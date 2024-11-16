@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+
+import { Header } from "../components/elements/header";
+import { Footer } from "../components/elements/footer";
+
 import "./globals.css";
 
 const geistSans = localFont({
@@ -15,17 +19,21 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
     title: "Tbilisi JS",
-    description: "Tbilisi JS Communit Website",
+    description: "Tbilisi JS Community Website",
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <html lang="en" className="scroll-p-16">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-100`}>{children}</body>
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-100`}>
+                <div className="min-h-screen bg-gray-100">
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </div>
+            </body>
         </html>
     );
-}
+};
+
+export default RootLayout;
