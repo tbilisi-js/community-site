@@ -16,6 +16,11 @@ export default [
         },
     },
     ...tseslint.configs.recommended,
+    {
+        rules: {
+            "@typescript-eslint/no-require-imports": 0,
+        },
+    },
     eslintPluginPrettierRecommended,
     {
         ignores: ["**/node_modules/**", "**/dist/**", "**/.next/**"],
