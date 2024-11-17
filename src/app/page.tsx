@@ -2,6 +2,7 @@ import { HomeIntro } from "../components/blocks/home-intro";
 import { Schedule } from "../components/blocks/schedule";
 import { Tickets } from "../components/blocks/tickets";
 import { PreviousConferences } from "../components/blocks/previous-conferences";
+import { Speakers } from "../components/blocks/speakers";
 
 const HomePage = () => (
     <>
@@ -9,6 +10,7 @@ const HomePage = () => (
         <Schedule />
         <Tickets />
         <PreviousConferences />
+        <Speakers />
     </>
 );
 

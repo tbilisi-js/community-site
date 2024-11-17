@@ -4,7 +4,7 @@ import { CalendarIcon, TicketIcon } from "lucide-react";
 import { Button } from "@src/components/ui/button";
 
 export const HomeIntro: React.FC = () => (
-    <section className="relative bg-slate-950 text-slate-50 py-32 px-4">
+    <section className="relative bg-slate-950 text-slate-50 pt-48 pb-32 -mt-16 px-4">
         <div className="container mx-auto py-12 px-4 text-center">
             <div className="relative z-10">
                 <h1 className="text-4xl font-bold">Tbilisi JS Meetup #4</h1>
