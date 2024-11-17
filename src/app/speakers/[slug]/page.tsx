@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { speakers } from "@src/core/mock/speakers";
+
 type Params = Promise<{ slug: string }>;
 
 const SpeakerPage: React.FC<{ params: Params }> = async ({ params }) => {
@@ -14,5 +16,7 @@ const SpeakerPage: React.FC<{ params: Params }> = async ({ params }) => {
         </section>
     );
 };
+
+export const generateStaticParams = () => speakers.map(({ slug }) => ({ slug }));
 
 export default SpeakerPage;
