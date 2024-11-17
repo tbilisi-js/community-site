@@ -1,4 +1,14 @@
-export const talks = [
+export type Talk = {
+    slug: string;
+    name: string;
+    description: string;
+    labels: string[];
+    time: string;
+    speaker?: string;
+    type?: string;
+};
+
+export const talks: Talk[] = [
     {
         slug: "greetings",
         name: "Greetings",

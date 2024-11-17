@@ -1,4 +1,9 @@
-export const speakers = [
+export type Speaker = {
+    slug: string;
+    name: string;
+};
+
+export const speakers: Speaker[] = [
     {
         slug: "vadim-makeev",
         name: "Vadim Makeev",
