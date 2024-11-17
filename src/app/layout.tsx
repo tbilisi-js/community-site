@@ -26,11 +26,9 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <html lang="en" className="scroll-p-16">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-100`}>
-                <div className="min-h-screen bg-gray-100">
-                    <Header />
-                    <main>{children}</main>
-                    <Footer />
-                </div>
+                <Header />
+                <main>{children}</main>
+                <Footer />
             </body>
         </html>
     );
