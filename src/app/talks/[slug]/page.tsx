@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { talks } from "@src/core/mock/talks";
+
 type Params = Promise<{ slug: string }>;
 
 const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
@@ -14,5 +16,7 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
         </section>
     );
 };
+
+export const generateStaticParams = () => talks.map(({ slug }) => ({ slug }));
 
 export default TalkPage;
