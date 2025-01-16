@@ -12,23 +12,23 @@
   "dependencies": {
     "classnames": "2.5.1",
     "lucide-react": "0.460.0",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "next": "15.1.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@types/node": "22.9.0",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
+    "@types/node": "22.10.7",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
     "eslint": "9.13.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-config-next": "15.0.3",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "prettier": "3.3.3",
-    "postcss": "8.4.49",
+    "postcss": "8.5.1",
     "tailwindcss": "3.4.15",
-    "typescript": "5.6.3",
+    "typescript": "5.7.3",
     "typescript-eslint": "8.11.0"
   }
 }
