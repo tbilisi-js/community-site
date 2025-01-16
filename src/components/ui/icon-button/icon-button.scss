@@ -1,0 +1,22 @@
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: var(--cl-text);
+    box-sizing: border-box;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--cl-text);
+    border-radius: 10px;
+    cursor: pointer;
+    outline-offset: 3px;
+    outline-width: 2px;
+
+    &:hover {
+        color: var(--cl-primary);
+        border: 1px solid var(--cl-primary);
+    }
+}
