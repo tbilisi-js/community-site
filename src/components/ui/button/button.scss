@@ -4,6 +4,14 @@
     border: 1px solid var(--cl-background);
     border-radius: 10px;
     text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+    outline-offset: 3px;
+    outline-width: 2px;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .button_medium {
