@@ -1,0 +1,28 @@
+.button {
+    box-shadow: 2px 4px 0 0 #000;
+    color: var(--cl-background);
+    border: 1px solid var(--cl-background);
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.button_medium {
+    padding: 8px 30px;
+}
+
+.button_large {
+    font-size: 30px;
+    padding: 14px 12px;
+}
+
+.button_neutral {
+    background-color: var(--cl-neutral);
+}
+
+.button_primary {
+    background-color: var(--cl-primary);
+}
+
+.button_secondary {
+    background-color: var(--cl-secondary);
+}
