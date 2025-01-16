@@ -22,7 +22,7 @@ export const Header = () => (
                         Speakers
                     </Link>
                 </div>
-                <Button variant="secondary" size="sm" className="md:hidden">
+                <Button variant="secondary" size="md" className="md:hidden">
                     <MenuIcon className="w-4 h-4" />
                 </Button>
             </nav>
