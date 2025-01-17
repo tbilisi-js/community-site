@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
-        <html lang="en" className="scroll-p-16">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <html lang="en">
+            <body className={`${geistSans.variable} ${geistMono.variable}`}>
                 <Header />
                 <main>{children}</main>
                 <Footer />
