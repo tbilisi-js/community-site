@@ -1,5 +1,5 @@
 const BecomeAPartnerPage = () => (
-    <section className="container mx-auto py-20 px-4">
+    <section>
         <p>Become a Partner Page</p>
     </section>
 );
