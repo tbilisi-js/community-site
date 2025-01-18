@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CalendarIcon, TicketIcon } from "lucide-react";
+import { CalendarIcon } from "lucide-react";
 
 import { Button } from "@src/components/ui/button";
 
@@ -21,8 +21,7 @@ export const HomeIntro: React.FC = () => (
                         </time>
                     </div>
                     <Button variant="primary" size="lg" className="font-semibold">
-                        <TicketIcon className="w-5 h-5 mr-2" />
-                        Register
+                        Learn More
                     </Button>
                 </div>
             </div>
