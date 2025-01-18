@@ -8,11 +8,9 @@ const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
     const { slug } = await params;
 
     return (
-        <section className="container mx-auto py-20 px-4">
+        <section>
             <p>Conference Page ({slug})</p>
-            <Link href="/conferences" className="py-1 hover:text-blue-700">
-                See all conferences
-            </Link>
+            <Link href="/conferences">See all conferences</Link>
         </section>
     );
 };

@@ -1,13 +1,12 @@
 export const Footer = () => (
-    <footer className="container mx-auto py-8 px-4 border-t">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+    <footer>
+        <div>
             <p>&copy; 2024 Tbilisi JS. All rights reserved.</p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
+            <div>
                 <a
                     href="https://www.linkedin.com/company/tbilisi-js-community/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-blue-600"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" height="32" width="32">
                         <title>LinkedIn</title>
@@ -21,12 +20,7 @@ export const Footer = () => (
                         />
                     </svg>
                 </a>
-                <a
-                    href="https://t.me/tbilisi_js_chat"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-600"
-                >
+                <a href="https://t.me/tbilisi_js_chat" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" height="32" width="32">
                         <title>Telegram</title>
                         <circle cx="120" cy="120" r="120" fill="currentColor" />

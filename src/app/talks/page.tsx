@@ -3,14 +3,12 @@ import Link from "next/link";
 import { talks } from "@src/core/mock/talks";
 
 const TalksPage = () => (
-    <section className="container mx-auto py-20 px-4">
+    <section>
         <p>Talks Page</p>
-        <ul className="list-disc">
+        <ul>
             {talks.map((talk) => (
                 <li key={talk.slug}>
-                    <Link href={`/talks/${talk.slug}`} className="block py-1 hover:text-blue-700">
-                        {talk.name}
-                    </Link>
+                    <Link href={`/talks/${talk.slug}`}>{talk.name}</Link>
                 </li>
             ))}
         </ul>

@@ -3,14 +3,12 @@ import Link from "next/link";
 import { conferences } from "@src/core/mock/conferences";
 
 const ConferencesPage = () => (
-    <section className="container mx-auto py-20 px-4">
+    <section>
         <p>Conferences Page</p>
-        <ul className="list-disc">
+        <ul>
             {conferences.map((conference) => (
                 <li key={conference.slug}>
-                    <Link href={`/conferences/${conference.slug}`} className="block py-1 hover:text-blue-700">
-                        {conference.name}
-                    </Link>
+                    <Link href={`/conferences/${conference.slug}`}>{conference.name}</Link>
                 </li>
             ))}
         </ul>
