@@ -1,3 +1,9 @@
-const HomePage = () => <p>Home page</p>;
+import { HomeIntro } from "../components/sections/home-intro";
+
+const HomePage = () => (
+    <>
+        <HomeIntro />
+    </>
+);
 
 export default HomePage;
