@@ -12,7 +12,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: var(--font-jersey);
-  letter-spacing: 1;
+  letter-spacing: .1em;
 }
 
 body {
@@ -30,7 +30,7 @@ svg, img {
 
 button, input {
   font-family: var(--font-roboto);
-  letter-spacing: 1;
+  letter-spacing: .1em;
 }
 
 p {

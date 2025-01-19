@@ -10,6 +10,8 @@ const jersey = Jersey_10({
     weight: ["400"],
     variable: "--font-jersey",
     fallback: ["Tahoma", "sans-serif"],
+    preload: true,
+    subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={`${jersey.variable}`}>
+            <body className={jersey.variable}>
                 <Header />
                 <main>{children}</main>
                 <Footer />
