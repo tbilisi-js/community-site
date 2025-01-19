@@ -11,6 +11,8 @@ html, body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  font-family: var(--font-jersey);
+  letter-spacing: 1;
 }
 
 body {
@@ -18,8 +20,17 @@ body {
   color: var(--cl-text);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 svg, img {
   display: block;
+}
+
+button, input {
+  font-family: var(--font-roboto);
+  letter-spacing: 1;
 }
 
 p {
