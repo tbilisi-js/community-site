@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Jersey_10 } from "next/font/google";
 
 import { Header } from "../components/elements/header";
 import { Footer } from "../components/elements/footer";
 
 import "./globals.scss";
 
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
+const jersey = Jersey_10({
+    weight: ["400"],
+    variable: "--font-jersey",
+    fallback: ["Tahoma", "sans-serif"],
+    preload: true,
+    subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +22,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <body className={jersey.variable}>
                 <Header />
                 <main>{children}</main>
                 <Footer />

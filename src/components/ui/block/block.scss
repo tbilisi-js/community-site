@@ -1,0 +1,25 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.block {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include mixins.media(md) {
+        padding-right: 52px;
+        padding-left: 52px;
+    }
+}
+
+.block-body {
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    @include mixins.media(md) {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
