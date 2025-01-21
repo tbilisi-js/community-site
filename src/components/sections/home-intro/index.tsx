@@ -5,7 +5,7 @@ import logotype from "./img/logotype.png";
 import "./home-intro.scss";
 
 export const HomeIntro = () => (
-    <Block id="intro">
+    <Block id="intro" className="home-intro">
         <img
             src={logotype.src}
             width={logotype.width}
