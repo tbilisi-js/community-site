@@ -1,0 +1,50 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.call-for-speakers-body {
+    display: grid;
+    gap: 20px;
+
+    @include mixins.media(lg) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.call-for-speakers-heading {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    @include mixins.media(lg) {
+        font-size: 62px;
+    }
+}
+
+.call-for-speakers-subheading {
+    display: none;
+    font-size: 62px;
+    text-transform: uppercase;
+
+    @include mixins.media(lg) {
+        display: block;
+    }
+}
+
+.call-for-speakers-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mixins.media(sm) {
+        align-items: flex-start;
+    }
+}
+
+.call-for-speakers-description {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.call-for-speakers-button {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}

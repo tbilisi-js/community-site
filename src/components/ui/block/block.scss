@@ -1,12 +1,11 @@
 @use "../../../assets/styles/_mixins.scss";
 
 .block {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 
     @include mixins.media(md) {
-        padding-right: 52px;
-        padding-left: 52px;
+        padding: 80px 52px;
     }
 }
 
