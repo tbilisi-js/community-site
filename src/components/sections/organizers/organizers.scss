@@ -1,0 +1,97 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.organizers-body {
+    position: relative;
+}
+
+.organizers-heading {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    @include mixins.media(md) {
+        font-size: 76px;
+    }
+}
+
+.organizers-list {
+    display: grid;
+    align-items: center;
+    gap: 32px;
+    max-width: 860px;
+    margin: 32px auto 0;
+
+    @include mixins.media(sm) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include mixins.media(lg) {
+        gap: 60px;
+    }
+}
+
+.organizers-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.organizers-card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-position: top;
+    min-height: 360px;
+
+    @include mixins.media(md) {
+        aspect-ratio: initial;
+    }
+}
+
+.organizers-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.organizers-card-heading {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 16px 16px 0;
+    background-color: var(--cl-background);
+    border-top-right-radius: 12px;
+
+    @include mixins.media(md) {
+        max-width: 120px;
+    }
+}
+
+.organizers-card-description {
+    min-width: 160px;
+    max-width: 240px;
+    padding: 12px 16px 16px;
+    background-color: var(--cl-background);
+}
+
+.organizers-social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0 16px 16px;
+    background-color: var(--cl-background);
+    border-bottom-left-radius: 12px;
+}
+
+.organizers-social-item {
+    display: block;
+    color: var(--cl-text);
+    padding: 8px;
+    border: 1px solid var(--cl-text);
+    border-radius: 10px;
+
+    &:hover {
+        color: var(--cl-primary);
+        border-color: var(--cl-primary);
+    }
+}

@@ -21,7 +21,14 @@ export const AboutCommunity = () => (
             />
         </svg>
         <div className="about-community-info">
-            <img src={tjsPeople.src} width={433} height={548} alt="Tbilisi JS People" className="about-community-img" />
+            <img
+                src={tjsPeople.src}
+                width={433}
+                height={548}
+                alt="Tbilisi JS People"
+                className="about-community-img"
+                loading="lazy"
+            />
             <div className="about-community-description">
                 <p className="about-community-text">
                     We are united by our interest in technology and progress, a love for knowledge, and a genuine wish
