@@ -1,3 +1,5 @@
+@use "../../../assets/styles/_mixins.scss";
+
 .home-intro {
     text-align: center;
 }
@@ -10,10 +12,14 @@
 }
 
 .home-intro-subtitle {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
-    max-width: 520px;
+    max-width: 580px;
     margin: 32px auto 0;
+
+    @include mixins.media(md) {
+        font-size: 30px;
+    }
 }
 
 .home-intro-button {

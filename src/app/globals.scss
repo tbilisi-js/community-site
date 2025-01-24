@@ -11,8 +11,7 @@ html, body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: var(--font-jersey);
-  letter-spacing: .1em;
+  font-family: var(--font-main);
 }
 
 body {
@@ -30,7 +29,6 @@ svg, img {
 
 button, input {
   font-family: var(--font-roboto);
-  letter-spacing: .1em;
 }
 
 p, h1, h2, h3, h4, h5, h6 {

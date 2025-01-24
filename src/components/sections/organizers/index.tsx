@@ -20,7 +20,9 @@ export const Organizers = () => (
                 <div className="organizers-info">
                     <p className="organizers-card-heading">Julia Volkova</p>
                     <p className="organizers-card-description">
-                        Frontend Developer Mentor at Yandex Practicum and HTML Academy
+                        Frontend Developer
+                        <br />
+                        Mentor at Yandex Practicum and HTML Academy
                     </p>
                 </div>
                 <div className="organizers-social">
