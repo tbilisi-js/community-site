@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Jersey_10 } from "next/font/google";
+import localFont from "next/font/local";
 
 import { Header } from "../components/elements/header";
 import { Footer } from "../components/elements/footer";
 
 import "./globals.scss";
 
-const jersey = Jersey_10({
-    weight: ["400"],
-    variable: "--font-jersey",
-    fallback: ["Tahoma", "sans-serif"],
-    preload: true,
-    subsets: ["latin"],
+const fontspring = localFont({
+    src: [
+        { path: "../assets/fonts/Fontspring-DEMO-realtime-regular.otf", weight: "400", style: "regular" },
+        { path: "../assets/fonts/Fontspring-DEMO-realtime-black.otf", weight: "900", style: "black" },
+    ],
+    variable: "--font-main",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={jersey.variable}>
+            <body className={fontspring.variable}>
                 <Header />
                 <main>{children}</main>
                 <Footer />
