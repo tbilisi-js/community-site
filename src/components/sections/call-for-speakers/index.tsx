@@ -11,8 +11,8 @@ export const CallForSpeakers = () => (
         </div>
         <div className="call-for-speakers-info">
             <p className="call-for-speakers-description">
-                If you want to share your experience and knowledge in upcoming Tbilisi JS Meetup, let us know till
-                01.16.25
+                If you want to share your experience and&nbsp;knowledge&nbsp;in upcoming Tbilisi JS Meetup, let us know
+                till 01.16.25
             </p>
             <Button variant="primary" className="call-for-speakers-button" size="md">
                 Apply to speak

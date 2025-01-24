@@ -2,10 +2,10 @@
 
 .call-for-speakers-body {
     display: grid;
-    gap: 20px;
 
     @include mixins.media(lg) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 14fr 10fr;
+        gap: 40px;
     }
 }
 
@@ -40,7 +40,9 @@
 }
 
 .call-for-speakers-description {
+    margin-top: 20px;
     font-size: 18px;
+    font-weight: 900;
     text-transform: uppercase;
 }
 

@@ -13,7 +13,9 @@ export const HomeIntro = () => (
             alt="Tbilisi JS People"
             className="home-intro-img"
         />
-        <h1 className="home-intro-subtitle">Tbilisi JavaScript and TypeScript RU–EN speaking Community</h1>
+        <h1 className="home-intro-subtitle">
+            Tbilisi JavaScript and TypeScript RU&#8288;–&#8288;EN&nbsp;speaking Community
+        </h1>
         <Button variant="primary" className="home-intro-button" size="lg">
             Learn More
         </Button>

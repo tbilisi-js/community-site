@@ -10,12 +10,14 @@
 
     @include mixins.media(sm) {
         display: flex;
-        gap: 20px;
+        justify-content: space-between;
+        gap: 36px;
     }
 
     @include mixins.media(lg) {
         justify-content: flex-end;
         padding-top: 84px;
+        margin-right: -32px;
     }
 
     @include mixins.media(xl) {
@@ -49,15 +51,15 @@
     @include mixins.media(xl) {
         position: absolute;
         top: 120px;
-        left: 84px;
-        max-width: 404px;
+        left: 32px;
+        max-width: 420px;
         text-shadow: 4px 2px #000, -1px -1px #000;
     }
 }
 
 .about-community-img-bg {
     position: absolute;
-    left: 32px;
+    left: 0;
     padding: 1px;
 
     @include mixins.media(null, lg) {
