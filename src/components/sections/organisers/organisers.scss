@@ -1,10 +1,10 @@
 @use "../../../assets/styles/_mixins.scss";
 
-.organizers-body {
+.organisers-body {
     position: relative;
 }
 
-.organizers-heading {
+.organisers-heading {
     font-size: 30px;
     font-weight: 900;
     text-transform: uppercase;
@@ -14,7 +14,7 @@
     }
 }
 
-.organizers-list {
+.organisers-list {
     display: grid;
     align-items: center;
     gap: 32px;
@@ -30,13 +30,13 @@
     }
 }
 
-.organizers-card {
+.organisers-card {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
 }
 
-.organizers-card-img {
+.organisers-card-img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -49,13 +49,13 @@
     }
 }
 
-.organizers-info {
+.organisers-info {
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-.organizers-card-heading {
+.organisers-card-heading {
     font-size: 30px;
     font-weight: 900;
     padding: 16px 16px 0;
@@ -67,14 +67,14 @@
     }
 }
 
-.organizers-card-description {
+.organisers-card-description {
     min-width: 160px;
     max-width: 260px;
     padding: 12px 16px 16px;
     background-color: var(--cl-background);
 }
 
-.organizers-social {
+.organisers-social {
     position: absolute;
     top: 0;
     right: 0;
@@ -83,7 +83,7 @@
     border-bottom-left-radius: 12px;
 }
 
-.organizers-social-item {
+.organisers-social-item {
     display: block;
     color: var(--cl-text);
     padding: 8px;

@@ -4,7 +4,7 @@ import { Button } from "@src/components/ui/button";
 import { Block } from "@src/components/ui/block";
 import { AnnouncementTimer } from "@src/components/elements/announcement-timer";
 import { formatDate } from "@src/core/utils/formatDate";
-import { nextConfDate } from "@src/core/mock/conferences";
+import { nextConfDate } from "@src/core/mock/events";
 
 import announcementImg from "./img/announcement.png";
 

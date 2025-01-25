@@ -12,11 +12,13 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: var(--font-main);
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--cl-background);
   color: var(--cl-text);
+  white-space: break-spaces;
 }
 
 *, *::before, *::after {
