@@ -4,7 +4,7 @@ import { Block } from "../../ui/block";
 import "./call-for-speakers.scss";
 
 export const CallForSpeakers = () => (
-    <Block id="intro" bodyClassName="call-for-speakers-body">
+    <Block id="call-for-speakers" bodyClassName="call-for-speakers-body">
         <div className="call-for-speakers-head">
             <h2 className="call-for-speakers-heading">Call for speakers</h2>
             <p className="call-for-speakers-subheading">Passionate about tech and design</p>

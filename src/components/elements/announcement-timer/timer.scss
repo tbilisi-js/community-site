@@ -1,0 +1,28 @@
+.timer {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.timer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-item-del {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.timer-item-type {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.timer-item-time {
+    font-size: 62px;
+    font-weight: 900;
+    line-height: 1;
+}
