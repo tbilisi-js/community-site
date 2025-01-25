@@ -1,0 +1,103 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.announcement-body {
+    position: relative;
+
+    @include mixins.media(lg) {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr repeat(4, auto) 1fr;
+        grid-template-areas: ". image" "date image" "heading image" "description image" "button image" ". image";
+        align-items: center;
+        justify-items: left;
+    }
+}
+
+.announcement-date {
+    grid-area: date;
+    font-size: 16px;
+
+    @include mixins.media(md) {
+        font-size: 24px;
+    }
+}
+
+.announcement-heading {
+    grid-area: heading;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 6px;
+
+    @include mixins.media(lg) {
+        font-size: 62px;
+        margin-top: 12px;
+    }
+}
+
+.announcement-description {
+    grid-area: description;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 16px;
+
+    @include mixins.media(lg) {
+        font-size: 18px;
+        margin-top: 32px;
+    }
+}
+
+.announcement-button {
+    grid-area: button;
+    margin-top: 16px;
+
+    @include mixins.media(null,sm) {
+        width: 100%;
+    }
+
+    @include mixins.media(lg) {
+        margin-top: 32px;
+    }
+}
+
+.announcement-image {
+    grid-area: image;
+    margin-top: 16px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+    @include mixins.media(lg) {
+        margin-top: 0;
+    }
+}
+
+.announcement-timer-wrapper {
+    margin-top: 16px;
+
+    @include mixins.media(lg) {
+        position: absolute;
+        right: 32px;
+        bottom: 0;
+        padding: 20px;
+        margin-top: 0;
+    }
+}
+
+.announcement-timer-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include mixins.media(null,sm) {
+        display: none;
+    }
+}
+
+.announcement-timer {
+    @include mixins.media(null,sm) {
+        justify-content: center;
+        margin-top: 32px;
+    }
+}

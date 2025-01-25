@@ -6,6 +6,8 @@ export type Conference = {
     talks: string[];
 };
 
+export const nextConfDate = "2025-02-22T14:00:00.000Z";
+
 export const conferences: Conference[] = [
     {
         slug: "tbilisi-a11y-ux-day",

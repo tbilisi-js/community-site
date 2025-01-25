@@ -5,7 +5,7 @@ import antonPavlov from "./img/anton_pavlov.png";
 import "./organizers.scss";
 
 export const Organizers = () => (
-    <Block id="about" bodyClassName="organizers-body">
+    <Block id="organizers" bodyClassName="organizers-body">
         <h2 className="organizers-heading">Meet the organisers</h2>
         <div className="organizers-list">
             <div className="organizers-card organizers-volkova">
