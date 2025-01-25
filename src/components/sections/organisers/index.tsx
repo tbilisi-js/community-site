@@ -2,35 +2,35 @@ import { Block } from "../../ui/block";
 import juliaVolkova from "./img/julia_volkova.png";
 import antonPavlov from "./img/anton_pavlov.png";
 
-import "./organizers.scss";
+import "./organisers.scss";
 
-export const Organizers = () => (
-    <Block id="organizers" bodyClassName="organizers-body">
-        <h2 className="organizers-heading">Meet the organisers</h2>
-        <div className="organizers-list">
-            <div className="organizers-card organizers-volkova">
+export const Organisers = () => (
+    <Block id="organisers" bodyClassName="organisers-body">
+        <h2 className="organisers-heading">Meet the organisers</h2>
+        <div className="organisers-list">
+            <div className="organisers-card organisers-volkova">
                 <img
                     src={juliaVolkova.src}
                     width={398}
                     height={570}
                     alt="Julia Volkova Avatar"
-                    className="organizers-card-img"
+                    className="organisers-card-img"
                     loading="lazy"
                 />
-                <div className="organizers-info">
-                    <p className="organizers-card-heading">Julia Volkova</p>
-                    <p className="organizers-card-description">
+                <div className="organisers-info">
+                    <p className="organisers-card-heading">Julia Volkova</p>
+                    <p className="organisers-card-description">
                         Frontend Developer
                         <br />
                         Mentor at Yandex Practicum and HTML Academy
                     </p>
                 </div>
-                <div className="organizers-social">
+                <div className="organisers-social">
                     <a
                         href="https://www.linkedin.com/in/julie-volkova"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="organizers-social-item"
+                        className="organisers-social-item"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" height="20" width="20">
                             <title>LinkedIn</title>
@@ -42,25 +42,25 @@ export const Organizers = () => (
                     </a>
                 </div>
             </div>
-            <div className="organizers-card organizers-pavlop">
+            <div className="organisers-card organisers-pavlop">
                 <img
                     src={antonPavlov.src}
                     width={398}
                     height={570}
                     alt="Anton Pavlov Avatar"
-                    className="organizers-card-img"
+                    className="organisers-card-img"
                     loading="lazy"
                 />
-                <div className="organizers-info">
-                    <p className="organizers-card-heading">Anton Pavlov</p>
-                    <p className="organizers-card-description">DevOPS</p>
+                <div className="organisers-info">
+                    <p className="organisers-card-heading">Anton Pavlov</p>
+                    <p className="organisers-card-description">DevOPS</p>
                 </div>
-                <div className="organizers-social">
+                <div className="organisers-social">
                     <a
                         href="https://www.linkedin.com/in/antonepavlov"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="organizers-social-item"
+                        className="organisers-social-item"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" height="20" width="20">
                             <title>LinkedIn</title>
