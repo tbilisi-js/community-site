@@ -24,7 +24,7 @@
     font-size: 62px;
     text-transform: uppercase;
 
-    @include mixins.media(lg) {
+    @include mixins.media(xl) {
         display: block;
     }
 }
