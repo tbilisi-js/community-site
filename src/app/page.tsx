@@ -3,6 +3,8 @@ import { AboutCommunity } from "../components/sections/about-community";
 import { CallForSpeakers } from "../components/sections/call-for-speakers";
 import { Organizers } from "../components/sections/organizers";
 import { Announcement } from "../components/sections/announcement";
+import { JoinUs } from "../components/sections/join-us";
+import { CatsPattern } from "../components/sections/cats-pattern";
 
 const HomePage = () => (
     <>
@@ -11,6 +13,8 @@ const HomePage = () => (
         <AboutCommunity />
         <CallForSpeakers />
         <Organizers />
+        <JoinUs />
+        <CatsPattern />
     </>
 );
 

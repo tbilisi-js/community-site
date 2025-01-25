@@ -1,0 +1,20 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.join-us {
+    text-align: center;
+}
+
+.join-us-heading {
+    font-size: 62px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--cl-primary);
+
+    @include mixins.media(md) {
+        font-size: 96px;
+    }
+}
+
+.join-us-button {
+    margin-top: 12px;
+}
