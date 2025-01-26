@@ -1,19 +1,29 @@
 @use "../../../assets/styles/mixins.scss";
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 16px;
-    gap: 40px;
     background: #00102060;
     backdrop-filter: blur(4px);
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 16px;
+
+    @include mixins.media(md) {
+        padding: 20px 72px;
+    }
 
     @include mixins.media(lg) {
-        padding: 24px 40px;
+        padding: 20px 84px;
     }
 }
 

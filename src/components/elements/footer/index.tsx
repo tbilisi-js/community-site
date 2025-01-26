@@ -67,8 +67,10 @@ export const Footer = () => (
             </nav>
         </div>
         <div className="footer-additional">
-            <p>Copyright Tbilisi JS Community</p>
-            <p>Design by Elona Sarkisova</p>
+            <div className="footer-additional-content">
+                <p>Copyright Tbilisi JS Community</p>
+                <p>Design by Elona Sarkisova</p>
+            </div>
         </div>
     </footer>
 );
