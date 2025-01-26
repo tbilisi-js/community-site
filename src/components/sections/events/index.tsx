@@ -16,14 +16,10 @@ export const Events = () => {
     const touchRef = useRef<number | null>(null);
 
     const touchStartHandler = (e: React.TouchEvent<HTMLElement>) => {
-        console.log(e);
-
         touchRef.current = e.touches.item(0).clientX;
     };
     const touchEndHandler = (e: React.TouchEvent<HTMLElement>) => {
         if (touchRef.current === null) return;
-        console.log(e);
-
         const touchClientX = e.changedTouches.item(0).clientX;
         if (touchClientX > touchRef.current + 100) {
             if (activeSlide > 0) {
@@ -61,7 +57,11 @@ export const Events = () => {
                                 {event.date.substring(0, 10).replace(/-/g, ".")}
                             </span>
                         </p>
-                        <NavLink href={`/events/${event.slug}`} className="events-slider-link">
+                        <NavLink
+                            href={`/events/${event.slug}`}
+                            className="events-slider-link"
+                            title={`Go to ${event.name} page`}
+                        >
                             <IconButton className="events-slider-link-button">
                                 <svg
                                     width="20"
