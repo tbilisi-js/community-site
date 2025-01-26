@@ -13,36 +13,38 @@ export const Header = () => {
 
     return (
         <header className="header">
-            <NavLink href="/" className="header-logo">
-                <img src="/logo.png" alt="TJS" width={52} height={30} />
-            </NavLink>
-            <nav className="header-nav">
-                <div className={cn("header-nav-list", opened && "_opened")}>
-                    <NavLink href="/" className="header-nav-link">
-                        Home
-                    </NavLink>
-                    <NavLink href="/events" className="header-nav-link">
-                        Events
-                    </NavLink>
-                    <NavLink href="/speakers" className="header-nav-link">
-                        Speakers
-                    </NavLink>
-                    <NavLink href="/partners" className="header-nav-link">
-                        Partners
-                    </NavLink>
-                    <NavLink href="/contacts" className="header-nav-link">
-                        Contacts
-                    </NavLink>
-                    <NavLink href="/" className="header-join">
-                        <Button variant="primary" size="md">
-                            Join
-                        </Button>
-                    </NavLink>
-                </div>
-                <Button variant="primary" size="md" className="header-menu" onClick={() => setOpened(!opened)}>
-                    Menu
-                </Button>
-            </nav>
+            <div className="header-content">
+                <NavLink href="/" className="header-logo">
+                    <img src="/logo.png" alt="TJS" width={52} height={30} />
+                </NavLink>
+                <nav className="header-nav">
+                    <div className={cn("header-nav-list", opened && "_opened")}>
+                        <NavLink href="/" className="header-nav-link">
+                            Home
+                        </NavLink>
+                        <NavLink href="/events" className="header-nav-link">
+                            Events
+                        </NavLink>
+                        <NavLink href="/speakers" className="header-nav-link">
+                            Speakers
+                        </NavLink>
+                        <NavLink href="/partners" className="header-nav-link">
+                            Partners
+                        </NavLink>
+                        <NavLink href="/contacts" className="header-nav-link">
+                            Contacts
+                        </NavLink>
+                        <NavLink href="/" className="header-join">
+                            <Button variant="primary" size="md">
+                                Join
+                            </Button>
+                        </NavLink>
+                    </div>
+                    <Button variant="primary" size="md" className="header-menu" onClick={() => setOpened(!opened)}>
+                        Menu
+                    </Button>
+                </nav>
+            </div>
         </header>
     );
 };
