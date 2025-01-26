@@ -1,0 +1,23 @@
+.stars-wrapper {
+    position: relative;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    content-visibility: auto;
+}
+
+.stars._active {
+    opacity: 0.5;
+}
+
+.star {
+    position: absolute;
+    border-radius: 10;
+    background: var(--cl-text);
+}

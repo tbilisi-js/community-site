@@ -6,17 +6,34 @@ import { CallForSpeakers } from "../components/sections/call-for-speakers";
 import { Organisers } from "../components/sections/organisers";
 import { JoinUs } from "../components/sections/join-us";
 import { CatsPattern } from "../components/sections/cats-pattern";
+import { StarsWrapper } from "../components/elements/stars-wrapper";
 
 const HomePage = () => (
     <>
-        <HomeIntro />
-        <Announcement />
-        <AboutCommunity />
-        <Events />
-        <CallForSpeakers />
-        <Organisers />
-        <JoinUs />
-        <CatsPattern />
+        <StarsWrapper density={3}>
+            <HomeIntro />
+        </StarsWrapper>
+        <StarsWrapper>
+            <Announcement />
+        </StarsWrapper>
+        <StarsWrapper>
+            <AboutCommunity />
+        </StarsWrapper>
+        <StarsWrapper>
+            <Events />
+        </StarsWrapper>
+        <StarsWrapper>
+            <CallForSpeakers />
+        </StarsWrapper>
+        <StarsWrapper>
+            <Organisers />
+        </StarsWrapper>
+        <StarsWrapper>
+            <JoinUs />
+        </StarsWrapper>
+        <StarsWrapper>
+            <CatsPattern />
+        </StarsWrapper>
     </>
 );
 
