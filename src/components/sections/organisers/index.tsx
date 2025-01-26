@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 import { Block } from "../../ui/block";
 import juliaVolkova from "./img/julia_volkova.png";
-import antonPavlov from "./img/anton_pavlov.png";
+import antonPavlov from "./img/anton_pavlov.jpg";
 
 import "./organisers.scss";
 
@@ -9,7 +11,7 @@ export const Organisers = () => (
         <h2 className="organisers-heading">Meet the organisers</h2>
         <div className="organisers-list">
             <div className="organisers-card organisers-volkova">
-                <img
+                <Image
                     src={juliaVolkova.src}
                     width={398}
                     height={570}
@@ -43,7 +45,7 @@ export const Organisers = () => (
                 </div>
             </div>
             <div className="organisers-card organisers-pavlop">
-                <img
+                <Image
                     src={antonPavlov.src}
                     width={398}
                     height={570}
