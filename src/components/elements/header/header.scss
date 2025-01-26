@@ -6,9 +6,14 @@
     justify-content: space-between;
     padding: 20px 16px;
     gap: 40px;
+    background: #00102060;
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     @include mixins.media(lg) {
-        padding: 48px 40px;
+        padding: 24px 40px;
     }
 }
 
