@@ -32,16 +32,50 @@
 
 .organisers-card {
     position: relative;
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 22px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        width: 84px;
+        height: 84px;
+        background-image: url('./img/mask_linkedin.png');
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: -1px;
+    }
+}
+
+.organisers-volkova {
+    &::after {
+        width: 302px;
+        height: 180px;
+        background-image: url('./img/mask_volkova.png');
+    }
+}
+
+.organisers-pavlop {
+    &::after {
+        width: 132px;
+        height: 126px;
+        background-image: url('./img/mask_pavlov.png');
+    }
 }
 
 .organisers-card-img {
+    display: block;
     width: 100%;
     object-fit: cover;
     aspect-ratio: 1 / 1;
     object-position: top;
     min-height: 360px;
+    border-radius: 22px;
 
     @include mixins.media(md) {
         aspect-ratio: initial;
@@ -52,25 +86,21 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 1;
 }
 
 .organisers-card-heading {
     font-size: 30px;
     font-weight: 900;
     padding: 16px 16px 0;
-    background-color: var(--cl-background);
-    border-top-right-radius: 12px;
-
-    @include mixins.media(md) {
-        max-width: 160px;
-    }
+    line-height: 1;
+    max-width: 160px;
 }
 
 .organisers-card-description {
     min-width: 160px;
     max-width: 260px;
-    padding: 12px 16px 16px;
-    background-color: var(--cl-background);
+    padding: 12px 16px 8px;
 }
 
 .organisers-social {
@@ -79,7 +109,6 @@
     right: 0;
     padding: 0 0 16px 16px;
     background-color: var(--cl-background);
-    border-bottom-left-radius: 12px;
 }
 
 .organisers-social-item {
