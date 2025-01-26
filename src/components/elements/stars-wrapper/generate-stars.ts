@@ -1,4 +1,39 @@
-export type Star = { x: number; y: number; key: string; size: number };
+export type Star = { x: number; y: number; key: string; type: number | string };
+
+const variants = {
+    closest: {
+        0: 0.7,
+        1: 0.2,
+        2: 0.1,
+    },
+    average: {
+        0: 0.1,
+        1: 0.2,
+        2: 0.3,
+        3: 0.2,
+        4: 0.2,
+    },
+    farthest: {
+        0: 0.2,
+        1: 0.2,
+        2: 0.1,
+        3: 0.1,
+        4: 0.2,
+        5: 0.1,
+        6: 0.1,
+    },
+};
+
+const getVariant = (variant: keyof typeof variants, random: number) => {
+    const entries = Object.entries(variants[variant]);
+    let sumRandom = 0;
+    for (const [key, value] of entries) {
+        sumRandom += value;
+        if (sumRandom > random) return key;
+    }
+
+    return 0;
+};
 
 export const generateStars = (container: HTMLElement, density: number) => {
     const scrollY = window.scrollY;
@@ -18,14 +53,14 @@ export const generateStars = (container: HTMLElement, density: number) => {
         },
     );
 
-    const horizontalStarsCount = Math.ceil(container.clientWidth / 150);
-    const verticalStarsCount = Math.ceil(container.clientHeight / 150);
+    const horizontalStarsCount = Math.ceil(container.clientWidth / 200);
+    const verticalStarsCount = Math.ceil(container.clientHeight / 200);
     const newStars: Star[] = [];
     for (let x = 0; x < horizontalStarsCount; x++) {
         for (let y = 0; y < verticalStarsCount; y++) {
             for (let z = 0; z < Math.random() * density; z++) {
-                const coordX = x * 150 + Math.floor(Math.random() * 150);
-                const coordY = y * 150 + Math.floor(Math.random() * 150);
+                const coordX = x * 200 + Math.floor(Math.random() * 200);
+                const coordY = y * 200 + Math.floor(Math.random() * 200);
 
                 if (
                     window.innerWidth > 767 &&
@@ -42,7 +77,7 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         x: coordX,
                         y: coordY,
                         key: `${x}_${y}_${z}`,
-                        size: Math.random() > 0.2 ? 8 : 16,
+                        type: getVariant("farthest", Math.random()),
                     });
                 } else if (
                     !containerElements.some((elem) => {
@@ -58,14 +93,14 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         x: coordX,
                         y: coordY,
                         key: `${x}_${y}_${z}`,
-                        size: Math.random() > 0.6 ? 4 : 8,
+                        type: getVariant("average", Math.random()),
                     });
                 } else {
                     newStars.push({
                         x: coordX,
                         y: coordY,
                         key: `${x}_${y}_${z}`,
-                        size: Math.random() > 0.2 ? 4 : 8,
+                        type: getVariant("closest", Math.random()),
                     });
                 }
             }

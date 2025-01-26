@@ -52,10 +52,8 @@ export const StarsWrapper: React.FC<StarsWrapperProps> = ({ children, density = 
                         style={{
                             left: star.x,
                             top: star.y,
-                            width: star.size,
-                            height: star.size,
                         }}
-                        className="star"
+                        className={`star star-${star.type}`}
                     />
                 ))}
             </div>
