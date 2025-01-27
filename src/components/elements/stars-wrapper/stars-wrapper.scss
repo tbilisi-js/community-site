@@ -63,3 +63,31 @@
     height: 52px;
     background-image: url('./images/star3.png');
 }
+
+.star-7 {
+    width: 40px;
+    height: 40px;
+    background-image: url('./images/khinkali.png');
+    transform: rotate(-15deg);
+}
+
+.star-8 {
+    width: 64px;
+    height: 64px;
+    background-image: url('./images/khinkali.png');
+    transform: rotate(-15deg);
+}
+
+.star-9 {
+    width: 40px;
+    height: 40px;
+    background-image: url('./images/khinkali.png');
+    transform: rotate(15deg);
+}
+
+.star-10 {
+    width: 64px;
+    height: 64px;
+    background-image: url('./images/khinkali.png');
+    transform: rotate(15deg);
+}
