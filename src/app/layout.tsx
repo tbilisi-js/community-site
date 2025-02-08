@@ -8,8 +8,8 @@ import "./globals.scss";
 
 const fontspring = localFont({
     src: [
-        { path: "../assets/fonts/Fontspring-DEMO-realtime-regular.otf", weight: "400", style: "regular" },
-        { path: "../assets/fonts/Fontspring-DEMO-realtime-black.otf", weight: "900", style: "black" },
+        { path: "../assets/fonts/realtimetest-regular.otf", weight: "400", style: "regular" },
+        { path: "../assets/fonts/realtimetest-black.otf", weight: "900", style: "black" },
     ],
     variable: "--font-main",
 });
