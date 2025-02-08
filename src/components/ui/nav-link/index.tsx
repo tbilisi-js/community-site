@@ -3,9 +3,10 @@ import cn from "classnames";
 
 import "./nav-link.scss";
 
-export interface NavLinkProps extends React.HTMLAttributes<HTMLAnchorElement>, LinkProps {
+export interface NavLinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">, LinkProps {
     weight?: keyof typeof NAV_LINK_WEIGHTS;
     size?: keyof typeof NAV_LINK_SIZES;
+    textTransform?: keyof typeof NAV_LINK_TRANSFORMS;
 }
 
 const NAV_LINK_WEIGHTS = {
@@ -18,6 +19,27 @@ const NAV_LINK_SIZES = {
     medium: "nav-link_medium",
 };
 
-export const NavLink: React.FC<NavLinkProps> = ({ className, weight = "light", size = "medium", ...props }) => (
-    <Link className={cn("nav-link", NAV_LINK_WEIGHTS[weight], NAV_LINK_SIZES[size], className)} {...props} />
+const NAV_LINK_TRANSFORMS = {
+    uppercase: "nav-link_transform-uppercase",
+    capitalize: "nav-link_transform-capitalize",
+    none: "nav-link_transform-none",
+};
+
+export const NavLink: React.FC<NavLinkProps> = ({
+    className,
+    weight = "light",
+    size = "medium",
+    textTransform = "uppercase",
+    ...props
+}) => (
+    <Link
+        className={cn(
+            "nav-link",
+            NAV_LINK_WEIGHTS[weight],
+            NAV_LINK_SIZES[size],
+            NAV_LINK_TRANSFORMS[textTransform],
+            className,
+        )}
+        {...props}
+    />
 );

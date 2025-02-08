@@ -1,4 +1,5 @@
 .button {
+    display: inline-block;
     box-shadow: 2px 4px 0 0 #000;
     color: var(--cl-background);
     border: 1px solid var(--cl-background);
@@ -10,6 +11,7 @@
     outline-width: 2px;
 
     &:hover {
+        color: var(--cl-background);
         opacity: 0.8;
     }
 }
