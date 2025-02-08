@@ -1,25 +1,25 @@
 import Image from "next/image";
 
+import { type Event } from "@src/core/mock/events";
 import { Button } from "@src/components/ui/button";
 import { Block } from "@src/components/ui/block";
 import { AnnouncementTimer } from "@src/components/elements/announcement-timer";
 import { formatDate } from "@src/core/utils/formatDate";
-import { nextConfDate } from "@src/core/mock/events";
 
 import announcementImg from "./img/announcement.png";
 
 import "./announcement.scss";
 
-export const Announcement = () => (
+export interface AnnouncementProps {
+    event: Event;
+}
+
+export const Announcement: React.FC<AnnouncementProps> = ({ event }) => (
     <Block id="announcement" bodyClassName="announcement-body">
-        <p className="announcement-date">{formatDate(nextConfDate)}</p>
-        <h2 className="announcement-heading">Tbilisi js meetup</h2>
+        <p className="announcement-date">{formatDate(event.date)}</p>
+        <h2 className="announcement-heading">{event.name}</h2>
         <Image src={announcementImg} alt="" loading="lazy" className="announcement-image" />
-        <p className="announcement-description">
-            Celebrate 1 year together
-            <br />
-            let’s chat, chill and eat huge cake 🎂
-        </p>
+        {event.promo && <p className="announcement-description">{event.promo}</p>}
         <div className="announcement-timer-wrapper">
             <svg
                 width="372"
@@ -34,9 +34,16 @@ export const Announcement = () => (
                     fill="#001020"
                 />
             </svg>
-            <AnnouncementTimer nextConfDate={nextConfDate} className="announcement-timer" />
+            <AnnouncementTimer nextConfDate={event.date} className="announcement-timer" />
         </div>
-        <Button variant="primary" className="announcement-button" size="md">
+        <Button
+            variant="primary"
+            size="md"
+            href={event.registration}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="announcement-button"
+        >
             Register
         </Button>
     </Block>
