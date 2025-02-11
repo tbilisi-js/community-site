@@ -1,3 +1,5 @@
+import { type Metadata } from "next/types";
+
 import { HomeIntro } from "../components/sections/home-intro";
 import { Announcement } from "../components/sections/announcement";
 import { AboutCommunity } from "../components/sections/about-community";
@@ -36,5 +38,16 @@ const HomePage = () => (
         </StarsWrapper>
     </>
 );
+
+export const metadata: Metadata = {
+    title: "Tbilisi JS People",
+    description:
+        "Tbilisi JavaScript and TypeScript RU-EN speaking Community. We are united by our interest in technology and progress, a love for knowledge, and a genuine wish to support each other",
+    openGraph: {
+        type: "website",
+        images: "/preview.jpg",
+        locale: "en_US",
+    },
+};
 
 export default HomePage;
