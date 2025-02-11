@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { type Metadata, type Viewport } from "next/types";
 import localFont from "next/font/local";
 
 import { Header } from "../components/elements/header";
@@ -17,6 +17,14 @@ const fontspring = localFont({
 export const metadata: Metadata = {
     title: "Tbilisi JS",
     description: "Tbilisi JS Community Website",
+};
+
+export const viewport: Viewport = {
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "#FF8022" },
+        { media: "(prefers-color-scheme: dark)", color: "#001020" },
+    ],
+    colorScheme: "dark",
 };
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
