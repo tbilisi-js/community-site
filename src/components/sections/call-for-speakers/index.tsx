@@ -3,7 +3,7 @@ import { Block } from "../../ui/block";
 
 import "./call-for-speakers.scss";
 
-export const CallForSpeakers = () => (
+export const CallForSpeakers: React.FC = () => (
     <Block id="call-for-speakers" bodyClassName="call-for-speakers-body">
         <div className="call-for-speakers-head">
             <h2 className="call-for-speakers-heading">Call for speakers</h2>
@@ -11,10 +11,16 @@ export const CallForSpeakers = () => (
         </div>
         <div className="call-for-speakers-info">
             <p className="call-for-speakers-description">
-                If you want to share your experience and&nbsp;knowledge&nbsp;in upcoming Tbilisi JS Meetup, let us know
-                till 01.16.25
+                If you would like to share your experience and&nbsp;knowledge&nbsp;at our events, please let us know
             </p>
-            <Button variant="primary" className="call-for-speakers-button" size="md">
+            <Button
+                variant="primary"
+                className="call-for-speakers-button"
+                size="md"
+                href="https://forms.gle/5iixksJiThWUNGvh9"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Apply to speak
             </Button>
         </div>

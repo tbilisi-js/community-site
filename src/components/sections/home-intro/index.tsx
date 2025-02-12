@@ -16,7 +16,7 @@ export const HomeIntro = () => (
         <h1 className="home-intro-subtitle">
             Tbilisi JavaScript and TypeScript RU&#8288;–&#8288;EN&nbsp;speaking Community
         </h1>
-        <Button variant="primary" className="home-intro-button" size="lg">
+        <Button variant="primary" className="home-intro-button" size="lg" href="#about">
             Learn More
         </Button>
     </Block>

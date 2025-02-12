@@ -9,20 +9,23 @@ import { Organisers } from "../components/sections/organisers";
 import { JoinUs } from "../components/sections/join-us";
 import { CatsPattern } from "../components/sections/cats-pattern";
 import { StarsWrapper } from "../components/elements/stars-wrapper";
+import { events } from "../core/mock/events";
 
 const HomePage = () => (
     <>
-        <StarsWrapper density={3}>
+        <StarsWrapper density={5}>
             <HomeIntro />
         </StarsWrapper>
-        <StarsWrapper>
-            <Announcement />
-        </StarsWrapper>
+        {new Date(events[0].date).getTime() > new Date().getTime() && (
+            <StarsWrapper>
+                <Announcement event={events[0]} />
+            </StarsWrapper>
+        )}
         <StarsWrapper>
             <AboutCommunity />
         </StarsWrapper>
         <StarsWrapper>
-            <Events />
+            <Events events={events} />
         </StarsWrapper>
         <StarsWrapper>
             <CallForSpeakers />

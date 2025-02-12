@@ -1,6 +1,5 @@
 .nav-link {
     color: var(--cl-text);
-    text-transform: uppercase;
     text-decoration: none;
     outline-offset: 3px;
     outline-width: 2px;
@@ -8,6 +7,18 @@
     &:hover {
         color: var(--cl-primary);
     }
+}
+
+.nav-link_transform-uppercase {
+    text-transform: uppercase;
+}
+
+.nav-link_transform-capitalize {
+    text-transform: capitalize;
+}
+
+.nav-link_transform-none {
+    text-transform: none;
 }
 
 .nav-link_light {

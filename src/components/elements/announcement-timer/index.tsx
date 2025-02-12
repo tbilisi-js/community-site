@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import cn from "classnames";
 
-import { formatLeadingZero } from "../../../core/utils/formatDate";
+import { formatLeadingZero } from "@src/core/utils/formatDate";
 
 import "./timer.scss";
 

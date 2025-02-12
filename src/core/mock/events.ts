@@ -1,26 +1,53 @@
 import { type StaticImageData } from "next/image";
 
-import allyUxDayImage from "./images/ally-ux-day.webp";
-import rustDayImage from "./images/rust-day.webp";
-import tjs2Image from "./images/tjs-2.webp";
+import allyUxDayImage from "./images/ally-ux-day.jpg";
+import rustDayImage from "./images/rust-day.jpg";
+import tjsConf1Image from "./images/tjs-conf-1.jpg";
+import tjsMeetup1Image from "./images/tjs-meetup-1.jpg";
+import tjsMeetup2Image from "./images/tjs-meetup-2.jpg";
+import tjsMeetup3Image from "./images/tjs-meetup-3.jpg";
+import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
+import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
 
 export type Event = {
     slug: string;
     name: string;
     date: string;
-    attendees: number;
+    attendees: number | undefined;
     talks: string[];
     image: StaticImageData;
+    promo?: string;
+    registration?: string;
+    tgLink: string;
 };
-
-export const nextConfDate = "2025-02-22T14:00:00.000Z";
 
 export const events: Event[] = [
     {
+        slug: "tbilisi-js-meetup-5",
+        name: "Tbilisi JS Meetup #5",
+        date: "2025-02-22T12:30:00.000Z",
+        attendees: undefined,
+        talks: [],
+        image: tjsMeetup5Image,
+        promo: "Exciting program and lots of fun activities\njoin us for networking, discussions, and insightful talks",
+        registration: "https://forms.gle/xBFjyup82pZoMnpQ9",
+        tgLink: "https://t.me/tbilisi_js_chat/15677",
+    },
+    {
+        slug: "tbilisi-js-meetup-4",
+        name: "Tbilisi JS Meetup #4",
+        date: "2024-12-14T13:30:00.000Z",
+        attendees: 200,
+        talks: [],
+        image: tjsMeetup4Image,
+        promo: "Celebrate 1 year together\nlet’s chat, chill and eat huge cake 🎂",
+        tgLink: "https://t.me/tbilisi_js_chat/13437",
+    },
+    {
         slug: "tbilisi-a11y-ux-day",
         name: "Tbilisi A11y & UX Day",
-        date: "2024-11-02T16:30:00.000Z",
-        attendees: 200,
+        date: "2024-11-02T12:30:00.000Z",
+        attendees: 160,
         talks: [
             "greetings",
             "welcome-speech",
@@ -36,30 +63,34 @@ export const events: Event[] = [
             "afterparty",
         ],
         image: allyUxDayImage,
+        tgLink: "https://t.me/tbilisi_js_chat/10441",
     },
     {
         slug: "tbilisi-js-meetup-3",
         name: "Tbilisi JS Meetup #3",
-        date: "2024-10-31T16:30:00.000Z",
+        date: "2024-10-31T17:30:00.000Z",
         attendees: 150,
         talks: [],
-        image: tjs2Image,
+        image: tjsMeetup3Image,
+        tgLink: "https://t.me/tbilisi_js_chat/10306",
     },
     {
         slug: "tbilisi-rust-day",
         name: "Tbilisi Rust Day",
-        date: "2024-09-26T16:30:00.000Z",
-        attendees: 150,
+        date: "2024-09-26T17:30:00.000Z",
+        attendees: 130,
         talks: [],
         image: rustDayImage,
+        tgLink: "https://t.me/tbilisi_js_chat/9490",
     },
     {
-        slug: "tbilisi-js-conf",
+        slug: "tbilisi-js-conf-1",
         name: "Tbilisi JS Conf",
-        date: "2024-06-01T16:30:00.000Z",
-        attendees: 100,
+        date: "2024-06-01T12:30:00.000Z",
+        attendees: 150,
         talks: [],
-        image: rustDayImage,
+        image: tjsConf1Image,
+        tgLink: "https://t.me/tbilisi_js_chat/5632",
     },
     {
         slug: "tbilisi-js-meetup-2",
@@ -67,7 +98,8 @@ export const events: Event[] = [
         date: "2024-03-28T16:30:00.000Z",
         attendees: 90,
         talks: [],
-        image: tjs2Image,
+        image: tjsMeetup2Image,
+        tgLink: "https://t.me/tbilisi_js_chat/3545",
     },
     {
         slug: "tbilisi-js-meetup-1",
@@ -75,6 +107,7 @@ export const events: Event[] = [
         date: "2024-01-25T16:30:00.000Z",
         attendees: 80,
         talks: [],
-        image: tjs2Image,
+        image: tjsMeetup1Image,
+        tgLink: "https://t.me/tbilisi_js_chat/1182",
     },
 ];

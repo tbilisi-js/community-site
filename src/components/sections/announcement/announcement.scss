@@ -5,7 +5,7 @@
 
     @include mixins.media(lg) {
         display: grid;
-        column-gap: 20px;
+        column-gap: 60px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr repeat(4, auto) 1fr;
         grid-template-areas: ". image" "date image" "heading image" "description image" "button image" ". image";
