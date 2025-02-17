@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     max-width: 1280px;
-    padding: 20px 16px;
+    padding: 20px 16px 36px;
     margin-right: auto;
     margin-left: auto;
     gap: 24px;
@@ -16,14 +16,14 @@
     @include mixins.media(md) {
         text-align: left;
         align-items: stretch;
-        padding: 20px 72px;
+        padding: 20px 72px 40px;
     }
 
     @include mixins.media(lg) {
         flex-direction: row;
         align-items: flex-start;
         gap: 72px;
-        padding: 48px 84px;
+        padding: 20px 84px 36px;
     }
 }
 
@@ -59,12 +59,13 @@
     gap: 20px;
 
     @include mixins.media(md) {
-        margin-top: 32px;
-        grid-template-columns: 1fr 1fr auto;
+        margin-top: 12px;
+        // grid-template-columns: 1fr auto;
         width: 100%;
     }
 
     @include mixins.media(lg) {
+        margin-top: 32px;
         width: 556px;
     }
 }
@@ -98,17 +99,24 @@
 .footer-nav-info {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 12px;
     text-transform: uppercase;
+    text-align: center;
+
+    @include mixins.media(md) {
+        text-align: right;
+        align-items: flex-start;
+    }
+
+    @include mixins.media(lg) {
+        align-items: flex-end;
+    }
 }
 
 .footer-social {
     display: flex;
     gap: 8px;
     justify-content: center;
-
-    @include mixins.media(md) {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+    margin-bottom: 20px;
 }
