@@ -17,6 +17,7 @@ export interface EventsProps {
 export const Events: React.FC<EventsProps> = ({ events }) => {
     const [activeSlide, setActiveSlide] = useState(0);
     const touchRef = useRef<number | null>(null);
+    const wheelRef = useRef<{ delta: number; time: number }>({ delta: 0, time: Date.now() });
 
     const touchStartHandler = (e: React.TouchEvent<HTMLElement>) => {
         touchRef.current = e.touches.item(0).clientX;
@@ -36,6 +37,31 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
         touchRef.current = null;
     };
 
+    const wheelHandler = (e: React.WheelEvent<HTMLElement>) => {
+        const delta = e.deltaX;
+        if (
+            (wheelRef.current.delta > 0 && delta < 0) ||
+            (wheelRef.current.delta < 0 && delta > 0) ||
+            wheelRef.current.time + 2000 < Date.now()
+        ) {
+            wheelRef.current = { delta: 0, time: Date.now() };
+        }
+
+        wheelRef.current = { delta: wheelRef.current.delta + delta, time: Date.now() };
+
+        if (delta > wheelRef.current.delta + 1000) {
+            if (activeSlide > 0) {
+                setActiveSlide(activeSlide - 1);
+            }
+            wheelRef.current = { delta: 0, time: Date.now() };
+        } else if (delta < wheelRef.current.delta - 1000) {
+            if (activeSlide + 1 < events.length) {
+                setActiveSlide(activeSlide + 1);
+            }
+            wheelRef.current = { delta: 0, time: Date.now() };
+        }
+    };
+
     return (
         <Block id="events" className="events">
             <h2 className="events-heading">Our Events</h2>
@@ -44,6 +70,7 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
                 style={{ "--translate": `${-74 * activeSlide}px` } as React.CSSProperties}
                 onTouchStart={touchStartHandler}
                 onTouchEnd={touchEndHandler}
+                onWheel={wheelHandler}
             >
                 {events.map((event, index) => (
                     <div
