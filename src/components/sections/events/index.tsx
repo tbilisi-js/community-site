@@ -41,7 +41,7 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
             <h2 className="events-heading">Our Events</h2>
             <div
                 className="events-slider"
-                style={{ marginLeft: -74 * activeSlide }}
+                style={{ "--translate": `${-74 * activeSlide}px` } as React.CSSProperties}
                 onTouchStart={touchStartHandler}
                 onTouchEnd={touchEndHandler}
             >
