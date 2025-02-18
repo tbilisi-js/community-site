@@ -20,6 +20,13 @@
     gap: 12px;
     width: max-content;
     margin-top: 24px;
+    transform: translateX(var(--translate));
+    transition: transform .3s;
+
+    @include mixins.media(md) {
+        font-size: 76px;
+        transform: translateX(calc(var(--translate) - 36px));
+    }
 }
 
 .events-slider-card {
@@ -32,6 +39,8 @@
     padding: 12px;
     color: var(--cl-primary);
     cursor: pointer;
+    transition: width .3s;
+    overflow: hidden;
 
     @include mixins.media(sm) {
         height: 424px;
@@ -88,6 +97,8 @@
 .events-slider-heading {
     font-size: 24px;
     font-weight: 900;
+    width: 616px;
+    max-width: calc(100vw - 68px);
 
     @include mixins.media(md) {
         position: absolute;
@@ -99,6 +110,7 @@
     .events-slider-card:not(.events-slider-card-active) & {
         font-size: 18px;
         line-height: 32px;
+        width: auto;
     }
 }
 
@@ -110,7 +122,7 @@
     }
 
     .events-slider-card-active & {
-        max-width: calc(100% - 60px);
+        width: inherit;
         text-wrap: auto;
     }
 
