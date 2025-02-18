@@ -18,7 +18,8 @@ export type Event = {
     image: StaticImageData;
     promo?: string;
     registration?: string;
-    tgLink: string;
+    telegram: string;
+    youtube: string;
 };
 
 export const events: Event[] = [
@@ -31,7 +32,8 @@ export const events: Event[] = [
         image: tjsMeetup5Image,
         promo: "Exciting program and lots of fun activities\njoin us for networking, discussions, and insightful talks",
         registration: "https://forms.gle/xBFjyup82pZoMnpQ9",
-        tgLink: "https://t.me/tbilisi_js_chat/15677",
+        telegram: "https://t.me/tbilisi_js_chat/15677",
+        youtube: "https://www.youtube.com/embed/m8H-cObBEZY?si=HQrsYqZ-7Oaslxi_",
     },
     {
         slug: "tbilisi-js-meetup-4",
@@ -41,7 +43,8 @@ export const events: Event[] = [
         talks: [],
         image: tjsMeetup4Image,
         promo: "Celebrate 1 year together\nlet’s chat, chill and eat huge cake 🎂",
-        tgLink: "https://t.me/tbilisi_js_chat/13437",
+        telegram: "https://t.me/tbilisi_js_chat/13437",
+        youtube: "",
     },
     {
         slug: "tbilisi-a11y-ux-day",
@@ -63,7 +66,8 @@ export const events: Event[] = [
             "afterparty",
         ],
         image: allyUxDayImage,
-        tgLink: "https://t.me/tbilisi_js_chat/10441",
+        telegram: "https://t.me/tbilisi_js_chat/10441",
+        youtube: "",
     },
     {
         slug: "tbilisi-js-meetup-3",
@@ -72,7 +76,8 @@ export const events: Event[] = [
         attendees: 150,
         talks: [],
         image: tjsMeetup3Image,
-        tgLink: "https://t.me/tbilisi_js_chat/10306",
+        telegram: "https://t.me/tbilisi_js_chat/10306",
+        youtube: "",
     },
     {
         slug: "tbilisi-rust-day",
@@ -81,7 +86,8 @@ export const events: Event[] = [
         attendees: 130,
         talks: [],
         image: rustDayImage,
-        tgLink: "https://t.me/tbilisi_js_chat/9490",
+        telegram: "https://t.me/tbilisi_js_chat/9490",
+        youtube: "",
     },
     {
         slug: "tbilisi-js-conf-1",
@@ -90,7 +96,8 @@ export const events: Event[] = [
         attendees: 150,
         talks: [],
         image: tjsConf1Image,
-        tgLink: "https://t.me/tbilisi_js_chat/5632",
+        telegram: "https://t.me/tbilisi_js_chat/5632",
+        youtube: "",
     },
     {
         slug: "tbilisi-js-meetup-2",
@@ -99,7 +106,8 @@ export const events: Event[] = [
         attendees: 90,
         talks: [],
         image: tjsMeetup2Image,
-        tgLink: "https://t.me/tbilisi_js_chat/3545",
+        telegram: "https://t.me/tbilisi_js_chat/3545",
+        youtube: "",
     },
     {
         slug: "tbilisi-js-meetup-1",
@@ -108,6 +116,7 @@ export const events: Event[] = [
         attendees: 80,
         talks: [],
         image: tjsMeetup1Image,
-        tgLink: "https://t.me/tbilisi_js_chat/1182",
+        telegram: "https://t.me/tbilisi_js_chat/1182",
+        youtube: "",
     },
 ];

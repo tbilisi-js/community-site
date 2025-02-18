@@ -1,7 +1,9 @@
 import { type Metadata } from "next/types";
 
 import { HomeIntro } from "../components/sections/home-intro";
+import { SwapWrapper } from "../components/elements/swap-wrapper";
 import { Announcement } from "../components/sections/announcement";
+import { YoutubePlayer } from "../components/sections/youtube-player";
 import { AboutCommunity } from "../components/sections/about-community";
 import { Events } from "../components/sections/events";
 import { CallForSpeakers } from "../components/sections/call-for-speakers";
@@ -16,11 +18,13 @@ const HomePage = () => (
         <StarsWrapper density={5}>
             <HomeIntro />
         </StarsWrapper>
-        {new Date(events[0].date).getTime() > new Date().getTime() && (
-            <StarsWrapper>
-                <Announcement event={events[0]} />
-            </StarsWrapper>
-        )}
+        <StarsWrapper>
+            <SwapWrapper
+                before={<Announcement event={events[0]} />}
+                after={<YoutubePlayer src={events[0].youtube} />}
+                at={new Date(events[0].date).getTime() - 600000}
+            />
+        </StarsWrapper>
         <StarsWrapper>
             <AboutCommunity />
         </StarsWrapper>
