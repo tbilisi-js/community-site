@@ -62,7 +62,7 @@ export const Footer = () => (
                                 />
                             </svg>
                         </IconButton>
-                        <IconButton href="https://t.me/tbilisi_js_chat" target="_blank" rel="noopener noreferrer">
+                        <IconButton href="https://www.youtube.com/@TbilisiJS" target="_blank" rel="noopener noreferrer">
                             <svg
                                 width="32"
                                 height="33"
@@ -77,7 +77,11 @@ export const Footer = () => (
                                 />
                             </svg>
                         </IconButton>
-                        <IconButton href="https://t.me/tbilisi_js_chat" target="_blank" rel="noopener noreferrer">
+                        <IconButton
+                            href="https://www.instagram.com/tbilisijs/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <svg
                                 width="32"
                                 height="33"
@@ -100,7 +104,7 @@ export const Footer = () => (
                                 />
                             </svg>
                         </IconButton>
-                        <IconButton href="https://t.me/tbilisi_js_chat" target="_blank" rel="noopener noreferrer">
+                        <IconButton href="https://github.com/tbilisi-js/" target="_blank" rel="noopener noreferrer">
                             <svg
                                 width="32"
                                 height="33"
