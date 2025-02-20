@@ -11,6 +11,7 @@
 
     @include mixins.media(md) {
         font-size: 76px;
+        text-align: center;
     }
 }
 
@@ -18,7 +19,6 @@
     display: grid;
     align-items: center;
     gap: 32px;
-    max-width: 860px;
     margin: 32px auto 0;
 
     @include mixins.media(sm) {
@@ -26,7 +26,8 @@
     }
 
     @include mixins.media(lg) {
-        gap: 60px;
+        gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -54,7 +55,7 @@
 
 .organisers-volkova {
     &::after {
-        width: 302px;
+        width: 272px;
         height: 180px;
         background-image: url('./img/mask_volkova.png');
     }
@@ -68,13 +69,34 @@
     }
 }
 
+.organisers-savelyev {
+    &::after {
+        width: 202px;
+        height: 126px;
+        background-image: url('./img/mask_savelyev.png');
+    }
+}
+
+.organisers-palamarchuk {
+    @include mixins.media(lg) {
+        grid-column-start: 2;
+    }
+
+    &::after {
+        width: 206px;
+        height: 126px;
+        background-image: url('./img/mask_palamarchuk.png');
+    }
+}
+
 .organisers-card-img {
     display: block;
     width: 100%;
     object-fit: cover;
     aspect-ratio: 1 / 1;
     object-position: top;
-    min-height: 360px;
+    height: 420px;
+    min-height: 420px;
     border-radius: 22px;
 
     @include mixins.media(md) {
