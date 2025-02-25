@@ -1,0 +1,49 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.talk-intro {
+    text-align: center;
+}
+
+.talk-intro-title {
+    font-size: 60px;
+    font-weight: 400;
+    margin: 32px auto 0;
+
+    @include mixins.media(md) {
+        font-size: 72px;
+    }
+}
+
+.talk-intro-date {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 12px;
+
+    @include mixins.media(md) {
+        font-size: 24px;
+    }
+}
+
+.talk-intro-speaker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 40px auto 0;
+
+    @include mixins.media(md) {
+        font-size: 28px;
+    }
+}
+
+.talk-intro-speaker-avatar {
+    background-color: var(--cl-text);
+    border: 2px solid var(--cl-secondary);
+    object-fit: cover;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-right: 16px;
+}

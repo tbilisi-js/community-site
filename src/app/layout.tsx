@@ -17,6 +17,11 @@ const fontspring = localFont({
 export const metadata: Metadata = {
     title: "Tbilisi JS",
     description: "Tbilisi JS Community Website",
+    openGraph: {
+        type: "website",
+        images: "/preview.jpg",
+        locale: "en_US",
+    },
 };
 
 export const viewport: Viewport = {
