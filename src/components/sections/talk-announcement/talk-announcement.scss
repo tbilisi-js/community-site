@@ -1,0 +1,56 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.talk-announcement-body {
+    position: relative;
+
+    @include mixins.media(lg) {
+        display: grid;
+        column-gap: 60px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: left;
+    }
+}
+
+.talk-announcement-description {
+    font-size: 16px;
+
+    @include mixins.media(lg) {
+        font-size: 18px;
+    }
+}
+
+.talk-announcement-visual {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+
+    @include mixins.media(null,lg) {
+        margin: 0 auto;
+    }
+}
+
+.talk-announcement-image {
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background-color: var(--cl-neutral);
+
+    @include mixins.media(lg) {
+        margin-top: 0;
+    }
+}
+
+.talk-announcement-timer-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+.talk-announcement-timer-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
