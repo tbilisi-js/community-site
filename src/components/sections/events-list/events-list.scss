@@ -1,0 +1,91 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.events-list-cards {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    gap: 32px;
+
+    @include mixins.media(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.media(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.events-list-card {
+    margin: 0;
+}
+
+.events-list-link {
+    position: relative;
+    display: block;
+    color: var(--cl-text);
+    text-decoration: none;
+    transition: color .3s;
+
+    &:hover {
+        color: var(--cl-primary);
+    }
+}
+
+.events-list-title {
+    font-size: 16px;
+    margin: 8px 16px 0px;
+
+    @include mixins.media(md) {
+        font-size: 20px;
+    }
+}
+
+.events-list-date {
+    padding: 8px 0 8px 16px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background-color: var(--cl-background);
+    height: 42px;
+    transition: width .3s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 18px;
+        height: 57px;
+        background-image: url('./img/date-mask-left.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -29px;
+        width: 30px;
+        height: 43px;
+        background-image: url('./img/date-mask-right.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.events-list-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.events-list-visual {
+    transition: transform .3s;
+
+    .events-list-link:hover & {
+        transform: scale(1.03);
+    }
+}
