@@ -4,6 +4,7 @@ import { EventsList } from "@src/components/sections/events-list";
 import { CallForSpeakers } from "../../components/sections/call-for-speakers";
 import { JoinUs } from "../../components/sections/join-us";
 import { CatsPattern } from "../../components/sections/cats-pattern";
+import { CommunityGallery } from "../../components/sections/community-gallery";
 
 const EventsPage = () => (
     <>
@@ -15,6 +16,9 @@ const EventsPage = () => (
         </StarsWrapper>
         <StarsWrapper>
             <CallForSpeakers />
+        </StarsWrapper>
+        <StarsWrapper>
+            <CommunityGallery />
         </StarsWrapper>
         <StarsWrapper>
             <JoinUs />
