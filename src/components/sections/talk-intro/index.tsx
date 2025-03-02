@@ -1,4 +1,4 @@
-import { type Speaker } from "@src/core/mock/speakers";
+import { type Speaker } from "@srccore/mock/speakers";
 import { Block } from "@src/components/ui/block";
 
 import "./talk-intro.scss";

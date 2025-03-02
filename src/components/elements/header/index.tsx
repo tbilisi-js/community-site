@@ -22,8 +22,8 @@ export const Header = () => {
                         <NavLink href="/events" className="header-nav-link">
                             Events
                         </NavLink>
-                        <NavLink href="/speakers" className="header-nav-link">
-                            Speakers
+                        <NavLink href="/people" className="header-nav-link">
+                            People
                         </NavLink>
                         <NavLink href="/partners" className="header-nav-link">
                             Partners

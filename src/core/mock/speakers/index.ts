@@ -26,16 +26,16 @@ export const speakers: Speaker[] = [
         name: "Andrey Evdokov",
     },
     {
-        slug: "ilona-sarkisova",
-        name: "Ilona Sarkisova",
+        slug: "elona-sarkisova",
+        name: "Elona Sarkisova",
     },
     {
         slug: "philip-baranovsky",
         name: "Philip Baranovsky",
     },
     {
-        slug: "alexandr-savelyev",
-        name: "Alexandr Savelyev",
+        slug: "alex-savelyev",
+        name: "Alex Savelyev",
         img: alexSavelyev,
     },
 ];
