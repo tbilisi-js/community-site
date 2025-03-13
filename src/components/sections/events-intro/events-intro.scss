@@ -1,0 +1,23 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.events-intro {
+    text-align: center;
+}
+
+.events-intro-heading {
+    font-size: 40px;
+
+    @include mixins.media(md) {
+        font-size: 56px;
+    }
+}
+
+.events-intro-subheading {
+    font-size: 20px;
+    max-width: 720px;
+    margin: 32px auto 0;
+
+    @include mixins.media(md) {
+        font-size: 28px;
+    }
+}
