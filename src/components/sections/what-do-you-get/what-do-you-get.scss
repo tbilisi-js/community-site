@@ -13,8 +13,8 @@
 
 .what-do-you-get-items {
     display: grid;
-    gap: 24px 40px;
-    margin-top: 32px;
+    gap: 40px;
+    margin-top: 60px;
     list-style: none;
     padding: 0;
 
@@ -24,18 +24,52 @@
 }
 
 .what-do-you-get-item {
-    padding: 0;
+    padding: 32px 40px;
     margin: 0;
+    border-radius: 12px;
+    background-color: rgba(#12365a, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+        border-color: var(--cl-primary);
+    }
+
+    &:hover .what-do-you-get-item-icon {
+        background-color: var(--cl-primary);
+    }
+
+    &:hover .what-do-you-get-item-title::before {
+        color: var(--cl-primary);
+    }
+}
+
+.what-do-you-get-item-icon {
+    position: absolute;
+    left: -12px;
+    top: -16px;
+    display: block;
+    background-color: var(--cl-secondary);
+    border-radius: 8px;
+    padding: 6px;
+    color: var(--cl-background);
+    transition: background-color 0.3s ease;
 }
 
 .what-do-you-get-item-title {
     font-size: 20px;
     font-weight: 700;
 
-    &::before {
+    @include mixins.media(md) {
         font-size: 24px;
+    }
+
+    &::before {
         margin-right: 12px;
         margin-top: -20px;
+        color: var(--cl-secondary);
+        transition: color 0.3s ease;
     }
 }
 
