@@ -1,0 +1,43 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.how-to-help-title {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include mixins.media(md) {
+        font-size: 48px;
+    }
+}
+
+.how-to-help-list {
+    display: grid;
+    gap: 48px 24px;
+    list-style: none;
+    padding: 0;
+    margin-top: 56px;
+
+    @include mixins.media(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.media(xl) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.how-to-help-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.how-to-help-item-title {
+    margin-top: 20px;
+}
+
+.how-to-help-item-description {
+    margin-top: 12px;
+}
