@@ -7,6 +7,7 @@ import { BecomePartnerIntro } from "@src/components/sections/become-partner-intr
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { Events } from "@src/components/sections/events";
 import { HowToHelp } from "@src/components/sections/how-to-help";
+import { WhatDoYouGet } from "@src/components/sections/what-do-you-get";
 import { events } from "@src/core/mock/events";
 
 const BecomeAPartnerPage = () => (
@@ -25,6 +26,9 @@ const BecomeAPartnerPage = () => (
         </StarsWrapper>
         <StarsWrapper>
             <Events events={events} />
+        </StarsWrapper>
+        <StarsWrapper>
+            <WhatDoYouGet />
         </StarsWrapper>
         <StarsWrapper>
             <CatsPattern />

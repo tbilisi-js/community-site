@@ -1,0 +1,61 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.what-do-you-get-title {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include mixins.media(md) {
+        font-size: 48px;
+    }
+}
+
+.what-do-you-get-items {
+    display: grid;
+    gap: 24px 40px;
+    margin-top: 32px;
+    list-style: none;
+    padding: 0;
+
+    @include mixins.media(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.what-do-you-get-item {
+    padding: 0;
+    margin: 0;
+}
+
+.what-do-you-get-item-title {
+    font-size: 20px;
+    font-weight: 700;
+
+    &::before {
+        font-size: 24px;
+        margin-right: 12px;
+        margin-top: -20px;
+    }
+}
+
+.what-do-you-get-item:nth-child(1) .what-do-you-get-item-title::before {
+    content: "1.";
+}
+
+.what-do-you-get-item:nth-child(2) .what-do-you-get-item-title::before {
+    content: "2.";
+}
+
+.what-do-you-get-item:nth-child(3) .what-do-you-get-item-title::before {
+    content: "3.";
+}
+
+.what-do-you-get-item:nth-child(4) .what-do-you-get-item-title::before {
+    content: "4.";
+}
+
+.what-do-you-get-item-description {
+    margin-top: 12px;
+    line-height: 1.5;
+}
