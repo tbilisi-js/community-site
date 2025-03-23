@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cn from "classnames";
+import { usePathname } from "next/navigation";
 
 import { Button } from "@src/components/ui/button";
 import { NavLink } from "@src/components/ui/nav-link";
@@ -10,6 +11,11 @@ import "./header.scss";
 
 export const Header = () => {
     const [opened, setOpened] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setOpened(false);
+    }, [pathname]);
 
     return (
         <header className={cn("header", opened && "_opened")}>
