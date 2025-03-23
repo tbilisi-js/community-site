@@ -1,0 +1,113 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.people-list-cards {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    @include mixins.media(xs) {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    @include mixins.media(sm) {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    @include mixins.media(md) {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    @include mixins.media(lg) {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    @include mixins.media(xl) {
+        grid-template-columns: repeat(5, 20%);
+    }
+}
+
+.people-list-card {
+    margin: 0;
+    padding: 16px 10px;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        transition: background .3s;
+        pointer-events: none;
+    }
+
+    &:hover::before {
+        background: #00102040;
+        backdrop-filter: blur(2px);
+    }
+}
+
+.people-list-link {
+    position: relative;
+    display: block;
+    color: var(--cl-text);
+    text-decoration: none;
+
+    .people-list-card:hover & {
+        z-index: 2;
+    }
+}
+
+.people-list-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cl-background);
+    padding: 4px 16px 2px 2px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8px 28px 0 0;
+    word-break: break-word;
+    border-top-right-radius: 16px;
+
+    @include mixins.media(md) {
+        font-size: 24px;
+    }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 20px;
+        background-image: url('./img/name-mask-corner.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &::before {
+        top: -19px;
+        left: -1px;
+    }
+
+    &::after {
+        bottom: -1px;
+        right: -23px;
+    }
+}
+
+.people-list-visual {
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--cl-text);
+    border: 1px solid var(--cl-background);
+}
+
+.people-list-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+}

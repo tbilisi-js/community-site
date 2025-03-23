@@ -14,8 +14,8 @@ export const Footer = () => (
                     <NavLink href="/events" className="footer-nav-link" size="small" weight="light">
                         Events
                     </NavLink>
-                    <NavLink href="/speakers" className="footer-nav-link" size="small" weight="light">
-                        Speakers
+                    <NavLink href="/people" className="footer-nav-link" size="small" weight="light">
+                        People
                     </NavLink>
                     <NavLink href="/partners" className="footer-nav-link" size="small" weight="light">
                         Partners

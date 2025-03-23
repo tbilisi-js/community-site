@@ -1,20 +1,20 @@
 import { type Metadata } from "next/types";
 
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
-import { EventsIntro } from "@src/components/sections/events-intro";
-import { EventsList } from "@src/components/sections/events-list";
+import { PeopleIntro } from "@src/components/sections/people-intro";
+import { PeopleList } from "@src/components/sections/people-list";
 import { CallForSpeakers } from "@src/components/sections/call-for-speakers";
 import { JoinUs } from "@src/components/sections/join-us";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
 
-const EventsPage = () => (
+const PeoplePage = () => (
     <>
         <StarsWrapper density={3}>
-            <EventsIntro />
+            <PeopleIntro />
         </StarsWrapper>
         <StarsWrapper>
-            <EventsList />
+            <PeopleList />
         </StarsWrapper>
         <StarsWrapper>
             <CallForSpeakers />
@@ -32,7 +32,7 @@ const EventsPage = () => (
 );
 
 export const metadata: Metadata = {
-    title: "Tbilisi JS Events",
+    title: "Tbilisi JS People",
     description:
         "Bringing together experts and enthusiasts to change the future of the web - conferences about technologies, trends and people",
     openGraph: {
@@ -42,4 +42,4 @@ export const metadata: Metadata = {
     },
 };
 
-export default EventsPage;
+export default PeoplePage;
