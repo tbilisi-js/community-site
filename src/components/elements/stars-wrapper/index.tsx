@@ -49,10 +49,13 @@ export const StarsWrapper: React.FC<StarsWrapperProps> = ({ children, density = 
                 {stars.map((star) => (
                     <span
                         key={star.key}
-                        style={{
-                            left: star.x,
-                            top: star.y,
-                        }}
+                        style={
+                            {
+                                left: star.x,
+                                top: star.y,
+                                "--random": star.random,
+                            } as React.CSSProperties
+                        }
                         className={`star star-${star.type}`}
                     />
                 ))}
