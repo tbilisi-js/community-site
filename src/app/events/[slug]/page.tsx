@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
 import { events } from "@src/core/mock/events";
-import { EventIntro } from "@src/components/sections/event-intro";
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Tapes } from "@src/components/sections/tapes";
 
 type Params = Promise<{ slug: string }>;
 
@@ -14,8 +14,9 @@ const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
 
     return (
         <>
-            <StarsWrapper density={3}>
-                <EventIntro title={event.name} date={event.date} />
+            <p>{event.name}</p>
+            <StarsWrapper>
+                <Tapes date={event.date} />
             </StarsWrapper>
         </>
     );

@@ -1,0 +1,71 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.tapes {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 27vw;
+    color: var(--cl-background);
+    padding-top: 8vw;
+    opacity: 0;
+    transition: opacity .3s;
+
+    @include mixins.media(md) {
+        font-size: 24px;
+        height: 20vw;
+    }
+}
+
+.tapes._ready {
+    opacity: 1;
+}
+
+.tapes-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: currentColor;
+    vertical-align: middle;
+}
+
+.tape-left {
+    width: 108vw;
+    margin-left: -4vw;
+    transform: rotate(-8deg);
+    background-color: #FC851E;
+    padding: 8px 0;
+    text-align: right;
+    text-wrap: nowrap;
+}
+
+.tape-right {
+    width: 108vw;
+    margin-left: -4vw;
+    transform: rotate(8deg);
+    background-color: #81E2FF;
+    padding: 8px 0;
+    margin-top: -48px;
+    text-align: left;
+    text-wrap: nowrap;
+}
+
+.tape-left-content {
+    display: block;
+    transform: translateX(-108vw);
+    animation: move-tape 15s linear infinite alternate-reverse;
+}
+
+.tape-right-content {
+    display: block;
+    transform: translateX(-108vw);
+    animation: move-tape 15s linear infinite alternate;
+}
+
+@keyframes move-tape {
+    0%, 10% {
+        transform: translateX(-108vw);
+    }
+    90%, 100% {
+        transform: translateX(0);
+    }
+}
