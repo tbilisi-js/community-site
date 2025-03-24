@@ -1,0 +1,66 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.event-intro {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.event-intro-title {
+    font-size: 76px;
+
+    @include mixins.media(md) {
+        font-size: 96px;
+    }
+}
+
+.event-intro-timer {
+    justify-content: center;
+    margin-top: 36px;
+
+    @include mixins.media(md) {
+        margin-top: 80px;
+    }
+}
+
+.event-intro-date {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 36px;
+
+    @include mixins.media(md) {
+        font-size: 60px;
+        margin-top: 80px;
+    }
+}
+
+.event-intro-arrow {
+    margin: 36px auto 0;
+    animation: move 2s ease infinite;
+
+    @include mixins.media(md) {
+        margin: 80px auto 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        opacity: .6;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: .6;
+    }
+    50% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(0);
+        opacity: .6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: .6;
+    }
+}
