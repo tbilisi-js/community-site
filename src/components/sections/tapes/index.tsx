@@ -1,49 +1,90 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { formatDate } from "@src/core/utils/formatDate";
+import cn from "classnames";
 
 import "./tapes.scss";
-import cn from "classnames";
 
 export interface TapesProps {
     date: string;
 }
 
+const WINDOW_WIDTH_MULTIPLIER = 1.08;
+const REPEAT_MULTIPLIER = 2;
+
+interface TapeCounts {
+    left: number;
+    right: number;
+    ready: boolean;
+}
+
+const TapeContent: React.FC<{ date: string; isLeft?: boolean }> = ({ date, isLeft }) => {
+    const content = isLeft ? (
+        <>
+            {" "}
+            <span className="tapes-dot" /> {formatDate(date)} <span className="tapes-dot" /> Online{" "}
+            <span className="tapes-dot" /> Tbilisi, Georgia
+        </>
+    ) : (
+        <>
+            {formatDate(date)} <span className="tapes-dot" /> Online <span className="tapes-dot" /> Tbilisi, Georgia{" "}
+            <span className="tapes-dot" />{" "}
+        </>
+    );
+
+    return <>{content}</>;
+};
+
 export const Tapes: React.FC<TapesProps> = ({ date }) => {
-    const [counts, setCounts] = useState({ left: 0, right: 0, ready: false });
+    const [counts, setCounts] = useState<TapeCounts>({ left: 0, right: 0, ready: false });
     const leftSectionRef = useRef<HTMLSpanElement>(null);
     const rightSectionRef = useRef<HTMLSpanElement>(null);
-    useEffect(() => {
+
+    const calculateCounts = useCallback(() => {
         const rightSection = rightSectionRef.current;
         const leftSection = leftSectionRef.current;
-        const calculate = () => {
-            if (rightSection && leftSection) {
-                setCounts((prev) => ({ ...prev, ready: true }));
-                const rightSectionCount = Math.ceil((window.innerWidth * 1.08) / rightSection.offsetWidth);
-                const leftSectionCount = Math.ceil((window.innerWidth * 1.08) / leftSection.offsetWidth);
-                setCounts({ right: rightSectionCount * 2, left: leftSectionCount * 2, ready: true });
-            }
-        };
-        calculate();
-        window.addEventListener("resize", calculate);
-        return () => window.removeEventListener("resize", calculate);
+
+        if (!rightSection || !leftSection) return;
+
+        const windowWidth = window.innerWidth;
+        const rightSectionCount = Math.ceil((windowWidth * WINDOW_WIDTH_MULTIPLIER) / rightSection.offsetWidth);
+        const leftSectionCount = Math.ceil((windowWidth * WINDOW_WIDTH_MULTIPLIER) / leftSection.offsetWidth);
+
+        setCounts({
+            right: rightSectionCount * REPEAT_MULTIPLIER,
+            left: leftSectionCount * REPEAT_MULTIPLIER,
+            ready: true,
+        });
     }, []);
+
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+
+        const handleResize = () => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(calculateCounts, 150);
+        };
+
+        calculateCounts();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            clearTimeout(timeoutId);
+        };
+    }, [calculateCounts]);
 
     return (
         <div className={cn("tapes", counts.ready && "_ready")}>
             <div className="tape-left">
                 <span className="tape-left-content">
                     <span ref={leftSectionRef}>
-                        {" "}
-                        <span className="tapes-dot" /> {formatDate(date)} <span className="tapes-dot" /> Online{" "}
-                        <span className="tapes-dot" /> Tbilisi, Georgia
+                        <TapeContent date={date} isLeft />
                     </span>
-                    {Array.from(new Array(counts.left)).map((_, index) => (
-                        <span key={index}>
-                            {" "}
-                            <span className="tapes-dot" /> {formatDate(date)} <span className="tapes-dot" /> Online{" "}
-                            <span className="tapes-dot" /> Tbilisi, Georgia
+                    {Array.from({ length: counts.left }).map((_, index) => (
+                        <span key={`left-${index}`}>
+                            <TapeContent date={date} isLeft />
                         </span>
                     ))}
                 </span>
@@ -51,13 +92,11 @@ export const Tapes: React.FC<TapesProps> = ({ date }) => {
             <div className="tape-right">
                 <span className="tape-right-content">
                     <span ref={rightSectionRef}>
-                        {formatDate(date)} <span className="tapes-dot" /> Online <span className="tapes-dot" /> Tbilisi,
-                        Georgia <span className="tapes-dot" />{" "}
+                        <TapeContent date={date} />
                     </span>
-                    {Array.from(new Array(counts.right)).map((_, index) => (
-                        <span key={index}>
-                            {formatDate(date)} <span className="tapes-dot" /> Online <span className="tapes-dot" />{" "}
-                            Tbilisi, Georgia <span className="tapes-dot" />{" "}
+                    {Array.from({ length: counts.right }).map((_, index) => (
+                        <span key={`right-${index}`}>
+                            <TapeContent date={date} />
                         </span>
                     ))}
                 </span>
