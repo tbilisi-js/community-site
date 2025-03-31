@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { events } from "@src/core/mock/events";
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
 import { Tapes } from "@src/components/sections/tapes";
-import { EventIntro } from "@srccomponents/sections/event-intro";
+import { EventIntro } from "@src/components/sections/event-intro";
 
 type Params = Promise<{ slug: string }>;
 
