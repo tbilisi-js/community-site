@@ -1,9 +1,10 @@
+import Image from "next/image";
+
 import { type Speaker } from "@src/core/mock/speakers";
+import { formatDate } from "@src/core/utils/formatDate";
 import { Block } from "@src/components/ui/block";
 
 import "./talk-intro.scss";
-import { formatDate } from "../../../core/utils/formatDate";
-import Image from "next/image";
 
 export interface TalkIntroProps {
     title: string;
@@ -36,13 +37,25 @@ export const TalkIntro: React.FC<TalkIntroProps> = ({ title, speaker, date }) =>
                                 className="talk-intro-speaker-avatar"
                             />
                         ) : (
-                            <img src="/logo-rect.png" width={40} height={40} className="talk-intro-speaker-avatar" />
+                            <img
+                                src="/logo-rect.png"
+                                alt="TJS logo"
+                                width={40}
+                                height={40}
+                                className="talk-intro-speaker-avatar"
+                            />
                         )}
                         <p>{speaker.name}</p>
                     </>
                 ) : (
                     <>
-                        <img src="/logo-rect.png" width={40} height={40} className="talk-intro-speaker-avatar" />
+                        <img
+                            src="/logo-rect.png"
+                            alt="TJS logo"
+                            width={40}
+                            height={40}
+                            className="talk-intro-speaker-avatar"
+                        />
                         <p>Tbilisi JS</p>
                     </>
                 )}
