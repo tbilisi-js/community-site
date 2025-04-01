@@ -116,8 +116,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
 }
 
 .community-gallery-modal-img {
@@ -130,6 +130,7 @@
     width: auto;
     height: auto;
     object-fit: contain;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .community-gallery-modal-alt {
@@ -143,6 +144,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .community-gallery-modal-close,
