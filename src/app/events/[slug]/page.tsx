@@ -10,7 +10,7 @@ import { speakers, type Speaker } from "@src/core/mock/speakers";
 
 type Params = Promise<{ slug: string }>;
 
-const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
+const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
     const { slug } = await params;
     const event = events.find((eventItem) => eventItem.slug === slug);
 
@@ -20,10 +20,8 @@ const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
         const talk = talks.find((talk) => talk.slug === cur);
         const speaker = speakers.find((speaker) => speaker.slug === talk?.speaker);
 
-        if (talk && speaker) {
+        if (talk) {
             acc.push({ ...talk, speaker });
-        } else if (talk) {
-            acc.push({ ...talk, speaker: undefined });
         }
 
         return acc;
@@ -57,4 +55,4 @@ export const generateMetadata = async ({ params }: { params: Params }) => {
     };
 };
 
-export default ConferencePage;
+export default EventPage;

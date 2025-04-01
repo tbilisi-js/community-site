@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { formatDate } from "@src/core/utils/formatDate";
 import cn from "classnames";
+
+import { TapeContent } from "./tapes-content";
 
 import "./tapes.scss";
 
@@ -10,31 +11,14 @@ export interface TapesProps {
     date: string;
 }
 
-const WINDOW_WIDTH_MULTIPLIER = 1.08;
-const REPEAT_MULTIPLIER = 2;
-
-interface TapeCounts {
+export interface TapeCounts {
     left: number;
     right: number;
     ready: boolean;
 }
 
-const TapeContent: React.FC<{ date: string; isLeft?: boolean }> = ({ date, isLeft }) => {
-    const content = isLeft ? (
-        <>
-            {" "}
-            <span className="tapes-dot" /> {formatDate(date)} <span className="tapes-dot" /> Online{" "}
-            <span className="tapes-dot" /> Tbilisi, Georgia
-        </>
-    ) : (
-        <>
-            {formatDate(date)} <span className="tapes-dot" /> Online <span className="tapes-dot" /> Tbilisi, Georgia{" "}
-            <span className="tapes-dot" />{" "}
-        </>
-    );
-
-    return <>{content}</>;
-};
+const WINDOW_WIDTH_MULTIPLIER = 1.08;
+const REPEAT_MULTIPLIER = 2;
 
 export const Tapes: React.FC<TapesProps> = ({ date }) => {
     const [counts, setCounts] = useState<TapeCounts>({ left: 0, right: 0, ready: false });
