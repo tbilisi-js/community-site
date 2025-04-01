@@ -1,32 +1,38 @@
-export type Star = { x: number; y: number; key: string; type: number | string };
+export type Star = { x: number; y: number; key: string; type: number | string; random: number };
 
 const variants = {
     closest: {
-        0: 0.7,
-        1: 0.2,
+        0: 0.6,
+        1: 0.15,
         2: 0.1,
+        11: 0.1,
+        12: 0.05,
     },
     average: {
         0: 0.1,
-        1: 0.2,
-        2: 0.3,
-        3: 0.2,
-        4: 0.19,
+        1: 0.15,
+        2: 0.25,
+        3: 0.15,
+        4: 0.14,
         7: 0.005,
         9: 0.005,
+        11: 0.1,
+        12: 0.1,
     },
     farthest: {
         0: 0.2,
-        1: 0.2,
-        2: 0.18,
+        1: 0.1,
+        2: 0.13,
         3: 0.1,
         4: 0.1,
         5: 0.1,
-        6: 0.1,
+        6: 0.05,
         7: 0.005,
         8: 0.005,
         9: 0.005,
         10: 0.005,
+        11: 0.1,
+        12: 0.1,
     },
 };
 
@@ -84,6 +90,7 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         y: coordY,
                         key: `${x}_${y}_${z}`,
                         type: getVariant("farthest", Math.random()),
+                        random: Math.ceil(Math.random() * 100),
                     });
                 } else if (
                     !containerElements.some((elem) => {
@@ -100,6 +107,7 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         y: coordY,
                         key: `${x}_${y}_${z}`,
                         type: getVariant("average", Math.random()),
+                        random: Math.ceil(Math.random() * 100),
                     });
                 } else {
                     newStars.push({
@@ -107,6 +115,7 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         y: coordY,
                         key: `${x}_${y}_${z}`,
                         type: getVariant("closest", Math.random()),
+                        random: Math.ceil(Math.random() * 100),
                     });
                 }
             }
