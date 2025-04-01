@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 import { Block } from "@src/components/ui/block";
+import { IconButton } from "@srccomponents/ui/icon-button";
 
 import gallery1 from "./img/gallery-1.jpg";
 import gallery2 from "./img/gallery-2.jpg";
@@ -100,7 +101,7 @@ export const CommunityGallery = () => {
                     <div className="community-gallery-modal-backdrop" onClick={handleClose} />
                     <Image src={images[store].img} alt={images[store].alt} className="community-gallery-modal-img" />
                     <p className="community-gallery-modal-alt">{images[store].alt}</p>
-                    <button className="community-gallery-modal-close" onClick={handleClose}>
+                    <IconButton variant="light" className="community-gallery-modal-close" onClick={handleClose}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M18 6L6 18M6 6L18 18"
@@ -110,8 +111,8 @@ export const CommunityGallery = () => {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                    </button>
-                    <button className="community-gallery-modal-prev" onClick={handlePrev}>
+                    </IconButton>
+                    <IconButton variant="light" className="community-gallery-modal-prev" onClick={handlePrev}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15 18L9 12L15 6"
@@ -121,8 +122,8 @@ export const CommunityGallery = () => {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                    </button>
-                    <button className="community-gallery-modal-next" onClick={handleNext}>
+                    </IconButton>
+                    <IconButton variant="light" className="community-gallery-modal-next" onClick={handleNext}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9 18L15 12L9 6"
@@ -132,7 +133,7 @@ export const CommunityGallery = () => {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                    </button>
+                    </IconButton>
                 </div>
             )}
         </Block>

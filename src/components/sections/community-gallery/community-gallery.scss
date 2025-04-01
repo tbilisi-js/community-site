@@ -149,18 +149,8 @@
 .community-gallery-modal-prev,
 .community-gallery-modal-next {
     position: absolute;
-    background-color: var(--cl-text);
-    color: var(--cl-background);
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
     z-index: 100;
     opacity: 0.5;
-
-    &:hover {
-        opacity: 1;
-    }
 }
 
 .community-gallery-modal-close {
