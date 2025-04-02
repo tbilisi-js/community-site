@@ -23,7 +23,7 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
     return (
         <>
             <StarsWrapper>
-                <TalkIntro title={talk.name} date={talk.date} speaker={speaker} />
+                <TalkIntro title={talk.name} date={talk.start} speaker={speaker} />
             </StarsWrapper>
             {talk.youtube && (
                 <StarsWrapper>
@@ -33,7 +33,7 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
             <StarsWrapper>
                 <TalkAnnouncement
                     description={talk.description}
-                    date={talk.date}
+                    date={talk.start}
                     img={speaker?.img || "/logo-rect.png"}
                 />
             </StarsWrapper>
