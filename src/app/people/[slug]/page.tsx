@@ -1,20 +1,20 @@
 import Link from "next/link";
 
-import { speakers } from "@src/core/mock/speakers";
+import { speakers } from "@srccore/mock/speakers";
 
 type Params = Promise<{ slug: string }>;
 
-const SpeakerPage: React.FC<{ params: Params }> = async ({ params }) => {
+const PersonPage: React.FC<{ params: Params }> = async ({ params }) => {
     const { slug } = await params;
 
     return (
         <section>
-            <p>Speaker Page ({slug})</p>
-            <Link href="/speakers">See all speakers</Link>
+            <p>Person Page ({slug})</p>
+            <Link href="/people">See all people</Link>
         </section>
     );
 };
 
 export const generateStaticParams = () => speakers.map(({ slug }) => ({ slug }));
 
-export default SpeakerPage;
+export default PersonPage;

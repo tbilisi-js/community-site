@@ -1,6 +1,11 @@
+import { type StaticImageData } from "next/image";
+
+import alexSavelyev from "./img/alexandr-savelyev.png";
+
 export type Speaker = {
     slug: string;
     name: string;
+    img?: StaticImageData;
 };
 
 export const speakers: Speaker[] = [
@@ -21,11 +26,16 @@ export const speakers: Speaker[] = [
         name: "Andrey Evdokov",
     },
     {
-        slug: "ilona-sarkisova",
-        name: "Ilona Sarkisova",
+        slug: "elona-sarkisova",
+        name: "Elona Sarkisova",
     },
     {
         slug: "philip-baranovsky",
         name: "Philip Baranovsky",
+    },
+    {
+        slug: "alex-savelyev",
+        name: "Alex Savelyev",
+        img: alexSavelyev,
     },
 ];
