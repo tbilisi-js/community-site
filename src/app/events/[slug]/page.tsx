@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
 import { EventIntro } from "@src/components/sections/event-intro";
+import { Tapes } from "@src/components/sections/tapes";
 import { Schedule } from "@src/components/sections/schedule";
 import { events } from "@src/core/mock/events";
 import { talks, type Talk } from "@src/core/mock/talks";
@@ -9,7 +10,7 @@ import { speakers, type Speaker } from "@src/core/mock/speakers";
 
 type Params = Promise<{ slug: string }>;
 
-const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
+const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
     const { slug } = await params;
     const event = events.find((eventItem) => eventItem.slug === slug);
 
@@ -19,10 +20,8 @@ const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
         const talk = talks.find((talk) => talk.slug === cur);
         const speaker = speakers.find((speaker) => speaker.slug === talk?.speaker);
 
-        if (talk && speaker) {
+        if (talk) {
             acc.push({ ...talk, speaker });
-        } else if (talk) {
-            acc.push({ ...talk, speaker: undefined });
         }
 
         return acc;
@@ -30,8 +29,10 @@ const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
 
     return (
         <>
-            <StarsWrapper density={3}>
+            <p>{event.name}</p>
+            <StarsWrapper>
                 <EventIntro title={event.name} date={event.date} />
+                <Tapes date={event.date} />
             </StarsWrapper>
             <StarsWrapper>
                 <Schedule talks={eventTalks} />
@@ -54,4 +55,4 @@ export const generateMetadata = async ({ params }: { params: Params }) => {
     };
 };
 
-export default ConferencePage;
+export default EventPage;
