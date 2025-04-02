@@ -31,9 +31,19 @@ export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
                     >
                         <summary className="schedule-item-summary">
                             <p className="schedule-item-time">
-                                {talk.start}
+                                {new Intl.DateTimeFormat([], {
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                    timeZone: "Asia/Tbilisi",
+                                    hour12: false,
+                                }).format(new Date(talk.start))}
                                 <br />
-                                {talk.end}
+                                {new Intl.DateTimeFormat([], {
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                    timeZone: "Asia/Tbilisi",
+                                    hour12: false,
+                                }).format(new Date(talk.end))}
                             </p>
                             <div className="schedule-item-main">
                                 <h3 className="schedule-item-name">{talk.name}</h3>

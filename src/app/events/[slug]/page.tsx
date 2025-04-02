@@ -29,7 +29,6 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
 
     return (
         <>
-            <p>{event.name}</p>
             <StarsWrapper>
                 <EventIntro title={event.name} date={event.date} />
                 <Tapes date={event.date} />
