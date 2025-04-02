@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { talks } from "@src/core/mock/talks";
-import { speakers } from "@src/core/mock/speakers";
+import { speakers } from "@srccore/mock/speakers";
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
 import { TalkIntro } from "@src/components/sections/talk-intro";
 import { TalkAnnouncement } from "@src/components/sections/talk-announcement";
@@ -23,7 +23,7 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
     return (
         <>
             <StarsWrapper>
-                <TalkIntro title={talk.name} date={talk.date} speaker={speaker} />
+                <TalkIntro title={talk.name} date={talk.start} speaker={speaker} />
             </StarsWrapper>
             {talk.youtube && (
                 <StarsWrapper>
@@ -33,7 +33,7 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
             <StarsWrapper>
                 <TalkAnnouncement
                     description={talk.description}
-                    date={talk.date}
+                    date={talk.start}
                     img={speaker?.img || "/logo-rect.png"}
                 />
             </StarsWrapper>

@@ -91,3 +91,36 @@
     background-image: url('./images/khinkali.png');
     transform: rotate(15deg);
 }
+
+.star-11 {
+    width: 16px;
+    height: 16px;
+    background-image: url('./images/star1.png');
+    animation: pulse 5s ease-in-out infinite;
+    animation-delay: calc(var(--random) * .05s);
+}
+
+.star-12 {
+    width: 18px;
+    height: 18px;
+    background-image: url('./images/star2.png');
+    animation: pulse 5s ease-in-out infinite;
+    animation-delay: calc(var(--random) * .05s);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -4,16 +4,28 @@ import { NavLink } from "../nav-link";
 
 import "./icon-button.scss";
 
-export type IconButtonProps =
-    | ({ href: string } & React.AnchorHTMLAttributes<HTMLAnchorElement>)
-    | ({ href?: undefined } & React.ButtonHTMLAttributes<HTMLButtonElement>);
+export interface IconButtonBaseProps {
+    variant?: keyof typeof BUTTON_VARIANTS;
+}
 
-export const IconButton: React.FC<IconButtonProps> = (props) => {
+export type IconButtonProps =
+    | ({ href: string } & IconButtonBaseProps & React.AnchorHTMLAttributes<HTMLAnchorElement>)
+    | ({ href?: undefined } & IconButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>);
+
+const BUTTON_VARIANTS = {
+    primary: "icon-button_primary",
+    secondary: "icon-button_secondary",
+    neutral: "icon-button_neutral",
+    transparent: "icon-button_transparent",
+    light: "icon-button_light",
+};
+
+export const IconButton: React.FC<IconButtonProps> = ({ variant = "transparent", ...props }) => {
     if (typeof props.href === "string") {
         const { className, ...other } = props;
-        return <NavLink className={cn("icon-button", className)} {...other} />;
+        return <NavLink className={cn("icon-button", BUTTON_VARIANTS[variant], className)} {...other} />;
     }
 
     const { className, ...other } = props;
-    return <button className={cn("icon-button", className)} {...other} />;
+    return <button className={cn("icon-button", BUTTON_VARIANTS[variant], className)} {...other} />;
 };
