@@ -42,7 +42,7 @@
         right: -1px;
         width: 84px;
         height: 84px;
-        background-image: url('./img/mask_linkedin.png');
+        background-image: url('../../../core/mock/images/organisers/mask_linkedin.png');
     }
 
     &::after {
@@ -57,15 +57,15 @@
     &::after {
         width: 272px;
         height: 180px;
-        background-image: url('./img/mask_volkova.png');
+        background-image: url('../../../core/mock/images/organisers/mask_volkova.png');
     }
 }
 
-.organisers-pavlop {
+.organisers-pavlov {
     &::after {
         width: 132px;
         height: 126px;
-        background-image: url('./img/mask_pavlov.png');
+        background-image: url('../../../core/mock/images/organisers/mask_pavlov.png');
     }
 }
 
@@ -73,19 +73,23 @@
     &::after {
         width: 202px;
         height: 126px;
-        background-image: url('./img/mask_savelyev.png');
+        background-image: url('../../../core/mock/images/organisers/mask_savelyev.png');
     }
 }
 
 .organisers-palamarchuk {
-    @include mixins.media(lg) {
-        grid-column-start: 2;
-    }
-
     &::after {
         width: 206px;
         height: 126px;
-        background-image: url('./img/mask_palamarchuk.png');
+        background-image: url('../../../core/mock/images/organisers/mask_palamarchuk.png');
+    }
+}
+
+.organisers-korotaev {
+    &::after {
+        width: 272px;
+        height: 160px;
+        background-image: url('../../../core/mock/images/organisers/mask_volkova.png');
     }
 }
 
