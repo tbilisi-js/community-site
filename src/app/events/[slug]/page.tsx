@@ -1,6 +1,11 @@
 import { notFound } from "next/navigation";
 
+import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { EventIntro } from "@src/components/sections/event-intro";
+import { Schedule } from "@src/components/sections/schedule";
 import { events } from "@src/core/mock/events";
+import { talks, type Talk } from "@src/core/mock/talks";
+import { speakers, type Speaker } from "@src/core/mock/speakers";
 
 type Params = Promise<{ slug: string }>;
 
@@ -10,9 +15,27 @@ const ConferencePage: React.FC<{ params: Params }> = async ({ params }) => {
 
     if (!event) return notFound();
 
+    const eventTalks = event.talks.reduce<Array<Omit<Talk, "speaker"> & { speaker?: Speaker }>>((acc, cur) => {
+        const talk = talks.find((talk) => talk.slug === cur);
+        const speaker = speakers.find((speaker) => speaker.slug === talk?.speaker);
+
+        if (talk && speaker) {
+            acc.push({ ...talk, speaker });
+        } else if (talk) {
+            acc.push({ ...talk, speaker: undefined });
+        }
+
+        return acc;
+    }, []);
+
     return (
         <>
-            <p>{event.name}</p>
+            <StarsWrapper density={3}>
+                <EventIntro title={event.name} date={event.date} />
+            </StarsWrapper>
+            <StarsWrapper>
+                <Schedule talks={eventTalks} />
+            </StarsWrapper>
         </>
     );
 };
