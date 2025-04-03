@@ -143,8 +143,8 @@ export const talks: Talk[] = [
         speaker: "alex-savelyev",
         youtube: "https://www.youtube.com/embed/m8H-cObBEZY?si=HWnVX2DLMLTRVQMn&amp;start=5817",
         preview: reactServerComponents,
-        type: "free-form",
-        start: "2024-11-02T20:40:00.000Z",
-        end: "2024-11-02T24:00:00.000Z",
+        type: "talk",
+        start: "2025-02-01T21:00:00.000Z",
+        end: "2025-02-01T21:30:00.000Z",
     },
 ];
