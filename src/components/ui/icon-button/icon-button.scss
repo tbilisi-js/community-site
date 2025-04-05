@@ -1,3 +1,5 @@
+@use "../../../assets/styles/_mixins.scss";
+
 .icon-button {
     display: flex;
     align-items: center;
@@ -16,18 +18,18 @@
 
 .icon-button_transparent {
     background: none;
-    color: var(--cl-text);
+    color: mixins.rgb-color(neutral-950);
     border-color: transparent;
 
     &:hover {
-        color: var(--cl-primary);
+        color: mixins.rgb-color(yellow-500);
     }
 }
 
 .icon-button_neutral,
 .icon-button:disabled {
-    background-color: var(--cl-neutral);
-    color: var(--cl-text);
+    background-color: mixins.rgb-color(neutral-500);
+    color: mixins.rgb-color(neutral-950);
     opacity: 0.8;
 
     &:hover {
@@ -36,8 +38,8 @@
 }
 
 .icon-button_light {
-    background-color: var(--cl-text);
-    color: var(--cl-background);
+    background-color: mixins.rgb-color(neutral-950);
+    color: mixins.rgb-color(neutral-50);
     opacity: 0.8;
 
     &:hover {
@@ -46,8 +48,8 @@
 }
 
 .icon-button_primary {
-    background-color: var(--cl-primary);
-    color: var(--cl-text);
+    background-color: mixins.rgb-color(yellow-500);
+    color: mixins.rgb-color(neutral-950);
     opacity: 0.8;
 
     &:hover {
@@ -56,8 +58,8 @@
 }
 
 .icon-button_secondary {
-    background-color: var(--cl-secondary);
-    color: var(--cl-text);
+    background-color: mixins.rgb-color(orange-400);
+    color: mixins.rgb-color(neutral-950);
     opacity: 0.8;
 
     &:hover {

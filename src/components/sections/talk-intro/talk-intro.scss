@@ -38,8 +38,8 @@
 }
 
 .talk-intro-speaker-avatar {
-    background-color: var(--cl-text);
-    border: 2px solid var(--cl-secondary);
+    background-color: mixins.rgb-color(neutral-950);
+    border: 2px solid mixins.rgb-color(orange-400);
     object-fit: cover;
     display: inline-block;
     width: 40px;

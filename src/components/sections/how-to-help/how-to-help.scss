@@ -32,25 +32,25 @@
     padding: 20px 24px;
     margin: 0;
     border-radius: 12px;
-    background-color: rgba(#12365a, 0.3);
+    background-color: mixins.rgb-color(neutral-300, 0.3);
     backdrop-filter: blur(4px);
     border: 1px solid transparent;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-        border-color: var(--cl-primary);
-        box-shadow: 0 0 10px 0 rgba(#FFCE13, 0.3);
+        border-color: mixins.rgb-color(yellow-500);
+        box-shadow: 0 0 10px 0 mixins.rgb-color(yellow-500, 0.3);
         transition: border-color 0.3s ease, box-shadow 0.3s ease 0.3s;
     }
 
     &:hover .how-to-help-item-icon-wrapper {
-        background-color: var(--cl-primary);
-        color: var(--cl-background);
+        background-color: mixins.rgb-color(yellow-500);
+        color: mixins.rgb-color(neutral-50);
     }
 }
 
 .how-to-help-item-icon-wrapper {
-    background-color: var(--cl-background);
+    background-color: mixins.rgb-color(neutral-50);
     padding: 16px;
     border-radius: 50%;
     width: 56px;

@@ -1,3 +1,5 @@
+@use "../../../assets/styles/mixins.scss";
+
 .stars-wrapper {
     position: relative;
 }
@@ -25,7 +27,7 @@
 .star-0 {
     width: 6px;
     height: 6px;
-    background: var(--cl-text);
+    background: mixins.rgb-color(neutral-950);
 }
 
 .star-1 {

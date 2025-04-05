@@ -130,18 +130,18 @@
     top: 0;
     right: 0;
     padding: 0 0 16px 16px;
-    background-color: var(--cl-background);
+    background-color: mixins.rgb-color(neutral-50);
 }
 
 .organisers-social-item {
     display: block;
-    color: var(--cl-text);
+    color: mixins.rgb-color(neutral-950);
     padding: 8px;
-    border: 1px solid var(--cl-text);
+    border: 1px solid mixins.rgb-color(neutral-950);
     border-radius: 10px;
 
     &:hover {
-        color: var(--cl-primary);
-        border-color: var(--cl-primary);
+        color: mixins.rgb-color(yellow-500);
+        border-color: mixins.rgb-color(yellow-500);
     }
 }

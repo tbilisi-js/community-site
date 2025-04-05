@@ -22,12 +22,12 @@
 .events-list-link {
     position: relative;
     display: block;
-    color: var(--cl-text);
+    color: mixins.rgb-color(neutral-950);
     text-decoration: none;
     transition: color .3s;
 
     &:hover {
-        color: var(--cl-primary);
+        color: mixins.rgb-color(yellow-500);
     }
 }
 
@@ -45,7 +45,7 @@
     position: absolute;
     top: -1px;
     left: 0;
-    background-color: var(--cl-background);
+    background-color: mixins.rgb-color(neutral-50);
     height: 42px;
     transition: width .3s;
 

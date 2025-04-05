@@ -1,8 +1,10 @@
+@use "../../../assets/styles/_mixins.scss";
+
 .button {
     display: inline-block;
-    box-shadow: 2px 4px 0 0 #000;
-    color: var(--cl-background);
-    border: 1px solid var(--cl-background);
+    box-shadow: 2px 4px 0 0 mixins.rgb-color(neutral-0);
+    color: mixins.rgb-color(neutral-50);
+    border: 1px solid mixins.rgb-color(neutral-50);
     border-radius: 10px;
     text-transform: uppercase;
     font-weight: 900;
@@ -11,7 +13,7 @@
     outline-width: 2px;
 
     &:hover {
-        color: var(--cl-background);
+        color: mixins.rgb-color(neutral-50);
         opacity: 0.8;
     }
 }
@@ -25,8 +27,9 @@
     padding: 14px 12px;
 }
 
-.button_neutral, .button:disabled {
-    background-color: var(--cl-neutral);
+.button_neutral,
+.button:disabled {
+    background-color: mixins.rgb-color(neutral-500);
 }
 
 .button:disabled {
@@ -34,9 +37,9 @@
 }
 
 .button_primary {
-    background-color: var(--cl-primary);
+    background-color: mixins.rgb-color(yellow-500);
 }
 
 .button_secondary {
-    background-color: var(--cl-secondary);
+    background-color: mixins.rgb-color(orange-400);
 }

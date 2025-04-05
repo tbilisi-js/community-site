@@ -5,7 +5,7 @@
     text-transform: uppercase;
     font-size: 16px;
     height: 27vw;
-    color: var(--cl-background);
+    color: mixins.rgb-color(neutral-50);
     padding-top: 8vw;
     opacity: 0;
     transition: opacity .3s;
@@ -32,7 +32,7 @@
     width: 108vw;
     margin-left: -4vw;
     transform: rotate(-8deg);
-    background-color: #FC851E;
+    background-color: mixins.rgb-color(orange-400);
     padding: 8px 0;
     text-align: right;
     text-wrap: nowrap;
@@ -42,7 +42,7 @@
     width: 108vw;
     margin-left: -4vw;
     transform: rotate(8deg);
-    background-color: #81E2FF;
+    background-color: mixins.rgb-color(blue-400);
     padding: 8px 0;
     margin-top: -48px;
     text-align: left;
@@ -62,10 +62,14 @@
 }
 
 @keyframes move-tape {
-    0%, 10% {
+
+    0%,
+    10% {
         transform: translateX(-108vw);
     }
-    90%, 100% {
+
+    90%,
+    100% {
         transform: translateX(0);
     }
 }
