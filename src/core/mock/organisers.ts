@@ -35,7 +35,7 @@ export const organisers = [
     },
     {
         avatarSrc: aleksandrKorotaev.src,
-        name: "Alex Korotaev",
+        name: "Aleksandr Korotaev",
         id: "korotaev",
         description: "Frontend Developer, SPB Frontend Organizer",
         socialLink: "https://www.linkedin.com/in/lekzd/",
