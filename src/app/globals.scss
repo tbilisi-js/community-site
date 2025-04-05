@@ -1,13 +1,24 @@
+@use "../assets/styles/_mixins.scss";
+
 :root {
-  --cl-background: #001020;
-  --cl-background-dark: #000000;
-  --cl-text: #FFFFFF;
-  --cl-primary: #FFCE13;
-  --cl-secondary: #FC851E;
-  --cl-neutral: #B0B0B0;
+  --cl-neutral-0: 0 0 0;
+  --cl-neutral-50: 0 16 32;
+  --cl-neutral-100: 15 23 43;
+  --cl-neutral-200: 29 41 61;
+  --cl-neutral-300: 49 65 88;
+  --cl-neutral-400: 69 85 108;
+  --cl-neutral-500: 98 116 142;
+  --cl-neutral-950: 255 255 255;
+  --cl-yellow-400: 253 199 0;
+  --cl-yellow-500: 255 206 19;
+  --cl-blue-400: 81 162 255;
+  --cl-blue-500: 43 127 255;
+  --cl-orange-400: 255 137 4;
+  --cl-orange-500: 255 105 0;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
@@ -16,8 +27,8 @@ html, body {
 }
 
 body {
-  background-color: var(--cl-background);
-  color: var(--cl-text);
+  background-color: mixins.rgb-color(neutral-50);
+  color: mixins.rgb-color(neutral-950);
   white-space: pre-wrap;
 }
 
@@ -25,19 +36,29 @@ main {
   overflow: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-svg, img {
+svg,
+img {
   display: block;
 }
 
-button, input {
+button,
+input {
   font-family: var(--font-roboto);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-block-start: 0;
   margin-block-end: 0;
 }

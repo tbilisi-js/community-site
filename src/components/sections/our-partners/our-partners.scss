@@ -9,7 +9,8 @@
     overflow: hidden;
     margin: 0 -36px;
     border-radius: 12px;
-    box-shadow: inset 2px 2px 12px rgba(255, 255, 255, .1);
+    box-shadow: inset 2px 2px 12px mixins.rgb-color(neutral-200, 0.5);
+    border: 1px solid mixins.rgb-color(neutral-400, 0.2);
 
     &:hover .our-partners-list {
         animation-play-state: paused;
@@ -44,7 +45,7 @@
     }
 
     &:hover {
-        background-color: var(--cl-primary);
+        background-color: mixins.rgb-color(yellow-500);
     }
 }
 

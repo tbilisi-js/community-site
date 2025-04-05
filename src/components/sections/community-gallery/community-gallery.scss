@@ -72,7 +72,7 @@
     }
 
     &:hover .community-gallery-card-primary {
-        color: var(--cl-primary);
+        color: mixins.rgb-color(yellow-500);
     }
 }
 
@@ -116,7 +116,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: mixins.rgb-color(neutral-0, 0.8);
     backdrop-filter: blur(4px);
 }
 
@@ -130,7 +130,7 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid mixins.rgb-color(neutral-950, 0.2);
 }
 
 .community-gallery-modal-alt {
@@ -139,12 +139,12 @@
     left: 0;
     width: 100%;
     height: 48px;
-    background-color: var(--cl-background);
+    background-color: mixins.rgb-color(neutral-50);
     padding: 12px;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid mixins.rgb-color(neutral-950, 0.2);
 }
 
 .community-gallery-modal-close,

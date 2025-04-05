@@ -15,7 +15,7 @@
 }
 
 .schedule-item {
-    background-color: rgba(#091f35, 0.5);
+    background-color: mixins.rgb-color(neutral-100, 0.5);
     backdrop-filter: blur(4px);
     border: 1px solid transparent;
     border-radius: 4px;
@@ -89,7 +89,7 @@
 .schedule-item-description {
     margin: 0 20px;
     padding: 24px 0;
-    border-top: 1px solid var(--cl-text);
+    border-top: 1px solid mixins.rgb-color(neutral-950);
     transition: border-color 0.3s ease-in-out;
 }
 

@@ -1,7 +1,7 @@
 @use "../../../assets/styles/mixins.scss";
 
 .header {
-    background: #00102060;
+    background: mixins.rgb-color(neutral-50, 0.6);
     backdrop-filter: blur(4px);
     position: sticky;
     top: 0;

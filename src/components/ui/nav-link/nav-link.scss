@@ -1,11 +1,13 @@
+@use "../../../assets/styles/mixins.scss";
+
 .nav-link {
-    color: var(--cl-text);
+    color: mixins.rgb-color(neutral-950);
     text-decoration: none;
     outline-offset: 3px;
     outline-width: 2px;
 
     &:hover {
-        color: var(--cl-primary);
+        color: mixins.rgb-color(yellow-500);
     }
 }
 
@@ -36,4 +38,3 @@
 .nav-link_medium {
     font-size: 16;
 }
-
