@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import { Block } from "../../ui/block";
 import { OrganiserSocial } from "@src/components/elements/organiser-social";
@@ -12,7 +12,7 @@ export interface OrganiserProps {
     id: string;
     description: string;
     socialLink: string;
-    maskImage: StaticImageData;
+    maskImage: string;
 }
 
 const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description, socialLink, maskImage }) => (
@@ -25,7 +25,7 @@ const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description,
             className="organisers-card-img"
             loading="lazy"
         />
-        <img src={maskImage.src} alt="" loading="lazy" className="organisers-mask" />
+        <img src={maskImage} alt="" loading="lazy" className="organisers-mask" />
         <div className="organisers-info">
             <p className="organisers-card-heading">{name}</p>
             <p className="organisers-card-description">{description}</p>
