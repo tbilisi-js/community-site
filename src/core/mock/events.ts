@@ -8,6 +8,7 @@ import tjsMeetup2Image from "./images/tjs-meetup-2.jpg";
 import tjsMeetup3Image from "./images/tjs-meetup-3.jpg";
 import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
 import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
+import webPerformanceDayImage from "./images/web-performance-day.jpg";
 
 export type Event = {
     slug: string;
@@ -24,10 +25,22 @@ export type Event = {
 
 export const events: Event[] = [
     {
+        slug: "tbilisi-performance-day",
+        name: "Tbilisi Performance Day",
+        date: "2025-04-11T15:30:00.000Z",
+        attendees: undefined,
+        talks: [],
+        image: webPerformanceDayImage,
+        promo: "Exciting day dedicated to web performance\nJoin us for a day of learning and fun 🚀",
+        registration: "https://forms.gle/L92w2VH1XkhCaEht6",
+        telegram: "https://t.me/tbilisi_js_chat/19071",
+        youtube: "https://www.youtube.com/live/fSyWehFpGc4?si=4NI45NS2NAGYKYr7",
+    },
+    {
         slug: "tbilisi-js-meetup-5",
         name: "Tbilisi JS Meetup #5",
         date: "2025-02-22T12:30:00.000Z",
-        attendees: undefined,
+        attendees: 200,
         talks: [],
         image: tjsMeetup5Image,
         promo: "Exciting program and lots of fun activities\njoin us for networking, discussions, and insightful talks",
