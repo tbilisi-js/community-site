@@ -1,0 +1,74 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.talks-list-cards {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    gap: 32px;
+
+    @include mixins.media(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.media(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.talks-list-card {
+    margin: 0;
+}
+
+.talks-list-link {
+    position: relative;
+    display: block;
+    color: var(--cl-text);
+    text-decoration: none;
+    transition: color .3s;
+
+    &:hover {
+        color: var(--cl-primary);
+    }
+}
+
+.talks-list-title {
+    font-size: 16px;
+    margin: 8px 16px 0px;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include mixins.media(md) {
+        font-size: 20px;
+    }
+}
+
+.talks-list-date {
+    font-size: 24px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+
+    @include mixins.media(md) {
+        font-size: 40px;
+    }
+}
+
+.talks-list-image {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    max-height: 320px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 16px;
+    background-color: var(--cl-text);
+}
+
+.talks-list-visual {
+    transition: transform .3s;
+
+    .talks-list-link:hover & {
+        transform: scale(1.03);
+    }
+}

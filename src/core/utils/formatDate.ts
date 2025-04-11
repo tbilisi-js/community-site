@@ -13,10 +13,10 @@ const MONTHS = [
     "December",
 ];
 
-export const formatDate = (date: Date | string) => {
+export const formatDate = (date: Date | string, withYear = false) => {
     const dateTarget = new Date(date);
 
-    return `${MONTHS[dateTarget.getUTCMonth()]} ${dateTarget.getUTCDate()}`;
+    return `${MONTHS[dateTarget.getUTCMonth()]} ${dateTarget.getUTCDate()}${withYear ? `, ${dateTarget.getUTCFullYear()}` : ""}`;
 };
 
 export const formatLeadingZero = (num: number) => {
