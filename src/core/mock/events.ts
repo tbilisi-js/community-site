@@ -34,7 +34,7 @@ export const events: Event[] = [
         promo: "Exciting day dedicated to web performance\nJoin us for a day of learning and fun 🚀",
         registration: "https://forms.gle/L92w2VH1XkhCaEht6",
         telegram: "https://t.me/tbilisi_js_chat/19071",
-        youtube: "https://www.youtube.com/live/fSyWehFpGc4?si=4NI45NS2NAGYKYr7",
+        youtube: "https://www.youtube.com/embed/fSyWehFpGc4?si=mNYyYKvPl8D2YMdz",
     },
     {
         slug: "tbilisi-js-meetup-5",
