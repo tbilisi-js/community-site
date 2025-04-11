@@ -1,0 +1,20 @@
+.organisers-social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0 16px 16px;
+  background-color: var(--cl-background);
+}
+
+.organisers-social-item {
+  display: block;
+  color: var(--cl-text);
+  padding: 8px;
+  border: 1px solid var(--cl-text);
+  border-radius: 10px;
+
+  &:hover {
+    color: var(--cl-primary);
+    border-color: var(--cl-primary);
+  }
+}
