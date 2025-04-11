@@ -52,7 +52,7 @@
     grid-area: button;
     margin-top: 16px;
 
-    @include mixins.media(null,sm) {
+    @include mixins.media(null, sm) {
         width: 100%;
     }
 
@@ -67,6 +67,8 @@
     max-width: 100%;
     height: auto;
     border-radius: 20px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 
     @include mixins.media(lg) {
         margin-top: 0;
@@ -90,13 +92,13 @@
     bottom: 0;
     right: 0;
 
-    @include mixins.media(null,sm) {
+    @include mixins.media(null, sm) {
         display: none;
     }
 }
 
 .announcement-timer {
-    @include mixins.media(null,sm) {
+    @include mixins.media(null, sm) {
         justify-content: center;
         margin-top: 32px;
     }

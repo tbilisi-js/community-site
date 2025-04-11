@@ -25,8 +25,8 @@ export type Event = {
 
 export const events: Event[] = [
     {
-        slug: "web-performance-day",
-        name: "Web Performance Day",
+        slug: "tbilisi-performance-day",
+        name: "Tbilisi Performance Day",
         date: "2025-04-11T15:30:00.000Z",
         attendees: undefined,
         talks: [],
