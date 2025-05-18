@@ -5,6 +5,13 @@ import nikitaDubko from "./img/nikita-dubko.jpg";
 import egorNechaev from "./img/egor-nechaev.png";
 import vicIstomin from "./img/vic-istomin.jpeg";
 import timurGafiulin from "./img/timur-gafiulin.jpg";
+import annaShiryaeva from "./img/anna-shiryaeva.jpg";
+import daniilSavitskii from "./img/daniil-savitskii.jpg";
+import eugeneKorobko from "./img/eugene-korobko.jpg";
+import ivanAkulov from "./img/ivan-akulov.png";
+import aleksandrKorotaev from "./img/aleksandr-korotaev.png";
+import olegSemichev from "./img/oleg-semichev.jpg";
+import denIlin from "./img/den-ilin.png";
 
 export type Speaker = {
     slug: string;
@@ -61,5 +68,40 @@ export const speakers: Speaker[] = [
         slug: "timur-gafiulin",
         name: "Timur Gafiulin",
         img: timurGafiulin,
+    },
+    {
+        slug: "anna-shiryaeva",
+        name: "Anna Shiryaeva",
+        img: annaShiryaeva,
+    },
+    {
+        slug: "daniil-savitskii",
+        name: "Daniil Savitskii",
+        img: daniilSavitskii,
+    },
+    {
+        slug: "eugene-korobko",
+        name: "Eugene Korobko",
+        img: eugeneKorobko,
+    },
+    {
+        slug: "ivan-akulov",
+        name: "Ivan Akulov",
+        img: ivanAkulov,
+    },
+    {
+        slug: "aleksander-korotaev",
+        name: "Aleksander Korotaev",
+        img: aleksandrKorotaev,
+    },
+    {
+        slug: "oleg-semichev",
+        name: "Oleg Semichev",
+        img: olegSemichev,
+    },
+    {
+        slug: "den-ilin",
+        name: "Den Ilin",
+        img: denIlin,
     },
 ];

@@ -5,6 +5,14 @@ import debuggingPerformance from "./img/debugging-performance.jpg";
 import designSystem from "./img/design-system.jpg";
 import batteryFleet from "./img/battery-fleet.jpg";
 import howToHelpTeamLeadGrow from "./img/how-to-help-teamlead-grow.jpg";
+import acceptingReactCompiler from "./img/accepting-react-compiler.png";
+import weeksUntilRelease from "./img/weeks-until-release.png";
+import financialChartsOptimization from "./img/financial-charts-optimization.png";
+import whenOptimizationBackfire from "./img/when-optimization-backfire.png";
+import generativeArtOnJS from "./img/generative-art-with-js.jpg";
+import rememberEverything from "./img/remember-everything.jpg";
+import frontendToFullstack from "./img/frontend-to-fullstack.jpg";
+import easyWayToQuitReact from "./img/easy-way-to-quit-react.jpg";
 
 export type Talk = {
     slug: string;
@@ -24,7 +32,7 @@ export const talks: Talk[] = [
         slug: "debugging-page-performance-with-browser-tools",
         speaker: "nikita-dubko",
         name: "Debugging Page Performance with Browser Tools",
-        description: `<p>The first time I opened the Performance tab in DevTools, I clicked on different elements, didn’t understand a thing, and closed it. But in fact, it’s a very useful tool with a lot of capabilities.</p><br/><p> Over the years, I’ve figured out what all those buttons and links actually mean, so in this talk, I’ll explain how to use this tab and impress your colleagues with quick problem-solving.</p>`,
+        description: `<p>The first time I opened the Performance tab in DevTools, I clicked on different elements, didn’t understand a thing, and closed it. But in fact, it’s a very useful tool with a lot of capabilities.</p><br/><p>Over the years, I’ve figured out what all those buttons and links actually mean, so in this talk, I’ll explain how to use this tab and impress your colleagues with quick problem-solving.</p>`,
         labels: ["performance", "devtools"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/CBi-ycq3tuo?si=rzRXM1Jj5vT1dpLj",
@@ -237,12 +245,13 @@ export const talks: Talk[] = [
     },
     {
         slug: "generative-art-on-js",
-        speaker: "alexander-korotaev",
+        speaker: "aleksander-korotaev",
         name: "Generative art on JS",
-        description:
-            "Alexander Korotaev, Frontend Developer, speaker, and member of the Holy.js program committee, will talk about how generative art can become a source of inspiration and a practical tool for learning. Interface developers can adopt approaches to using algorithms to create adaptive animations, unique visual elements, and interactive effects. This is not just a demonstration of technical capabilities — it is an immersion into the creative process that will help the audience expand their horizons and see algorithms as a means of expression rather than just a problem-solving tool.",
+        description: `<p>Alexander Korotaev, Frontend Developer, speaker, and member of the Holy.js program committee, will talk about how generative art can become a source of inspiration and a practical tool for learning.</p><p>Interface developers can adopt approaches to using algorithms to create adaptive animations, unique visual elements, and interactive effects. This is not just a demonstration of technical capabilities — it is an immersion into the creative process that will help the audience expand their horizons and see algorithms as a means of expression rather than just a problem-solving tool.</p>`,
         labels: ["generative-art", "algorithms", "creative"],
         type: "talk",
+        preview: generativeArtOnJS,
+        youtube: "https://www.youtube.com/embed/JxBbe26uE-M?si=QPKiCfJzCI5cN4-X",
         start: "2026-02-22T18:00:00.000Z",
         end: "2026-02-22T18:30:00.000Z",
     },
@@ -250,32 +259,36 @@ export const talks: Talk[] = [
         slug: "remember-everything",
         speaker: "oleg-semichev",
         name: "Remember Everything",
-        description:
-            "Another work overload? Did you forget to reply to your manager again? Tired of endless, unmanageable notification dots in your inbox, task manager, or corporate messenger? Oleg Semichev, Frontend Team Lead at TradingView, will share his thoughts on the constant mental stack overflow and practical tips on handling it—(almost) without resorting to fancy acronyms.",
+        description: `<p>Another work overload? Did you forget to reply to your manager again? Tired of endless, unmanageable notification dots in your inbox, task manager, or corporate messenger?</p><br/><p>Oleg Semichev, Frontend Team Lead at TradingView, will share his thoughts on the constant mental stack overflow and practical tips on handling it — (almost) without resorting to fancy acronyms.</p>`,
         labels: ["productivity", "mental-health"],
         type: "talk",
+        preview: rememberEverything,
+        youtube: "https://www.youtube.com/embed/v3NcxJgEWlQ?si=mfDyBbyiRHqYSVYb",
         start: "2026-02-22T18:40:00.000Z",
         end: "2026-02-22T19:10:00.000Z",
     },
     {
         slug: "an-easy-way-to-quit-react",
-        speaker: "daniil-savitsky",
+        speaker: "daniil-savitskii",
         name: "An Easy Way to Quit React",
         description:
             "Daniil Savitsky, Senior Software Engineer and functional-programming enthusiast, will talk about life beyond React. Expect a heated debate!",
         labels: ["react", "functional-programming"],
         type: "talk",
+        preview: easyWayToQuitReact,
+        youtube: "https://www.youtube.com/embed/JAwk8ZBxAHk?si=HvxeWj6ZOsBm7jP0",
         start: "2026-02-22T20:00:00.000Z",
         end: "2026-02-22T20:30:00.000Z",
     },
     {
-        slug: "the-journey-from-frontend-to-full-stack-engineering-team",
-        speaker: "denis-ilyin",
+        slug: "the-journey-from-frontend-to-fullstack-engineering-team",
+        speaker: "den-ilin",
         name: "The Journey from Frontend to a Full-Stack Engineering Team",
-        description:
-            "Denis Ilyin, Technical Leader at Chill House, will share how his team replaced non-frontend development with cloud technologies, saving time and money. He’ll discuss their approaches and details of implementing serverless solutions.",
+        description: `<p>Denis Ilin, Technical Leader at Chill House, will share how his team replaced non-frontend development with cloud technologies, saving time and money.</p><br/><p>He’ll discuss their approaches and details of implementing serverless solutions.</p>`,
         labels: ["full-stack", "serverless", "cloud"],
         type: "talk",
+        preview: frontendToFullstack,
+        youtube: "https://www.youtube.com/embed/uSmbI9Hq1eI?si=bQIDFhv03PnbVJtV",
         start: "2026-02-22T20:40:00.000Z",
         end: "2026-02-22T21:10:00.000Z",
     },
@@ -283,32 +296,37 @@ export const talks: Talk[] = [
         slug: "three-stages-of-accepting-react-compiler",
         speaker: "anna-shiryaeva",
         name: "The Three Stages of Accepting React Compiler",
-        description:
-            "Anna Shiryaeva, Lead Software Engineer at Sibur Digital and organizer of MoscowJS, will walk us through the evolution of the React Compiler adoption process, from initial skepticism to full embrace—highlighting lessons learned at each stage.",
+        description: `<p>Everything evolves, and new tools occasionally emerge that fundamentally change how we work. At these times, you might wonder, "How will this affect my code?".</p><br/><p>Some may become curious about how these new tools function, while others might broaden their perspective to consider the wider implications for the industry, often discovering whether the excitement surrounding the tool is truly justified.</p>
+<p>Anna Shiryaeva, Lead Frontend Developer at Sibur Digital and organizer of MoscowJS, will deliver a talk about compilers, focusing on React Compiler. We'll examine the problems it solves and how it impacts current React mechanisms.</p>`,
         labels: ["react", "compiler", "performance"],
         type: "talk",
+        youtube: "https://www.youtube.com/embed/LMJmFmR3SC8?si=lrnrdlZdiO3guHNe",
+        preview: acceptingReactCompiler,
         start: "2025-04-11T18:00:00.000Z",
         end: "2025-04-11T18:30:00.000Z",
     },
     {
         slug: "9-and-a-half-weeks-before-release",
-        speaker: "daniil-savitsky",
+        speaker: "daniil-savitskii",
         name: "9 ½ Weeks Before Release",
-        description:
-            "Daniil Savitsky, Senior Software Engineer at Quantori and self-described Clojurist, returns with an intriguing exploration of the critical 9½-week period before a major release—sharing simple, battle-tested strategies for keeping performance and stability on track.",
-        labels: ["release", "performance", "timing"],
+        description: `<p>Choices, choices, and more choices. The best choice? The one you didn't have to make.</p><br/><p>Daniil will talk about taking apart a wooden airplane mid-flight, racing against the clock, and trying not to mess everything up at the finish line.</p>
+<p>Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple solutions and almost a сlojurist, returns with a new talk, as always, with an intriguing title.<p>`,
+        labels: ["release", "performance"],
         type: "talk",
+        youtube: "https://www.youtube.com/embed/dbGm3pDgSPQ?si=XfP4CxcJsAllVL9f",
+        preview: weeksUntilRelease,
         start: "2025-04-11T18:40:00.000Z",
         end: "2025-04-11T19:10:00.000Z",
     },
     {
-        slug: "tackling-canvas-performance-at-tradingview",
-        speaker: "evgeniy-korobko",
-        name: "Tackling Canvas Performance at TradingView",
-        description:
-            "Evgeniy Korobko, Lead Software Developer on the TradingView charting team and author of TradingView’s first line of code, will share 14 years of hard-won performance optimizations: from drawing massive datasets on Canvas to squeezing every millisecond out of complex charting workflows.",
+        slug: "practice-of-the-financial-chart-optimization",
+        speaker: "eugene-korobko",
+        name: "Practice of the financial chart optimization",
+        description: `<p>Evgeniy Korobko, Lead Software Developer on the TradingView charting team and author of TradingView’s first line of code, will share 14 years of hard-won performance optimizations: from drawing massive datasets on Canvas to squeezing every millisecond out of complex charting workflows.</p>`,
         labels: ["canvas", "performance", "optimization"],
         type: "talk",
+        youtube: "https://www.youtube.com/embed/VqWk-6oKGN4?si=H3fEWtvJ3w8d0wtp",
+        preview: financialChartsOptimization,
         start: "2025-04-11T19:20:00.000Z",
         end: "2025-04-11T19:50:00.000Z",
     },
@@ -316,11 +334,12 @@ export const talks: Talk[] = [
         slug: "when-performance-optimizations-backfire",
         speaker: "ivan-akulov",
         name: "When Performance Optimizations Backfire",
-        description:
-            "Ivan Akulov, Google Developer Expert and Web Performance Engineer at Framer, will reveal how common optimizations—like Google Fonts or lazy-loaded images—can actually slow you down, and what you need to do to avoid these anti-patterns.",
+        description: `<p>Ever put your assets on a CDN? Or used font-diplay: swap to render the text faster? These optimizations are recommended all over the web, but sometimes, they make your site not faster but slower.</p><br/><p>In this talk, Ivan — Google Developer Expert and React/Web Performance Engineer — will show how some common performance optimizations backfire, and what we need to do to avoid that.</p>`,
         labels: ["performance", "anti-patterns", "optimization"],
         type: "talk",
-        start: "2025-04-11T20:00:00.000Z",
+        youtube: "https://www.youtube.com/embed/JgQsElXk5BM?si=ILEnImX1XlpclqJz",
+        preview: whenOptimizationBackfire,
+        start: "2025-04-11T00:00:00.000Z",
         end: "2025-04-11T20:30:00.000Z",
     },
     {

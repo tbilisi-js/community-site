@@ -27,9 +27,14 @@ export const events: Event[] = [
     {
         slug: "tbilisi-performance-day",
         name: "Tbilisi Performance Day",
-        date: "2025-04-11T15:30:00.000Z",
-        attendees: undefined,
-        talks: [],
+        date: "2025-04-11T00:00:00.000Z",
+        attendees: 100,
+        talks: [
+            "9-and-a-half-weeks-before-release",
+            "practice-of-the-financial-chart-optimization",
+            "when-performance-optimizations-backfire",
+            "three-stages-of-accepting-react-compiler",
+        ],
         image: webPerformanceDayImage,
         promo: "Exciting day dedicated to web performance\nJoin us for a day of learning and fun 🚀",
         registration: "https://forms.gle/L92w2VH1XkhCaEht6",
