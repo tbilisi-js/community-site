@@ -12,6 +12,10 @@ import ivanAkulov from "./img/ivan-akulov.png";
 import aleksandrKorotaev from "./img/aleksandr-korotaev.png";
 import olegSemichev from "./img/oleg-semichev.jpg";
 import denIlin from "./img/den-ilin.png";
+import hannaKastrytsa from "./img/hanna-kastrutsa.jpg";
+import valeriyaYakovleva from "./img/valeriya-yakovleva.jpg";
+import kirillKazakov from "./img/kirill-kazakov.jpg";
+import ivanZatravkin from "./img/ivan-zatravkin.jpg";
 
 export type Speaker = {
     slug: string;
@@ -103,5 +107,25 @@ export const speakers: Speaker[] = [
         slug: "den-ilin",
         name: "Den Ilin",
         img: denIlin,
+    },
+    {
+        slug: "hanna-kastrytsa",
+        name: "Hanna Kastrytsa",
+        img: hannaKastrytsa,
+    },
+    {
+        slug: "valeriya-yakovleva",
+        name: "Valeriya Yakovleva",
+        img: valeriyaYakovleva,
+    },
+    {
+        slug: "kirill-kazakov",
+        name: "Kirill Kazakov",
+        img: kirillKazakov,
+    },
+    {
+        slug: "ivan-zatravkin",
+        name: "Ivan Zatravkin",
+        img: ivanZatravkin,
     },
 ];
