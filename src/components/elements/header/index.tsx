@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import cn from "classnames";
+import { usePathname } from "next/navigation";
 
 import { Button } from "@src/components/ui/button";
 import { NavLink } from "@src/components/ui/nav-link";
@@ -8,29 +10,30 @@ import { NavLink } from "@src/components/ui/nav-link";
 import "./header.scss";
 
 export const Header = () => {
+    const [opened, setOpened] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setOpened(false);
+    }, [pathname]);
+
     return (
-        <header className="header">
+        <header className={cn("header", opened && "_opened")}>
             <div className="header-content">
                 <NavLink href="/" className="header-logo">
                     <img src="/logo.png" alt="TJS" width={52} height={30} />
                 </NavLink>
                 <nav className="header-nav">
-                    <div className={cn("header-nav-list")}>
-                        {/* <NavLink href="/" className="header-nav-link">
-                            Home
-                        </NavLink>
+                    <div className="header-nav-list">
                         <NavLink href="/events" className="header-nav-link">
                             Events
                         </NavLink>
                         <NavLink href="/people" className="header-nav-link">
                             People
                         </NavLink>
-                        <NavLink href="/partners" className="header-nav-link">
+                        <NavLink href="/become-a-partner" className="header-nav-link">
                             Partners
                         </NavLink>
-                        <NavLink href="/contacts" className="header-nav-link">
-                            Contacts
-                        </NavLink> */}
                         <Button
                             variant="primary"
                             size="md"
@@ -42,6 +45,9 @@ export const Header = () => {
                             Join Us
                         </Button>
                     </div>
+                    <Button variant="primary" size="md" className="header-menu" onClick={() => setOpened(!opened)}>
+                        Menu
+                    </Button>
                 </nav>
             </div>
         </header>
