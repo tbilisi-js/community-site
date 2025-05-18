@@ -78,7 +78,7 @@ export const events: Event[] = [
             "accessibility-and-typography",
             "accessibility-as-a-decomposition-of-complexity",
             "coffee-break-2",
-            "what-exactly-is-this-ux-of-yours",
+            "what-is-this-ux-thing-anyway",
             "accessibility-using-the-clay-pot-industry",
             "closing",
             "afterparty",

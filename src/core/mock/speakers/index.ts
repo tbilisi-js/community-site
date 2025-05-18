@@ -16,6 +16,14 @@ import hannaKastrytsa from "./img/hanna-kastrutsa.jpg";
 import valeriyaYakovleva from "./img/valeriya-yakovleva.jpg";
 import kirillKazakov from "./img/kirill-kazakov.jpg";
 import ivanZatravkin from "./img/ivan-zatravkin.jpg";
+import elonaSarkisova from "./img/elona-sarkisova.jpg";
+import vadimMakeev from "./img/vadim-makeev.jpeg";
+import philippBaranovskii from "./img/philipp-baranovskii.jpg";
+import maksimKhalizov from "./img/maksim-khalizov.jpg";
+import andreyEvdokov from "./img/andrey-evdokov.jpg";
+import aleksanderDmitriev from "./img/aleksander-dmitriev.jpg";
+import aleksanderZelik from "./img/aleksander-zelik.jpg";
+import tanyaFokina from "./img/tanya-fokina.jpg";
 
 export type Speaker = {
     slug: string;
@@ -27,26 +35,32 @@ export const speakers: Speaker[] = [
     {
         slug: "vadim-makeev",
         name: "Vadim Makeev",
+        img: vadimMakeev,
     },
     {
-        slug: "maxim-khalizov",
-        name: "Maxim Khalizov",
+        slug: "maksim-khalizov",
+        name: "Maksim Khalizov",
+        img: maksimKhalizov,
     },
     {
         slug: "tanya-fokina",
         name: "Tanya Fokina",
+        img: tanyaFokina,
     },
     {
         slug: "andrey-evdokov",
         name: "Andrey Evdokov",
+        img: andreyEvdokov,
     },
     {
         slug: "elona-sarkisova",
         name: "Elona Sarkisova",
+        img: elonaSarkisova,
     },
     {
-        slug: "philip-baranovsky",
-        name: "Philip Baranovsky",
+        slug: "philipp-baranovskii",
+        name: "Philipp Baranovskii",
+        img: philippBaranovskii,
     },
     {
         slug: "alex-savelyev",
@@ -127,5 +141,15 @@ export const speakers: Speaker[] = [
         slug: "ivan-zatravkin",
         name: "Ivan Zatravkin",
         img: ivanZatravkin,
+    },
+    {
+        slug: "aleksander-dmitriev",
+        name: "Aleksander Dmitriev",
+        img: aleksanderDmitriev,
+    },
+    {
+        slug: "aleksander-zelik",
+        name: "Aleksander Zelik",
+        img: aleksanderZelik,
     },
 ];

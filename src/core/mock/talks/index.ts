@@ -17,6 +17,15 @@ import echoesOfExclusion from "./img/echoes-of-exclusion.jpg";
 import interfaceTextWithoutUxDesigner from "./img/interface-text-without-ux-designer.jpg";
 import infrastructureAsTypescript from "./img/infrastructure-as-typescript.jpg";
 import browserAsPlatformForHeavyApplications from "./img/browser-as-platform-for-heavy-applications.jpg";
+import whatIsUx from "./img/what-is-ux.jpg";
+import stateOfA11y from "./img/state-of-a11y.jpg";
+import a11yAndTypography from "./img/a11y-and-typography.jpg";
+import a11yInTheClayPotIndustry from "./img/a11y-in-the-clay-pot-industry.jpg";
+import speedrunThroughA11y from "./img/speedrun-through-a11y.jpg";
+import a11yAsDecompositionOfComplexity from "./img/a11y-as-decomposition-of-complexity.jpg";
+import backendInRust from "./img/backend-in-rust.jpg";
+import rustAndItsConcepts from "./img/rust-and-its-concepts.jpg";
+import rustForFrontendDevelopment from "./img/rust-for-frontend-development.jpg";
 
 export type Talk = {
     slug: string;
@@ -76,46 +85,33 @@ export const talks: Talk[] = [
             "Our special guest, Vadim Makeev, a tech writer at MDN, host and producer of Web Standards, will open Tbilisi A11y & UX Day and talk about how the community's attitude towards accessibility is changing (or not changing).",
         labels: ["a11y"],
         type: "talk",
+        preview: stateOfA11y,
+        youtube: "https://www.youtube.com/embed/gMwS69xVmRE?si=P4FUtIM0hvB7uM1M",
         start: "2024-11-02T15:10:00.000Z",
         end: "2024-11-02T15:40:00.000Z",
     },
     {
-        slug: "accessibility-speedrun",
-        speaker: "maxim-khalizov",
-        name: "Accessibility Speedrun",
-        description: "https://t.me/tbilisi_js_chat/11484",
-        labels: ["a11y"],
-        type: "talk",
-        start: "2024-11-02T15:40:00.000Z",
-        end: "2024-11-02T16:30:00.000Z",
-    },
-    {
         slug: "accessibility-as-a-decomposition-of-complexity",
         speaker: "andrey-evdokov",
-        name: "Very Interesting, Completely Incomprehensible, or Accessibility as a Decomposition of Complexity",
-        description: "https://t.me/tbilisi_js_chat/11413",
+        name: "Accessibility as a Decomposition of Complexity",
+        description:
+            "Talk about accessibility as the decomposition of complexity and interface design as a translation into human language. Why and how we strive to create user-friendly tool-based software for biotech.",
         labels: ["a11y"],
+        preview: a11yAsDecompositionOfComplexity,
+        youtube: "https://www.youtube.com/embed/IDGvUb9hZJ4?si=jqGF9Df1dBQVRRUg",
         type: "talk",
         start: "2024-11-02T17:50:00.000Z",
         end: "2024-11-02T18:35:00.000Z",
     },
     {
-        slug: "what-exactly-is-this-ux-of-yours",
-        speaker: "ilona-sarkisova",
-        name: "What Exactly Is This UX of Yours",
-        description: "https://t.me/tbilisi_js_chat/10677",
-        labels: ["a11y", "UX"],
-        type: "talk",
-        start: "2024-11-02T19:00:00.000Z",
-        end: "2024-11-02T19:40:00.000Z",
-    },
-    {
-        slug: "accessibility-using-the-clay-pot-industry",
-        speaker: "philip-baranovsky",
-        name: "Accessibility Using the Clay Pot Industry as an Example",
+        slug: "accessibility-in-the-clay-pot-industry",
+        speaker: "philipp-baranovskii",
+        name: "Accessibility In the Clay Pot Industry",
         description: "https://t.me/tbilisi_js_chat/11245",
         labels: ["a11y"],
         type: "talk",
+        preview: a11yInTheClayPotIndustry,
+        youtube: "https://www.youtube.com/embed/IyyrhIX3Bxg?si=h9PkbH787frPhyW3",
         start: "2024-11-02T19:40:00.000Z",
         end: "2024-11-02T20:30:00.000Z",
     },
@@ -156,6 +152,8 @@ export const talks: Talk[] = [
             'Let’s try to speed up the entire path of accessibility in 30 minutes. Starting with "What is accessibility and why it’s important?" and ending with "Now I know how to create accessible components."',
         labels: ["accessibility", "a11y"],
         type: "talk",
+        preview: speedrunThroughA11y,
+        youtube: "https://www.youtube.com/embed/QJz1uIO4QKk?si=nsceCxC0N6F5lB7z",
         start: "2025-05-20T17:00:00.000Z",
         end: "2025-05-20T17:30:00.000Z",
     },
@@ -167,41 +165,22 @@ export const talks: Talk[] = [
             "Have you ever wondered how to work with fonts in a way that cares for users and their eyes? In this talk, you’ll learn the basics of typography and its impact on the accessibility and usability of web interfaces.",
         labels: ["accessibility", "typography"],
         type: "talk",
+        preview: a11yAndTypography,
+        youtube: "https://www.youtube.com/embed/F64bGVrI4TY?si=j5Yi8_j0LAH2-ocA",
         start: "2025-05-20T17:40:00.000Z",
         end: "2025-05-20T18:10:00.000Z",
     },
     {
-        slug: "the-process-of-accessibility-in-a-clay-pot-industry",
-        speaker: "philipp-baranovskii",
-        name: "The Process of Accessibility in a Clay Pot Industry",
-        description:
-            "Filipp will demonstrate when people start focusing on accessibility, at what point it becomes important, who it becomes important to, and for what reasons in the context of the clay pot industry.",
-        labels: ["accessibility", "process"],
-        type: "talk",
-        start: "2025-05-20T18:20:00.000Z",
-        end: "2025-05-20T18:50:00.000Z",
-    },
-    {
         slug: "what-is-this-ux-thing-anyway",
         speaker: "elona-sarkisova",
-        name: "What Is This UX Thing Anyway?",
-        description:
-            'Ilona Sarkisova will talk about what UX is and how it relates to UX design, the interface design process and "the Figma operators", what designers should and shouldn’t do on a product team, the top 5 ways to annoy an interface designer, and how to build collaborative work without toxicity.',
+        name: "What Is All This UX Thing Anyway?",
+        description: `<p>Elona Sarkisova will talk about what UX is and how it relates to UX design, the interface design process and "the Figma operators", what designers should and shouldn’t do on a product team, the top 5 ways to annoy an interface designer, and how to build collaborative work without toxicity.</p>`,
         labels: ["ux", "design"],
         type: "talk",
+        preview: whatIsUx,
+        youtube: "https://www.youtube.com/embed/SjWrAjTWVQI?si=EwGSgD1IndpW-6Q0",
         start: "2025-05-20T19:00:00.000Z",
         end: "2025-05-20T19:30:00.000Z",
-    },
-    {
-        slug: "very-interesting-but-nothing-is-clear-accessibility-as-a-decomposition-of-complexity",
-        speaker: "andrey-evdokov",
-        name: "Very Interesting, but Nothing Is Clear: Accessibility as a Decomposition of Complexity",
-        description:
-            "Talk about accessibility as the decomposition of complexity and interface design as a translation into human language. Why and how we strive to create user-friendly tool-based software for biotech.",
-        labels: ["accessibility", "complexity"],
-        type: "talk",
-        start: "2025-05-20T19:40:00.000Z",
-        end: "2025-05-20T20:10:00.000Z",
     },
     {
         slug: "how-to-write-interface-texts-without-ux-writer",
@@ -284,7 +263,7 @@ export const talks: Talk[] = [
         speaker: "daniil-savitskii",
         name: "An Easy Way to Quit React",
         description:
-            "Daniil Savitsky, Senior Software Engineer and functional-programming enthusiast, will talk about life beyond React. Expect a heated debate!",
+            "Daniil Savitskii, Senior Software Engineer and functional-programming enthusiast, will talk about life beyond React. Expect a heated debate!",
         labels: ["react", "functional-programming"],
         type: "talk",
         preview: easyWayToQuitReact,
@@ -356,34 +335,40 @@ export const talks: Talk[] = [
     },
     {
         slug: "introduction-rust-and-its-basic-concepts",
-        speaker: "alexander-zelik",
+        speaker: "aleksander-zelik",
         name: "Introduction: Rust and its Basic Concepts",
         description:
             "Rust is a programming language that helps write safe and fast code. In this talk, Alexander Zelik will explain how memory is managed to avoid errors and what tools make working with Rust convenient.",
         labels: ["rust", "basics"],
         type: "talk",
+        preview: rustAndItsConcepts,
+        youtube: "https://www.youtube.com/embed/NPoGm_5Xfn4?si=2WOMN-BEePHmwMIw",
         start: "2025-06-15T18:00:00.000Z",
         end: "2025-06-15T18:30:00.000Z",
     },
     {
         slug: "rust-as-a-tool-for-developing-backend-services",
-        speaker: "alexander-dmitriev",
+        speaker: "aleksander-dmitriev",
         name: "Rust as a Tool for Developing Backend Services",
         description:
             "Rust is excellent for creating server applications. Alexander Dmitriev will show how to work safely with multithreading and asynchronous tasks, using Actix-web as an example to build high-performance web services.",
         labels: ["rust", "backend"],
+        preview: backendInRust,
+        youtube: "https://www.youtube.com/embed/14GQJB3RnYc?si=MMKxBcW7Qx023Zan",
         type: "talk",
         start: "2025-06-15T18:40:00.000Z",
         end: "2025-06-15T19:10:00.000Z",
     },
     {
         slug: "rust-as-a-tool-for-developing-frontend-applications",
-        speaker: "alexander-zelik",
+        speaker: "aleksander-zelik",
         name: "Rust as a Tool for Developing Frontend Applications",
         description:
             "Rust can also be used to create rich browser apps via WebAssembly. Alexander Zelik will cover how Rust compiles to Wasm and how frameworks like Yew enable building modern frontend applications.",
         labels: ["rust", "frontend", "webassembly"],
         type: "talk",
+        preview: rustForFrontendDevelopment,
+        youtube: "https://www.youtube.com/embed/FV8qhSzzfYo?si=XlWSyAVSYhTh2574",
         start: "2025-06-15T19:20:00.000Z",
         end: "2025-06-15T19:50:00.000Z",
     },
