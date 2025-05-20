@@ -26,6 +26,10 @@ import a11yAsDecompositionOfComplexity from "./img/a11y-as-decomposition-of-comp
 import backendInRust from "./img/backend-in-rust.jpg";
 import rustAndItsConcepts from "./img/rust-and-its-concepts.jpg";
 import rustForFrontendDevelopment from "./img/rust-for-frontend-development.jpg";
+import dialMForMaintainability1 from "./img/dial-m-for-maintainability-1.jpg";
+import frontendInBiotech from "./img/frontend-in-biotech.jpg";
+import dokaForEachOther from "./img/doka-for-each-other.jpg";
+import serverlessForFrontend from "./img/serverless-for-frontend.jpg";
 import tjsMeetup6Image from "../images/tjs-meetup-6.png";
 
 export type Talk = {
@@ -459,6 +463,8 @@ export const talks: Talk[] = [
             "Azat Davliatshin, JS Engineer / SA at Quantori, will discuss “maintainability” using a simple problem example. He’ll explain what quality attributes are, share strategies for achieving code maintainability, and cover the “metrics” that indicate well-maintained code (and why “metrics” is in quotes).",
         labels: ["maintainability", "code-quality"],
         type: "talk",
+        preview: dialMForMaintainability1,
+        youtube: "https://www.youtube.com/embed/4AqRsCX6GGw?si=gZqpWGnKRF2X67cB",
         start: "2024-01-25T18:00:00.000Z",
         end: "2024-01-25T18:30:00.000Z",
     },
@@ -470,6 +476,8 @@ export const talks: Talk[] = [
             "Tanya Fokina, developer and editor of the accessibility and SVG sections at Doka and host of the Inclusive Pineapple podcast, will explain what Doka is, why it’s important, and how you can contribute to this open-source knowledge base.",
         labels: ["doka", "open-source"],
         type: "talk",
+        preview: dokaForEachOther,
+        youtube: "https://www.youtube.com/embed/Zhlfia_l-bc?si=6USRkJiahbZyvvok",
         start: "2024-01-25T18:40:00.000Z",
         end: "2024-01-25T19:10:00.000Z",
     },
@@ -481,6 +489,8 @@ export const talks: Talk[] = [
             "Maria Kondaurova, interface developer at BIOCAD and Holy.js speaker, will talk about the role of frontend in biotech: the goals it pursues, what modern antibody development looks like, and how developers contribute to the process.",
         labels: ["frontend", "biotech"],
         type: "talk",
+        preview: frontendInBiotech,
+        youtube: "https://www.youtube.com/embed/CKe7MQg8Mrc?si=0PSHgqPnOiUi1f15",
         start: "2024-01-25T19:20:00.000Z",
         end: "2024-01-25T19:50:00.000Z",
     },
@@ -492,6 +502,8 @@ export const talks: Talk[] = [
             "Anton Pavlov, DevOps and SRE at ANNA Money, will explain why serverless (AWS Lambda & Google Cloud Functions) is useful for frontend development, how to set it up, and why it matters for modern web apps.",
         labels: ["serverless", "frontend", "aws", "gcp"],
         type: "talk",
+        preview: serverlessForFrontend,
+        youtube: "https://www.youtube.com/embed/wNqhaK2rdSc?si=vJfZagTZ74V-xzPu",
         start: "2024-01-25T20:00:00.000Z",
         end: "2024-01-25T20:30:00.000Z",
     },
