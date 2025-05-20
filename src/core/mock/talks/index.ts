@@ -26,6 +26,7 @@ import a11yAsDecompositionOfComplexity from "./img/a11y-as-decomposition-of-comp
 import backendInRust from "./img/backend-in-rust.jpg";
 import rustAndItsConcepts from "./img/rust-and-its-concepts.jpg";
 import rustForFrontendDevelopment from "./img/rust-for-frontend-development.jpg";
+import tjsMeetup6Image from "../images/tjs-meetup-6.png";
 
 export type Talk = {
     slug: string;
@@ -42,6 +43,84 @@ export type Talk = {
 
 export const talks: Talk[] = [
     {
+        slug: "how-langchain-js-works-and-when-its-useful",
+        speaker: "anton-nepsha",
+        name: "How LangChain.js Works and When It's Useful",
+        description:
+            "Anton Nepsha, Lead Frontend Developer at Sber and author of a popular Telegram channel, will demystify LangChain.js—showing how it works under the hood and highlighting real-world use cases where it can streamline conversational AI in your applications.",
+        labels: ["langchain", "javascript", "ai"],
+        type: "talk",
+        preview: tjsMeetup6Image,
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+        start: "2025-06-14T09:30:00.000Z",
+        end: "2025-06-14T09:30:00.000Z",
+    },
+    {
+        slug: "live-interfaces-how-and-with-what-to-animate-the-web-in-2025",
+        speaker: "evgeny-doroshkevich",
+        name: "Live Interfaces: How (and with What) to Animate the Web in 2025?",
+        description:
+            "Evgeny Doroshkevich, Tech Lead Frontend at Kodix, will explore the latest animation techniques and libraries—from Web Animations API to real-time physics engines—and demonstrate how to bring truly interactive, high-performance motion to modern web applications.",
+        labels: ["animation", "web", "performance"],
+        type: "talk",
+        preview: tjsMeetup6Image,
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+        start: "2025-06-14T09:30:00.000Z",
+        end: "2025-06-14T09:30:00.000Z",
+    },
+    {
+        slug: "react-19-new-form-management-tools",
+        speaker: "sergey-levkovich",
+        name: "React 19: New Form Management Tools",
+        description:
+            "Sergey Levkovich, Senior Frontend Developer at Social Discovery Group, will introduce the new form handling APIs in React 19—covering their motivation, syntax, and migration path—and show how they simplify validation, performance, and developer ergonomics.",
+        labels: ["react", "forms", "react19"],
+        type: "talk",
+        preview: tjsMeetup6Image,
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+        start: "2025-06-14T09:30:00.000Z",
+        end: "2025-06-14T09:30:00.000Z",
+    },
+    {
+        slug: "voice-ai",
+        speaker: "maxim-barinov",
+        name: "Voice AI",
+        description:
+            "Maxim Barinov, Founder of vocao.ai and Founding Engineer at Workdone (YC X25), will guide us through the latest advances in Voice AI—from speech synthesis to real-time voice interfaces—and discuss how to integrate these technologies into web products.",
+        labels: ["ai", "voice"],
+        type: "talk",
+        preview: tjsMeetup6Image,
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+        start: "2025-06-14T09:30:00.000Z",
+        end: "2025-06-14T09:30:00.000Z",
+    },
+    {
+        slug: "gamified-prototyping-how-dnd-mechanics-help-to-design-an-llm-voice-assistant",
+        speaker: "hanna-kastrytsa",
+        name: "Gamified Prototyping: how D&D Mechanics help to design an LLM Voice Assistant",
+        description:
+            "Hanna Kastrytsa, UX Researcher and Product Designer at Lightspeed Commerce, will show how game mechanics from Dungeons & Dragons can be applied to prototyping LLM-powered voice assistants—making design workshops more engaging and effective.",
+        labels: ["prototyping", "gamification", "llm", "voice"],
+        type: "talk",
+        preview: tjsMeetup6Image,
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+        start: "2025-06-14T09:30:00.000Z",
+        end: "2025-06-14T09:30:00.000Z",
+    },
+    {
+        slug: "major-minor-patch-without-the-headache",
+        speaker: "azat-davliatshin",
+        name: "Major.Minor.Patch Without the Headache",
+        description:
+            "Azat Davliatshin, Lead Software Engineer / Software Architect at Quantori, will unravel the pain points of semantic versioning—sharing patterns and tools to automate 'major.minor.patch' workflows and keep your release process smooth.",
+        labels: ["versioning", "semver"],
+        type: "talk",
+        preview: tjsMeetup6Image,
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+        start: "2025-06-14T09:30:00.000Z",
+        end: "2025-06-14T09:30:00.000Z",
+    },
+    {
         slug: "debugging-page-performance-with-browser-tools",
         speaker: "nikita-dubko",
         name: "Debugging Page Performance with Browser Tools",
@@ -50,8 +129,8 @@ export const talks: Talk[] = [
         type: "talk",
         youtube: "https://www.youtube.com/embed/CBi-ycq3tuo?si=rzRXM1Jj5vT1dpLj",
         preview: debuggingPerformance,
-        start: "2025-04-10T18:00:00.000Z",
-        end: "2025-04-10T18:30:00.000Z",
+        start: "2024-10-31T17:30:00.000Z",
+        end: "2024-10-31T17:30:00.000Z",
     },
     {
         slug: "design-system-is-not-about-design-its-about-interaction",
@@ -62,8 +141,8 @@ export const talks: Talk[] = [
         youtube: "https://www.youtube.com/embed/mu2KOGv-sus?si=vNEA7_r9yJ73VD7J",
         preview: designSystem,
         type: "talk",
-        start: "2025-04-10T18:40:00.000Z",
-        end: "2025-04-10T19:10:00.000Z",
+        start: "2024-10-31T17:30:00.000Z",
+        end: "2024-10-31T17:30:00.000Z",
     },
     {
         slug: "managing-an-industrial-battery-fleet-using-react-spa",
@@ -74,8 +153,8 @@ export const talks: Talk[] = [
         type: "talk",
         youtube: "https://www.youtube.com/embed/O9Rid_RNJPE?si=rE_wK6yc0ZSDwJLn",
         preview: batteryFleet,
-        start: "2025-04-10T19:20:00.000Z",
-        end: "2025-04-10T19:50:00.000Z",
+        start: "2024-10-31T17:30:00.000Z",
+        end: "2024-10-31T17:30:00.000Z",
     },
     {
         slug: "how-a-developer-can-help-their-team-lead-grow",
@@ -86,8 +165,8 @@ export const talks: Talk[] = [
         type: "talk",
         youtube: "https://www.youtube.com/embed/qEELxhmZT6k?si=3tzZ_o3XKZDYz2yR",
         preview: howToHelpTeamLeadGrow,
-        start: "2025-04-10T20:00:00.000Z",
-        end: "2025-04-10T20:30:00.000Z",
+        start: "2024-10-31T17:30:00.000Z",
+        end: "2024-10-31T17:30:00.000Z",
     },
     {
         slug: "state-of-a11y",
@@ -99,8 +178,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: stateOfA11y,
         youtube: "https://www.youtube.com/embed/gMwS69xVmRE?si=P4FUtIM0hvB7uM1M",
-        start: "2024-11-02T15:10:00.000Z",
-        end: "2024-11-02T15:40:00.000Z",
+        start: "2024-11-02T12:30:00.000Z",
+        end: "2024-11-02T12:30:00.000Z",
     },
     {
         slug: "accessibility-as-a-decomposition-of-complexity",
@@ -112,8 +191,8 @@ export const talks: Talk[] = [
         preview: a11yAsDecompositionOfComplexity,
         youtube: "https://www.youtube.com/embed/IDGvUb9hZJ4?si=jqGF9Df1dBQVRRUg",
         type: "talk",
-        start: "2024-11-02T17:50:00.000Z",
-        end: "2024-11-02T18:35:00.000Z",
+        start: "2024-11-02T12:30:00.000Z",
+        end: "2024-11-02T12:30:00.000Z",
     },
     {
         slug: "accessibility-in-the-clay-pot-industry",
@@ -124,8 +203,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: a11yInTheClayPotIndustry,
         youtube: "https://www.youtube.com/embed/IyyrhIX3Bxg?si=h9PkbH787frPhyW3",
-        start: "2024-11-02T19:40:00.000Z",
-        end: "2024-11-02T20:30:00.000Z",
+        start: "2024-11-02T12:30:00.000Z",
+        end: "2024-11-02T12:30:00.000Z",
     },
     {
         slug: "react-server-components",
@@ -141,8 +220,8 @@ export const talks: Talk[] = [
         youtube: "https://www.youtube.com/embed/m8H-cObBEZY?si=HWnVX2DLMLTRVQMn&amp;start=5817",
         preview: reactServerComponents,
         type: "talk",
-        start: "2025-02-01T21:00:00.000Z",
-        end: "2025-02-01T21:30:00.000Z",
+        start: "2025-02-22T12:30:00.000Z",
+        end: "2025-02-22T12:30:00.000Z",
     },
     {
         slug: "speedrun-through-accessibility",
@@ -154,8 +233,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: speedrunThroughA11y,
         youtube: "https://www.youtube.com/embed/QJz1uIO4QKk?si=nsceCxC0N6F5lB7z",
-        start: "2025-05-20T17:00:00.000Z",
-        end: "2025-05-20T17:30:00.000Z",
+        start: "2024-11-02T12:30:00.000Z",
+        end: "2024-11-02T12:30:00.000Z",
     },
     {
         slug: "accessibility-and-typography",
@@ -167,8 +246,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: a11yAndTypography,
         youtube: "https://www.youtube.com/embed/F64bGVrI4TY?si=j5Yi8_j0LAH2-ocA",
-        start: "2025-05-20T17:40:00.000Z",
-        end: "2025-05-20T18:10:00.000Z",
+        start: "2024-11-02T12:30:00.000Z",
+        end: "2024-11-02T12:30:00.000Z",
     },
     {
         slug: "what-is-this-ux-thing-anyway",
@@ -179,8 +258,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: whatIsUx,
         youtube: "https://www.youtube.com/embed/SjWrAjTWVQI?si=EwGSgD1IndpW-6Q0",
-        start: "2025-05-20T19:00:00.000Z",
-        end: "2025-05-20T19:30:00.000Z",
+        start: "2024-11-02T12:30:00.000Z",
+        end: "2024-11-02T12:30:00.000Z",
     },
     {
         slug: "how-to-write-interface-texts-without-ux-writer",
@@ -192,8 +271,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: interfaceTextWithoutUxDesigner,
         youtube: "https://www.youtube.com/embed/f2_NFLtOmSo?si=v9y1wExSOCOEgFJL",
-        start: "2025-12-14T18:00:00.000Z",
-        end: "2025-12-14T18:30:00.000Z",
+        start: "2024-12-14T20:00:00.000Z",
+        end: "2024-12-14T20:00:00.000Z",
     },
     {
         slug: "the-browser-as-a-platform-for-heavy-applications",
@@ -205,8 +284,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: browserAsPlatformForHeavyApplications,
         youtube: "https://www.youtube.com/embed/Wl_LJFzmXwk?si=_sa4LzQV0WE0nLTR",
-        start: "2025-12-14T18:40:00.000Z",
-        end: "2025-12-14T19:10:00.000Z",
+        start: "2024-12-14T20:00:00.000Z",
+        end: "2024-12-14T20:00:00.000Z",
     },
     {
         slug: "echoes-of-exclusion-bias-in-generative-ai",
@@ -218,8 +297,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: echoesOfExclusion,
         youtube: "https://www.youtube.com/embed/ymr5AXlqPOI?si=Nd3AkLBXCWZ66tKw",
-        start: "2025-12-14T19:20:00.000Z",
-        end: "2025-12-14T19:50:00.000Z",
+        start: "2024-12-14T20:00:00.000Z",
+        end: "2024-12-14T20:00:00.000Z",
     },
     {
         slug: "infrastructure-as-typescript",
@@ -231,8 +310,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: infrastructureAsTypescript,
         youtube: "https://www.youtube.com/embed/uYJAA16EuQ4?si=YuXAlIGsp-z0ZbmL",
-        start: "2025-12-14T20:00:00.000Z",
-        end: "2025-12-14T20:30:00.000Z",
+        start: "2024-12-14T20:00:00.000Z",
+        end: "2024-12-14T20:30:00.000Z",
     },
     {
         slug: "generative-art-on-js",
@@ -243,8 +322,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: generativeArtOnJS,
         youtube: "https://www.youtube.com/embed/JxBbe26uE-M?si=QPKiCfJzCI5cN4-X",
-        start: "2026-02-22T18:00:00.000Z",
-        end: "2026-02-22T18:30:00.000Z",
+        start: "2025-02-22T12:30:00.000Z",
+        end: "2025-02-22T12:30:00.000Z",
     },
     {
         slug: "remember-everything",
@@ -255,8 +334,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: rememberEverything,
         youtube: "https://www.youtube.com/embed/v3NcxJgEWlQ?si=mfDyBbyiRHqYSVYb",
-        start: "2026-02-22T18:40:00.000Z",
-        end: "2026-02-22T19:10:00.000Z",
+        start: "2025-02-22T12:30:00.000Z",
+        end: "2025-02-22T12:30:00.000Z",
     },
     {
         slug: "an-easy-way-to-quit-react",
@@ -268,8 +347,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: easyWayToQuitReact,
         youtube: "https://www.youtube.com/embed/JAwk8ZBxAHk?si=HvxeWj6ZOsBm7jP0",
-        start: "2026-02-22T20:00:00.000Z",
-        end: "2026-02-22T20:30:00.000Z",
+        start: "2025-02-22T12:30:00.000Z",
+        end: "2025-02-22T12:30:00.000Z",
     },
     {
         slug: "the-journey-from-frontend-to-fullstack-engineering-team",
@@ -280,8 +359,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: frontendToFullstack,
         youtube: "https://www.youtube.com/embed/uSmbI9Hq1eI?si=bQIDFhv03PnbVJtV",
-        start: "2026-02-22T20:40:00.000Z",
-        end: "2026-02-22T21:10:00.000Z",
+        start: "2025-02-22T12:30:00.000Z",
+        end: "2025-02-22T12:30:00.000Z",
     },
     {
         slug: "three-stages-of-accepting-react-compiler",
@@ -343,8 +422,8 @@ export const talks: Talk[] = [
         type: "talk",
         preview: rustAndItsConcepts,
         youtube: "https://www.youtube.com/embed/NPoGm_5Xfn4?si=2WOMN-BEePHmwMIw",
-        start: "2025-06-15T18:00:00.000Z",
-        end: "2025-06-15T18:30:00.000Z",
+        start: "2024-09-26T17:30:00.000Z",
+        end: "2024-09-26T17:30:00.000Z",
     },
     {
         slug: "rust-as-a-tool-for-developing-backend-services",
@@ -356,8 +435,8 @@ export const talks: Talk[] = [
         preview: backendInRust,
         youtube: "https://www.youtube.com/embed/14GQJB3RnYc?si=MMKxBcW7Qx023Zan",
         type: "talk",
-        start: "2025-06-15T18:40:00.000Z",
-        end: "2025-06-15T19:10:00.000Z",
+        start: "2024-09-26T17:30:00.000Z",
+        end: "2024-09-26T17:30:00.000Z",
     },
     {
         slug: "rust-as-a-tool-for-developing-frontend-applications",
@@ -369,15 +448,15 @@ export const talks: Talk[] = [
         type: "talk",
         preview: rustForFrontendDevelopment,
         youtube: "https://www.youtube.com/embed/FV8qhSzzfYo?si=XlWSyAVSYhTh2574",
-        start: "2025-06-15T19:20:00.000Z",
-        end: "2025-06-15T19:50:00.000Z",
+        start: "2024-09-26T17:30:00.000Z",
+        end: "2024-09-26T17:30:00.000Z",
     },
     {
         slug: "dial-m-for-maintainability-part-1",
-        speaker: "azat-davlyatshin",
+        speaker: "azat-davliatshin",
         name: "Dial M for Maintainability (Part 1)",
         description:
-            "Azat Davlyatshin, JS Engineer / SA at Quantori, will discuss “maintainability” using a simple problem example. He’ll explain what quality attributes are, share strategies for achieving code maintainability, and cover the “metrics” that indicate well-maintained code (and why “metrics” is in quotes).",
+            "Azat Davliatshin, JS Engineer / SA at Quantori, will discuss “maintainability” using a simple problem example. He’ll explain what quality attributes are, share strategies for achieving code maintainability, and cover the “metrics” that indicate well-maintained code (and why “metrics” is in quotes).",
         labels: ["maintainability", "code-quality"],
         type: "talk",
         start: "2024-01-25T18:00:00.000Z",

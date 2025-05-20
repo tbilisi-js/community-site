@@ -8,6 +8,7 @@ import tjsMeetup2Image from "./images/tjs-meetup-2.jpg";
 import tjsMeetup3Image from "./images/tjs-meetup-3.jpg";
 import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
 import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
+import tjsMeetup6Image from "./images/tjs-meetup-6.png";
 import webPerformanceDayImage from "./images/web-performance-day.jpg";
 
 export type Event = {
@@ -24,6 +25,29 @@ export type Event = {
 };
 
 export const events: Event[] = [
+    {
+        slug: "tbilisi-js-meetup-6",
+        name: "Tbilisi JS Meetup #6",
+        date: "2025-06-14T09:30:00.000Z",
+        attendees: 150,
+        talks: [
+            "how-langchain-js-works-and-when-its-useful",
+            "live-interfaces-how-and-with-what-to-animate-the-web-in-2025",
+            "react-19-new-form-management-tools",
+            "voice-ai",
+            "gamified-prototyping-how-dnd-mechanics-help-to-design-an-llm-voice-assistant",
+            "major-minor-patch-without-the-headache",
+        ],
+        image: tjsMeetup6Image,
+        promo:
+            "We are excited to announce our new meetup and celebrate the incredible milestone of hosting ten events overall! 😎\n" +
+            "Since our first gathering in January 2024, we've successfully organized five classic meetups, three themed events, and one big conference! \n" +
+            "\n" +
+            "A special thanks to the fantastic team at Social Discovery Group for their support in making this event possible!",
+        registration: "https://forms.gle/umSdTdJeeQGZPsw97",
+        telegram: "https://t.me/tbilisi_js/415",
+        youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
+    },
     {
         slug: "tbilisi-performance-day",
         name: "Tbilisi Performance Day",

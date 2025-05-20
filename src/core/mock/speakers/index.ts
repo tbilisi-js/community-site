@@ -12,7 +12,7 @@ import ivanAkulov from "./img/ivan-akulov.png";
 import aleksandrKorotaev from "./img/aleksandr-korotaev.png";
 import olegSemichev from "./img/oleg-semichev.jpg";
 import denIlin from "./img/den-ilin.png";
-import hannaKastrytsa from "./img/hanna-kastrutsa.jpg";
+import hannaKastrytsa from "./img/hanna-kastrytsa.jpg";
 import valeriyaYakovleva from "./img/valeriya-yakovleva.jpg";
 import kirillKazakov from "./img/kirill-kazakov.jpg";
 import ivanZatravkin from "./img/ivan-zatravkin.jpg";
@@ -24,6 +24,10 @@ import andreyEvdokov from "./img/andrey-evdokov.jpg";
 import aleksanderDmitriev from "./img/aleksander-dmitriev.jpg";
 import aleksanderZelik from "./img/aleksander-zelik.jpg";
 import tanyaFokina from "./img/tanya-fokina.jpg";
+import antonNepsha from "./img/anton-nepsha.jpg";
+import evgenyDoroshkevich from "./img/evgeny-doroshkevich.png";
+import sergeyLevkovich from "./img/sergey-levkovich.jpeg";
+import maximBarinov from "./img/max-barinov.jpg";
 
 export type Speaker = {
     slug: string;
@@ -151,5 +155,25 @@ export const speakers: Speaker[] = [
         slug: "aleksander-zelik",
         name: "Aleksander Zelik",
         img: aleksanderZelik,
+    },
+    {
+        slug: "anton-nepsha",
+        name: "Anton Nepsha",
+        img: antonNepsha,
+    },
+    {
+        slug: "evgeny-doroshkevich",
+        name: "Evgeny Doroshkevich",
+        img: evgenyDoroshkevich,
+    },
+    {
+        slug: "sergey-levkovich",
+        name: "Sergey Levkovich",
+        img: sergeyLevkovich,
+    },
+    {
+        slug: "maxim-barinov",
+        name: "Maxim Barinov",
+        img: maximBarinov,
     },
 ];
