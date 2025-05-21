@@ -8,7 +8,7 @@ import tjsMeetup2Image from "./images/tjs-meetup-2.jpg";
 import tjsMeetup3Image from "./images/tjs-meetup-3.jpg";
 import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
 import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
-import tjsMeetup6Image from "./images/tjs-meetup-6.png";
+import tjsMeetup6Image from "./images/tbilisi-js-meetup-6.png";
 import webPerformanceDayImage from "./images/web-performance-day.jpg";
 
 export type Event = {
@@ -160,7 +160,7 @@ export const events: Event[] = [
         name: "Tbilisi JS Meetup #2",
         date: "2024-03-28T16:30:00.000Z",
         attendees: 90,
-        talks: [],
+        talks: ["modern-ui-kit-libraries", "dynamic-environments-in-frontend", "another-way-to-localise-websites"],
         image: tjsMeetup2Image,
         telegram: "https://t.me/tbilisi_js_chat/3545",
         youtube: "",
@@ -170,7 +170,12 @@ export const events: Event[] = [
         name: "Tbilisi JS Meetup #1",
         date: "2024-01-25T16:30:00.000Z",
         attendees: 80,
-        talks: [],
+        talks: [
+            "dial-m-for-maintainability-part-1",
+            "frontend-in-biotech",
+            "cloud-serverless-for-frontend",
+            "contributing-to-doka",
+        ],
         image: tjsMeetup1Image,
         telegram: "https://t.me/tbilisi_js_chat/1182",
         youtube: "",

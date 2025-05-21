@@ -30,6 +30,9 @@ import dialMForMaintainability1 from "./img/dial-m-for-maintainability-1.jpg";
 import frontendInBiotech from "./img/frontend-in-biotech.jpg";
 import dokaForEachOther from "./img/doka-for-each-other.jpg";
 import serverlessForFrontend from "./img/serverless-for-frontend.jpg";
+import dynamicEnviromentsInFrontend from "./img/dynamic-enviroments-in-frontend.jpg";
+import anotherWayToLocaliseWebsites from "./img/another-way-to-localise-websites.jpg";
+import modernUikitLibraries from "./img/modern-uikit-libraries.jpg";
 import tjsMeetup6Image from "../images/tjs-meetup-6.png";
 
 export type Talk = {
@@ -506,5 +509,42 @@ export const talks: Talk[] = [
         youtube: "https://www.youtube.com/embed/wNqhaK2rdSc?si=vJfZagTZ74V-xzPu",
         start: "2024-01-25T20:00:00.000Z",
         end: "2024-01-25T20:30:00.000Z",
+    },
+    {
+        slug: "modern-ui-kit-libraries",
+        speaker: "aleksander-popov",
+        name: "Modern UI kit libraries",
+        description:
+            "In this presentation, we will dive into the world of modern UI-kits, which serve not just as a set of tools, but as a foundation for creating high-quality and user-friendly interfaces. Alexander Popov will examine how ready-made components speed up development and enhance product consistency, guide you in choosing and customizing the right kit, and review popular open-source (including headless) libraries—sharing pros, cons, and his top tool recommendations.",
+        labels: ["ui-kit", "design-system", "component-library"],
+        type: "talk",
+        preview: modernUikitLibraries,
+        start: "2024-03-28T16:30:00.000Z",
+        end: "2024-03-28T16:30:00.000Z",
+    },
+    {
+        slug: "dynamic-environments-in-frontend",
+        speaker: "irakli-bakhtadze",
+        name: "Dynamic environments in frontend",
+        description:
+            "Irakli Bakhtadze, Senior DevOps Engineer at FlowHealth, will explain how dynamic environments can streamline frontend workflows—covering their full lifecycle and demonstrating a concrete AWS-based implementation that empowers teams to test, iterate, and tear down safely and automatically.",
+        labels: ["devops", "dynamic-environments", "aws"],
+        type: "talk",
+        preview: dynamicEnviromentsInFrontend,
+        start: "2024-03-28T16:30:00.000Z",
+        end: "2024-03-28T16:30:00.000Z",
+    },
+    {
+        slug: "another-way-to-localise-websites",
+        speaker: "dmitry-shmakov",
+        name: "Another way to localise websites",
+        description:
+            "Dmitry Shmakov, organizer of MoscowJS, will tackle the challenge of adapting website design and content for diverse countries, peoples, and cultures. Using Geert Hofstede’s cultural dimensions, he’ll show how to tailor layouts, color schemes, and copy to boost engagement and conversion across global audiences.",
+        labels: ["internationalization", "ux", "cultural-dimensions"],
+        type: "talk",
+        preview: anotherWayToLocaliseWebsites,
+        youtube: "https://www.youtube.com/embed/JH7cvKIzZdk?si=8pacELXvjwLlRPeH",
+        start: "2024-03-28T16:30:00.000Z",
+        end: "2024-03-28T16:30:00.000Z",
     },
 ];

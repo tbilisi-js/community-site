@@ -31,6 +31,9 @@ import maximBarinov from "./img/max-barinov.jpg";
 import azatDavliatshin from "./img/azat-davliatshin.jpg";
 import antonPavlov from "./img/anton-pavlov.jpg";
 import mariaKondaurova from "./img/maria-kondaurova.jpg";
+import dmitryShmakov from "./img/dmitry-shmakov.jpg";
+import irakliBakhtadze from "./img/irakli-bakhtadze.jpg";
+import aleksanderPopov from "./img/aleksander-popov.jpg";
 
 export type Speaker = {
     slug: string;
@@ -193,5 +196,20 @@ export const speakers: Speaker[] = [
         slug: "anton-pavlov",
         name: "Anton Pavlov",
         img: antonPavlov,
+    },
+    {
+        slug: "dmitry-shmakov",
+        name: "Dmitry Shmakov",
+        img: dmitryShmakov,
+    },
+    {
+        slug: "irakli-bakhtadze",
+        name: "Irakli Bakhtadze",
+        img: irakliBakhtadze,
+    },
+    {
+        slug: "aleksander-popov",
+        name: "Aleksander Popov",
+        img: aleksanderPopov,
     },
 ];
