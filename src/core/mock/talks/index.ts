@@ -27,12 +27,23 @@ import backendInRust from "./img/backend-in-rust.jpg";
 import rustAndItsConcepts from "./img/rust-and-its-concepts.jpg";
 import rustForFrontendDevelopment from "./img/rust-for-frontend-development.jpg";
 import dialMForMaintainability1 from "./img/dial-m-for-maintainability-1.jpg";
+import dialMForMaintainability2 from "./img/dial-m-for-maintainability-2.jpg";
 import frontendInBiotech from "./img/frontend-in-biotech.jpg";
 import dokaForEachOther from "./img/doka-for-each-other.jpg";
 import serverlessForFrontend from "./img/serverless-for-frontend.jpg";
 import dynamicEnviromentsInFrontend from "./img/dynamic-enviroments-in-frontend.jpg";
 import anotherWayToLocaliseWebsites from "./img/another-way-to-localise-websites.jpg";
 import modernUikitLibraries from "./img/modern-uikit-libraries.jpg";
+import howLangchainjsWorks from "./img/how-langchain-js-works-and-when-uts-useful.png";
+import serverlessYourFirstLambda from "./img/serverless-your-first-lambda.jpg";
+import howToGrowThroughMentorship from "./img/how-to-grow-through-mentorship.jpg";
+import frontendAcrossBorders from "./img/frontend-across-borders.jpg";
+import beyondFrontend from "./img/beyond-frontend.jpg";
+import testsYouDontNeed from "./img/tests-you-dont-need.jpg";
+import whyShouldYouWrite from "./img/why-should-you-write.jpg";
+import gettingIntoWebgl from "./img/getting-into-webgl.jpg";
+import storybookTheCookbook from "./img/storybook-the-cookbook.jpg";
+import whyDoWeCreateCommunities from "./img/why-do-we-create-communities.jpg";
 import tjsMeetup6Image from "../images/tjs-meetup-6.png";
 
 export type Talk = {
@@ -57,7 +68,7 @@ export const talks: Talk[] = [
             "Anton Nepsha, Lead Frontend Developer at Sber and author of a popular Telegram channel, will demystify LangChain.js—showing how it works under the hood and highlighting real-world use cases where it can streamline conversational AI in your applications.",
         labels: ["langchain", "javascript", "ai"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: howLangchainjsWorks,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -546,5 +557,135 @@ export const talks: Talk[] = [
         youtube: "https://www.youtube.com/embed/JH7cvKIzZdk?si=8pacELXvjwLlRPeH",
         start: "2024-03-28T16:30:00.000Z",
         end: "2024-03-28T16:30:00.000Z",
+    },
+    {
+        slug: "serverless-your-first-lambda",
+        speaker: "philipp-baranovskii",
+        name: "Serverless: Your First Lambda",
+        description:
+            "In Philipp’s talk, using examples from AWS and Yandex Cloud, we’ll explore serverless by building two applications: an echo bot and a subscription-calendar generator that receives events via a chat bot. We’ll dive into functions, database interactions, and S3 usage.",
+        labels: ["serverless", "aws", "yandex-cloud"],
+        type: "talk",
+        preview: serverlessYourFirstLambda,
+        youtube: "https://www.youtube.com/embed/UmMI_X6l9J0?si=UWyo8qOIA5GAWAoN",
+        start: "2024-06-01T18:00:00.000Z",
+        end: "2024-06-01T18:30:00.000Z",
+    },
+    {
+        slug: "how-to-develop-through-mentorship",
+        speaker: "timur-gafiulin",
+        name: "How to Develop Through Mentorship?",
+        description:
+            "Many of us build the foundation of our knowledge in a haphazard way and then neglect proper refactoring due to lack of motivation. In this talk with Timur, we’ll discuss how junior developers can find a mentor and why experienced IT professionals should help newcomers—exploring the benefits of mentorship for both sides.",
+        labels: ["mentorship", "career-development"],
+        preview: howToGrowThroughMentorship,
+        youtube: "https://www.youtube.com/embed/kahXRNNOzMk?si=8CiYzBrJQ94tcu7W",
+        type: "talk",
+        start: "2024-06-01T18:40:00.000Z",
+        end: "2024-06-01T19:10:00.000Z",
+    },
+    {
+        slug: "dial-m-for-maintainability-part-2",
+        speaker: "azat-davliatshin",
+        name: "Dial “M” for Maintainability. Part 2",
+        description:
+            "The sequel to “Dial “M” for Maintainability.” Together with Azat, we’ll continue developing the solution to the original problem—this time applying everything we learned in the first part.",
+        labels: ["maintainability", "code-quality"],
+        type: "talk",
+        preview: dialMForMaintainability2,
+        youtube: "https://www.youtube.com/embed/cR5HUjtukm8?si=OlTGMytadjNwu18s",
+        start: "2024-06-01T19:20:00.000Z",
+        end: "2024-06-01T19:50:00.000Z",
+    },
+    {
+        slug: "frontend-across-borders",
+        speaker: "viktor-shcheglov",
+        name: "Frontend Across Borders",
+        description:
+            "Launching an application in a new market is a challenge. Drawing on real experience from product launches in African countries, Viktor will demonstrate how to adapt and optimize the frontend, measure and monitor key technical metrics, and solve common issues—highlighting the universality of these challenges.",
+        labels: ["internationalization", "ux"],
+        type: "talk",
+        preview: frontendAcrossBorders,
+        youtube: "https://www.youtube.com/embed/DskcARdCYjE?si=CZe8HB3t45zdyas5",
+        start: "2024-06-01T20:00:00.000Z",
+        end: "2024-06-01T20:30:00.000Z",
+    },
+    {
+        slug: "beyond-frontend",
+        speaker: "mikhail-garbuzov",
+        name: "Beyond the Frontend",
+        description:
+            "In this talk, Misha will explain how a typical frontend developer can start writing backend code with Node.js. He’ll cover key considerations in the process and show that backend development isn’t as complex as it seems.",
+        labels: ["backend", "nodejs"],
+        type: "talk",
+        preview: beyondFrontend,
+        youtube: "https://www.youtube.com/embed/E6aVAAN1CdQ?si=glRyMw3AEayso2LE",
+        start: "2024-06-01T20:40:00.000Z",
+        end: "2024-06-01T21:10:00.000Z",
+    },
+    {
+        slug: "tests-you-dont-need",
+        speaker: "aleksander-komlev",
+        name: "Tests You Don't Need",
+        description:
+            "In his talk, Sasha will outline bad testing practices you should avoid and show what you should be writing instead to ensure effective coverage and maintainable tests.",
+        labels: ["testing", "best-practices"],
+        type: "talk",
+        preview: testsYouDontNeed,
+        youtube: "https://www.youtube.com/embed/KqzH_X4Ds0c?si=VMPGmx_m_fEu852Q",
+        start: "2024-06-01T21:20:00.000Z",
+        end: "2024-06-01T21:50:00.000Z",
+    },
+    {
+        slug: "why-should-you-write",
+        speaker: "mikhail-pokryshchenko",
+        name: "Why Should You Write?",
+        description:
+            "Our brains can trick us—mixing up thoughts and fostering self-doubt. Writing is your secret weapon! It can help organize your mind, improve memory, conquer imposter syndrome, and defeat procrastination. Want to become more confident and productive? Start writing!",
+        labels: ["writing", "productivity"],
+        type: "talk",
+        preview: whyShouldYouWrite,
+        youtube: "https://www.youtube.com/embed/Rezn0WQtJuE?si=DYezt8hgzTFlNRHg",
+        start: "2024-06-01T22:00:00.000Z",
+        end: "2024-06-01T22:30:00.000Z",
+    },
+    {
+        slug: "getting-into-webgl",
+        speaker: "pavel-melnikov",
+        name: "How to Dive into WebGL Graphics: Up & Going",
+        description:
+            "Pavel will discuss the main challenges of combining React and WebGL, and demonstrate how to create custom materials and particle effects with practical examples.",
+        labels: ["webgl", "graphics", "react"],
+        type: "talk",
+        preview: gettingIntoWebgl,
+        youtube: "https://www.youtube.com/embed/-xnLWfCYAdE?si=6vxcGsggYSaC7pDo",
+        start: "2024-06-01T22:40:00.000Z",
+        end: "2024-06-01T23:10:00.000Z",
+    },
+    {
+        slug: "storybook-the-cookbook",
+        speaker: "marsel-akhmetshin",
+        name: "Storybook: The Cookbook",
+        description:
+            "Marsel will share how to write effective stories for smart components and set up a production/development environment around them to improve your workflow.",
+        labels: ["storybook", "component-library"],
+        type: "talk",
+        preview: storybookTheCookbook,
+        youtube: "https://www.youtube.com/embed/H-8qQbaoSqM?si=8tFhntiY7FvUPC-X",
+        start: "2024-06-01T23:20:00.000Z",
+        end: "2024-06-01T23:50:00.000Z",
+    },
+    {
+        slug: "why-do-we-create-communities",
+        speaker: "aleksander-korotaev",
+        name: "Why Do We Create Communities?",
+        description:
+            "Alexander will share his experience organizing meetups and communities, discuss the different formats, and explain why building communities is important for both participants and organizers.",
+        labels: ["community", "meetups"],
+        type: "talk",
+        preview: whyDoWeCreateCommunities,
+        youtube: "https://www.youtube.com/embed/h_vmHQhvz_U?si=JJAhey4pela7GDAe",
+        start: "2024-06-01T23:50:00.000Z",
+        end: "2024-06-01T00:20:00.000Z",
     },
 ];

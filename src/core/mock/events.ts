@@ -146,7 +146,7 @@ export const events: Event[] = [
         youtube: "",
     },
     {
-        slug: "tbilisi-js-conf-1",
+        slug: "tbilisi-js-conf-2024",
         name: "Tbilisi JS Conf",
         date: "2024-06-01T12:30:00.000Z",
         attendees: 150,

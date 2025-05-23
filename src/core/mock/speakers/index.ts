@@ -34,6 +34,12 @@ import mariaKondaurova from "./img/maria-kondaurova.jpg";
 import dmitryShmakov from "./img/dmitry-shmakov.jpg";
 import irakliBakhtadze from "./img/irakli-bakhtadze.jpg";
 import aleksanderPopov from "./img/aleksander-popov.jpg";
+import viktorShcheglov from "./img/viktor-shcheglov.jpg";
+import mikhailGarbuzov from "./img/mikhail-garbuzov.jpeg";
+import aleksanderKomlev from "./img/aleksander-komlev.jpg";
+import pavelMelnikov from "./img/pavel-melnikov.jpg";
+import mikhailPokryshchenko from "./img/mikhail-pokryshchenko.jpg";
+import marselAkhmetshin from "./img/marsel-akhmetshin.jpg";
 
 export type Speaker = {
     slug: string;
@@ -211,5 +217,35 @@ export const speakers: Speaker[] = [
         slug: "aleksander-popov",
         name: "Aleksander Popov",
         img: aleksanderPopov,
+    },
+    {
+        slug: "viktor-shcheglov",
+        name: "Viktor Shcheglov",
+        img: viktorShcheglov,
+    },
+    {
+        slug: "mikhail-garbuzov",
+        name: "Mikhail Garbuzov",
+        img: mikhailGarbuzov,
+    },
+    {
+        slug: "aleksander-komlev",
+        name: "Aleksander Komlev",
+        img: aleksanderKomlev,
+    },
+    {
+        slug: "pavel-melnikov",
+        name: "Pavel Melnikov",
+        img: pavelMelnikov,
+    },
+    {
+        slug: "mikhail-pokryshchenko",
+        name: "Mikhail Pokryshchenko",
+        img: mikhailPokryshchenko,
+    },
+    {
+        slug: "marsel-akhmetshin",
+        name: "Marsel Akhmetshin",
+        img: marselAkhmetshin,
     },
 ];
