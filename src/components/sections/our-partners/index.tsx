@@ -6,6 +6,7 @@ import garageItImg from "./img/garage-it.svg";
 import lightspeedImg from "./img/lightspeed.svg";
 import tabbyImg from "./img/tabby.svg";
 import tradingViewImg from "./img/trading-view.svg";
+import socialDiscoderyGroup from "./img/social-discovery-group.svg";
 
 import "./our-partners.scss";
 
@@ -44,6 +45,11 @@ const partners = [
         src: tradingViewImg.src,
         alt: "TradingView",
         url: "https://www.tradingview.com/",
+    },
+    {
+        src: socialDiscoderyGroup.src,
+        alt: "Social Discovery Group",
+        url: "https://socialdiscoverygroup.com/",
     },
 ];
 

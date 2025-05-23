@@ -90,9 +90,7 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
                         </p>
                         <IconButton
                             className="events-slider-link"
-                            href={event.telegram}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={`/events/${event.slug}`}
                             title={`Go to ${event.name} page`}
                         >
                             <ArrowIcon />

@@ -11,7 +11,7 @@
     }
 
     @include mixins.media(lg) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -59,10 +59,9 @@
     height: auto;
     min-height: 200px;
     max-height: 320px;
-    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 16px;
-    background-color: var(--cl-text);
+    background-color: transparent;
 }
 
 .talks-list-visual {
