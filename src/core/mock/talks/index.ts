@@ -142,7 +142,7 @@ export const talks: Talk[] = [
         slug: "debugging-page-performance-with-browser-tools",
         speaker: "nikita-dubko",
         name: "Debugging Page Performance with Browser Tools",
-        description: `<p>The first time I opened the Performance tab in DevTools, I clicked on different elements, didn’t understand a thing, and closed it. But in fact, it’s a very useful tool with a lot of capabilities.</p><br/><p>Over the years, I’ve figured out what all those buttons and links actually mean, so in this talk, I’ll explain how to use this tab and impress your colleagues with quick problem-solving.</p>`,
+        description: `The first time I opened the Performance tab in DevTools, I clicked on different elements, didn’t understand a thing, and closed it. But in fact, it’s a very useful tool with a lot of capabilities.Over the years, I’ve figured out what all those buttons and links actually mean, so in this talk, I’ll explain how to use this tab and impress your colleagues with quick problem-solving.`,
         labels: ["performance", "devtools"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/CBi-ycq3tuo?si=rzRXM1Jj5vT1dpLj",
@@ -154,7 +154,7 @@ export const talks: Talk[] = [
         slug: "design-system-is-not-about-design-its-about-interaction",
         speaker: "egor-nechaev",
         name: "Design System is Not About Design, It’s About Interaction",
-        description: `<p>Is a design system a must-have or a devil’s trap? How do you avoid letting a design system limit you? What do design and architecture have in common, and why is it important for designers to develop an engineering mindset? </p><br/><p>We’ll hear the answers to these and other questions from Egor Nechaev, a system designer at Lightspeed. As you can guess from my job title, Egor creates and develops web design systems, sets up processes, and advocates for perfectionism and quality. Somehow, wherever Egor has worked, he has always done this, so he has much to share!</p>`,
+        description: `Is a design system a must-have or a devil’s trap? How do you avoid letting a design system limit you? What do design and architecture have in common, and why is it important for designers to develop an engineering mindset? We’ll hear the answers to these and other questions from Egor Nechaev, a system designer at Lightspeed. As you can guess from my job title, Egor creates and develops web design systems, sets up processes, and advocates for perfectionism and quality. Somehow, wherever Egor has worked, he has always done this, so he has much to share!`,
         labels: ["design-system", "interaction"],
         youtube: "https://www.youtube.com/embed/mu2KOGv-sus?si=vNEA7_r9yJ73VD7J",
         preview: designSystem,
@@ -166,7 +166,7 @@ export const talks: Talk[] = [
         slug: "managing-an-industrial-battery-fleet-using-react-spa",
         speaker: "vic-istomin",
         name: "Managing an Industrial Battery Fleet Using React SPA",
-        description: `<p>Imagine this — you join a project, and at first glance, it seems like a straightforward app for managing and monitoring parameters of large lithium-ion batteries. Sure, the domain is unusual (Battery Management Systems aren’t something you encounter every day), but after getting acquainted with the simple API, you quickly realize it’s not that simple: the app works entirely talk, there’s no centralized server, and it communicates directly with battery microcontrollers over a local network. These batteries are installed on industrial forklifts in giant warehouses!</p><br/><p>As requirements grew, we added support for different battery generations with incompatible APIs, subnet scanning to auto-discover batteries in secure modes, and even client-side processing of millions of log entries to draw telemetry graphs — all bundled into a single file to send by email!</p>`,
+        description: `Imagine this — you join a project, and at first glance, it seems like a straightforward app for managing and monitoring parameters of large lithium-ion batteries. Sure, the domain is unusual (Battery Management Systems aren’t something you encounter every day), but after getting acquainted with the simple API, you quickly realize it’s not that simple: the app works entirely talk, there’s no centralized server, and it communicates directly with battery microcontrollers over a local network. These batteries are installed on industrial forklifts in giant warehouses!As requirements grew, we added support for different battery generations with incompatible APIs, subnet scanning to auto-discover batteries in secure modes, and even client-side processing of millions of log entries to draw telemetry graphs — all bundled into a single file to send by email!`,
         labels: ["react", "iiot", "talk-first"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/O9Rid_RNJPE?si=rE_wK6yc0ZSDwJLn",
@@ -178,7 +178,7 @@ export const talks: Talk[] = [
         slug: "how-a-developer-can-help-their-team-lead-grow",
         speaker: "timur-gafiulin",
         name: "How a Developer Can Help Their Team Lead Grow",
-        description: `<p>Timur Gafiulin, developer and author of the <a href='https://t.me/tatarinfrontend' target="_blank">Telegram channel TatarinFrontend</a>, will share his experience as a developer who actively contributes to his team lead’s professional and personal growth.</p> <p>He’ll discuss practical steps, strategies, and methods — from reverse mentoring to collaborative learning — that create a supportive environment for leadership development.</p>`,
+        description: `Timur Gafiulin, developer and author of the <a href='https://t.me/tatarinfrontend' target="_blank">Telegram channel TatarinFrontend</a>, will share his experience as a developer who actively contributes to his team lead’s professional and personal growth. He’ll discuss practical steps, strategies, and methods — from reverse mentoring to collaborative learning — that create a supportive environment for leadership development.`,
         labels: ["mentoring", "leadership"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/qEELxhmZT6k?si=3tzZ_o3XKZDYz2yR",
@@ -227,8 +227,8 @@ export const talks: Talk[] = [
     {
         slug: "react-server-components",
         name: "React Server Components: What, How, and Most Importantly, Why?",
-        description: `<p>Alexander Savelyev, Developer and Next.js Contributor, has been actively implementing React Server Components (RSC) in production projects over the past couple of years. He has also contributed to the ecosystem and shared his experience through articles.</p>
-<p>In his talk, Alexander will cover:</p>
+        description: `Alexander Savelyev, Developer and Next.js Contributor, has been actively implementing React Server Components (RSC) in production projects over the past couple of years. He has also contributed to the ecosystem and shared his experience through articles.
+In his talk, Alexander will cover:
 <ul><li>How server components actually work and what’s happening under the hood;</li>
 <li>Key differences in framework implementations (Next.js, Remix, TanStack Router);</li>
 <li>The new component architecture: composing server and client components, communication between them, and building component trees;</li>
@@ -271,7 +271,7 @@ export const talks: Talk[] = [
         slug: "what-is-this-ux-thing-anyway",
         speaker: "elona-sarkisova",
         name: "What Is All This UX Thing Anyway?",
-        description: `<p>Elona Sarkisova will talk about what UX is and how it relates to UX design, the interface design process and "the Figma operators", what designers should and shouldn’t do on a product team, the top 5 ways to annoy an interface designer, and how to build collaborative work without toxicity.</p>`,
+        description: `Elona Sarkisova will talk about what UX is and how it relates to UX design, the interface design process and "the Figma operators", what designers should and shouldn’t do on a product team, the top 5 ways to annoy an interface designer, and how to build collaborative work without toxicity.`,
         labels: ["ux", "design"],
         type: "talk",
         preview: whatIsUx,
@@ -335,7 +335,7 @@ export const talks: Talk[] = [
         slug: "generative-art-on-js",
         speaker: "aleksander-korotaev",
         name: "Generative art on JS",
-        description: `<p>Alexander Korotaev, Frontend Developer, speaker, and member of the Holy.js program committee, will talk about how generative art can become a source of inspiration and a practical tool for learning.</p><p>Interface developers can adopt approaches to using algorithms to create adaptive animations, unique visual elements, and interactive effects. This is not just a demonstration of technical capabilities — it is an immersion into the creative process that will help the audience expand their horizons and see algorithms as a means of expression rather than just a problem-solving tool.</p>`,
+        description: `Alexander Korotaev, Frontend Developer, speaker, and member of the Holy.js program committee, will talk about how generative art can become a source of inspiration and a practical tool for learning.Interface developers can adopt approaches to using algorithms to create adaptive animations, unique visual elements, and interactive effects. This is not just a demonstration of technical capabilities — it is an immersion into the creative process that will help the audience expand their horizons and see algorithms as a means of expression rather than just a problem-solving tool.`,
         labels: ["generative-art", "algorithms", "creative"],
         type: "talk",
         preview: generativeArtOnJS,
@@ -347,7 +347,7 @@ export const talks: Talk[] = [
         slug: "remember-everything",
         speaker: "oleg-semichev",
         name: "Remember Everything",
-        description: `<p>Another work overload? Did you forget to reply to your manager again? Tired of endless, unmanageable notification dots in your inbox, task manager, or corporate messenger?</p><br/><p>Oleg Semichev, Frontend Team Lead at TradingView, will share his thoughts on the constant mental stack overflow and practical tips on handling it — (almost) without resorting to fancy acronyms.</p>`,
+        description: `Another work overload? Did you forget to reply to your manager again? Tired of endless, unmanageable notification dots in your inbox, task manager, or corporate messenger?Oleg Semichev, Frontend Team Lead at TradingView, will share his thoughts on the constant mental stack overflow and practical tips on handling it — (almost) without resorting to fancy acronyms.`,
         labels: ["productivity", "mental-health"],
         type: "talk",
         preview: rememberEverything,
@@ -372,7 +372,7 @@ export const talks: Talk[] = [
         slug: "the-journey-from-frontend-to-fullstack-engineering-team",
         speaker: "den-ilin",
         name: "The Journey from Frontend to a Full-Stack Engineering Team",
-        description: `<p>Denis Ilin, Technical Leader at Chill House, will share how his team replaced non-frontend development with cloud technologies, saving time and money.</p><br/><p>He’ll discuss their approaches and details of implementing serverless solutions.</p>`,
+        description: `Denis Ilin, Technical Leader at Chill House, will share how his team replaced non-frontend development with cloud technologies, saving time and money.He’ll discuss their approaches and details of implementing serverless solutions.`,
         labels: ["full-stack", "serverless", "cloud"],
         type: "talk",
         preview: frontendToFullstack,
@@ -384,8 +384,8 @@ export const talks: Talk[] = [
         slug: "three-stages-of-accepting-react-compiler",
         speaker: "anna-shiryaeva",
         name: "The Three Stages of Accepting React Compiler",
-        description: `<p>Everything evolves, and new tools occasionally emerge that fundamentally change how we work. At these times, you might wonder, "How will this affect my code?".</p><br/><p>Some may become curious about how these new tools function, while others might broaden their perspective to consider the wider implications for the industry, often discovering whether the excitement surrounding the tool is truly justified.</p>
-<p>Anna Shiryaeva, Lead Frontend Developer at Sibur Digital and organizer of MoscowJS, will deliver a talk about compilers, focusing on React Compiler. We'll examine the problems it solves and how it impacts current React mechanisms.</p>`,
+        description: `Everything evolves, and new tools occasionally emerge that fundamentally change how we work. At these times, you might wonder, "How will this affect my code?".Some may become curious about how these new tools function, while others might broaden their perspective to consider the wider implications for the industry, often discovering whether the excitement surrounding the tool is truly justified.
+Anna Shiryaeva, Lead Frontend Developer at Sibur Digital and organizer of MoscowJS, will deliver a talk about compilers, focusing on React Compiler. We'll examine the problems it solves and how it impacts current React mechanisms.`,
         labels: ["react", "compiler", "performance"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/LMJmFmR3SC8?si=lrnrdlZdiO3guHNe",
@@ -397,8 +397,8 @@ export const talks: Talk[] = [
         slug: "9-and-a-half-weeks-before-release",
         speaker: "daniil-savitskii",
         name: "9 ½ Weeks Before Release",
-        description: `<p>Choices, choices, and more choices. The best choice? The one you didn't have to make.</p><br/><p>Daniil will talk about taking apart a wooden airplane mid-flight, racing against the clock, and trying not to mess everything up at the finish line.</p>
-<p>Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple solutions and almost a сlojurist, returns with a new talk, as always, with an intriguing title.<p>`,
+        description: `Choices, choices, and more choices. The best choice? The one you didn't have to make.Daniil will talk about taking apart a wooden airplane mid-flight, racing against the clock, and trying not to mess everything up at the finish line.
+Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple solutions and almost a сlojurist, returns with a new talk, as always, with an intriguing title.`,
         labels: ["release", "performance"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/dbGm3pDgSPQ?si=XfP4CxcJsAllVL9f",
@@ -410,7 +410,7 @@ export const talks: Talk[] = [
         slug: "practice-of-the-financial-chart-optimization",
         speaker: "eugene-korobko",
         name: "Practice of the financial chart optimization",
-        description: `<p>Evgeniy Korobko, Lead Software Developer on the TradingView charting team and author of TradingView’s first line of code, will share 14 years of hard-won performance optimizations: from drawing massive datasets on Canvas to squeezing every millisecond out of complex charting workflows.</p>`,
+        description: `Evgeniy Korobko, Lead Software Developer on the TradingView charting team and author of TradingView’s first line of code, will share 14 years of hard-won performance optimizations: from drawing massive datasets on Canvas to squeezing every millisecond out of complex charting workflows.`,
         labels: ["canvas", "performance", "optimization"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/VqWk-6oKGN4?si=H3fEWtvJ3w8d0wtp",
@@ -422,7 +422,7 @@ export const talks: Talk[] = [
         slug: "when-performance-optimizations-backfire",
         speaker: "ivan-akulov",
         name: "When Performance Optimizations Backfire",
-        description: `<p>Ever put your assets on a CDN? Or used font-diplay: swap to render the text faster? These optimizations are recommended all over the web, but sometimes, they make your site not faster but slower.</p><br/><p>In this talk, Ivan — Google Developer Expert and React/Web Performance Engineer — will show how some common performance optimizations backfire, and what we need to do to avoid that.</p>`,
+        description: `Ever put your assets on a CDN? Or used font-diplay: swap to render the text faster? These optimizations are recommended all over the web, but sometimes, they make your site not faster but slower.In this talk, Ivan — Google Developer Expert and React/Web Performance Engineer — will show how some common performance optimizations backfire, and what we need to do to avoid that.`,
         labels: ["performance", "anti-patterns", "optimization"],
         type: "talk",
         youtube: "https://www.youtube.com/embed/JgQsElXk5BM?si=ILEnImX1XlpclqJz",

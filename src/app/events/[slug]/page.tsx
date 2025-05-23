@@ -34,7 +34,7 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
                 <Tapes date={event.date} />
             </StarsWrapper>
             <StarsWrapper>
-                <Schedule talks={eventTalks} />
+                <Schedule talks={eventTalks} speakers={speakers} />
             </StarsWrapper>
         </>
     );

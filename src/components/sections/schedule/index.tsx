@@ -4,6 +4,7 @@ import { Block } from "@src/components/ui/block";
 import { NavLink } from "@src/components/ui/nav-link";
 
 import "./schedule.scss";
+import Image from "next/image";
 
 const TALK_TYPES = {
     talk: "#00bcff",
@@ -12,9 +13,12 @@ const TALK_TYPES = {
 
 export interface ScheduleProps {
     talks: Array<Omit<Talk, "speaker"> & { speaker?: Speaker }>;
+    speakers: Array<Speaker>;
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
+export const Schedule: React.FC<ScheduleProps> = ({ talks, speakers }) => {
+    const getSpeakerAvatar = (talkSpeakerName: string) => speakers.find((speaker) => speaker.name === talkSpeakerName);
+
     return (
         <Block className="schedule" id="schedule">
             <h2 className="schedule-title">Schedule</h2>
@@ -68,15 +72,24 @@ export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
                             </div>
                         </summary>
                         <div className="schedule-item-description">
-                            <p>{talk.description}</p>
-                            <NavLink
-                                href={`/talks/${talk.slug}`}
-                                weight="bold"
-                                textTransform="none"
-                                className="schedule-item-link"
-                            >
-                                <span>Read more</span>
-                            </NavLink>
+                            <Image
+                                src={getSpeakerAvatar(talk.speaker?.name ?? "")?.img ?? "/logo-rect.png"}
+                                width={100}
+                                height={100}
+                                alt="Avatar"
+                                className="schedule-item-avatar"
+                            />
+                            <p>
+                                {talk.description}
+                                <NavLink
+                                    href={`/talks/${talk.slug}`}
+                                    weight="bold"
+                                    textTransform="none"
+                                    className="schedule-item-link"
+                                >
+                                    <span>Read more →</span>
+                                </NavLink>
+                            </p>
                         </div>
                     </details>
                 ))}

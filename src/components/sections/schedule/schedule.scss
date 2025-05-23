@@ -87,10 +87,24 @@
 }
 
 .schedule-item-description {
+    display: flex;
+    align-items: center;
     margin: 0 20px;
     padding: 24px 0;
     border-top: 1px solid var(--cl-text);
     transition: border-color 0.3s ease-in-out;
+    text-wrap: balance;
+}
+
+.schedule-item-avatar {
+  background-color: var(--cl-text);
+  border: 2px solid var(--cl-secondary);
+  object-fit: cover;
+  display: inline-block;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 32px;
 }
 
 .schedule-item-link {
