@@ -90,7 +90,7 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
                         </p>
                         <IconButton
                             className="events-slider-link"
-                            href={`events/${event.slug}`}
+                            href={`/events/${event.slug}`}
                             title={`Go to ${event.name} page`}
                         >
                             <ArrowIcon />
