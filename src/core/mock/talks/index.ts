@@ -611,7 +611,7 @@ export const talks: Talk[] = [
         end: "2024-06-01T20:30:00.000Z",
     },
     {
-        slug: "beyond-frontend",
+        slug: "beyond-the-frontend",
         speaker: "mikhail-garbuzov",
         name: "Beyond the Frontend",
         description:
