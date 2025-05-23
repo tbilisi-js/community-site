@@ -106,11 +106,11 @@ export const events: Event[] = [
         attendees: 160,
         talks: [
             "state-of-a11y",
-            "accessibility-speedrun",
+            "speedrun-through-accessibility",
             "accessibility-and-typography",
             "accessibility-as-a-decomposition-of-complexity",
             "what-is-this-ux-thing-anyway",
-            "accessibility-using-the-clay-pot-industry",
+            "accessibility-in-the-clay-pot-industry",
         ],
         image: allyUxDayImage,
         telegram: "https://t.me/tbilisi_js_chat/10441",
