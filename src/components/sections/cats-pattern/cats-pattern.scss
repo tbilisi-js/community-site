@@ -1,6 +1,7 @@
 @use "../../../assets/styles/_mixins.scss";
 
 .cats-pattern {
+    position: relative;
     background-position: bottom;
     background-size: auto 100%;
     background-repeat: repeat-x;
