@@ -7,6 +7,8 @@ import { Schedule } from "@src/components/sections/schedule";
 import { events } from "@src/core/mock/events";
 import { talks, type Talk } from "@src/core/mock/talks";
 import { speakers, type Speaker } from "@src/core/mock/speakers";
+import { CommunityGallery } from "@src/components/sections/community-gallery";
+import { CatsPattern } from "@src/components/sections/cats-pattern";
 
 type Params = Promise<{ slug: string }>;
 
@@ -35,6 +37,12 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
             </StarsWrapper>
             <StarsWrapper>
                 <Schedule talks={eventTalks} speakers={speakers} />
+            </StarsWrapper>
+            <StarsWrapper>
+                <CommunityGallery />
+            </StarsWrapper>
+            <StarsWrapper>
+                <CatsPattern />
             </StarsWrapper>
         </>
     );

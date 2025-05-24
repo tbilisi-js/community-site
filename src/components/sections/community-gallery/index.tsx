@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 import { Block } from "@src/components/ui/block";
-import { IconButton } from "@srccomponents/ui/icon-button";
+import { IconButton } from "@src/components/ui/icon-button";
 
 import gallery1 from "./img/gallery-1.jpg";
 import gallery2 from "./img/gallery-2.jpg";

@@ -1,4 +1,4 @@
-export const Arrow: React.FC<React.SVGAttributes<SVGSVGElement>> = (props) => (
+export const PixelArrowBottom: React.FC<React.SVGAttributes<SVGSVGElement>> = (props) => (
     <svg width="36" height="50" viewBox="0 0 36 50" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <rect x="20.5" y="20" width="5" height="5" fill="#CEA60F" />
         <rect x="30.5" y="25" width="5" height="5" fill="#CEA60F" />
