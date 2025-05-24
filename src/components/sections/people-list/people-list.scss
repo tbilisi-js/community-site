@@ -77,7 +77,8 @@
         font-size: 24px;
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
         content: "";
         position: absolute;
         width: 24px;

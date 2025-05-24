@@ -1,7 +1,7 @@
 import { Block } from "@src/components/ui/block";
 import { AnnouncementTimer } from "@src/components/elements/announcement-timer";
 import { SwapWrapper } from "@src/components/elements/swap-wrapper";
-import { Arrow } from "./img/arrow";
+import { Arrow } from "@src/components/ui/arrow";
 
 import "./event-intro.scss";
 

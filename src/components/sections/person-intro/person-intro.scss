@@ -1,0 +1,74 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.person-intro {
+    text-align: center;
+}
+
+.person-intro-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 40px auto 0;
+
+    @include mixins.media(md) {
+        font-size: 72px;
+    }
+}
+
+.person-intro-avatar-wrapper {
+    position: relative;
+    width: 356px;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: radial-gradient(var(--cl-background) 20%, var(--cl-primary), var(--cl-secondary), var(--cl-background) 90%);
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+        border-radius: 50%;
+        animation: gradient 5s ease infinite, scale 8s ease infinite;
+    }
+}
+
+@keyframes gradient {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        inset: -2px;
+    }
+
+    50% {
+        inset: -0.5px;
+    }
+}
+
+.person-intro-avatar {
+    position: relative;
+    display: block;
+    background-color: var(--cl-text);
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.person-intro-arrow {
+    margin: 36px auto;
+}

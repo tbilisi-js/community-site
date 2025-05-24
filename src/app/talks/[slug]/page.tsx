@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { talks } from "@src/core/mock/talks";
-import { speakers } from "@srccore/mock/speakers";
+import { speakers } from "@src/core/mock/speakers";
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
 import { TalkIntro } from "@src/components/sections/talk-intro";
 import { TalkAnnouncement } from "@src/components/sections/talk-announcement";

@@ -1,13 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { events } from "@src/core/mock/events";
+import { type Event } from "@src/core/mock/events";
 import { formatDate } from "@src/core/utils/formatDate";
 import { Block } from "@src/components/ui/block";
 
 import "./events-list.scss";
 
-export const EventsList = () => (
+export interface EventsListProps {
+    events: Event[];
+}
+
+export const EventsList: React.FC<EventsListProps> = ({ events }) => (
     <Block className="events-list" id="events">
         <ul className="events-list-cards">
             {events.map((event) => (

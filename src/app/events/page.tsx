@@ -1,5 +1,6 @@
 import { type Metadata } from "next/types";
 
+import { events } from "@src/core/mock/events";
 import { StarsWrapper } from "@src/components/elements/stars-wrapper";
 import { EventsIntro } from "@src/components/sections/events-intro";
 import { EventsList } from "@src/components/sections/events-list";
@@ -14,7 +15,7 @@ const EventsPage = () => (
             <EventsIntro />
         </StarsWrapper>
         <StarsWrapper>
-            <EventsList />
+            <EventsList events={events} />
         </StarsWrapper>
         <StarsWrapper>
             <CallForSpeakers />
