@@ -1,0 +1,112 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.not-found {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.not-found-error {
+    font-size: 144px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--cl-neutral);
+    opacity: 0.2;
+    line-height: 1;
+    --glitch-diff: 2px;
+    --glitch-diff-anti: -2px;
+
+    @include mixins.media(md) {
+        font-size: 320px;
+        --glitch-diff: 5px;
+        --glitch-diff-anti: -5px;
+    }
+}
+
+.not-found-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cl-primary);
+
+    @include mixins.media(md) {
+        font-size: 36px;
+    }
+}
+
+.not-found-actions {
+    margin-top: 24px;
+
+    @include mixins.media(sm) {
+        margin-top: 60px;
+    }
+}
+
+.not-found-button {
+    width: 100%;
+    margin: 8px 0;
+
+    @include mixins.media(sm) {
+        width: auto;
+        margin: 0 16px;
+    }
+}
+
+.not-found-glitch {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+
+    &:before,
+    &:after {
+        display: block;
+        content: "404";
+        text-transform: uppercase;
+        opacity: .8;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:after {
+        color: var(--cl-primary);
+        z-index: -2;
+    }
+
+    &:before {
+        color: var(--cl-secondary);
+        z-index: -1;
+    }
+
+    &:before {
+        animation: not-found-glitch 10s cubic-bezier(.25, .46, .45, .94) both infinite;
+    }
+
+    &:after {
+        animation: not-found-glitch 10s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+    }
+}
+
+@keyframes not-found-glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(var(--glitch-diff-anti), var(--glitch-diff));
+    }
+
+    40% {
+        transform: translate(var(--glitch-diff-anti), var(--glitch-diff-anti));
+    }
+
+    60% {
+        transform: translate(var(--glitch-diff), var(--glitch-diff));
+    }
+
+    80% {
+        transform: translate(var(--glitch-diff), var(--glitch-diff-anti));
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
