@@ -7,6 +7,7 @@ import lightspeedImg from "./img/lightspeed.svg";
 import tabbyImg from "./img/tabby.svg";
 import tradingViewImg from "./img/trading-view.svg";
 import socialDiscoderyGroup from "./img/social-discovery-group.svg";
+import exanteImg from "./img/exante.svg";
 
 import "./our-partners.scss";
 
@@ -50,6 +51,11 @@ const partners = [
         src: socialDiscoderyGroup.src,
         alt: "Social Discovery Group",
         url: "https://socialdiscoverygroup.com/",
+    },
+    {
+        src: exanteImg.src,
+        alt: "Exante",
+        url: "https://exante.eu/",
     },
 ];
 

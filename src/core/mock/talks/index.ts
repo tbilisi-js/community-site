@@ -45,6 +45,7 @@ import gettingIntoWebgl from "./img/getting-into-webgl.jpg";
 import storybookTheCookbook from "./img/storybook-the-cookbook.jpg";
 import whyDoWeCreateCommunities from "./img/why-do-we-create-communities.jpg";
 import tjsMeetup6Image from "../images/tjs-meetup-6.png";
+import tjsMeetup7Image from "../images/tjs-meetup-7.jpg";
 
 export type Talk = {
     slug: string;
@@ -687,5 +688,70 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
         youtube: "https://www.youtube.com/embed/h_vmHQhvz_U?si=JJAhey4pela7GDAe",
         start: "2024-06-01T23:50:00.000Z",
         end: "2024-06-01T00:20:00.000Z",
+    },
+    {
+        slug: "how-browsers-render-shadows-and-curves",
+        speaker: "aleksander-korotaev",
+        name: "How Browsers Render Shadows and Curves",
+        description:
+            "Sasha Korotaev, developer, organizer of SPB Frontend and BeerJS Spb, and member of the Holy.js Program Committee, will explain how browsers draw shadows, round corners, and process vector graphics — from CSS rules to the graphics card.",
+        labels: ["css", "graphics", "browsers"],
+        type: "talk",
+        preview: tjsMeetup7Image,
+        youtube: "",
+        start: "2025-08-16T10:30:00.000Z",
+        end: "2025-08-16T11:00:00.000Z",
+    },
+    {
+        slug: "responsive-typography-in-web",
+        speaker: "tanya-fokina",
+        name: "Responsive Typography in the Web",
+        description:
+            "Tanya Fokina, editor at Doka and web accessibility expert, will share how to work with responsive typography, where it’s needed, and why it matters.",
+        labels: ["typography", "accessibility", "frontend"],
+        type: "talk",
+        preview: tjsMeetup7Image,
+        youtube: "",
+        start: "2025-08-16T11:10:00.000Z",
+        end: "2025-08-16T11:40:00.000Z",
+    },
+    {
+        slug: "growing-as-a-developer-long-term",
+        speaker: "anna-shiryaeva",
+        name: "Growing as a Developer in the Long Run",
+        description:
+            "Anya Shiryaeva, Lead Frontend Developer at Sibur Digital and organizer of MoscowJS, will talk about how to grow and develop as a professional, even if you’ve been in the industry for many years.",
+        labels: ["career", "growth", "frontend"],
+        type: "talk",
+        preview: tjsMeetup7Image,
+        youtube: "",
+        start: "2025-08-16T11:50:00.000Z",
+        end: "2025-08-16T12:20:00.000Z",
+    },
+    {
+        slug: "writing-a-compiler-for-a-disappearing-framework",
+        speaker: "daniil-savitskii",
+        name: "Writing a Compiler for a Disappearing Framework",
+        description:
+            "Danya Savitskiy, Senior Frontend Engineer at Quantori, will share the story of writing his own compiler for a framework that’s fading away — and what he learned in the process.",
+        labels: ["compilers", "frameworks", "frontend"],
+        type: "talk",
+        preview: tjsMeetup7Image,
+        youtube: "",
+        start: "2025-08-16T12:40:00.000Z",
+        end: "2025-08-16T13:10:00.000Z",
+    },
+    {
+        slug: "microfrontends-business-vs-development",
+        speaker: "nikita-potapov",
+        name: "Microfrontends: Business vs Development",
+        description:
+            "Nikita Potapov, Frontend Lead at Exante, will explain what microfrontends are, discuss their pros and cons, and help us figure out who needs them more — business or development teams.",
+        labels: ["microfrontends", "architecture", "frontend"],
+        type: "talk",
+        preview: tjsMeetup7Image,
+        youtube: "",
+        start: "2025-08-16T13:20:00.000Z",
+        end: "2025-08-16T13:50:00.000Z",
     },
 ];

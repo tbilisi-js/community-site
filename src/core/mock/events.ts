@@ -9,6 +9,7 @@ import tjsMeetup3Image from "./images/tjs-meetup-3.jpg";
 import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
 import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
 import tjsMeetup6Image from "./images/tbilisi-js-meetup-6.png";
+import tjsMeetup7Image from "./images/tjs-meetup-7.jpg";
 import webPerformanceDayImage from "./images/web-performance-day.jpg";
 
 export type Event = {
@@ -25,6 +26,27 @@ export type Event = {
 };
 
 export const events: Event[] = [
+    {
+        slug: "tbilisi-js-meetup-7",
+        name: "Tbilisi JS Meetup #7",
+        date: "2025-08-16T10:30:00.000Z",
+        attendees: 150,
+        talks: [
+            "how-browsers-render-shadows-and-curves",
+            "responsive-typography-in-web",
+            "growing-as-a-developer-long-term",
+            "writing-a-compiler-for-a-disappearing-framework",
+            "microfrontends-business-vs-development",
+        ],
+        image: tjsMeetup7Image,
+        promo:
+            "Summer’s in full swing, brains are melting, but we’ve got the cure — gather in a cool spot, meet great people, and enjoy inspiring talks!" +
+            "\n" +
+            "A special thanks to the fantastic team at Exante for their support in making this event possible!",
+        registration: "https://forms.gle/eJ6kHR6AHapuB1tYA",
+        telegram: "https://t.me/tbilisi_js_chat/22355",
+        youtube: "https://www.youtube.com/embed/zuMoopst9Ls?si=m2-2Id0At7k0zi0T",
+    },
     {
         slug: "tbilisi-js-meetup-6",
         name: "Tbilisi JS Meetup #6",
