@@ -40,6 +40,7 @@ import aleksanderKomlev from "./img/aleksander-komlev.jpg";
 import pavelMelnikov from "./img/pavel-melnikov.jpg";
 import mikhailPokryshchenko from "./img/mikhail-pokryshchenko.jpg";
 import marselAkhmetshin from "./img/marsel-akhmetshin.jpg";
+import nikitaPotapov from "./img/nikita-potapov.png";
 
 export type Speaker = {
     slug: string;
@@ -247,5 +248,10 @@ export const speakers: Speaker[] = [
         slug: "marsel-akhmetshin",
         name: "Marsel Akhmetshin",
         img: marselAkhmetshin,
+    },
+    {
+        slug: "nikita-potapov",
+        name: "Nikita Potapov",
+        img: nikitaPotapov,
     },
 ];

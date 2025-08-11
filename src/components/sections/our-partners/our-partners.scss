@@ -36,6 +36,7 @@
     min-width: 180px;
     border-radius: 8px;
     transition: background-color .1s;
+    border: 1px solid transparent;
 
     @include mixins.media(null, md) {
         padding: 8px 12px;
@@ -44,7 +45,8 @@
     }
 
     &:hover {
-        background-color: var(--cl-primary);
+        border-color: var(--cl-primary);
+        background-color: rgba(255, 255, 255, .2);
     }
 }
 
