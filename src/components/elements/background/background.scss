@@ -1,0 +1,147 @@
+.background {
+    position: relative;
+}
+
+.background-elements {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.background-elements._active {
+    opacity: 0.5;
+}
+
+.background-element {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content-visibility: auto;
+}
+
+.background-element-type_dot {
+    background-color: var(--cl-text);
+}
+
+.background-element-type_star1 {
+    background-image: url('./images/star1.png');
+}
+
+.background-element-type_star2 {
+    background-image: url('./images/star2.png');
+}
+
+.background-element-type_star3 {
+    background-image: url('./images/star3.png');
+}
+
+.background-element-type_khinkali {
+    background-image: url('./images/khinkali.png');
+}
+
+.background-element-type_pumpkin {
+    background-image: url('./images/pumpkin.png');
+}
+
+.background-element-size_6 {
+    width: 6px;
+    height: 6px;
+}
+
+.background-element-size_10 {
+    width: 10px;
+    height: 10px;
+}
+
+.background-element-size_16 {
+    width: 16px;
+    height: 16px;
+}
+
+.background-element-size_18 {
+    width: 18px;
+    height: 18px;
+}
+
+.background-element-size_22 {
+    width: 22px;
+    height: 22px;
+}
+
+.background-element-size_36 {
+    width: 36px;
+    height: 36px;
+}
+
+.background-element-size_40 {
+    width: 40px;
+    height: 40px;
+}
+
+.background-element-size_52 {
+    width: 52px;
+    height: 52px;
+}
+
+.background-element-size_64 {
+    width: 64px;
+    height: 64px;
+}
+
+.background-element-addon_pulse {
+    animation: pulse 5s ease-in-out infinite;
+    animation-delay: calc(var(--random) * .05s);
+}
+
+.background-element-addon_rotate-15-left {
+    transform: rotate(-15deg);
+}
+
+.background-element-addon_rotate-15-right {
+    transform: rotate(15deg);
+}
+
+.background-element-addon_fly {
+    offset-path: path("M 100 150 C 100 50, 350 450, 960 960");
+    offset-rotate: auto;
+    animation: fly linear forwards;
+    animation-duration: calc(var(--random) * 0.05s + 3s);
+    animation-delay: calc(var(--random) * 0.5s);
+}
+
+@keyframes fly {
+    0% {
+        opacity: 0;
+        offset-distance: 0%;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        offset-distance: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

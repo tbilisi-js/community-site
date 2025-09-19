@@ -4,7 +4,7 @@ import { talks } from "@src/core/mock/talks";
 import { speakers } from "@src/core/mock/speakers";
 import { events } from "@src/core/mock/events";
 import { PersonIntro } from "@src/components/sections/person-intro";
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { CallForSpeakers } from "@src/components/sections/call-for-speakers";
 import { JoinUs } from "@src/components/sections/join-us";
@@ -24,24 +24,24 @@ const PersonPage: React.FC<{ params: Params }> = async ({ params }) => {
 
     return (
         <>
-            <StarsWrapper>
+            <Background>
                 <PersonIntro name={person.name} img={person.img} />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <EventsList events={personEvents} />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <CallForSpeakers />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <TalksList talks={personTalks} />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <JoinUs />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <CatsPattern />
-            </StarsWrapper>
+            </Background>
         </>
     );
 };
