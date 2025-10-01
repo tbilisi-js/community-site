@@ -1,7 +1,7 @@
 import { type Metadata } from "next/types";
 
 import { events } from "@src/core/mock/events";
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { EventsIntro } from "@src/components/sections/events-intro";
 import { EventsList } from "@src/components/sections/events-list";
 import { CallForSpeakers } from "@src/components/sections/call-for-speakers";
@@ -11,24 +11,24 @@ import { CommunityGallery } from "@src/components/sections/community-gallery";
 
 const EventsPage = () => (
     <>
-        <StarsWrapper density={3}>
+        <Background density={3}>
             <EventsIntro />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <EventsList events={events} />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CallForSpeakers />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CommunityGallery />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <JoinUs />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CatsPattern />
-        </StarsWrapper>
+        </Background>
     </>
 );
 

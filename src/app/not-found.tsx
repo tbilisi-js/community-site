@@ -1,15 +1,15 @@
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { NotFound } from "@src/components/sections/not-found";
 
 const NotFoundPage = () => (
     <>
-        <StarsWrapper density={5}>
+        <Background density={5}>
             <NotFound />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CatsPattern />
-        </StarsWrapper>
+        </Background>
     </>
 );
 

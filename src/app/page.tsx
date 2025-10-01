@@ -10,39 +10,39 @@ import { CallForSpeakers } from "../components/sections/call-for-speakers";
 import { Organisers } from "../components/sections/organisers";
 import { JoinUs } from "../components/sections/join-us";
 import { CatsPattern } from "../components/sections/cats-pattern";
-import { StarsWrapper } from "../components/elements/stars-wrapper";
+import { Background } from "../components/elements/background";
 import { events } from "../core/mock/events";
 
 const HomePage = () => (
     <>
-        <StarsWrapper density={5}>
+        <Background density={5}>
             <HomeIntro />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <SwapWrapper
                 before={<Announcement event={events[0]} />}
                 after={<YoutubePlayer src={events[0].youtube} />}
                 at={new Date(events[0].date).getTime() - 600000}
             />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <AboutCommunity />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <Events events={events} />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CallForSpeakers />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <Organisers />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <JoinUs />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CatsPattern />
-        </StarsWrapper>
+        </Background>
     </>
 );
 

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { talks } from "@src/core/mock/talks";
 import { speakers } from "@src/core/mock/speakers";
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { TalkIntro } from "@src/components/sections/talk-intro";
 import { TalkAnnouncement } from "@src/components/sections/talk-announcement";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
@@ -22,30 +22,30 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
 
     return (
         <>
-            <StarsWrapper>
+            <Background>
                 <TalkIntro title={talk.name} date={talk.start} speaker={speaker} />
-            </StarsWrapper>
+            </Background>
             {talk.youtube && (
-                <StarsWrapper>
+                <Background>
                     <YoutubePlayer src={talk.youtube} />
-                </StarsWrapper>
+                </Background>
             )}
-            <StarsWrapper>
+            <Background>
                 <TalkAnnouncement
                     description={talk.description}
                     date={talk.start}
                     img={speaker?.img || "/logo-rect.png"}
                 />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <CallForSpeakers />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <JoinUs />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <CatsPattern />
-            </StarsWrapper>
+            </Background>
         </>
     );
 };

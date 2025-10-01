@@ -1,53 +1,25 @@
-export type Star = { x: number; y: number; key: string; type: number | string; random: number };
+import { type ElementView, type Element } from "./types";
+import { VARIANTS } from "./data";
 
-const variants = {
-    closest: {
-        0: 0.6,
-        1: 0.15,
-        2: 0.1,
-        11: 0.1,
-        12: 0.05,
-    },
-    average: {
-        0: 0.1,
-        1: 0.15,
-        2: 0.25,
-        3: 0.15,
-        4: 0.14,
-        7: 0.005,
-        9: 0.005,
-        11: 0.1,
-        12: 0.1,
-    },
-    farthest: {
-        0: 0.2,
-        1: 0.1,
-        2: 0.13,
-        3: 0.1,
-        4: 0.1,
-        5: 0.1,
-        6: 0.05,
-        7: 0.005,
-        8: 0.005,
-        9: 0.005,
-        10: 0.005,
-        11: 0.1,
-        12: 0.1,
-    },
-};
-
-const getVariant = (variant: keyof typeof variants, random: number) => {
-    const entries = Object.entries(variants[variant]);
+const getElementView = (options: (ElementView & { weight: number })[], random: number): ElementView => {
     let sumRandom = 0;
-    for (const [key, value] of entries) {
-        sumRandom += value;
-        if (sumRandom > random) return key;
+    for (const { type, size, weight, addons } of options) {
+        sumRandom += weight;
+        if (sumRandom > random) return { type, size, addons };
     }
 
-    return 0;
+    return { type: "star1", size: 6, addons: [] };
 };
 
-export const generateStars = (container: HTMLElement, density: number) => {
+export const generateElements = (container: HTMLElement, density: number): Element[] => {
+    const currentEvent = Object.values(VARIANTS).find((data) => {
+        const { from, to } = data;
+        const now = new Date();
+        const fromDate = new Date(`${now.getFullYear()}-${from}T00:00:00.000Z`);
+        const toDate = new Date(`${now.getFullYear()}-${to}T23:59:59.000Z`);
+        return now >= fromDate && now <= toDate;
+    });
+    const options = currentEvent?.options || VARIANTS.base.options;
     const scrollY = window.scrollY;
     const scrollX = window.scrollX;
     const containerLeft = container.offsetLeft;
@@ -65,11 +37,11 @@ export const generateStars = (container: HTMLElement, density: number) => {
         },
     );
 
-    const horizontalStarsCount = Math.ceil(container.clientWidth / 200);
-    const verticalStarsCount = Math.ceil(container.clientHeight / 200);
-    const newStars: Star[] = [];
-    for (let x = 0; x < horizontalStarsCount; x++) {
-        for (let y = 0; y < verticalStarsCount; y++) {
+    const horizontalElementsCount = Math.ceil(container.clientWidth / 200);
+    const verticalElementsCount = Math.ceil(container.clientHeight / 200);
+    const newElements: Element[] = [];
+    for (let x = 0; x < horizontalElementsCount; x++) {
+        for (let y = 0; y < verticalElementsCount; y++) {
             for (let z = 0; z < Math.random() * density; z++) {
                 const coordX = x * 200 + Math.floor(Math.random() * 200);
                 const coordY = y * 200 + Math.floor(Math.random() * 200);
@@ -85,11 +57,11 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         );
                     })
                 ) {
-                    newStars.push({
+                    newElements.push({
                         x: coordX,
                         y: coordY,
                         key: `${x}_${y}_${z}`,
-                        type: getVariant("farthest", Math.random()),
+                        view: getElementView(options.farthest, Math.random()),
                         random: Math.ceil(Math.random() * 100),
                     });
                 } else if (
@@ -102,24 +74,24 @@ export const generateStars = (container: HTMLElement, density: number) => {
                         );
                     })
                 ) {
-                    newStars.push({
+                    newElements.push({
                         x: coordX,
                         y: coordY,
                         key: `${x}_${y}_${z}`,
-                        type: getVariant("average", Math.random()),
+                        view: getElementView(options.average, Math.random()),
                         random: Math.ceil(Math.random() * 100),
                     });
                 } else {
-                    newStars.push({
+                    newElements.push({
                         x: coordX,
                         y: coordY,
                         key: `${x}_${y}_${z}`,
-                        type: getVariant("closest", Math.random()),
+                        view: getElementView(options.closest, Math.random()),
                         random: Math.ceil(Math.random() * 100),
                     });
                 }
             }
         }
     }
-    return newStars;
+    return newElements;
 };

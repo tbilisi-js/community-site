@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { EventIntro } from "@src/components/sections/event-intro";
 import { Tapes } from "@src/components/sections/tapes";
 import { Schedule } from "@src/components/sections/schedule";
@@ -31,19 +31,19 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
 
     return (
         <>
-            <StarsWrapper>
+            <Background>
                 <EventIntro title={event.name} date={event.date} />
                 <Tapes date={event.date} />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <Schedule talks={eventTalks} speakers={speakers} />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <CommunityGallery />
-            </StarsWrapper>
-            <StarsWrapper>
+            </Background>
+            <Background>
                 <CatsPattern />
-            </StarsWrapper>
+            </Background>
         </>
     );
 };

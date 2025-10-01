@@ -1,6 +1,6 @@
 import { type Metadata } from "next/types";
 
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { PeopleIntro } from "@src/components/sections/people-intro";
 import { PeopleList } from "@src/components/sections/people-list";
 import { CallForSpeakers } from "@src/components/sections/call-for-speakers";
@@ -10,24 +10,24 @@ import { CommunityGallery } from "@src/components/sections/community-gallery";
 
 const PeoplePage = () => (
     <>
-        <StarsWrapper density={3}>
+        <Background density={3}>
             <PeopleIntro />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <PeopleList />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CallForSpeakers />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CommunityGallery />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <JoinUs />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CatsPattern />
-        </StarsWrapper>
+        </Background>
     </>
 );
 

@@ -1,6 +1,6 @@
 import { type Metadata } from "next/types";
 
-import { StarsWrapper } from "@src/components/elements/stars-wrapper";
+import { Background } from "@src/components/elements/background";
 import { OurPartners } from "@src/components/sections/our-partners";
 import { AboutCommunity } from "@src/components/sections/about-community";
 import { BecomePartnerIntro } from "@src/components/sections/become-partner-intro";
@@ -12,27 +12,27 @@ import { events } from "@src/core/mock/events";
 
 const BecomeAPartnerPage = () => (
     <>
-        <StarsWrapper density={3}>
+        <Background density={3}>
             <BecomePartnerIntro />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <OurPartners />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <AboutCommunity />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <HowToHelp />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <Events events={events} />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <WhatDoYouGet />
-        </StarsWrapper>
-        <StarsWrapper>
+        </Background>
+        <Background>
             <CatsPattern />
-        </StarsWrapper>
+        </Background>
     </>
 );
 
