@@ -46,6 +46,10 @@ export type Speaker = {
     slug: string;
     name: string;
     img?: StaticImageData;
+    company?: string;
+    role?: string;
+    location?: string;
+    hasSocial?: boolean;
 };
 
 export const speakers: Speaker[] = [
