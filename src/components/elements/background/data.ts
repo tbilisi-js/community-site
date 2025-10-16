@@ -321,8 +321,8 @@ export const HALLOWEEN_VARIANTS: Record<string, (ElementView & { weight: number 
 export const VARIANTS = {
     halloween: {
         options: HALLOWEEN_VARIANTS,
-        from: "09-16",
-        to: "10-14",
+        from: "10-01",
+        to: "11-07",
     },
     base: {
         options: BASE_VARIANTS,
