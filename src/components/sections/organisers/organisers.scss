@@ -18,46 +18,22 @@
 .organisers-list {
     display: grid;
     align-items: center;
-    gap: 32px;
+    gap: 40px;
     margin: 32px auto 0;
 
     @include mixins.media(sm) {
+        gap: 24px;
         grid-template-columns: 1fr 1fr;
     }
 
     @include mixins.media(lg) {
-        gap: 40px;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 .organisers-card {
     position: relative;
     border-radius: 22px;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: -1px;
-        right: -1px;
-        width: 84px;
-        height: 84px;
-        background-image: url('../../../core/mock/images/organisers/mask_linkedin.png');
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: -1px;
-    }
-}
-
-.organisers-mask {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    pointer-events: none;
 }
 
 .organisers-card-img {
@@ -66,8 +42,8 @@
     object-fit: cover;
     aspect-ratio: 1 / 1;
     object-position: top;
-    height: 420px;
-    min-height: 420px;
+    height: 380px;
+    min-height: 380px;
     border-radius: 22px;
 
     @include mixins.media(md) {
@@ -80,18 +56,45 @@
     bottom: 0;
     left: 0;
     z-index: 1;
+    width: 100%;
 }
 
 .organisers-card-heading {
+    position: relative;
     font-size: 30px;
     font-weight: 900;
-    padding: 16px 16px 0;
+    padding: 16px 16px 4px;
     line-height: 1;
-    max-width: 160px;
+    width: fit-content;
+    background-color: var(--cl-background);
+    border-top-right-radius: 16px;
 }
 
 .organisers-card-description {
+    position: relative;
     min-width: 160px;
-    max-width: 260px;
-    padding: 12px 16px 8px;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--cl-background);
+}
+
+.organisers-card-heading-top-corner {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    color: var(--cl-background);
+}
+
+.organisers-card-heading-bottom-corner {
+    position: absolute;
+    right: -16px;
+    bottom: 0;
+    color: var(--cl-background);
+}
+
+.organisers-card-description-right-corner {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    color: var(--cl-background);
 }

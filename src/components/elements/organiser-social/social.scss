@@ -4,6 +4,7 @@
   right: 0;
   padding: 0 0 16px 16px;
   background-color: var(--cl-background);
+  border-bottom-left-radius: 16px;
 }
 
 .organisers-social-item {
@@ -17,4 +18,18 @@
     color: var(--cl-primary);
     border-color: var(--cl-primary);
   }
+}
+
+.organisers-social-corner-top-left {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  color: var(--cl-background);
+}
+
+.organisers-social-corner-bottom-right {
+  position: absolute;
+  bottom: -16px;
+  right: 0;
+  color: var(--cl-background);
 }

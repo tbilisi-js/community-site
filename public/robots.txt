@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tbilisijs.dev
+
+# Sitemaps
+Sitemap: https://tbilisijs.dev/sitemap.xml
