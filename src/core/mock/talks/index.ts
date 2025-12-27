@@ -228,8 +228,8 @@ export const talks: Talk[] = [
     {
         slug: "react-server-components",
         name: "React Server Components: What, How, and Most Importantly, Why?",
-        description: `Alexander Savelyev, Developer and Next.js Contributor, has been actively implementing React Server Components (RSC) in production projects over the past couple of years. He has also contributed to the ecosystem and shared his experience through articles.
-In his talk, Alexander will cover:
+        description: `Alex Savelyev, Developer and Next.js Contributor, has been actively implementing React Server Components (RSC) in production projects over the past couple of years. He has also contributed to the ecosystem and shared his experience through articles.
+In his talk, Alex will cover:
 <ul><li>How server components actually work and what’s happening under the hood;</li>
 <li>Key differences in framework implementations (Next.js, Remix, TanStack Router);</li>
 <li>The new component architecture: composing server and client components, communication between them, and building component trees;</li>

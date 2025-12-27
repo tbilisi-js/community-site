@@ -1,8 +1,9 @@
 import Image from "next/image";
 
-import { Block } from "../../ui/block";
 import { OrganiserSocial } from "@src/components/elements/organiser-social";
 import { organisers } from "@src/core/mock/organisers";
+import { Icon } from "@src/components/ui/icon";
+import { Block } from "@src/components/ui/block";
 
 import "./organisers.scss";
 
@@ -12,10 +13,9 @@ export interface OrganiserProps {
     id: string;
     description: string;
     socialLink: string;
-    maskImage: string;
 }
 
-const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description, socialLink, maskImage }) => (
+const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description, socialLink }) => (
     <div className={`organisers-card organisers-${id}`}>
         <Image
             src={avatarSrc}
@@ -25,10 +25,27 @@ const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description,
             className="organisers-card-img"
             loading="lazy"
         />
-        <img src={maskImage} alt="" loading="lazy" className="organisers-mask" />
         <div className="organisers-info">
-            <p className="organisers-card-heading">{name}</p>
-            <p className="organisers-card-description">{description}</p>
+            <p className="organisers-card-heading">
+                <Icon name="corner-bottom-left" className="organisers-card-heading-top-corner" width={16} height={16} />
+                {name.replace(" ", "\n")}
+                <Icon
+                    name="corner-bottom-left"
+                    className="organisers-card-heading-bottom-corner"
+                    width={16}
+                    height={16}
+                />
+            </p>
+
+            <p className="organisers-card-description">
+                {description}
+                <Icon
+                    name="corner-bottom-right"
+                    className="organisers-card-description-right-corner"
+                    width={16}
+                    height={16}
+                />
+            </p>
         </div>
         <OrganiserSocial socialLink={socialLink} />
     </div>
@@ -46,7 +63,6 @@ export const Organisers = () => (
                     id={organiser.id}
                     description={organiser.description}
                     socialLink={organiser.socialLink}
-                    maskImage={organiser.maskImage}
                 />
             ))}
         </div>

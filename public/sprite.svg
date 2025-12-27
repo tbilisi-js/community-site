@@ -1,0 +1,14 @@
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol fill="none" viewBox="0 0 16 16" id="corner-top-left">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16C7.16344 0 0 7.16344 0 16V0Z" fill="currentColor"/>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 16 16" id="corner-top-right">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0H0C8.83656 0 16 7.16344 16 16V0Z" fill="currentColor"/>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 16 16" id="corner-bottom-left">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16H16C7.16344 16 0 8.83656 0 0V16Z" fill="currentColor"/>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 16 16" id="corner-bottom-right">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H0C8.83656 16 16 8.83656 16 0V16Z" fill="currentColor"/>
+    </symbol>
+</svg>

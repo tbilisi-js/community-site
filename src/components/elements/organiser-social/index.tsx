@@ -1,3 +1,4 @@
+import { Icon } from "@src/components/ui/icon";
 import "./social.scss";
 
 export interface OrganiserSocialProps {
@@ -6,6 +7,8 @@ export interface OrganiserSocialProps {
 
 export const OrganiserSocial: React.FC<OrganiserSocialProps> = ({ socialLink }) => (
     <div className="organisers-social">
+        <Icon name="corner-top-right" className="organisers-social-corner-top-left" width={16} height={16} />
+        <Icon name="corner-top-right" className="organisers-social-corner-bottom-right" width={16} height={16} />
         <a href={socialLink} target="_blank" rel="noopener noreferrer" className="organisers-social-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" height="20" width="20">
                 <title>LinkedIn</title>
