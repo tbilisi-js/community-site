@@ -41,6 +41,8 @@ import pavelMelnikov from "./img/pavel-melnikov.jpg";
 import mikhailPokryshchenko from "./img/mikhail-pokryshchenko.jpg";
 import marselAkhmetshin from "./img/marsel-akhmetshin.jpg";
 import nikitaPotapov from "./img/nikita-potapov.png";
+import artemArutyunyan from "./img/artem-arutyunyan.jpg";
+import alyonaBatitskaya from "./img/alyona-batitskaya.png";
 
 export type Speaker = {
     slug: string;
@@ -49,6 +51,16 @@ export type Speaker = {
 };
 
 export const speakers: Speaker[] = [
+    {
+        slug: "artem-arutyunyan",
+        name: "Artem Arutyunyan",
+        img: artemArutyunyan,
+    },
+    {
+        slug: "alyona-batitskaya",
+        name: "Alyona Batitskaya",
+        img: alyonaBatitskaya,
+    },
     {
         slug: "vadim-makeev",
         name: "Vadim Makeev",

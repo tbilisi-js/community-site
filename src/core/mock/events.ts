@@ -10,6 +10,7 @@ import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
 import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
 import tjsMeetup6Image from "./images/tbilisi-js-meetup-6.png";
 import tjsMeetup7Image from "./images/tjs-meetup-7.jpg";
+import xmasStream2025Image from "./images/tjs-xmas-stream-2025.jpg";
 import webPerformanceDayImage from "./images/web-performance-day.jpg";
 
 export type Event = {
@@ -20,12 +21,29 @@ export type Event = {
     talks: string[];
     image: StaticImageData;
     promo?: string;
-    registration?: string;
+    registration?: string | false;
     telegram: string;
     youtube: string;
 };
 
 export const events: Event[] = [
+    {
+        slug: "tbilisi-js-xmas-stream-2025",
+        name: "XMas Stream 2025",
+        date: "2025-12-28T14:30:00.000Z",
+        attendees: 150,
+        talks: [
+            "aaaaaaaaaaaaaaaaaaaaaaa-href",
+            "what-if-css-if-function",
+            "routing-as-the-foundation-of-correct-architecture",
+            "3d-graphics-is-an-illusion",
+        ],
+        image: xmasStream2025Image,
+        promo: "Let's discuss the events of the year, see what cool and not-so-cool (or completely uncool) 2025 brought to the frontend and the web in general, and at the same time celebrate 2 years of Tbilisi JS!",
+        registration: false,
+        telegram: "https://t.me/tbilisi_js/567",
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+    },
     {
         slug: "tbilisi-js-meetup-7",
         name: "Tbilisi JS Meetup #7",
