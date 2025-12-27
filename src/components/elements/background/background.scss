@@ -37,6 +37,21 @@
 .background-element-type_star3 {
     background-image: url('./images/star3.png');
 }
+.background-element-type_snow1 {
+    background-image: url('./images/snow1.png');
+}
+
+.background-element-type_snow2 {
+    background-image: url('./images/snow2.png');
+}
+
+.background-element-type_snow3 {
+    background-image: url('./images/snow3.png');
+}
+
+.background-element-type_orange {
+    background-image: url('./images/orange.png');
+}
 
 .background-element-type_khinkali {
     background-image: url('./images/khinkali.png');
@@ -104,6 +119,12 @@
     transform: rotate(15deg);
 }
 
+.background-element-addon_fall {
+    offset-rotate: auto;
+    animation: fall linear forwards infinite;
+    animation-duration: calc(var(--random) * 0.15s + 2s);
+}
+
 .background-element-addon_fly {
     offset-path: path("M 100 150 C 100 50, 350 450, 960 960");
     offset-rotate: auto;
@@ -125,6 +146,22 @@
     }
     100% {
         offset-distance: 100%;
+        opacity: 0;
+    }
+}
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translate(calc(100px - var(--random) * 2px), 0);
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(50px - var(--random) * 1px), 300px);
         opacity: 0;
     }
 }
