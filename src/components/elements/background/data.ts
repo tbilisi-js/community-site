@@ -318,11 +318,185 @@ export const HALLOWEEN_VARIANTS: Record<string, (ElementView & { weight: number 
     ],
 };
 
+export const XMAS_VARIANTS: Record<string, (ElementView & { weight: number })[]> = {
+    closest: [
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.6,
+            addons: ["rotate-15-left", "pulse"],
+        },
+        {
+            type: "snow2",
+            size: 16,
+            weight: 0.15,
+            addons: ["rotate-15-right"],
+        },
+        {
+            type: "snow3",
+            size: 16,
+            weight: 0.1,
+            addons: ["pulse"],
+        },
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.1,
+            addons: ["pulse"],
+        },
+        {
+            type: "snow2",
+            size: 18,
+            weight: 0.05,
+            addons: ["pulse"],
+        },
+    ],
+    average: [
+        {
+            type: "snow1",
+            size: 10,
+            weight: 0.1,
+        },
+        {
+            type: "snow2",
+            size: 10,
+            weight: 0.15,
+        },
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.25,
+            addons: ["pulse"],
+        },
+        {
+            type: "snow3",
+            size: 18,
+            weight: 0.15,
+        },
+        {
+            type: "snow2",
+            size: 22,
+            weight: 0.14,
+        },
+        {
+            type: "orange",
+            size: 40,
+            weight: 0.005,
+            addons: ["rotate-15-left"],
+        },
+        {
+            type: "orange",
+            size: 40,
+            weight: 0.005,
+            addons: ["rotate-15-right"],
+        },
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.1,
+            addons: ["pulse"],
+        },
+        {
+            type: "orange",
+            size: 64,
+            weight: 0.1,
+        },
+    ],
+    farthest: [
+        {
+            type: "snow3",
+            size: 16,
+            weight: 0.2,
+            addons: ["rotate-15-right"],
+        },
+        {
+            type: "snow1",
+            size: 10,
+            weight: 0.04,
+        },
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.1,
+        },
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.1,
+            addons: ["rotate-15-left"],
+        },
+        {
+            type: "snow3",
+            size: 18,
+            weight: 0.1,
+            addons: ["pulse"],
+        },
+        {
+            type: "snow2",
+            size: 22,
+            weight: 0.1,
+        },
+        {
+            type: "snow3",
+            size: 36,
+            weight: 0.05,
+            addons: ["pulse"],
+        },
+        {
+            type: "snow3",
+            size: 52,
+            weight: 0.05,
+            addons: ["pulse"],
+        },
+        {
+            type: "orange",
+            size: 40,
+            weight: 0.02,
+            addons: ["rotate-15-left"],
+        },
+        {
+            type: "orange",
+            size: 80,
+            weight: 0.01,
+            addons: ["rotate-15-left"],
+        },
+        {
+            type: "orange",
+            size: 64,
+            weight: 0.02,
+            addons: ["rotate-15-right"],
+        },
+        {
+            type: "orange",
+            size: 92,
+            weight: 0.01,
+            addons: ["rotate-15-right"],
+        },
+        {
+            type: "snow1",
+            size: 16,
+            weight: 0.1,
+            addons: ["pulse"],
+        },
+        {
+            type: "snow3",
+            size: 18,
+            weight: 0.1,
+            addons: ["pulse"],
+        },
+    ],
+};
+
 export const VARIANTS = {
     halloween: {
         options: HALLOWEEN_VARIANTS,
         from: "10-01",
         to: "11-07",
+    },
+    xmas: {
+        options: XMAS_VARIANTS,
+        from: "12-20",
+        to: "01-07",
     },
     base: {
         options: BASE_VARIANTS,

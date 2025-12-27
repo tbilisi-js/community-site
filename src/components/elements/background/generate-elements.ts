@@ -15,8 +15,9 @@ export const generateElements = (container: HTMLElement, density: number): Eleme
     const currentEvent = Object.values(VARIANTS).find((data) => {
         const { from, to } = data;
         const now = new Date();
+        const toYear = +from.split("-")[0] > +to.split("-")[0] ? now.getFullYear() + 1 : now.getFullYear();
         const fromDate = new Date(`${now.getFullYear()}-${from}T00:00:00.000Z`);
-        const toDate = new Date(`${now.getFullYear()}-${to}T23:59:59.000Z`);
+        const toDate = new Date(`${toYear}-${to}T23:59:59.000Z`);
         return now >= fromDate && now <= toDate;
     });
     const options = currentEvent?.options || VARIANTS.base.options;
