@@ -46,6 +46,10 @@ import storybookTheCookbook from "./img/storybook-the-cookbook.jpg";
 import whyDoWeCreateCommunities from "./img/why-do-we-create-communities.jpg";
 import tjsMeetup6Image from "../images/tjs-meetup-6.png";
 import tjsMeetup7Image from "../images/tjs-meetup-7.jpg";
+import xmas2025WhatIf from "./img/xmas-2025-what-if.jpg";
+import xmas2025AaaaHref from "./img/xmas-2025-aaaa-href.jpg";
+import xmas2025RoutingAsFoundation from "./img/xmas-2025-routing-as-foundation.jpg";
+import xmas2025Why3dGraphic from "./img/xmas-2025-why-3d-graphic.jpg";
 
 export type Talk = {
     slug: string;
@@ -61,6 +65,58 @@ export type Talk = {
 };
 
 export const talks: Talk[] = [
+    {
+        slug: "aaaaaaaaaaaaaaaaaaaaaaa-href",
+        speaker: "ivan-akulov",
+        name: "aaaaaaaaaaaaaaaaaaaaaaa (href)",
+        description:
+            "Meet Ivan Akulov — a React enthusiast focused on web performance, Google Developer Expert, and author of a Telegram channel. In this talk, Ivan questions modern router-based navigation in frameworks like Next.js, Nuxt.js, and @angular/router. He explores data preloading, fine-grained DOM updates, and state preservation, and explains when and why, even in 2026, plain old HTML links can outperform router navigation.",
+        labels: ["html", "routing", "web-performance", "react", "frontend"],
+        type: "talk",
+        preview: xmas2025AaaaHref,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T14:30:00.000Z",
+        end: "2025-12-28T15:00:00.000Z",
+    },
+    {
+        slug: "what-if-css-if-function",
+        speaker: "alyona-batitskaya",
+        name: "What? if()?",
+        description:
+            "Alyona Batitskaya, Senior Frontend Developer, Google Developer Expert for Web, editor at Doka Guide, speaker, educator, author, and translator, explores one of the most intriguing recent additions to CSS. In this talk, she takes a close look at the new if() function—its syntax, practical use cases, and how it fits into the emerging new paradigm of thinking about CSS.",
+        labels: ["css", "web-standards", "frontend", "if-function"],
+        type: "talk",
+        preview: xmas2025WhatIf,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T15:00:00.000Z",
+        end: "2025-12-28T15:30:00.000Z",
+    },
+    {
+        slug: "routing-as-the-foundation-of-correct-architecture",
+        speaker: "artem-arutyunyan",
+        name: "Routing as the Foundation of Correct Architecture",
+        description:
+            "Artem Arutyunyan, a developer with years of experience building libraries, frameworks, articles, and talks, shares practical insights into application architecture. In this talk, he explains why the router is a key architectural foundation and demonstrates how to make it smarter and more efficient using the computed factory pattern, with Reatom as a real-world example.",
+        labels: ["routing", "architecture", "reatom", "frontend", "javascript"],
+        type: "talk",
+        preview: xmas2025RoutingAsFoundation,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T15:30:00.000Z",
+        end: "2025-12-28T16:00:00.000Z",
+    },
+    {
+        slug: "3d-graphics-is-an-illusion",
+        speaker: "aleksander-korotaev",
+        name: "3D Graphics Is an Illusion",
+        description:
+            "Alexander Korotaev, a graphics effects, game, and animation developer known for his distinctive beard and sharp storytelling, returns with his fourth talk—this time about 3D graphics. He explains how graphics are not reality, but a collection of mathematical tricks that fool our brains into perceiving volume, light, and materials. From simple triangles to ray tracing, it is all deception—beautiful, intentional, and well-engineered. A down-to-earth explanation that cuts through the glossy surface of “physically accurate lighting” to show what is really solid and what is just drywall.",
+        labels: ["3d-graphics", "computer-graphics", "rendering", "games", "animation"],
+        type: "talk",
+        preview: xmas2025Why3dGraphic,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T16:00:00.000Z",
+        end: "2025-12-28T16:30:00.000Z",
+    },
     {
         slug: "how-langchain-js-works-and-when-its-useful",
         speaker: "anton-nepsha",
