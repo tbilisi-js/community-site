@@ -44,6 +44,51 @@ const FILTERS = {
             </mask>
         </>
     ),
+    "fractal-filter-static": (
+        <>
+            <filter id="fractalFilterStatic" x="0" y="0" width="100px" height="100px">
+                <feTurbulence type="fractalNoise" baseFrequency="50 50" numOctaves="3" result="fractal" />
+                <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="fractal"
+                    scale="0.5"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                />
+            </filter>
+
+            <mask id="fractalMaskStatic" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                <rect x="0" y="0" width="1" height="1" fill="white" filter="url(#fractalFilterStatic)" />
+            </mask>
+        </>
+    ),
+    "fractal-filter-dynamic": (
+        <>
+            <filter id="fractalFilterDynamic" x="0" y="0" width="100px" height="100px">
+                <feTurbulence type="fractalNoise" baseFrequency="50 50" numOctaves="3" result="fractal">
+                    <animate
+                        attributeName="baseFrequency"
+                        values="60 60; 66 66; 60 60"
+                        dur="50s"
+                        repeatCount="indefinite"
+                    />
+                </feTurbulence>
+                <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="fractal"
+                    scale="0.5"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                >
+                    <animate attributeName="scale" values="0.25; 0.75; 0.25" dur="10s" repeatCount="indefinite" />
+                </feDisplacementMap>
+            </filter>
+
+            <mask id="fractalMaskDynamic" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                <rect x="0" y="0" width="1" height="1" fill="white" filter="url(#fractalFilterDynamic)" />
+            </mask>
+        </>
+    ),
 };
 
 export interface SvgFiltersProps {

@@ -13,6 +13,7 @@ import { Contributors } from "../components/sections/contributors";
 import { CatsPattern } from "../components/sections/cats-pattern";
 import { Background } from "../components/elements/background";
 import { events } from "../core/mock/events";
+import { Friends } from "@src/components/sections/friends";
 
 const HomePage = () => (
     <>
@@ -40,6 +41,9 @@ const HomePage = () => (
         </Background>
         <Background>
             <Contributors />
+        </Background>
+        <Background>
+            <Friends />
         </Background>
         <Background>
             <JoinUs />
