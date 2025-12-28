@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
+
+import { GalleryModal } from "@src/components/elements/gallery-modal";
+import { useModal } from "@src/components/elements/gallery-modal/use-modal";
 
 import { Block } from "@src/components/ui/block";
-import { IconButton } from "@src/components/ui/icon-button";
 
 import gallery1 from "./img/gallery-1.jpg";
 import gallery2 from "./img/gallery-2.jpg";
@@ -17,7 +19,7 @@ import gallery8 from "./img/gallery-8.jpg";
 
 import "./community-gallery.scss";
 
-const images = [
+const defaultImages = [
     { img: gallery1, alt: "Audience attending a presentation with slides" },
     { img: gallery2, alt: "Community members networking" },
     { img: gallery3, alt: "Woman speaking with a microphone at a community event" },
@@ -28,48 +30,16 @@ const images = [
     { img: gallery8, alt: "Speakers on stage discussing JavaScript topics" },
 ];
 
-export const CommunityGallery = () => {
-    const [store, setStore] = useState<number | null>(null);
+export interface CommunityGalleryProps {
+    images?: {
+        img: StaticImageData | string;
+        alt: string;
+    }[];
+    galleryUrl?: string;
+}
 
-    const keyboardHandler = useCallback((e: KeyboardEvent) => {
-        if (e.key === "Escape") {
-            handleClose();
-        }
-
-        if (e.key === "ArrowLeft") {
-            handlePrev();
-        }
-        if (e.key === "ArrowRight") {
-            handleNext();
-        }
-    }, []);
-
-    const handleOpen = useCallback((index: number) => {
-        setStore(index);
-        document.body.style.overflow = "hidden";
-        window.addEventListener("keydown", keyboardHandler);
-    }, []);
-
-    const handleClose = useCallback(() => {
-        setStore(null);
-        document.body.style.overflow = "auto";
-        window.removeEventListener("keydown", keyboardHandler);
-    }, []);
-
-    const handlePrev = useCallback(() => {
-        setStore((prev) => (prev === null || prev === 0 ? images.length - 1 : prev - 1));
-    }, []);
-
-    const handleNext = useCallback(() => {
-        setStore((prev) => (prev === null || prev === images.length - 1 ? 0 : prev + 1));
-    }, []);
-
-    useEffect(() => {
-        return () => {
-            document.body.style.overflow = "auto";
-            window.removeEventListener("keydown", keyboardHandler);
-        };
-    }, []);
+export const CommunityGallery: React.FC<CommunityGalleryProps> = ({ images = defaultImages, galleryUrl }) => {
+    const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(images);
 
     return (
         <Block className="community-gallery" id="community-gallery">
@@ -83,7 +53,7 @@ export const CommunityGallery = () => {
                     <li
                         className="community-gallery-card"
                         onClick={() => handleOpen(index)}
-                        key={image.img.src}
+                        key={typeof image.img === "string" ? image.img : image.img.src}
                         tabIndex={0}
                         role="button"
                         onKeyDown={(e) => {
@@ -92,49 +62,31 @@ export const CommunityGallery = () => {
                             }
                         }}
                     >
-                        <Image src={image.img} alt={image.alt} className="community-gallery-card-img" />
+                        <Image
+                            width={960}
+                            height={960}
+                            src={image.img}
+                            alt={image.alt}
+                            className="community-gallery-card-img"
+                        />
                     </li>
                 ))}
+                {galleryUrl && (
+                    <li className="community-gallery-card">
+                        <Link href={galleryUrl} className="community-gallery-card-view-all">
+                            View all photos
+                        </Link>
+                    </li>
+                )}
             </ul>
             {store !== null && (
-                <div className="community-gallery-modal">
-                    <div className="community-gallery-modal-backdrop" onClick={handleClose} />
-                    <Image src={images[store].img} alt={images[store].alt} className="community-gallery-modal-img" />
-                    <p className="community-gallery-modal-alt">{images[store].alt}</p>
-                    <IconButton variant="light" className="community-gallery-modal-close" onClick={handleClose}>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 6L6 18M6 6L18 18"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </IconButton>
-                    <IconButton variant="light" className="community-gallery-modal-prev" onClick={handlePrev}>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15 18L9 12L15 6"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </IconButton>
-                    <IconButton variant="light" className="community-gallery-modal-next" onClick={handleNext}>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9 18L15 12L9 6"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </IconButton>
-                </div>
+                <GalleryModal
+                    images={images}
+                    store={store}
+                    handleClose={handleClose}
+                    handlePrev={handlePrev}
+                    handleNext={handleNext}
+                />
             )}
         </Block>
     );

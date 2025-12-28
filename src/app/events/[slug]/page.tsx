@@ -29,6 +29,13 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
         return acc;
     }, []);
 
+    const gallery = event.gallerySource && (await fetch(event.gallerySource));
+    const galleryData = gallery && (await gallery.json());
+    const images = galleryData?.files.map((file: string, index: number) => ({
+        img: `${galleryData.base_url}${file}`,
+        alt: `Photo from ${event.name} #${index + 1}`,
+    }));
+
     return (
         <>
             <Background>
@@ -39,7 +46,10 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
                 <Schedule talks={eventTalks} speakers={speakers} />
             </Background>
             <Background>
-                <CommunityGallery />
+                <CommunityGallery
+                    images={images?.length ? images.slice(-7) : undefined}
+                    galleryUrl={images?.length ? `/events/${slug}/gallery` : undefined}
+                />
             </Background>
             <Background>
                 <CatsPattern />
