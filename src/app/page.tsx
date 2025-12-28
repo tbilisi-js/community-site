@@ -9,6 +9,7 @@ import { Events } from "../components/sections/events";
 import { CallForSpeakers } from "../components/sections/call-for-speakers";
 import { Organisers } from "../components/sections/organisers";
 import { JoinUs } from "../components/sections/join-us";
+import { Contributors } from "../components/sections/contributors";
 import { CatsPattern } from "../components/sections/cats-pattern";
 import { Background } from "../components/elements/background";
 import { events } from "../core/mock/events";
@@ -36,6 +37,9 @@ const HomePage = () => (
         </Background>
         <Background>
             <Organisers />
+        </Background>
+        <Background>
+            <Contributors />
         </Background>
         <Background>
             <JoinUs />

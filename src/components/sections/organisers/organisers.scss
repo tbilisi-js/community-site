@@ -63,19 +63,27 @@
     position: relative;
     font-size: 30px;
     font-weight: 900;
-    padding: 16px 16px 4px;
+    padding: 16px 16px 4px 0;
     line-height: 1;
     width: fit-content;
     background-color: var(--cl-background);
     border-top-right-radius: 16px;
+
+    @include mixins.media(md) {
+        padding: 16px 16px 4px;
+    }
 }
 
 .organisers-card-description {
     position: relative;
     min-width: 160px;
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 16px 8px 0;
     background-color: var(--cl-background);
+
+    @include mixins.media(md) {
+        padding: 8px 16px;
+    }
 }
 
 .organisers-card-heading-top-corner {
