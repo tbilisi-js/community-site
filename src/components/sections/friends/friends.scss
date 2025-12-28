@@ -1,0 +1,56 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.friends-body {
+    position: relative;
+}
+
+.friends-heading {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include mixins.media(md) {
+        font-size: 76px;
+        text-align: center;
+    }
+}
+
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+
+    @include mixins.media(md) {
+        justify-content: center;
+    }
+}
+
+.friends-item {
+    mask: url(#fractalMaskStatic);
+    -webkit-mask: url(#fractalMaskStatic);
+    border: 2px dotted var(--cl-secondary);
+    border-radius: 16px;
+    overflow: hidden;
+
+    &:hover {
+        mask: url(#fractalMaskDynamic);
+        -webkit-mask: url(#fractalMaskDynamic);
+    }
+}
+
+.friends-image {
+    width: auto;
+    object-fit: cover;
+    height: 60px;
+
+    @include mixins.media(md) {
+        height: 120px;
+    }
+
+    @include mixins.media(xl) {
+        height: 180px;
+    }
+}
