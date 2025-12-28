@@ -403,7 +403,13 @@ export const XMAS_VARIANTS: Record<string, (ElementView & { weight: number })[]>
         {
             type: "orange",
             size: 64,
-            weight: 0.1,
+            weight: 0.07,
+            addons: ["fall"],
+        },
+        {
+            type: "not-an-orange",
+            size: 64,
+            weight: 0.03,
             addons: ["fall"],
         },
     ],
@@ -463,7 +469,7 @@ export const XMAS_VARIANTS: Record<string, (ElementView & { weight: number })[]>
             addons: ["rotate-15-left", "fall"],
         },
         {
-            type: "orange",
+            type: "not-an-orange",
             size: 80,
             weight: 0.01,
             addons: ["rotate-15-left", "fall"],
