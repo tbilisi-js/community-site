@@ -7,12 +7,12 @@
 .contributors-heading {
     font-size: 30px;
     font-weight: 900;
-    z-index: 1;
     text-transform: uppercase;
     margin-bottom: 24px;
 
     @include mixins.media(md) {
         font-size: 76px;
+        text-align: center;
     }
 }
 
