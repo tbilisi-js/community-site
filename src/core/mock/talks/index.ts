@@ -44,8 +44,16 @@ import whyShouldYouWrite from "./img/why-should-you-write.jpg";
 import gettingIntoWebgl from "./img/getting-into-webgl.jpg";
 import storybookTheCookbook from "./img/storybook-the-cookbook.jpg";
 import whyDoWeCreateCommunities from "./img/why-do-we-create-communities.jpg";
-import tjsMeetup6Image from "../images/tjs-meetup-6.png";
-import tjsMeetup7Image from "../images/tjs-meetup-7.jpg";
+import tjs6GamifiedPrototyping from "./img/tjs6-gamified-proto.jpg";
+import tjs6LiveInterfaces from "./img/tjs6-live-interfaces.jpg";
+import tjs6MajorMinorPatch from "./img/tjs6-major-minor-patch.jpg";
+import tjs6React19 from "./img/tjs6-react19.jpg";
+import tjs6VoiceAi from "./img/tjs6-voice-ai.jpg";
+import tjs7BrowserShadows from "./img/tjs7-browser-shadows.png";
+import tjs7DokaForEachOther from "./img/tjs7-doka-for-each-other.png";
+import tjs7Microfrontends from "./img/tjs7-microfrontends.png";
+import tjs7PersonalDevelopmentPlan from "./img/tjs7-personal-development-plan.png";
+import tjs7TheDisappearingReality from "./img/tjs7-the-disappearing-reality.png";
 import xmas2025WhatIf from "./img/xmas-2025-what-if.jpg";
 import xmas2025AaaaHref from "./img/xmas-2025-aaaa-href.jpg";
 import xmas2025RoutingAsFoundation from "./img/xmas-2025-routing-as-foundation.jpg";
@@ -138,7 +146,7 @@ export const talks: Talk[] = [
             "Evgeny Doroshkevich, Tech Lead Frontend at Kodix, will explore the latest animation techniques and libraries—from Web Animations API to real-time physics engines—and demonstrate how to bring truly interactive, high-performance motion to modern web applications.",
         labels: ["animation", "web", "performance"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6LiveInterfaces,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -151,7 +159,7 @@ export const talks: Talk[] = [
             "Sergey Levkovich, Senior Frontend Developer at Social Discovery Group, will introduce the new form handling APIs in React 19—covering their motivation, syntax, and migration path—and show how they simplify validation, performance, and developer ergonomics.",
         labels: ["react", "forms", "react19"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6React19,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -164,7 +172,7 @@ export const talks: Talk[] = [
             "Maxim Barinov, Founder of vocao.ai and Founding Engineer at Workdone (YC X25), will guide us through the latest advances in Voice AI—from speech synthesis to real-time voice interfaces—and discuss how to integrate these technologies into web products.",
         labels: ["ai", "voice"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6VoiceAi,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -177,7 +185,7 @@ export const talks: Talk[] = [
             "Hanna Kastrytsa, UX Researcher and Product Designer at Lightspeed Commerce, will show how game mechanics from Dungeons & Dragons can be applied to prototyping LLM-powered voice assistants—making design workshops more engaging and effective.",
         labels: ["prototyping", "gamification", "llm", "voice"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6GamifiedPrototyping,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -190,7 +198,7 @@ export const talks: Talk[] = [
             "Azat Davliatshin, Lead Software Engineer / Software Architect at Quantori, will unravel the pain points of semantic versioning—sharing patterns and tools to automate 'major.minor.patch' workflows and keep your release process smooth.",
         labels: ["versioning", "semver"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6MajorMinorPatch,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -753,7 +761,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Sasha Korotaev, developer, organizer of SPB Frontend and BeerJS Spb, and member of the Holy.js Program Committee, will explain how browsers draw shadows, round corners, and process vector graphics — from CSS rules to the graphics card.",
         labels: ["css", "graphics", "browsers"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7BrowserShadows,
         youtube: "",
         start: "2025-08-16T10:30:00.000Z",
         end: "2025-08-16T11:00:00.000Z",
@@ -766,7 +774,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Tanya Fokina, editor at Doka and web accessibility expert, will share how to work with responsive typography, where it’s needed, and why it matters.",
         labels: ["typography", "accessibility", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7DokaForEachOther,
         youtube: "",
         start: "2025-08-16T11:10:00.000Z",
         end: "2025-08-16T11:40:00.000Z",
@@ -779,7 +787,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Anya Shiryaeva, Lead Frontend Developer at Sibur Digital and organizer of MoscowJS, will talk about how to grow and develop as a professional, even if you’ve been in the industry for many years.",
         labels: ["career", "growth", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7PersonalDevelopmentPlan,
         youtube: "",
         start: "2025-08-16T11:50:00.000Z",
         end: "2025-08-16T12:20:00.000Z",
@@ -792,7 +800,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Danya Savitskiy, Senior Frontend Engineer at Quantori, will share the story of writing his own compiler for a framework that’s fading away — and what he learned in the process.",
         labels: ["compilers", "frameworks", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7TheDisappearingReality,
         youtube: "",
         start: "2025-08-16T12:40:00.000Z",
         end: "2025-08-16T13:10:00.000Z",
@@ -805,7 +813,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Nikita Potapov, Frontend Lead at Exante, will explain what microfrontends are, discuss their pros and cons, and help us figure out who needs them more — business or development teams.",
         labels: ["microfrontends", "architecture", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7Microfrontends,
         youtube: "",
         start: "2025-08-16T13:20:00.000Z",
         end: "2025-08-16T13:50:00.000Z",
