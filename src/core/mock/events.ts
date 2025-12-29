@@ -43,7 +43,7 @@ export const events: Event[] = [
         promo: "Let's discuss the events of the year, see what cool and not-so-cool (or completely uncool) 2025 brought to the frontend and the web in general, and at the same time celebrate 2 years of Tbilisi JS!",
         registration: false,
         telegram: "https://t.me/tbilisi_js/567",
-        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        youtube: "https://www.youtube-nocookie.com/embed/wgyoibJfDzY?si=gDJq-SxYkmcq8bDq",
     },
     {
         slug: "tbilisi-js-meetup-7",
