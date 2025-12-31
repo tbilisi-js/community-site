@@ -11,6 +11,9 @@
     "prepare": "husky",
     "postbuild": "next-sitemap"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": ["eslint"]
+  },
   "dependencies": {
     "classnames": "2.5.1",
     "next": "16.1.1",
