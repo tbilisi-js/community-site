@@ -510,7 +510,7 @@ export const VARIANTS = {
     xmas: {
         options: XMAS_VARIANTS,
         from: "12-20",
-        to: "01-07",
+        to: "01-14",
     },
     base: {
         options: BASE_VARIANTS,

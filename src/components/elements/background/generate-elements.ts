@@ -11,15 +11,32 @@ const getElementView = (options: (ElementView & { weight: number })[], random: n
     return { type: "star1", size: 6, addons: [] };
 };
 
-export const generateElements = (container: HTMLElement, density: number): Element[] => {
+const getCurrentEvent = () => {
     const currentEvent = Object.values(VARIANTS).find((data) => {
         const { from, to } = data;
         const now = new Date();
-        const toYear = +from.split("-")[0] > +to.split("-")[0] ? now.getFullYear() + 1 : now.getFullYear();
-        const fromDate = new Date(`${now.getFullYear()}-${from}T00:00:00.000Z`);
-        const toDate = new Date(`${toYear}-${to}T23:59:59.000Z`);
+        const currentYear = now.getFullYear();
+        const fromDate = new Date(`${currentYear}-${from}T00:00:00.000Z`);
+        const toDate = new Date(`${currentYear}-${to}T23:59:59.000Z`);
+        const fromMonth = +from.split("-")[0];
+        const toMonth = +to.split("-")[0];
+
+        const isCrossYear = fromMonth > toMonth;
+
+        if (isCrossYear) {
+            const inAfterFromDate = now >= fromDate;
+            const inBeforeToDate = now.getMonth() <= toMonth && now <= toDate;
+
+            return inAfterFromDate || inBeforeToDate;
+        }
+
         return now >= fromDate && now <= toDate;
     });
+    return currentEvent;
+};
+
+export const generateElements = (container: HTMLElement, density: number): Element[] => {
+    const currentEvent = getCurrentEvent();
     const options = currentEvent?.options || VARIANTS.base.options;
     const scrollY = window.scrollY;
     const scrollX = window.scrollX;
