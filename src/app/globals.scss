@@ -7,7 +7,8 @@
   --cl-neutral: #B0B0B0;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
@@ -25,19 +26,53 @@ main {
   overflow: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-svg, img {
+svg,
+img {
   display: block;
 }
 
-button, input {
+button,
+input {
   font-family: var(--font-roboto);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+@keyframes rotate {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes inset-scale {
+
+  0%,
+  100% {
+    inset: -2px;
+  }
+
+  50% {
+    inset: -0.5px;
+  }
 }

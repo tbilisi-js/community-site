@@ -29,15 +29,45 @@
 }
 
 .friends-item {
-    mask: url(#fractalMaskStatic);
-    -webkit-mask: url(#fractalMaskStatic);
-    border: 2px dotted var(--cl-secondary);
+    position: relative;
     border-radius: 16px;
-    overflow: hidden;
 
-    &:hover {
-        mask: url(#fractalMaskDynamic);
-        -webkit-mask: url(#fractalMaskDynamic);
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(to right, transparent 49%, var(--cl-primary) 50%, var(--cl-primary));
+        background-size: 50px;
+        z-index: -1;
+        border-radius: 16px;
+        opacity: 0;
+    }
+
+    &:hover::after {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(to right, var(--cl-primary) 20px, transparent 25px, transparent calc(100% - 25px), var(--cl-primary) calc(100% - 20px));
+        z-index: -1;
+    }
+
+    &:hover::before {
+        animation: friend-spin 8s ease infinite;
+        opacity: 1;
+    }
+}
+
+@keyframes friend-spin {
+    0% {
+        background-position: -200px 0;
+    }
+
+    50% {
+        background-position: 200px 0;
+    }
+
+    100% {
+        background-position: -200px 0;
     }
 }
 
@@ -45,6 +75,7 @@
     width: auto;
     object-fit: cover;
     height: 60px;
+    border-radius: 14px;
 
     @include mixins.media(md) {
         height: 120px;
