@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from "next/image";
+import { type StaticImageData } from "next/image";
 
 import { IconButton } from "@src/components/ui/icon-button";
 
@@ -19,13 +19,12 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ images, store, handl
     return (
         <div className="gallery-modal">
             <div className="gallery-modal-backdrop" onClick={handleClose} />
-            <Image
+            <img
                 width={960}
                 height={960}
                 src={images[store].img}
                 alt={images[store].alt}
                 className="gallery-modal-img"
-                unoptimized
             />
             <p className="gallery-modal-alt">{images[store].alt}</p>
             <IconButton variant="light" className="gallery-modal-close" onClick={handleClose}>

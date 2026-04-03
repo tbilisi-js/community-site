@@ -30,7 +30,7 @@ const EventGalleryPage: React.FC<{ params: Params }> = async ({ params }) => {
     );
 };
 
-export const generateStaticParams = () => events.map(({ slug }) => ({ slug }));
+export const generateStaticParams = () => events.filter((event) => event.gallerySource).map(({ slug }) => ({ slug }));
 
 export const generateMetadata = async ({ params }: { params: Params }) => {
     const { slug } = await params;

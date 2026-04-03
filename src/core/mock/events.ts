@@ -105,7 +105,7 @@ export const events: Event[] = [
         registration: "https://forms.gle/L92w2VH1XkhCaEht6",
         telegram: "https://t.me/tbilisi_js_chat/19071",
         youtube: "https://www.youtube.com/embed/fSyWehFpGc4?si=mNYyYKvPl8D2YMdz",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/pd1/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/pd1/struct.json",
     },
     {
         slug: "tbilisi-js-meetup-5",
@@ -124,7 +124,7 @@ export const events: Event[] = [
         registration: "https://forms.gle/xBFjyup82pZoMnpQ9",
         telegram: "https://t.me/tbilisi_js_chat/15677",
         youtube: "https://www.youtube.com/embed/m8H-cObBEZY?si=HQrsYqZ-7Oaslxi_",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m5/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m5/struct.json",
     },
     {
         slug: "tbilisi-js-meetup-4",
@@ -141,7 +141,7 @@ export const events: Event[] = [
         promo: "Celebrate 1 year together\nlet’s chat, chill and eat huge cake 🎂",
         telegram: "https://t.me/tbilisi_js_chat/13437",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m4/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m4/struct.json",
     },
     {
         slug: "tbilisi-a11y-ux-day",
@@ -159,7 +159,7 @@ export const events: Event[] = [
         image: allyUxDayImage,
         telegram: "https://t.me/tbilisi_js_chat/10441",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/a11y1/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/a11y1/struct.json",
     },
     {
         slug: "tbilisi-js-meetup-3",
@@ -175,7 +175,7 @@ export const events: Event[] = [
         image: tjsMeetup3Image,
         telegram: "https://t.me/tbilisi_js_chat/10306",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m3/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m3/struct.json",
     },
     {
         slug: "tbilisi-rust-day",
@@ -190,7 +190,7 @@ export const events: Event[] = [
         image: rustDayImage,
         telegram: "https://t.me/tbilisi_js_chat/9490",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/r1/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/r1/struct.json",
     },
     {
         slug: "tbilisi-js-conf-2024",
@@ -212,7 +212,7 @@ export const events: Event[] = [
         image: tjsConf1Image,
         telegram: "https://t.me/tbilisi_js_chat/5632",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/c1/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/c1/struct.json",
     },
     {
         slug: "tbilisi-js-meetup-2",
@@ -223,7 +223,7 @@ export const events: Event[] = [
         image: tjsMeetup2Image,
         telegram: "https://t.me/tbilisi_js_chat/3545",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m2/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m2/struct.json",
     },
     {
         slug: "tbilisi-js-meetup-1",
@@ -239,6 +239,6 @@ export const events: Event[] = [
         image: tjsMeetup1Image,
         telegram: "https://t.me/tbilisi_js_chat/1182",
         youtube: "",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m1/struct.json",
+        // gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m1/struct.json",
     },
 ];

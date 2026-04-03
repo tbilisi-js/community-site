@@ -1,7 +1,3 @@
-"use client";
-
-import Image from "next/image";
-
 import { GalleryModal } from "@src/components/elements/gallery-modal";
 import { useModal } from "@src/components/elements/gallery-modal/use-modal";
 
@@ -20,7 +16,7 @@ export const GalleryGrid = ({ files, baseUrl }: GalleryGridProps) => {
         <div className="gallery-grid">
             {files.map((file, index) => (
                 <div key={file} className="gallery-grid-item">
-                    <Image
+                    <img
                         src={`${baseUrl}${file}`}
                         alt={file}
                         width={360}
