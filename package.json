@@ -12,29 +12,31 @@
     "postbuild": "next-sitemap"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": ["eslint"]
+    "*.{ts,tsx,js,jsx}": [
+      "eslint"
+    ]
   },
   "dependencies": {
     "classnames": "2.5.1",
-    "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "sass": "1.97.1"
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sass": "1.99.0"
   },
   "devDependencies": {
-    "@types/node": "25.0.3",
-    "@types/react": "19.2.7",
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "eslint": "9.39.2",
-    "eslint-config-next": "16.1.1",
+    "eslint": "10.1.0",
+    "eslint-config-next": "16.2.2",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-prettier": "5.5.5",
     "husky": "9.1.7",
     "next-sitemap": "4.2.3",
-    "postcss": "8.5.6",
-    "prettier": "3.7.4",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.50.1"
+    "postcss": "8.5.8",
+    "prettier": "3.8.1",
+    "typescript": "6.0.2",
+    "typescript-eslint": "8.58.0"
   },
   "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
 }
