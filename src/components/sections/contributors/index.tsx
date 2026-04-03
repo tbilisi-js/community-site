@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { speakers } from "@src/core/mock/speakers";
@@ -14,8 +13,8 @@ export const Contributors = () => {
                 {speakers.map((speaker) => (
                     <li className="contributors-item" key={speaker.slug}>
                         <Link href={`/people/${speaker.slug}`} className="contributors-link">
-                            <Image
-                                src={speaker.img || "/logo-rect.png"}
+                            <img
+                                src={speaker.img?.src || "/logo-rect.png"}
                                 loading="lazy"
                                 alt={speaker.name}
                                 width={100}
