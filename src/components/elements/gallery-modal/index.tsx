@@ -22,7 +22,7 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ images, store, handl
             <img
                 width={960}
                 height={960}
-                src={images[store].img}
+                src={typeof images[store].img === "string" ? images[store].img : images[store].img.src}
                 alt={images[store].alt}
                 className="gallery-modal-img"
             />
