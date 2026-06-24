@@ -17,7 +17,7 @@ import valeriyaYakovleva from "./img/valeriya-yakovleva.jpg";
 import kirillKazakov from "./img/kirill-kazakov.jpg";
 import ivanZatravkin from "./img/ivan-zatravkin.jpg";
 import elonaSarkisova from "./img/elona-sarkisova.jpg";
-import vadimMakeev from "./img/vadim-makeev.jpeg";
+import vadimMakeev from "./img/vadim-makeev.png";
 import philippBaranovskii from "./img/philipp-baranovskii.jpg";
 import maksimKhalizov from "./img/maksim-khalizov.jpg";
 import andreyEvdokov from "./img/andrey-evdokov.jpg";
@@ -43,6 +43,10 @@ import marselAkhmetshin from "./img/marsel-akhmetshin.jpg";
 import nikitaPotapov from "./img/nikita-potapov.png";
 import artemArutyunyan from "./img/artem-arutyunyan.jpg";
 import alyonaBatitskaya from "./img/alyona-batitskaya.png";
+import dariaKamyshina from "./img/daria-kamyshina.jpg";
+import ninaTorgunakova from "./img/nina-torgunakova.png";
+import alexeyRaldugin from "./img/alexey-raldugin.jpeg";
+import gigiJanelidze from "./img/gigi-janelidze.jpeg";
 
 export type Speaker = {
     slug: string;
@@ -52,6 +56,31 @@ export type Speaker = {
 
 export const speakers: Speaker[] = [
     {
+        slug: "daria-kamyshina",
+        name: "Daria Kamyshina",
+        img: dariaKamyshina,
+    },
+    {
+        slug: "nina-torgunakova",
+        name: "Nina Torgunakova",
+        img: ninaTorgunakova,
+    },
+    {
+        slug: "alexey-raldugin",
+        name: "Alexey Raldugin",
+        img: alexeyRaldugin,
+    },
+    {
+        slug: "gigi-janelidze",
+        name: "Gigi Janelidze",
+        img: gigiJanelidze,
+    },
+    {
+        slug: "vadim-makeev",
+        name: "Vadim Makeev",
+        img: vadimMakeev,
+    },
+    {
         slug: "artem-arutyunyan",
         name: "Artem Arutyunyan",
         img: artemArutyunyan,
@@ -60,11 +89,6 @@ export const speakers: Speaker[] = [
         slug: "alyona-batitskaya",
         name: "Alyona Batitskaya",
         img: alyonaBatitskaya,
-    },
-    {
-        slug: "vadim-makeev",
-        name: "Vadim Makeev",
-        img: vadimMakeev,
     },
     {
         slug: "maksim-khalizov",
