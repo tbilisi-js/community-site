@@ -10,6 +10,7 @@ import tjsMeetup4Image from "./images/tjs-meetup-4.jpg";
 import tjsMeetup5Image from "./images/tjs-meetup-5.jpg";
 import tjsMeetup6Image from "./images/tbilisi-js-meetup-6.png";
 import tjsMeetup7Image from "./images/tjs-meetup-7.jpg";
+import tjsMeetup8Image from "./images/tjs-meetup-8.png";
 import xmasStream2025Image from "./images/tjs-xmas-stream-2025.jpg";
 import webPerformanceDayImage from "./images/web-performance-day.jpg";
 
@@ -28,6 +29,29 @@ export type Event = {
 };
 
 export const events: Event[] = [
+    {
+        slug: "tbilisi-js-meetup-8",
+        name: "Tbilisi JS Meetup #8",
+        date: "2026-07-04T12:00:00.000Z",
+        attendees: undefined,
+        talks: [
+            "how-not-to-lose-your-mind-in-a-world-where-browsers-ship-every-two-weeks",
+            "why-design-belongs-to-engineers-too",
+            "smart-nano-stores-or-how-we-made-web-development-simpler",
+            "site-reliability-on-the-way-to-9999-uptime",
+            "anatomy-of-a-messy-mockup-from-a-detached-component-to-clean-react-code",
+        ],
+        image: tjsMeetup8Image,
+        promo: `Friends, it's been way too long, and we've missed you! 
+And we know for a fact you've missed us too. We know you've been waiting. ❤️ 
+
+So on July 4 we're finally back with a brand-new meetup — and trust us, it was worth the wait! 🚀
+
+This time we're supported by the awesome folks at Salmon, a fintech company operating in the Philippines.`,
+        registration: "https://forms.gle/jAgYr5DhUkaSbW8WA",
+        telegram: "https://t.me/tbilisi_js/596",
+        youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+    },
     {
         slug: "tbilisi-js-xmas-stream-2025",
         name: "XMas Stream 2025",
