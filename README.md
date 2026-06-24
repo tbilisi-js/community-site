@@ -1,4 +1,4 @@
-# Tbilisi JS Community Site
+# Tbilisi JS Community Site 
 
 A community website for Tbilisi JS - a JavaScript and TypeScript RU-EN speaking community in Tbilisi, Georgia. We are united by our interest in technology and progress, a love for knowledge, and a genuine wish to support each other.
 
