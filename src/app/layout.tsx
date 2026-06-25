@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={fontspring.variable}>
+            <body className={fontspring.variable} suppressHydrationWarning>
                 <Header />
                 <main>{children}</main>
                 <Footer />

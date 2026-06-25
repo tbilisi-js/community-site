@@ -40,7 +40,9 @@ yarn-error.log*
 next-env.d.ts
 
 #IDE
- .idea/
+.idea/
+
+.claude/
 
 # generated files
 /public/sitemap.xml

@@ -9,6 +9,7 @@ import { talks, type Talk } from "@src/core/mock/talks";
 import { speakers, type Speaker } from "@src/core/mock/speakers";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
+import { SpeakersList } from "@src/components/sections/speakers-list";
 
 type Params = Promise<{ slug: string }>;
 
@@ -29,6 +30,8 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
         return acc;
     }, []);
 
+    const eventSpeakers: Speaker[] = eventTalks.flatMap((talk) => (talk.speaker ? [talk.speaker] : []));
+
     const gallery = event.gallerySource && (await fetch(event.gallerySource));
     const galleryData = gallery && (await gallery.json());
     const images = galleryData?.files.map((file: string, index: number) => ({
@@ -41,6 +44,9 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
             <Background>
                 <EventIntro title={event.name} date={event.date} />
                 <Tapes date={event.date} />
+            </Background>
+            <Background>
+                <SpeakersList speakers={eventSpeakers} />
             </Background>
             <Background>
                 <Schedule talks={eventTalks} speakers={speakers} />

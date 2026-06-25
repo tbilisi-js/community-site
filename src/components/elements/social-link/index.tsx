@@ -5,7 +5,7 @@ export interface OrganiserSocialProps {
     socialLink: string;
 }
 
-export const OrganiserSocial: React.FC<OrganiserSocialProps> = ({ socialLink }) => (
+export const SocialLink: React.FC<OrganiserSocialProps> = ({ socialLink }) => (
     <div className="organisers-social">
         <Icon name="corner-top-right" className="organisers-social-corner-top-left" width={16} height={16} />
         <Icon name="corner-top-right" className="organisers-social-corner-bottom-right" width={16} height={16} />
