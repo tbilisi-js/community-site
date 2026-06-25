@@ -16,6 +16,7 @@ export const YoutubePlayer: React.FC<YoutubePlayerProps> = ({ src }) => (
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
+            loading="lazy"
             className="youtube-player-frame"
         />
     </Block>

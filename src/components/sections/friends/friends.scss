@@ -1,0 +1,89 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.friends-body {
+    position: relative;
+}
+
+.friends-heading {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include mixins.media(md) {
+        font-size: 76px;
+        text-align: center;
+    }
+}
+
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 40px auto 0;
+
+    @include mixins.media(md) {
+        justify-content: center;
+    }
+}
+
+.friends-item {
+    position: relative;
+    border-radius: 16px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(to right, transparent 49%, var(--cl-primary) 50%, var(--cl-primary));
+        background-size: 50px;
+        z-index: -1;
+        border-radius: 16px;
+        opacity: 0;
+    }
+
+    &:hover::after {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(to right, var(--cl-primary) 20px, transparent 25px, transparent calc(100% - 25px), var(--cl-primary) calc(100% - 20px));
+        z-index: -1;
+    }
+
+    &:hover::before {
+        animation: friend-spin 8s ease infinite;
+        opacity: 1;
+    }
+}
+
+@keyframes friend-spin {
+    0% {
+        background-position: -200px 0;
+    }
+
+    50% {
+        background-position: 200px 0;
+    }
+
+    100% {
+        background-position: -200px 0;
+    }
+}
+
+.friends-image {
+    width: auto;
+    object-fit: cover;
+    height: 60px;
+    border-radius: 14px;
+
+    @include mixins.media(md) {
+        height: 100px;
+    }
+
+    @include mixins.media(xl) {
+        height: 140px;
+    }
+}

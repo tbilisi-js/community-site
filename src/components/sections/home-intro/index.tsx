@@ -12,6 +12,7 @@ export const HomeIntro = () => (
             height={logotype.height}
             alt="Tbilisi JS People"
             className="home-intro-img"
+            fetchPriority="high"
         />
         <h1 className="home-intro-subtitle">
             Tbilisi JavaScript and TypeScript RU&#8288;–&#8288;EN&nbsp;speaking Community

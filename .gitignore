@@ -43,3 +43,7 @@ next-env.d.ts
 .idea/
 
 .claude/
+
+# generated files
+/public/sitemap.xml
+/public/robots.txt

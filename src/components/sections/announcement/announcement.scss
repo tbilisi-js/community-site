@@ -8,7 +8,7 @@
         column-gap: 60px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr repeat(4, auto) 1fr;
-        grid-template-areas: ". image" "date image" "heading image" "description image" "button image" ". image";
+        grid-template-areas: ". image" "date image" "heading image" "description image" "registration image" ". image";
         align-items: center;
         justify-items: left;
     }
@@ -49,12 +49,14 @@
 }
 
 .announcement-button {
-    grid-area: button;
-    margin-top: 16px;
-
     @include mixins.media(null, sm) {
         width: 100%;
     }
+}
+
+.announcement-registration {
+    grid-area: registration;
+    margin-top: 16px;
 
     @include mixins.media(lg) {
         margin-top: 32px;

@@ -19,3 +19,17 @@
     border-color: var(--cl-primary);
   }
 }
+
+.organisers-social-corner-top-left {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  color: var(--cl-background);
+}
+
+.organisers-social-corner-bottom-right {
+  position: absolute;
+  bottom: -16px;
+  right: 0;
+  color: var(--cl-background);
+}

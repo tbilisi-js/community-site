@@ -23,15 +23,19 @@ export const Announcement: React.FC<AnnouncementProps> = ({ event }) => (
             <TimerBackgroundIcon className="announcement-timer-bg" />
             <AnnouncementTimer nextConfDate={event.date} className="announcement-timer" />
         </div>
-        <Button
-            variant="primary"
-            size="md"
-            href={event.registration}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="announcement-button"
-        >
-            Register
-        </Button>
+        <div className="announcement-registration">
+            {event.registration && (
+                <Button
+                    variant="primary"
+                    size="md"
+                    href={event.registration}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="announcement-button"
+                >
+                    Register
+                </Button>
+            )}
+        </div>
     </Block>
 );

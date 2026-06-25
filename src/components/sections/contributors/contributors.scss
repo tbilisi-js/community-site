@@ -1,0 +1,58 @@
+@use "../../../assets/styles/_mixins.scss";
+
+.contributors-body {
+    position: relative;
+}
+
+.contributors-heading {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include mixins.media(md) {
+        font-size: 76px;
+        text-align: center;
+    }
+}
+
+.contributors-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+
+    @include mixins.media(md) {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+.contributors-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        background: radial-gradient(var(--cl-background) 20%, var(--cl-primary), var(--cl-secondary), var(--cl-background) 90%);
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        animation: rotate 5s ease infinite;
+    }
+}
+
+.contributors-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 999px;
+    background-color: var(--cl-background);
+}

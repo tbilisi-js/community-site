@@ -3,32 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "prepare": "husky"
+    "eslint": "eslint",
+    "prepare": "husky",
+    "postbuild": "next-sitemap"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint"
+    ]
   },
   "dependencies": {
     "classnames": "2.5.1",
-    "next": "15.2.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "sass": "1.86.1"
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sass": "1.99.0"
   },
   "devDependencies": {
-    "@types/node": "22.13.17",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "eslint": "9.23.0",
-    "eslint-config-next": "15.2.4",
-    "eslint-config-prettier": "10.1.1",
-    "eslint-plugin-prettier": "5.2.6",
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "10.1.0",
+    "eslint-config-next": "16.2.2",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.5",
     "husky": "9.1.7",
-    "postcss": "8.5.3",
-    "prettier": "3.5.3",
-    "typescript": "5.8.2",
-    "typescript-eslint": "8.29.0"
+    "next-sitemap": "4.2.3",
+    "postcss": "8.5.8",
+    "prettier": "3.8.1",
+    "typescript": "6.0.2",
+    "typescript-eslint": "8.58.0"
   },
-  "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
+  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
 }

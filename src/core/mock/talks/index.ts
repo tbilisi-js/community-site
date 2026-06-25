@@ -44,8 +44,21 @@ import whyShouldYouWrite from "./img/why-should-you-write.jpg";
 import gettingIntoWebgl from "./img/getting-into-webgl.jpg";
 import storybookTheCookbook from "./img/storybook-the-cookbook.jpg";
 import whyDoWeCreateCommunities from "./img/why-do-we-create-communities.jpg";
-import tjsMeetup6Image from "../images/tjs-meetup-6.png";
-import tjsMeetup7Image from "../images/tjs-meetup-7.jpg";
+import tjs6GamifiedPrototyping from "./img/tjs6-gamified-proto.jpg";
+import tjs6LiveInterfaces from "./img/tjs6-live-interfaces.jpg";
+import tjs6MajorMinorPatch from "./img/tjs6-major-minor-patch.jpg";
+import tjs6React19 from "./img/tjs6-react19.jpg";
+import tjs6VoiceAi from "./img/tjs6-voice-ai.jpg";
+import tjs7BrowserShadows from "./img/tjs7-browser-shadows.png";
+import tjs7DokaForEachOther from "./img/tjs7-doka-for-each-other.png";
+import tjs7Microfrontends from "./img/tjs7-microfrontends.png";
+import tjs7PersonalDevelopmentPlan from "./img/tjs7-personal-development-plan.png";
+import tjs7TheDisappearingReality from "./img/tjs7-the-disappearing-reality.png";
+import xmas2025WhatIf from "./img/xmas-2025-what-if.jpg";
+import xmas2025AaaaHref from "./img/xmas-2025-aaaa-href.jpg";
+import xmas2025RoutingAsFoundation from "./img/xmas-2025-routing-as-foundation.jpg";
+import xmas2025Why3dGraphic from "./img/xmas-2025-why-3d-graphic.jpg";
+import tjsMeetup8 from "../images/tjs-meetup-8.png";
 
 export type Talk = {
     slug: string;
@@ -61,6 +74,129 @@ export type Talk = {
 };
 
 export const talks: Talk[] = [
+    {
+        slug: "how-not-to-lose-your-mind-in-a-world-where-browsers-ship-every-two-weeks",
+        speaker: "vadim-makeev",
+        name: "How not to lose your mind in a world where browsers ship every two weeks",
+        description: `Vadim Makeev, frontend developer in love with the web, browsers, bicycles, and podcasting. Tech writer at MDN, Google Developer Expert, host of the Web Standards and LP podcasts.
+
+Back in the 2000s, browsers shipped once a year — with cake, fireworks, and a press tour. In the 2010s, releases jumped to 6–8 a year. In the 2020s we're already looking at a dozen a year, and by the end of 2026 most browsers will start shipping every two weeks. Even if you're a 10x god with a herd of LLM agents at your back, their models were trained six months ago — they're often simply out of the loop, and they'll lie to your face with a smile. What's already possible, what still isn't, and how to actually stay on top of everything happening on the web platform.`,
+        labels: ["browsers", "web-performance", "frontend"],
+        type: "talk",
+        preview: tjsMeetup8,
+        youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+        start: "2026-07-04T10:00:00.000Z",
+        end: "2026-07-04T16:00:00.000Z",
+    },
+    {
+        slug: "why-design-belongs-to-engineers-too",
+        speaker: "gigi-janelidze",
+        name: "Why Design belongs to Engineers too",
+        description: `Gigi Janelidze, Head of Design and UX at Salmon Group.
+A Georgian who has spent twenty years working at the intersection of different worlds and cultures — at Yandex, MTS, Sber, TBC Group, and others. Now he leads design and UX at Salmon Group in the Philippines. He has built design functions from scratch, led transformations, hired, mentored, and let people go, and founded several professional communities. A certified NN/g and IxDF expert, and a member of the Advisory Board of Design Institute Tbilisi.
+
+We treat the design system as a deliverable that design hands to engineering — and then pay for it every day in rework, drift, and slow decisions. In this talk I'll argue the opposite: a design system is an internal product whose customers are engineers, which means engineers have to be its co-authors, not its recipients. I'll show why the design ↔️ engineering wall is an org-design problem, not a people problem. You'll leave with one question worth bringing back to your own team: whose product is your design system, and who's allowed to build it?`,
+        labels: ["design", "engineering", "frontend"],
+        type: "talk",
+        preview: tjsMeetup8,
+        youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+        start: "2026-07-04T10:00:00.000Z",
+        end: "2026-07-04T16:00:00.000Z",
+    },
+    {
+        slug: "smart-nano-stores-or-how-we-made-web-development-simpler",
+        speaker: "nina-torgunakova",
+        name: "Smart Nano Stores, or how we made web development simpler",
+        description: `Nina Torgunakova, frontend developer at Evil Martians. Inspired by turning ideas into convenient products and articles, as well as public speaking on topics I care about.
+
+Many popular state management libraries are bloated, require boilerplate, and overload components - forcing us to trade off performance, maintainability, and readability. In this talk, Nina will introduce Nano Stores, a tiny (under 1 KB) state manager built around smart atomic stores. It has zero dependencies, its own ecosystem, and is framework-agnostic by design.`,
+        labels: ["state-management", "performance", "frontend"],
+        type: "talk",
+        preview: tjsMeetup8,
+        youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+        start: "2026-07-04T10:00:00.000Z",
+        end: "2026-07-04T16:00:00.000Z",
+    },
+    {
+        slug: "site-reliability-on-the-way-to-9999-uptime",
+        speaker: "alexey-raldugin",
+        name: "Site Reliability: On the way to 99.99...% uptime",
+        description: `Alexey Raldugin, Lead Software Engineer at Salmon, a lover of hard problems, architecture, and frontend.
+
+Today, developers aren't just responsible for writing code; they also have to handle deployment and ensure site reliability under heavy loads. With so many options out there, it's easy to get overwhelmed. In this talk, I'll try to untangle the complexity and share the best practices and experience of building a fault-tolerant website at Salmon for 1M+ unique users, featuring dynamic content updates.`,
+        labels: ["site-reliability", "architecture", "reliability", "performance", "frontend"],
+        type: "talk",
+        preview: tjsMeetup8,
+        youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+        start: "2026-07-04T10:00:00.000Z",
+        end: "2026-07-04T16:00:00.000Z",
+    },
+    {
+        slug: "anatomy-of-a-messy-mockup-from-a-detached-component-to-clean-react-code",
+        speaker: "daria-kamyshina",
+        name: "Anatomy of a Messy Mockup: From a Detached Component to Clean React Code",
+        description: `Daria Kamyshina, CEO of Francoise (https://francoise.design). 8 years of launching and scaling products in employment led her to founding her own startup that smooths out the seam between design and development.
+
+Writing code without an IDE, linters, or a compiler is pure madness. Yet, this is exactly how designers build interfaces every single day. In this talk, we will dissect the data structure of a "messy" mockup and break down why automated UI validation has been considered a mathematically unsolvable problem. We'll explore the fundamental conflict between the freeform Figma canvas and the strict DOM tree and attempt to find a path to cleaner React code.`,
+        labels: ["design", "architecture", "frontend", "react"],
+        type: "talk",
+        preview: tjsMeetup8,
+        youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+        start: "2026-07-04T10:00:00.000Z",
+        end: "2026-07-04T16:00:00.000Z",
+    },
+    {
+        slug: "aaaaaaaaaaaaaaaaaaaaaaa-href",
+        speaker: "ivan-akulov",
+        name: "aaaaaaaaaaaaaaaaaaaaaaa (href)",
+        description:
+            "Meet Ivan Akulov — a React enthusiast focused on web performance, Google Developer Expert, and author of a Telegram channel. In this talk, Ivan questions modern router-based navigation in frameworks like Next.js, Nuxt.js, and @angular/router. He explores data preloading, fine-grained DOM updates, and state preservation, and explains when and why, even in 2026, plain old HTML links can outperform router navigation.",
+        labels: ["html", "routing", "web-performance", "react", "frontend"],
+        type: "talk",
+        preview: xmas2025AaaaHref,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T14:30:00.000Z",
+        end: "2025-12-28T15:00:00.000Z",
+    },
+    {
+        slug: "what-if-css-if-function",
+        speaker: "alyona-batitskaya",
+        name: "What? if()?",
+        description:
+            "Alyona Batitskaya, Senior Frontend Developer, Google Developer Expert for Web, editor at Doka Guide, speaker, educator, author, and translator, explores one of the most intriguing recent additions to CSS. In this talk, she takes a close look at the new if() function—its syntax, practical use cases, and how it fits into the emerging new paradigm of thinking about CSS.",
+        labels: ["css", "web-standards", "frontend", "if-function"],
+        type: "talk",
+        preview: xmas2025WhatIf,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T15:00:00.000Z",
+        end: "2025-12-28T15:30:00.000Z",
+    },
+    {
+        slug: "routing-as-the-foundation-of-correct-architecture",
+        speaker: "artem-arutyunyan",
+        name: "Routing as the Foundation of Correct Architecture",
+        description:
+            "Artem Arutyunyan, a developer with years of experience building libraries, frameworks, articles, and talks, shares practical insights into application architecture. In this talk, he explains why the router is a key architectural foundation and demonstrates how to make it smarter and more efficient using the computed factory pattern, with Reatom as a real-world example.",
+        labels: ["routing", "architecture", "reatom", "frontend", "javascript"],
+        type: "talk",
+        preview: xmas2025RoutingAsFoundation,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T15:30:00.000Z",
+        end: "2025-12-28T16:00:00.000Z",
+    },
+    {
+        slug: "3d-graphics-is-an-illusion",
+        speaker: "aleksander-korotaev",
+        name: "3D Graphics Is an Illusion",
+        description:
+            "Alexander Korotaev, a graphics effects, game, and animation developer known for his distinctive beard and sharp storytelling, returns with his fourth talk—this time about 3D graphics. He explains how graphics are not reality, but a collection of mathematical tricks that fool our brains into perceiving volume, light, and materials. From simple triangles to ray tracing, it is all deception—beautiful, intentional, and well-engineered. A down-to-earth explanation that cuts through the glossy surface of “physically accurate lighting” to show what is really solid and what is just drywall.",
+        labels: ["3d-graphics", "computer-graphics", "rendering", "games", "animation"],
+        type: "talk",
+        preview: xmas2025Why3dGraphic,
+        youtube: "https://www.youtube.com/embed/wgyoibJfDzY?si=_vJWdon_IsUF1bRK",
+        start: "2025-12-28T16:00:00.000Z",
+        end: "2025-12-28T16:30:00.000Z",
+    },
     {
         slug: "how-langchain-js-works-and-when-its-useful",
         speaker: "anton-nepsha",
@@ -82,7 +218,7 @@ export const talks: Talk[] = [
             "Evgeny Doroshkevich, Tech Lead Frontend at Kodix, will explore the latest animation techniques and libraries—from Web Animations API to real-time physics engines—and demonstrate how to bring truly interactive, high-performance motion to modern web applications.",
         labels: ["animation", "web", "performance"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6LiveInterfaces,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -95,7 +231,7 @@ export const talks: Talk[] = [
             "Sergey Levkovich, Senior Frontend Developer at Social Discovery Group, will introduce the new form handling APIs in React 19—covering their motivation, syntax, and migration path—and show how they simplify validation, performance, and developer ergonomics.",
         labels: ["react", "forms", "react19"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6React19,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -108,7 +244,7 @@ export const talks: Talk[] = [
             "Maxim Barinov, Founder of vocao.ai and Founding Engineer at Workdone (YC X25), will guide us through the latest advances in Voice AI—from speech synthesis to real-time voice interfaces—and discuss how to integrate these technologies into web products.",
         labels: ["ai", "voice"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6VoiceAi,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -121,7 +257,7 @@ export const talks: Talk[] = [
             "Hanna Kastrytsa, UX Researcher and Product Designer at Lightspeed Commerce, will show how game mechanics from Dungeons & Dragons can be applied to prototyping LLM-powered voice assistants—making design workshops more engaging and effective.",
         labels: ["prototyping", "gamification", "llm", "voice"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6GamifiedPrototyping,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -134,7 +270,7 @@ export const talks: Talk[] = [
             "Azat Davliatshin, Lead Software Engineer / Software Architect at Quantori, will unravel the pain points of semantic versioning—sharing patterns and tools to automate 'major.minor.patch' workflows and keep your release process smooth.",
         labels: ["versioning", "semver"],
         type: "talk",
-        preview: tjsMeetup6Image,
+        preview: tjs6MajorMinorPatch,
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         start: "2025-06-14T09:30:00.000Z",
         end: "2025-06-14T09:30:00.000Z",
@@ -228,8 +364,8 @@ export const talks: Talk[] = [
     {
         slug: "react-server-components",
         name: "React Server Components: What, How, and Most Importantly, Why?",
-        description: `Alexander Savelyev, Developer and Next.js Contributor, has been actively implementing React Server Components (RSC) in production projects over the past couple of years. He has also contributed to the ecosystem and shared his experience through articles.
-In his talk, Alexander will cover:
+        description: `Alex Savelyev, Developer and Next.js Contributor, has been actively implementing React Server Components (RSC) in production projects over the past couple of years. He has also contributed to the ecosystem and shared his experience through articles.
+In his talk, Alex will cover:
 <ul><li>How server components actually work and what’s happening under the hood;</li>
 <li>Key differences in framework implementations (Next.js, Remix, TanStack Router);</li>
 <li>The new component architecture: composing server and client components, communication between them, and building component trees;</li>
@@ -697,7 +833,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Sasha Korotaev, developer, organizer of SPB Frontend and BeerJS Spb, and member of the Holy.js Program Committee, will explain how browsers draw shadows, round corners, and process vector graphics — from CSS rules to the graphics card.",
         labels: ["css", "graphics", "browsers"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7BrowserShadows,
         youtube: "",
         start: "2025-08-16T10:30:00.000Z",
         end: "2025-08-16T11:00:00.000Z",
@@ -710,7 +846,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Tanya Fokina, editor at Doka and web accessibility expert, will share how to work with responsive typography, where it’s needed, and why it matters.",
         labels: ["typography", "accessibility", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7DokaForEachOther,
         youtube: "",
         start: "2025-08-16T11:10:00.000Z",
         end: "2025-08-16T11:40:00.000Z",
@@ -723,7 +859,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Anya Shiryaeva, Lead Frontend Developer at Sibur Digital and organizer of MoscowJS, will talk about how to grow and develop as a professional, even if you’ve been in the industry for many years.",
         labels: ["career", "growth", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7PersonalDevelopmentPlan,
         youtube: "",
         start: "2025-08-16T11:50:00.000Z",
         end: "2025-08-16T12:20:00.000Z",
@@ -736,7 +872,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Danya Savitskiy, Senior Frontend Engineer at Quantori, will share the story of writing his own compiler for a framework that’s fading away — and what he learned in the process.",
         labels: ["compilers", "frameworks", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7TheDisappearingReality,
         youtube: "",
         start: "2025-08-16T12:40:00.000Z",
         end: "2025-08-16T13:10:00.000Z",
@@ -749,7 +885,7 @@ Daniil Savitsky, Senior Frontend Developer at Quantori, an advocate for simple s
             "Nikita Potapov, Frontend Lead at Exante, will explain what microfrontends are, discuss their pros and cons, and help us figure out who needs them more — business or development teams.",
         labels: ["microfrontends", "architecture", "frontend"],
         type: "talk",
-        preview: tjsMeetup7Image,
+        preview: tjs7Microfrontends,
         youtube: "",
         start: "2025-08-16T13:20:00.000Z",
         end: "2025-08-16T13:50:00.000Z",

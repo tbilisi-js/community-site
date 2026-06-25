@@ -8,10 +8,16 @@ import tabbyImg from "./img/tabby.svg";
 import tradingViewImg from "./img/trading-view.svg";
 import socialDiscoderyGroup from "./img/social-discovery-group.svg";
 import exanteImg from "./img/exante.svg";
+import salmonImg from "./img/salmon.svg";
 
 import "./our-partners.scss";
 
 const partners = [
+    {
+        src: salmonImg.src,
+        alt: "Salmon",
+        url: "https://salmon.ph/",
+    },
     {
         src: quantoriImg.src,
         alt: "Quantori",
