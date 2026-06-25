@@ -63,21 +63,25 @@ export const speakers: Speaker[] = [
         slug: "daria-kamyshina",
         name: "Daria Kamyshina",
         img: dariaKamyshina,
+        socialLink: "https://www.linkedin.com/in/daria-kamyshina/",
     },
     {
         slug: "nina-torgunakova",
         name: "Nina Torgunakova",
         img: ninaTorgunakova,
+        socialLink: "https://www.linkedin.com/in/nina-torgunakova/",
     },
     {
         slug: "alexey-raldugin",
         name: "Alexey Raldugin",
         img: alexeyRaldugin,
+        socialLink: "https://www.linkedin.com/in/alexey-raldugin/",
     },
     {
         slug: "gigi-janelidze",
         name: "Gigi Janelidze",
         img: gigiJanelidze,
+        socialLink: "https://www.linkedin.com/in/gigi1987/",
     },
     {
         slug: "vadim-makeev",
@@ -97,6 +101,7 @@ export const speakers: Speaker[] = [
         slug: "alyona-batitskaya",
         name: "Alyona Batitskaya",
         img: alyonaBatitskaya,
+        socialLink: "https://www.linkedin.com/in/alena-batitskaia/",
     },
     {
         slug: "maksim-khalizov",
