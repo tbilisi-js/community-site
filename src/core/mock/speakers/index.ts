@@ -49,7 +49,7 @@ export type Speaker = {
     company?: string;
     role?: string;
     location?: string;
-    hasSocial?: boolean;
+    socialLink?: string;
 };
 
 export const speakers: Speaker[] = [
@@ -60,7 +60,7 @@ export const speakers: Speaker[] = [
         company: "MDN",
         role: "Tech Writer",
         location: "Berlin",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/pepelsbey/",
     },
     {
         slug: "maksim-khalizov",
@@ -69,7 +69,6 @@ export const speakers: Speaker[] = [
         company: "Devexperts",
         role: "Senior Accessibility Engineer",
         location: "Tbilisi",
-        hasSocial: true,
     },
     {
         slug: "tanya-fokina",
@@ -78,7 +77,7 @@ export const speakers: Speaker[] = [
         company: "Doka Guide",
         role: "Editor",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/tanya-fokina/",
     },
     {
         slug: "andrey-evdokov",
@@ -87,7 +86,6 @@ export const speakers: Speaker[] = [
         company: "BIOCAD",
         role: "UI / UX Designer",
         location: "Saint-Petersburg",
-        hasSocial: true,
     },
     {
         slug: "elona-sarkisova",
@@ -96,7 +94,7 @@ export const speakers: Speaker[] = [
         company: "VK",
         role: "Lead Designer",
         location: "Saint-Petersburg",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/ilonasarkisova/",
     },
     {
         slug: "philipp-baranovskii",
@@ -105,7 +103,7 @@ export const speakers: Speaker[] = [
         company: "EPAM Systems",
         role: "Accessibility Team Lead",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/philippbaranovskii/",
     },
     {
         slug: "alex-savelyev",
@@ -114,7 +112,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Developer",
         location: "London",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/alexdln/",
     },
     {
         slug: "nikita-dubko",
@@ -123,7 +121,7 @@ export const speakers: Speaker[] = [
         company: "Web Standards",
         role: "Speaker, Meetup Organizer",
         location: "Minsk",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/nikita-dubko-5bb1608b/",
     },
     {
         slug: "egor-nechaev",
@@ -132,7 +130,7 @@ export const speakers: Speaker[] = [
         company: "Lightspeed",
         role: "System Designer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/egor-nechaev-a94816239/",
     },
     {
         slug: "vic-istomin",
@@ -141,7 +139,7 @@ export const speakers: Speaker[] = [
         company: "JettyCloud",
         role: "Staff Frontend Developer",
         location: "Sofia",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/vic-istomin/",
     },
     {
         slug: "timur-gafiulin",
@@ -150,7 +148,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Developer, Meetup Organizer",
         location: "Moscow",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/tatarinfrontend/",
     },
     {
         slug: "anna-shiryaeva",
@@ -159,7 +157,6 @@ export const speakers: Speaker[] = [
         company: "Sibur Digital",
         role: "Lead Frontend Developer",
         location: "Moscow",
-        hasSocial: true,
     },
     {
         slug: "daniil-savitskii",
@@ -168,7 +165,7 @@ export const speakers: Speaker[] = [
         company: "Quantori",
         role: "Senior Software Engineer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/velopsey/",
     },
     {
         slug: "eugene-korobko",
@@ -177,7 +174,6 @@ export const speakers: Speaker[] = [
         company: "TradingView",
         role: "Lead Software Developer",
         location: "Rostov",
-        hasSocial: true,
     },
     {
         slug: "ivan-akulov",
@@ -186,7 +182,7 @@ export const speakers: Speaker[] = [
         company: "Framer",
         role: "Performance Engineer, GDE",
         location: "Amsterdam",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/iamakulov/",
     },
     {
         slug: "aleksander-korotaev",
@@ -195,7 +191,7 @@ export const speakers: Speaker[] = [
         company: "SPB Frontend",
         role: "Meetup Organizer, Speaker, Developer",
         location: "Saint-Petersburg",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/lekzd/",
     },
     {
         slug: "oleg-semichev",
@@ -204,7 +200,7 @@ export const speakers: Speaker[] = [
         company: "TradingView",
         role: "Frontend Team Lead",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/oleg-semichev/",
     },
     {
         slug: "den-ilin",
@@ -213,7 +209,7 @@ export const speakers: Speaker[] = [
         company: "Chillhouse",
         role: "Technical Lead,",
         location: "Postov",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/iamdenilin/",
     },
     {
         slug: "hanna-kastrytsa",
@@ -222,7 +218,7 @@ export const speakers: Speaker[] = [
         company: "Lightspeed",
         role: "UX Researcher, UI Designer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/hanna-kastrytsa/",
     },
     {
         slug: "valeriya-yakovleva",
@@ -231,7 +227,7 @@ export const speakers: Speaker[] = [
         company: "Yandex Practicum",
         role: "UX Writer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/lerayakov/",
     },
     {
         slug: "kirill-kazakov",
@@ -240,7 +236,7 @@ export const speakers: Speaker[] = [
         company: "Lightspeed",
         role: "SRE Manager",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/kirikaza/",
     },
     {
         slug: "ivan-zatravkin",
@@ -249,7 +245,7 @@ export const speakers: Speaker[] = [
         company: "Quantori",
         role: "Delivery / Engineering Manager",
         location: "London",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/ivan-zatravkin-a64024167/",
     },
     {
         slug: "aleksander-dmitriev",
@@ -258,7 +254,6 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Backend Developer",
         location: "Tbilisi",
-        hasSocial: true,
     },
     {
         slug: "aleksander-zelik",
@@ -267,7 +262,7 @@ export const speakers: Speaker[] = [
         company: "Zelkom LLC",
         role: "Developer / Project Manager",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/aleksandr-zelik/",
     },
     {
         slug: "anton-nepsha",
@@ -276,7 +271,7 @@ export const speakers: Speaker[] = [
         company: "Sber",
         role: "Lead Frontend Developer",
         location: "Moscow",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/nepshaaa/",
     },
     {
         slug: "evgeny-doroshkevich",
@@ -285,7 +280,7 @@ export const speakers: Speaker[] = [
         company: "Kodix",
         role: "Frontend Tech Lead",
         location: "Minsk",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/evgeniy-doroshkevich/",
     },
     {
         slug: "sergey-levkovich",
@@ -294,7 +289,6 @@ export const speakers: Speaker[] = [
         company: "Social Discovery Group",
         role: "Senior Frontend Developer",
         location: "Gdańsk",
-        hasSocial: true,
     },
     {
         slug: "maxim-barinov",
@@ -303,7 +297,7 @@ export const speakers: Speaker[] = [
         company: "Vocao AI",
         role: "Founder, Founding Engineer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/maxbarinov/",
     },
     {
         slug: "azat-davliatshin",
@@ -312,7 +306,7 @@ export const speakers: Speaker[] = [
         company: "Quantori",
         role: "Solution / Software Architect",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/azat-davliatshin/",
     },
     {
         slug: "maria-kondaurova",
@@ -321,7 +315,6 @@ export const speakers: Speaker[] = [
         company: "BIOCAD",
         role: "Senior Frontend Developer",
         location: "Saint-Petersburg",
-        hasSocial: true,
     },
     {
         slug: "anton-pavlov",
@@ -330,7 +323,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "DevOps Team Lead",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/antonepavlov/",
     },
     {
         slug: "dmitry-shmakov",
@@ -339,7 +332,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Engineer",
         location: "Yerevan",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/shmakovdima/",
     },
     {
         slug: "irakli-bakhtadze",
@@ -348,7 +341,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior DevOps Engineer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/irakli-bakhtadze-760b97213/",
     },
     {
         slug: "aleksander-popov",
@@ -357,7 +350,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Developer",
         location: "Tbilisi",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/popovaleksx/",
     },
     {
         slug: "viktor-shcheglov",
@@ -366,7 +359,6 @@ export const speakers: Speaker[] = [
         company: "Recraft",
         role: "Senior Frontend Engineer",
         location: "Tbilisi",
-        hasSocial: true,
     },
     {
         slug: "mikhail-garbuzov",
@@ -375,7 +367,6 @@ export const speakers: Speaker[] = [
         company: "JettyCloud",
         role: "Senior Backend Developer",
         location: "Sofia",
-        hasSocial: true,
     },
     {
         slug: "aleksander-komlev",
@@ -384,7 +375,6 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Developer",
         location: "Batumi",
-        hasSocial: true,
     },
     {
         slug: "pavel-melnikov",
@@ -393,7 +383,6 @@ export const speakers: Speaker[] = [
         company: "",
         role: "WebGL Engineer",
         location: "Tbilisi",
-        hasSocial: true,
     },
     {
         slug: "mikhail-pokryshchenko",
@@ -402,7 +391,6 @@ export const speakers: Speaker[] = [
         company: "Mundfish",
         role: "Senior DevOps Engineer",
         location: "Tbilisi",
-        hasSocial: true,
     },
     {
         slug: "marsel-akhmetshin",
@@ -411,7 +399,6 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Developer",
         location: "London",
-        hasSocial: true,
     },
     {
         slug: "nikita-potapov",
@@ -420,6 +407,6 @@ export const speakers: Speaker[] = [
         company: "Exante",
         role: "Frontend Lead",
         location: "Yekaterinburg",
-        hasSocial: true,
+        socialLink: "https://www.linkedin.com/in/nikita-potapov/",
     },
 ];

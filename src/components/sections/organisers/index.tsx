@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Block } from "../../ui/block";
-import { OrganiserSocial } from "@src/components/elements/organiser-social";
+import { SocialLink } from "../../elements/social-link";
 import { organisers } from "@src/core/mock/organisers";
 
 import "./organisers.scss";
@@ -30,7 +30,7 @@ const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description,
             <p className="organisers-card-heading">{name}</p>
             <p className="organisers-card-description">{description}</p>
         </div>
-        <OrganiserSocial socialLink={socialLink} />
+        <SocialLink socialLink={socialLink} />
     </div>
 );
 

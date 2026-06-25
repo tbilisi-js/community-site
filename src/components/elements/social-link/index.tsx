@@ -4,7 +4,7 @@ export interface OrganiserSocialProps {
     socialLink: string;
 }
 
-export const OrganiserSocial: React.FC<OrganiserSocialProps> = ({ socialLink }) => (
+export const SocialLink: React.FC<OrganiserSocialProps> = ({ socialLink }) => (
     <div className="organisers-social">
         <a href={socialLink} target="_blank" rel="noopener noreferrer" className="organisers-social-item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" height="20" width="20">

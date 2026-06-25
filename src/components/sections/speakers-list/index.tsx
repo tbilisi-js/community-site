@@ -5,6 +5,7 @@ import { Block } from "@src/components/ui/block";
 
 import "./speakers-list.scss";
 import type { Speaker } from "@src/core/mock/speakers";
+import { SocialLink } from "@src/components/elements/social-link";
 
 export interface SpeakersListProps {
     speakers: Speaker[];
@@ -24,26 +25,6 @@ export const SpeakersList: React.FC<SpeakersListProps> = ({ speakers = [] }) => 
                                 </p>
                             )}
                             {speaker.location && <p className="speakers-list-location">{speaker.location}</p>}
-                            {speaker.hasSocial && (
-                                <div className="speakers-list-social-icon">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <circle cx="10" cy="10" r="9" fill="black" stroke="white" strokeWidth="2" />
-                                        <path
-                                            d="M7 10L9 12L13 8"
-                                            stroke="white"
-                                            strokeWidth="1.5"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                            )}
                         </div>
                         <div className="speakers-list-visual">
                             <Image
@@ -56,6 +37,7 @@ export const SpeakersList: React.FC<SpeakersListProps> = ({ speakers = [] }) => 
                             />
                         </div>
                     </Link>
+                    {speaker.socialLink && <SocialLink socialLink={speaker.socialLink} />}
                 </li>
             ))}
         </ul>
