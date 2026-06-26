@@ -10,6 +10,7 @@ import { speakers, type Speaker } from "@src/core/mock/speakers";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { SpeakersList } from "@src/components/sections/speakers-list";
+import { buildAllS3Photos, type S3GalleryStruct } from "@src/core/gallery/s3";
 
 type Params = Promise<{ slug: string }>;
 
@@ -32,12 +33,14 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
 
     const eventSpeakers: Speaker[] = eventTalks.flatMap((talk) => (talk.speaker ? [talk.speaker] : []));
 
-    const gallery = event.gallerySource && (await fetch(event.gallerySource));
-    const galleryData = gallery && (await gallery.json());
-    const images = galleryData?.files.map((file: string, index: number) => ({
-        img: `${galleryData.base_url}${file}`,
-        alt: `Photo from ${event.name} #${index + 1}`,
-    }));
+    let s3Photos = undefined;
+    if (event.gallerySource) {
+        const res = await fetch(event.gallerySource);
+        const struct: S3GalleryStruct = await res.json();
+        if (struct.photos.length) {
+            s3Photos = buildAllS3Photos(struct, event.name).slice(0, 7);
+        }
+    }
 
     return (
         <>
@@ -52,10 +55,7 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
                 <Schedule talks={eventTalks} speakers={speakers} />
             </Background>
             <Background>
-                <CommunityGallery
-                    images={images?.length ? images.slice(-7) : undefined}
-                    galleryUrl={images?.length ? `/events/${slug}/gallery` : undefined}
-                />
+                <CommunityGallery s3Photos={s3Photos} galleryUrl={s3Photos ? `/events/${slug}/gallery` : undefined} />
             </Background>
             <Background>
                 <CatsPattern />
