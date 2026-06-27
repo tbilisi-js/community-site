@@ -1,35 +1,42 @@
+"use client";
+
 import { GalleryModal } from "@src/components/elements/gallery-modal";
 import { useModal } from "@src/components/elements/gallery-modal/use-modal";
+import { type S3Photo } from "@src/core/gallery/s3";
 
 import "./gallery-grid.scss";
 
 export interface GalleryGridProps {
-    files: string[];
-    baseUrl: string;
+    photos: S3Photo[];
 }
 
-export const GalleryGrid = ({ files, baseUrl }: GalleryGridProps) => {
-    const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(
-        files.map((file) => ({ img: `${baseUrl}${file}`, alt: file })),
-    );
+export const GalleryGrid = ({ photos }: GalleryGridProps) => {
+    const modalImages = photos.map((p) => ({ img: p.large, alt: p.alt }));
+    const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(modalImages);
+
     return (
         <div className="gallery-grid">
-            {files.map((file, index) => (
-                <div key={file} className="gallery-grid-item">
-                    <img
-                        src={`${baseUrl}${file}`}
-                        alt={file}
-                        width={360}
-                        height={360}
-                        className="gallery-grid-item-image"
-                        loading="lazy"
-                        onClick={() => handleOpen(index)}
-                    />
+            {photos.map((photo, index) => (
+                <div key={photo.preview} className="gallery-grid-item" onClick={() => handleOpen(index)}>
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcSet={`${photo.thumbnail} 400w, ${photo.preview} 800w, ${photo.large} 1600w`}
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
+                        <img
+                            src={photo.preview}
+                            alt={photo.alt}
+                            className="gallery-grid-item-image"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </picture>
                 </div>
             ))}
             {store !== null && (
                 <GalleryModal
-                    images={files.map((file) => ({ img: `${baseUrl}${file}`, alt: file }))}
+                    images={modalImages}
                     store={store}
                     handleClose={handleClose}
                     handlePrev={handlePrev}

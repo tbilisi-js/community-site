@@ -4,6 +4,7 @@ import { Background } from "@src/components/elements/background";
 import { events } from "@src/core/mock/events";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { GalleryGrid } from "@src/components/sections/gallery-grid";
+import { buildAllS3Photos, type S3GalleryStruct } from "@src/core/gallery/s3";
 
 type Params = Promise<{ slug: string }>;
 
@@ -13,15 +14,17 @@ const EventGalleryPage: React.FC<{ params: Params }> = async ({ params }) => {
 
     if (!event?.gallerySource) return notFound();
 
-    const gallery = await fetch(event.gallerySource);
-    const galleryData = await gallery.json();
+    const res = await fetch(event.gallerySource);
+    const struct: S3GalleryStruct = await res.json();
 
-    if (!galleryData.files.length) return notFound();
+    if (!struct.photos.length) return notFound();
+
+    const photos = buildAllS3Photos(struct, event.name);
 
     return (
         <>
             <Background>
-                <GalleryGrid files={galleryData.files} baseUrl={galleryData.base_url} />
+                <GalleryGrid photos={photos} />
             </Background>
             <Background>
                 <CatsPattern />
