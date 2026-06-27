@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { type Event } from "@src/core/mock/events";
 import { Button } from "@src/components/ui/button";
@@ -17,7 +18,9 @@ export const Announcement: React.FC<AnnouncementProps> = ({ event }) => (
     <Block id="announcement" bodyClassName="announcement-body">
         <p className="announcement-date">{formatDate(event.date)}</p>
         <h2 className="announcement-heading">{event.name}</h2>
-        <Image src={event.image} alt="" loading="lazy" className="announcement-image" />
+        <Link href={`/events/${event.slug}`} className="announcement-image-link">
+            <Image src={event.image} alt="" loading="lazy" className="announcement-image" />
+        </Link>
         {event.promo && <p className="announcement-description">{event.promo}</p>}
         <div className="announcement-timer-wrapper">
             <TimerBackgroundIcon className="announcement-timer-bg" />

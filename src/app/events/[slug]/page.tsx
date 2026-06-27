@@ -8,8 +8,10 @@ import { events } from "@src/core/mock/events";
 import { talks, type Talk } from "@src/core/mock/talks";
 import { speakers, type Speaker } from "@src/core/mock/speakers";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
+import { YoutubePlayer } from "@src/components/sections/youtube-player";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { SpeakersList } from "@src/components/sections/speakers-list";
+import { sponsors } from "@src/core/mock/sponsors";
 import { buildAllS3Photos, type S3GalleryStruct } from "@src/core/gallery/s3";
 
 type Params = Promise<{ slug: string }>;
@@ -45,9 +47,23 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
     return (
         <>
             <Background>
-                <EventIntro title={event.name} date={event.date} />
+                <EventIntro
+                    title={event.name}
+                    image={event.image}
+                    description={event.description}
+                    speakers={eventSpeakers}
+                    sponsor={event.sponsor ? sponsors[event.sponsor] : undefined}
+                    youtubePlaylist={event.youtubePlaylist}
+                    registrationLink={event.registration || undefined}
+                    date={event.date}
+                />
                 <Tapes date={event.date} />
             </Background>
+            {event.youtube && new Date(event.date) > new Date() && (
+                <Background>
+                    <YoutubePlayer src={event.youtube} />
+                </Background>
+            )}
             <Background>
                 <SpeakersList speakers={eventSpeakers} />
             </Background>

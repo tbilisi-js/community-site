@@ -27,6 +27,15 @@ const HomePage = () => (
                 at={new Date(events[0].date).getTime() - 600000}
             />
         </Background>
+        {events[0].youtube && (
+            <Background>
+                <SwapWrapper
+                    before={<YoutubePlayer src={events[0].youtube} />}
+                    after={<></>}
+                    at={new Date(events[0].date).getTime() - 600000}
+                />
+            </Background>
+        )}
         <Background>
             <AboutCommunity />
         </Background>
