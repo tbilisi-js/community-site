@@ -1,32 +1,68 @@
 @use "../../../assets/styles/_mixins.scss";
 
 .gallery-grid {
+    position: relative;
     max-width: 1600px;
     margin: 0 auto 120px;
     padding: 12px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 4px;
+    columns: 2;
+    column-gap: 8px;
 
     @include mixins.media(md) {
         padding: 20px;
+        columns: 3;
+        column-gap: 12px;
+    }
+
+    @include mixins.media(lg) {
+        columns: 4;
+    }
+
+    @supports (grid-template-rows: masonry) {
+        display: grid;
+        columns: unset;
+        column-gap: unset;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: masonry;
         gap: 8px;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+        @include mixins.media(md) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        @include mixins.media(lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.gallery-grid-item {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include mixins.media(md) {
+        margin-bottom: 12px;
+    }
+
+    &:hover .gallery-grid-item-image {
+        transform: scale(1.04);
+    }
+
+    @supports (grid-template-rows: masonry) {
+        break-inside: unset;
+        margin-bottom: 0;
     }
 }
 
 .gallery-grid-item-image {
-    position: relative;
+    display: block;
     width: 100%;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    height: auto;
+    min-height: 150px;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        z-index: 1;
-    }
 }

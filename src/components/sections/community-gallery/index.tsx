@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { GalleryModal } from "@src/components/elements/gallery-modal";
 import { useModal } from "@src/components/elements/gallery-modal/use-modal";
+import { type S3Photo } from "@src/core/gallery/s3";
 
 import { Block } from "@src/components/ui/block";
 
@@ -35,11 +36,16 @@ export interface CommunityGalleryProps {
         img: StaticImageData | string;
         alt: string;
     }[];
+    s3Photos?: S3Photo[];
     galleryUrl?: string;
 }
 
-export const CommunityGallery: React.FC<CommunityGalleryProps> = ({ images = defaultImages, galleryUrl }) => {
-    const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(images);
+export const CommunityGallery: React.FC<CommunityGalleryProps> = ({ images = defaultImages, s3Photos, galleryUrl }) => {
+    const modalImages = s3Photos
+        ? s3Photos.map((p) => ({ img: p.large, alt: p.alt }))
+        : images.map((i) => ({ img: i.img, alt: i.alt }));
+
+    const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(modalImages);
 
     return (
         <Block className="community-gallery" id="community-gallery">
@@ -49,28 +55,56 @@ export const CommunityGallery: React.FC<CommunityGalleryProps> = ({ images = def
                         That's&nbsp;All About <span className="community-gallery-card-primary">Community</span>
                     </h2>
                 </li>
-                {images.map((image, index) => (
-                    <li
-                        className="community-gallery-card"
-                        onClick={() => handleOpen(index)}
-                        key={typeof image.img === "string" ? image.img : image.img.src}
-                        tabIndex={0}
-                        role="button"
-                        onKeyDown={(e) => {
-                            if (e.key === "Enter") {
-                                handleOpen(index);
-                            }
-                        }}
-                    >
-                        <Image
-                            width={960}
-                            height={960}
-                            src={image.img}
-                            alt={image.alt}
-                            className="community-gallery-card-img"
-                        />
-                    </li>
-                ))}
+                {s3Photos
+                    ? s3Photos.map((photo, index) => (
+                          <li
+                              className="community-gallery-card"
+                              onClick={() => handleOpen(index)}
+                              key={photo.preview}
+                              tabIndex={0}
+                              role="button"
+                              onKeyDown={(e) => {
+                                  if (e.key === "Enter") handleOpen(index);
+                              }}
+                          >
+                              <picture>
+                                  <source
+                                      type="image/webp"
+                                      srcSet={`${photo.thumbnail} 400w, ${photo.preview} 800w, ${photo.large} 1600w`}
+                                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                  />
+                                  <img
+                                      src={photo.preview}
+                                      alt={photo.alt}
+                                      className="community-gallery-card-img"
+                                      loading="lazy"
+                                      decoding="async"
+                                  />
+                              </picture>
+                          </li>
+                      ))
+                    : images.map((image, index) => (
+                          <li
+                              className="community-gallery-card"
+                              onClick={() => handleOpen(index)}
+                              key={typeof image.img === "string" ? image.img : image.img.src}
+                              tabIndex={0}
+                              role="button"
+                              onKeyDown={(e) => {
+                                  if (e.key === "Enter") {
+                                      handleOpen(index);
+                                  }
+                              }}
+                          >
+                              <Image
+                                  width={960}
+                                  height={960}
+                                  src={image.img}
+                                  alt={image.alt}
+                                  className="community-gallery-card-img"
+                              />
+                          </li>
+                      ))}
                 {galleryUrl && (
                     <li className="community-gallery-card">
                         <Link href={galleryUrl} className="community-gallery-card-view-all">
@@ -81,7 +115,7 @@ export const CommunityGallery: React.FC<CommunityGalleryProps> = ({ images = def
             </ul>
             {store !== null && (
                 <GalleryModal
-                    images={images}
+                    images={modalImages}
                     store={store}
                     handleClose={handleClose}
                     handlePrev={handlePrev}
