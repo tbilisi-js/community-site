@@ -1,9 +1,11 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
+import { type Sponsor } from "@src/core/mock/sponsors";
 import { Block } from "@src/components/ui/block";
 import { linkifyText } from "@src/core/utils/linkify";
-import { type Sponsor } from "@src/core/mock/sponsors";
+import { Button } from "@src/components/ui/button";
+import { SwapWrapper } from "@src/components/elements/swap-wrapper";
 
 import "./event-intro.scss";
 
@@ -14,6 +16,8 @@ export interface EventIntroProps {
     speakers?: { name: string; slug: string }[];
     sponsor?: Sponsor;
     youtubePlaylist?: string;
+    date: string;
+    registrationLink?: string;
 }
 
 export const EventIntro: React.FC<EventIntroProps> = ({
@@ -23,6 +27,8 @@ export const EventIntro: React.FC<EventIntroProps> = ({
     speakers = [],
     sponsor,
     youtubePlaylist,
+    date,
+    registrationLink,
 }) => {
     return (
         <Block className="event-intro">
@@ -47,16 +53,36 @@ export const EventIntro: React.FC<EventIntroProps> = ({
                             — {sponsor.tagline}.
                         </p>
                     )}
-                    {youtubePlaylist && (
-                        <a
-                            href={youtubePlaylist}
-                            className="event-intro-youtube"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Watch on YouTube
-                        </a>
-                    )}
+                    <div className="event-intro-actions">
+                        {registrationLink && (
+                            <SwapWrapper
+                                before={
+                                    <Button
+                                        variant="primary"
+                                        size="md"
+                                        href={registrationLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Register
+                                    </Button>
+                                }
+                                after={null}
+                                at={new Date(date).getTime() + 600000}
+                            />
+                        )}
+                        {youtubePlaylist && (
+                            <Button
+                                variant="primary"
+                                size="md"
+                                href={youtubePlaylist}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Watch on YouTube
+                            </Button>
+                        )}
+                    </div>
                 </div>
             </div>
         </Block>
