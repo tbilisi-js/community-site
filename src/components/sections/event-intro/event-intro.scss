@@ -13,6 +13,43 @@
     }
 }
 
+.event-intro-description {
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 32px auto 0;
+    opacity: 0.8;
+
+    @include mixins.media(md) {
+        font-size: 18px;
+        margin-top: 48px;
+    }
+}
+
+.event-intro-sponsor {
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 16px auto 0;
+    opacity: 0.8;
+
+    @include mixins.media(md) {
+        font-size: 18px;
+    }
+}
+
+.event-intro-description-link {
+    color: var(--cl-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
 .event-intro-timer {
     justify-content: center;
     margin-top: 36px;

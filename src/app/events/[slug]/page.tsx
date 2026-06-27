@@ -10,6 +10,7 @@ import { speakers, type Speaker } from "@src/core/mock/speakers";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { SpeakersList } from "@src/components/sections/speakers-list";
+import { sponsors } from "@src/core/mock/sponsors";
 
 type Params = Promise<{ slug: string }>;
 
@@ -42,7 +43,13 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
     return (
         <>
             <Background>
-                <EventIntro title={event.name} date={event.date} />
+                <EventIntro
+                    title={event.name}
+                    date={event.date}
+                    description={event.description}
+                    speakers={eventSpeakers}
+                    sponsor={event.sponsor ? sponsors[event.sponsor] : undefined}
+                />
                 <Tapes date={event.date} />
             </Background>
             <Background>
