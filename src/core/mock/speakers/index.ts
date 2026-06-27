@@ -63,24 +63,36 @@ export const speakers: Speaker[] = [
         slug: "daria-kamyshina",
         name: "Daria Kamyshina",
         img: dariaKamyshina,
+        company: "Francoise",
+        role: "CEO",
+        location: "Tbilisi",
         socialLink: "https://www.linkedin.com/in/daria-kamyshina/",
     },
     {
         slug: "nina-torgunakova",
         name: "Nina Torgunakova",
         img: ninaTorgunakova,
+        company: "Evil Martians",
+        role: "Frontend Engineer",
+        location: "Portugal",
         socialLink: "https://www.linkedin.com/in/nina-torgunakova/",
     },
     {
         slug: "alexey-raldugin",
         name: "Alexey Raldugin",
         img: alexeyRaldugin,
+        company: "Salmon",
+        role: "Lead Software Developer",
+        location: "Serbia",
         socialLink: "https://www.linkedin.com/in/alexey-raldugin/",
     },
     {
         slug: "gigi-janelidze",
         name: "Gigi Janelidze",
         img: gigiJanelidze,
+        company: "Salmon",
+        role: "Head of Design and UX",
+        location: "Tbilisi",
         socialLink: "https://www.linkedin.com/in/gigi1987/",
     },
     {
@@ -96,11 +108,15 @@ export const speakers: Speaker[] = [
         slug: "artem-arutyunyan",
         name: "Artem Arutyunyan",
         img: artemArutyunyan,
+        company: "Reatom",
+        role: "Software Developer",
     },
     {
         slug: "alyona-batitskaya",
         name: "Alyona Batitskaya",
         img: alyonaBatitskaya,
+        role: "Frontend Developer",
+        location: "London",
         socialLink: "https://www.linkedin.com/in/alena-batitskaia/",
     },
     {
@@ -117,7 +133,7 @@ export const speakers: Speaker[] = [
         img: tanyaFokina,
         company: "Doka Guide",
         role: "Editor",
-        location: "Tbilisi",
+        location: "London",
         socialLink: "https://www.linkedin.com/in/tanya-fokina/",
     },
     {
@@ -330,6 +346,7 @@ export const speakers: Speaker[] = [
         company: "Social Discovery Group",
         role: "Senior Frontend Developer",
         location: "Gdańsk",
+        socialLink: "https://www.linkedin.com/in/sergey-levkovich/",
     },
     {
         slug: "maxim-barinov",
@@ -400,6 +417,7 @@ export const speakers: Speaker[] = [
         company: "Recraft",
         role: "Senior Frontend Engineer",
         location: "Tbilisi",
+        socialLink: "https://www.linkedin.com/in/scheglov/",
     },
     {
         slug: "mikhail-garbuzov",
@@ -408,6 +426,7 @@ export const speakers: Speaker[] = [
         company: "JettyCloud",
         role: "Senior Backend Developer",
         location: "Sofia",
+        socialLink: "https://www.linkedin.com/in/madmxg/",
     },
     {
         slug: "aleksander-komlev",
@@ -415,7 +434,8 @@ export const speakers: Speaker[] = [
         img: aleksanderKomlev,
         company: "",
         role: "Senior Frontend Developer",
-        location: "Batumi",
+        location: "Serbia",
+        socialLink: "https://www.linkedin.com/in/alex-komlev/",
     },
     {
         slug: "pavel-melnikov",
@@ -424,6 +444,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "WebGL Engineer",
         location: "Tbilisi",
+        socialLink: "https://www.linkedin.com/in/pavel-melnikov-717373281/",
     },
     {
         slug: "mikhail-pokryshchenko",
@@ -432,6 +453,7 @@ export const speakers: Speaker[] = [
         company: "Mundfish",
         role: "Senior DevOps Engineer",
         location: "Tbilisi",
+        socialLink: "https://www.linkedin.com/in/mikhail-pokryshchenko-a30380119/",
     },
     {
         slug: "marsel-akhmetshin",
@@ -440,6 +462,7 @@ export const speakers: Speaker[] = [
         company: "",
         role: "Senior Frontend Developer",
         location: "London",
+        socialLink: "https://www.linkedin.com/in/marsel-akhmetshin/",
     },
     {
         slug: "nikita-potapov",
