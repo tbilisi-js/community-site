@@ -51,10 +51,12 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
                     speakers={eventSpeakers}
                     sponsor={event.sponsor ? sponsors[event.sponsor] : undefined}
                     youtubePlaylist={event.youtubePlaylist}
+                    registrationLink={event.registration || undefined}
+                    date={event.date}
                 />
                 <Tapes date={event.date} />
             </Background>
-            {event.youtube && new Date(event.date) > new Date() && (
+            {event.youtube && (
                 <Background>
                     <YoutubePlayer src={event.youtube} />
                 </Background>

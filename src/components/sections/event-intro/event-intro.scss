@@ -90,21 +90,17 @@
     }
 }
 
-.event-intro-youtube {
-    display: inline-block;
-    margin-top: 24px;
-    padding: 8px 30px;
-    background-color: var(--cl-primary);
-    color: var(--cl-background);
-    border: 1px solid var(--cl-background);
-    border-radius: 10px;
-    box-shadow: 2px 4px 0 0 #000;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-decoration: none;
+.event-intro-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
 
-    &:hover {
-        color: var(--cl-background);
-        opacity: 0.8;
+    @include mixins.media(sm) {
+        flex-direction: row;
+    }
+
+    @include mixins.media(md, lg) {
+        flex-direction: column;
     }
 }
