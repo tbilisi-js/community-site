@@ -13,26 +13,66 @@
     }
 }
 
-.event-intro-description {
+.event-intro-body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+    text-align: left;
     text-transform: none;
+
+    @include mixins.media(md) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 48px;
+        margin-top: 64px;
+    }
+}
+
+.event-intro-cover {
+    flex-shrink: 0;
+    width: 100%;
+    height: 280px;
+    border-radius: 22px;
+    overflow: hidden;
+
+    @include mixins.media(md) {
+        width: 340px;
+        height: auto;
+        align-self: stretch;
+    }
+
+    @include mixins.media(lg) {
+        width: 420px;
+    }
+}
+
+.event-intro-cover-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-intro-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.event-intro-description {
     font-size: 16px;
     line-height: 1.6;
-    max-width: 720px;
-    margin: 32px auto 0;
     opacity: 0.8;
 
     @include mixins.media(md) {
         font-size: 18px;
-        margin-top: 48px;
     }
 }
 
 .event-intro-sponsor {
-    text-transform: none;
     font-size: 16px;
     line-height: 1.6;
-    max-width: 720px;
-    margin: 16px auto 0;
+    margin-top: 16px;
     opacity: 0.8;
 
     @include mixins.media(md) {
@@ -40,7 +80,7 @@
     }
 }
 
-.event-intro-description-link {
+.event-intro-link {
     color: var(--cl-primary);
     text-decoration: none;
     transition: opacity 0.2s ease;
@@ -50,30 +90,21 @@
     }
 }
 
-.event-intro-timer {
-    justify-content: center;
-    margin-top: 36px;
+.event-intro-youtube {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 8px 30px;
+    background-color: var(--cl-primary);
+    color: var(--cl-background);
+    border: 1px solid var(--cl-background);
+    border-radius: 10px;
+    box-shadow: 2px 4px 0 0 #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
 
-    @include mixins.media(md) {
-        margin-top: 80px;
-    }
-}
-
-.event-intro-date {
-    text-align: center;
-    margin-top: 36px;
-    font-size: 36px;
-
-    @include mixins.media(md) {
-        font-size: 60px;
-        margin-top: 80px;
-    }
-}
-
-.event-intro-arrow {
-    margin: 36px auto 0;
-
-    @include mixins.media(md) {
-        margin: 80px auto 0;
+    &:hover {
+        color: var(--cl-background);
+        opacity: 0.8;
     }
 }

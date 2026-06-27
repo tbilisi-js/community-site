@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import cn from "classnames";
 
 import { type Event } from "@src/core/mock/events";
@@ -79,7 +80,18 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
                         className={cn("events-slider-card", index === activeSlide && "events-slider-card-active")}
                         onClick={() => setActiveSlide(index)}
                     >
-                        <Image src={event.image} alt="" className="events-slider-image" loading="lazy" />
+                        {index === activeSlide ? (
+                            <Link href={`/events/${event.slug}`} className="events-slider-image-link">
+                                <Image
+                                    src={event.image}
+                                    alt={event.name}
+                                    className="events-slider-image"
+                                    loading="lazy"
+                                />
+                            </Link>
+                        ) : (
+                            <Image src={event.image} alt="" className="events-slider-image" loading="lazy" />
+                        )}
                         <span className="events-slider-shadow" />
                         <p className="events-slider-heading">
                             <span className="events-slider-heading-name">{event.name}</span>
