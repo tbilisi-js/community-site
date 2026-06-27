@@ -63,17 +63,31 @@
     }
 }
 
-.announcement-image {
+.announcement-image-link {
     grid-area: image;
+    display: block;
     margin-top: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include mixins.media(lg) {
+        margin-top: 0;
+    }
+}
+
+.announcement-image {
+    display: block;
     max-width: 100%;
     height: auto;
     border-radius: 20px;
     aspect-ratio: 1/1;
     object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease;
 
-    @include mixins.media(lg) {
-        margin-top: 0;
+    .announcement-image-link:hover &,
+    .announcement-image-link:focus-visible & {
+        transform: scale(1.04);
     }
 }
 

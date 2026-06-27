@@ -70,7 +70,7 @@ export const AboutCommunity = () => {
                             />
                         </svg>
                         <a
-                            href="https://t.me/tbilisi_js_chat"
+                            href="https://t.me/tbilisi_js"
                             className="about-community-social-link"
                             target="_blank"
                             rel="noopener noreferrer"
