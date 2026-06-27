@@ -59,7 +59,7 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
                 />
                 <Tapes date={event.date} />
             </Background>
-            {event.youtube && (
+            {event.youtube && new Date(event.date) > new Date() && (
                 <Background>
                     <YoutubePlayer src={event.youtube} />
                 </Background>
