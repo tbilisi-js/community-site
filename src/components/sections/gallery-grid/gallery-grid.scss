@@ -1,6 +1,7 @@
 @use "../../../assets/styles/_mixins.scss";
 
 .gallery-grid {
+    position: relative;
     max-width: 1600px;
     margin: 0 auto 120px;
     padding: 12px;
@@ -61,6 +62,7 @@
     display: block;
     width: 100%;
     height: auto;
+    min-height: 150px;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
