@@ -11,7 +11,7 @@ export interface GalleryGridProps {
 }
 
 export const GalleryGrid = ({ photos }: GalleryGridProps) => {
-    const modalImages = photos.map((p) => ({ img: p.large, alt: p.alt }));
+    const modalImages = photos.map((p) => ({ img: p.large, alt: p.alt, downloadUrl: p.fullJpg }));
     const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(modalImages);
 
     return (
