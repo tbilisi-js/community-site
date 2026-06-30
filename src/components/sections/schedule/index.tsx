@@ -13,12 +13,9 @@ const TALK_TYPES = {
 
 export interface ScheduleProps {
     talks: Array<Omit<Talk, "speaker"> & { speaker?: Speaker }>;
-    speakers: Array<Speaker>;
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({ talks, speakers }) => {
-    const getSpeakerAvatar = (talkSpeakerName: string) => speakers.find((speaker) => speaker.name === talkSpeakerName);
-
+export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
     return (
         <Block className="schedule" id="schedule">
             <h2 className="schedule-title">Schedule</h2>
@@ -73,7 +70,7 @@ export const Schedule: React.FC<ScheduleProps> = ({ talks, speakers }) => {
                         </summary>
                         <div className="schedule-item-description">
                             <Image
-                                src={getSpeakerAvatar(talk.speaker?.name ?? "")?.img ?? "/logo-rect.png"}
+                                src={talk.speaker?.img ?? "/logo-rect.png"}
                                 width={100}
                                 height={100}
                                 alt="Avatar"

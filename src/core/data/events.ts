@@ -1,4 +1,4 @@
-import { s3Cover } from "@src/core/data/s3";
+import { s3Cover, s3GallerySource } from "@src/core/data/s3";
 
 export type Event = {
     slug: string;
@@ -92,7 +92,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/22355",
         youtube: "https://www.youtube.com/embed/zuMoopst9Ls?si=m2-2Id0At7k0zi0T",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvfTTAs2agRvYPLKf_EbLvQY&si=0KFOxrllhLq74wrH",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m7/struct.json",
+        gallerySource: s3GallerySource("m7"),
     },
     {
         slug: "tbilisi-js-meetup-6",
@@ -121,7 +121,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js/415",
         youtube: "https://www.youtube.com/embed/_V03VmjQZvQ?si=HRuWPequbBCofZgK",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvdhTSARs6y9grynaRKoic8n&si=yq8fEVQhv2zqqx0S",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m6/struct.json",
+        gallerySource: s3GallerySource("m6"),
     },
     {
         slug: "tbilisi-performance-day",
@@ -144,7 +144,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         sponsor: "tradingview",
         youtube: "https://www.youtube.com/embed/fSyWehFpGc4?si=mNYyYKvPl8D2YMdz",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvf7XYIge0XieSPA42aB4hbD&si=t0KzPwY_Rgk92PPa",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/pd1/struct.json",
+        gallerySource: s3GallerySource("pd1"),
     },
     {
         slug: "tbilisi-js-meetup-5",
@@ -168,7 +168,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         sponsor: "tradingview",
         youtube: "https://www.youtube.com/embed/m8H-cObBEZY?si=HQrsYqZ-7Oaslxi_",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvc6Xs6JeGVb40yj0EO2XsPt&si=TmC5c_b6oQm04jbe",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m5/struct.json",
+        gallerySource: s3GallerySource("m5"),
     },
     {
         slug: "tbilisi-js-meetup-4",
@@ -189,7 +189,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/13437",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvcqCnXTUJkao2Ut7ArX6QDh&si=ccVifGxjqZWftk32",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m4/struct.json",
+        gallerySource: s3GallerySource("m4"),
     },
     {
         slug: "tbilisi-a11y-ux-day",
@@ -211,7 +211,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/10441",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvexNfKtYxPaZWSGP4M9uA81&si=ZKMcvC4ZllTtBvKR",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/a11y1/struct.json",
+        gallerySource: s3GallerySource("a11y1"),
     },
     {
         slug: "tbilisi-js-meetup-3",
@@ -232,7 +232,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/10306",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvd0LmFiMG30orojP_kTalhL&si=GSDUrAoZ4kV0NtE1",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m3/struct.json",
+        gallerySource: s3GallerySource("m3"),
     },
     {
         slug: "tbilisi-rust-day",
@@ -251,7 +251,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/9490",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvfq6mtudKHN_ZEtXVhmPRax&si=QcwgHRJ-8LdifGrQ",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/r1/struct.json",
+        gallerySource: s3GallerySource("r1"),
     },
     {
         slug: "tbilisi-js-conf-2024",
@@ -276,7 +276,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/5632",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvc3usYK9ixCP_jK0tOswZGn&si=fn6p7f8BSG_S6fVM",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/c1/struct.json",
+        gallerySource: s3GallerySource("c1"),
     },
     {
         slug: "tbilisi-js-meetup-2",
@@ -291,7 +291,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/3545",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvfOTw356-fiYJILYFm9VfmL&si=PGREzrU0gxNy_qLI",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m2/struct.json",
+        gallerySource: s3GallerySource("m2"),
     },
     {
         slug: "tbilisi-js-meetup-1",
@@ -311,6 +311,6 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         telegram: "https://t.me/tbilisi_js_chat/1182",
         youtube: "",
         youtubePlaylist: "https://youtube.com/playlist?list=PLduqjbnjNUvfT3dBvG-1kXk11raKlMxlH&si=h3AECytOm683HGqW",
-        gallerySource: "https://tjs-photo.fra1.cdn.digitaloceanspaces.com/m1/struct.json",
+        gallerySource: s3GallerySource("m1"),
     },
 ];

@@ -1,6 +1,7 @@
-const CDN = "https://tjs-photo.fra1.cdn.digitaloceanspaces.com";
+export const CDN = "https://tjs-photo.fra1.cdn.digitaloceanspaces.com";
 
 export const s3Cover = (prefix: string) => `${CDN}/${prefix}/cover/large.webp`;
+export const s3GallerySource = (prefix: string) => `${CDN}/${prefix}/struct.json`;
 export const s3Speaker = (prefix: string, slug: string) => `${CDN}/${prefix}/speakers/${slug}/large.webp`;
 export const s3Talk = (prefix: string, slug: string) => `${CDN}/${prefix}/talks/${slug}/large.webp`;
 export const s3Organiser = (id: string) => `${CDN}/community/organisers/${id}/large.webp`;

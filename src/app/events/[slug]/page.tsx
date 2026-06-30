@@ -68,7 +68,7 @@ const EventPage: React.FC<{ params: Params }> = async ({ params }) => {
                 <SpeakersList speakers={eventSpeakers} />
             </Background>
             <Background>
-                <Schedule talks={eventTalks} speakers={speakers} />
+                <Schedule talks={eventTalks} />
             </Background>
             <Background>
                 <CommunityGallery s3Photos={s3Photos} galleryUrl={s3Photos ? `/events/${slug}/gallery` : undefined} />
