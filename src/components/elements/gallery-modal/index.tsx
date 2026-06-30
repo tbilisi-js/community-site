@@ -5,6 +5,7 @@ import { type StaticImageData } from "next/image";
 
 import { IconButton } from "@src/components/ui/icon-button";
 
+import { DownloadErrorNotification } from "./download-error-notification";
 import "./gallery-modal.scss";
 
 export interface GalleryModalProps {
@@ -43,13 +44,18 @@ function filenameFromAlt(alt: string): string {
 
 export const GalleryModal: React.FC<GalleryModalProps> = ({ images, store, handleClose, handlePrev, handleNext }) => {
     const [downloading, setDownloading] = useState(false);
+    const [downloadError, setDownloadError] = useState(false);
     const current = images[store];
 
     const handleDownload = async () => {
         if (!current.downloadUrl || downloading) return;
         setDownloading(true);
+        setDownloadError(false);
         try {
             await downloadPhoto(current.downloadUrl, filenameFromAlt(current.alt));
+        } catch (error) {
+            console.error("Failed to download photo", error);
+            setDownloadError(true);
         } finally {
             setDownloading(false);
         }
@@ -105,6 +111,7 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ images, store, handl
                     )}
                 </button>
             )}
+            {downloadError && <DownloadErrorNotification onClose={() => setDownloadError(false)} />}
             <IconButton variant="light" className="gallery-modal-close" onClick={handleClose}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
