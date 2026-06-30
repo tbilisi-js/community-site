@@ -38,6 +38,7 @@
 }
 
 .gallery-grid-item {
+    position: relative;
     break-inside: avoid;
     margin-bottom: 8px;
     border-radius: 8px;
@@ -65,4 +66,53 @@
     min-height: 150px;
     border-radius: 8px;
     transition: transform 0.3s ease;
+}
+
+.gallery-grid-download {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    color: #111;
+    opacity: 0;
+    transform: scale(0.8);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+    &:hover:not(:disabled) {
+        background-color: #f0f0f0;
+    }
+
+    &--loading {
+        cursor: default;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.gallery-grid-item:hover .gallery-grid-download {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.gallery-grid-download-spinner {
+    animation: gallery-grid-spin 1s linear infinite;
+}
+
+@keyframes gallery-grid-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
