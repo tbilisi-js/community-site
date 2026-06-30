@@ -1,5 +1,6 @@
 import { type Talk } from "@src/core/data/talks";
 import { type Speaker } from "@src/core/data/speakers";
+import { s3Resize } from "@src/core/data/s3";
 import { Block } from "@src/components/ui/block";
 import { NavLink } from "@src/components/ui/nav-link";
 
@@ -70,7 +71,7 @@ export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
                         </summary>
                         <div className="schedule-item-description">
                             <Image
-                                src={talk.speaker?.img ?? "/logo-rect.png"}
+                                src={talk.speaker?.img ? s3Resize(talk.speaker.img, "thumbnail") : "/logo-rect.png"}
                                 width={100}
                                 height={100}
                                 alt="Avatar"
