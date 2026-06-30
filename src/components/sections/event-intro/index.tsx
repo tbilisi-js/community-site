@@ -1,7 +1,7 @@
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
-import { type Sponsor } from "@src/core/mock/sponsors";
+import { type Sponsor } from "@src/core/data/sponsors";
 import { Block } from "@src/components/ui/block";
 import { linkifyText } from "@src/core/utils/linkify";
 import { Button } from "@src/components/ui/button";
@@ -11,7 +11,7 @@ import "./event-intro.scss";
 
 export interface EventIntroProps {
     title: string;
-    image: StaticImageData;
+    image: string;
     description?: string;
     speakers?: { name: string; slug: string }[];
     sponsor?: Sponsor;
@@ -35,7 +35,7 @@ export const EventIntro: React.FC<EventIntroProps> = ({
             <h1 className="event-intro-title">{title}</h1>
             <div className="event-intro-body">
                 <div className="event-intro-cover">
-                    <Image src={image} alt={title} className="event-intro-cover-image" />
+                    <Image src={image} alt={title} width={1200} height={630} className="event-intro-cover-image" />
                 </div>
                 <div className="event-intro-content">
                     {description && <p className="event-intro-description">{linkifyText(description, speakers)}</p>}

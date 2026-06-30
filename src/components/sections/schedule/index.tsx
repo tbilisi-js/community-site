@@ -1,5 +1,6 @@
-import { type Talk } from "@src/core/mock/talks";
-import { type Speaker } from "@src/core/mock/speakers";
+import { type Talk } from "@src/core/data/talks";
+import { type Speaker } from "@src/core/data/speakers";
+import { s3Resize } from "@src/core/data/s3";
 import { Block } from "@src/components/ui/block";
 import { NavLink } from "@src/components/ui/nav-link";
 
@@ -13,12 +14,9 @@ const TALK_TYPES = {
 
 export interface ScheduleProps {
     talks: Array<Omit<Talk, "speaker"> & { speaker?: Speaker }>;
-    speakers: Array<Speaker>;
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({ talks, speakers }) => {
-    const getSpeakerAvatar = (talkSpeakerName: string) => speakers.find((speaker) => speaker.name === talkSpeakerName);
-
+export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
     return (
         <Block className="schedule" id="schedule">
             <h2 className="schedule-title">Schedule</h2>
@@ -73,7 +71,7 @@ export const Schedule: React.FC<ScheduleProps> = ({ talks, speakers }) => {
                         </summary>
                         <div className="schedule-item-description">
                             <Image
-                                src={getSpeakerAvatar(talk.speaker?.name ?? "")?.img ?? "/logo-rect.png"}
+                                src={talk.speaker?.img ? s3Resize(talk.speaker.img, "thumbnail") : "/logo-rect.png"}
                                 width={100}
                                 height={100}
                                 alt="Avatar"

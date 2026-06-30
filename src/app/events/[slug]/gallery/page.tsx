@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { Background } from "@src/components/elements/background";
-import { events } from "@src/core/mock/events";
+import { events } from "@src/core/data/events";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { GalleryGrid } from "@src/components/sections/gallery-grid";
 import { buildAllS3Photos, type S3GalleryStruct } from "@src/core/gallery/s3";

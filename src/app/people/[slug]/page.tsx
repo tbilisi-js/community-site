@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
-import { talks } from "@src/core/mock/talks";
-import { speakers } from "@src/core/mock/speakers";
-import { events } from "@src/core/mock/events";
+import { talks } from "@src/core/data/talks";
+import { speakers } from "@src/core/data/speakers";
+import { events } from "@src/core/data/events";
 import { PersonIntro } from "@src/components/sections/person-intro";
 import { Background } from "@src/components/elements/background";
 import { CatsPattern } from "@src/components/sections/cats-pattern";

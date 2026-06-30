@@ -8,7 +8,7 @@ import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { Events } from "@src/components/sections/events";
 import { HowToHelp } from "@src/components/sections/how-to-help";
 import { WhatDoYouGet } from "@src/components/sections/what-do-you-get";
-import { events } from "@src/core/mock/events";
+import { events } from "@src/core/data/events";
 
 const BecomeAPartnerPage = () => (
     <>
