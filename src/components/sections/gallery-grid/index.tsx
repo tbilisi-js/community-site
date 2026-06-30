@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import cn from "classnames";
 
 import { GalleryModal } from "@src/components/elements/gallery-modal";
 import { DownloadErrorNotification } from "@src/components/elements/gallery-modal/download-error-notification";
 import { useModal } from "@src/components/elements/gallery-modal/use-modal";
-import { downloadPhoto, filenameFromAlt } from "@src/core/gallery/download";
+import { Icon } from "@src/components/ui/icon";
+import { downloadPhoto } from "@src/core/gallery/download";
 import { type S3Photo } from "@src/core/gallery/s3";
 
 import "./gallery-grid.scss";
@@ -24,7 +26,7 @@ const DownloadButton = ({ photo }: { photo: S3Photo }) => {
         setDownloading(true);
         setDownloadError(false);
         try {
-            await downloadPhoto(photo.fullJpg, filenameFromAlt(photo.alt));
+            await downloadPhoto(photo.fullJpg, photo.filename);
         } catch (err) {
             console.error("Failed to download photo", err);
             setDownloadError(true);
@@ -36,42 +38,18 @@ const DownloadButton = ({ photo }: { photo: S3Photo }) => {
     return (
         <>
             <button
-                className={`gallery-grid-download${downloading ? " gallery-grid-download--loading" : ""}`}
+                className={cn("gallery-grid-download", downloading && "gallery-grid-download--loading")}
                 onClick={handleClick}
                 disabled={downloading}
                 title="Download original"
                 aria-label="Download original"
             >
-                {downloading ? (
-                    <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="gallery-grid-download-spinner"
-                    >
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="9"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeDasharray="14 42"
-                        />
-                    </svg>
-                ) : (
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 3v13m0 0l-4-4m4 4l4-4M4 20h16"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                )}
+                <Icon
+                    name={downloading ? "spinner" : "download"}
+                    width={16}
+                    height={16}
+                    className={cn(downloading && "gallery-grid-download-spinner")}
+                />
             </button>
             {downloadError && <DownloadErrorNotification onClose={() => setDownloadError(false)} />}
         </>
@@ -79,7 +57,7 @@ const DownloadButton = ({ photo }: { photo: S3Photo }) => {
 };
 
 export const GalleryGrid = ({ photos }: GalleryGridProps) => {
-    const modalImages = photos.map((p) => ({ img: p.large, alt: p.alt, downloadUrl: p.fullJpg }));
+    const modalImages = photos.map((p) => ({ img: p.large, alt: p.alt, downloadUrl: p.fullJpg, filename: p.filename }));
     const { store, handleOpen, handleClose, handlePrev, handleNext } = useModal(modalImages);
 
     return (
