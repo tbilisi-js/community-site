@@ -1,5 +1,5 @@
-import { type Talk } from "@src/core/mock/talks";
-import { type Speaker } from "@src/core/mock/speakers";
+import { type Talk } from "@src/core/data/talks";
+import { type Speaker } from "@src/core/data/speakers";
 import { Block } from "@src/components/ui/block";
 import { NavLink } from "@src/components/ui/nav-link";
 

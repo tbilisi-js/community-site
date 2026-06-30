@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { SocialLink } from "../../elements/social-link";
-import { organisers } from "@src/core/mock/organisers";
+import { organisers } from "@src/core/data/organisers";
 import { Icon } from "@src/components/ui/icon";
 import { Block } from "@src/components/ui/block";
 

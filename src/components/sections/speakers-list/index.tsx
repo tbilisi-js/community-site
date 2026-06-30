@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Block } from "@src/components/ui/block";
 
 import "./speakers-list.scss";
-import type { Speaker } from "@src/core/mock/speakers";
+import type { Speaker } from "@src/core/data/speakers";
 import { SocialLink } from "@src/components/elements/social-link";
 
 export interface SpeakersListProps {

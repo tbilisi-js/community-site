@@ -4,14 +4,14 @@ import { Background } from "@src/components/elements/background";
 import { EventIntro } from "@src/components/sections/event-intro";
 import { Tapes } from "@src/components/sections/tapes";
 import { Schedule } from "@src/components/sections/schedule";
-import { events } from "@src/core/mock/events";
-import { talks, type Talk } from "@src/core/mock/talks";
-import { speakers, type Speaker } from "@src/core/mock/speakers";
+import { events } from "@src/core/data/events";
+import { talks, type Talk } from "@src/core/data/talks";
+import { speakers, type Speaker } from "@src/core/data/speakers";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
 import { YoutubePlayer } from "@src/components/sections/youtube-player";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { SpeakersList } from "@src/components/sections/speakers-list";
-import { sponsors } from "@src/core/mock/sponsors";
+import { sponsors } from "@src/core/data/sponsors";
 import { buildAllS3Photos, type S3GalleryStruct } from "@src/core/gallery/s3";
 
 type Params = Promise<{ slug: string }>;

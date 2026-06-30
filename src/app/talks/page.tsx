@@ -7,8 +7,8 @@ import { CallForSpeakers } from "@src/components/sections/call-for-speakers";
 import { CommunityGallery } from "@src/components/sections/community-gallery";
 import { CatsPattern } from "@src/components/sections/cats-pattern";
 import { Events } from "@src/components/sections/events";
-import { talks } from "@src/core/mock/talks";
-import { events } from "@src/core/mock/events";
+import { talks } from "@src/core/data/talks";
+import { events } from "@src/core/data/events";
 
 const TalksPage = () => (
     <>

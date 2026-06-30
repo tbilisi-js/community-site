@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
-import { talks } from "@src/core/mock/talks";
-import { speakers } from "@src/core/mock/speakers";
+import { talks } from "@src/core/data/talks";
+import { speakers } from "@src/core/data/speakers";
 import { Background } from "@src/components/elements/background";
 import { TalkIntro } from "@src/components/sections/talk-intro";
 import { TalkAnnouncement } from "@src/components/sections/talk-announcement";
@@ -63,7 +63,7 @@ export const generateMetadata = async ({ params }: { params: Params }) => {
         description: talk.name,
         openGraph: {
             type: "website",
-            images: typeof talk.preview === "string" ? talk.preview : talk.preview?.src,
+            images: talk.preview,
             locale: "en_US",
         },
     };

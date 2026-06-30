@@ -12,7 +12,7 @@ import { JoinUs } from "../components/sections/join-us";
 import { Contributors } from "../components/sections/contributors";
 import { CatsPattern } from "../components/sections/cats-pattern";
 import { Background } from "../components/elements/background";
-import { events } from "../core/mock/events";
+import { events } from "../core/data/events";
 import { Friends } from "@src/components/sections/friends";
 
 const HomePage = () => (

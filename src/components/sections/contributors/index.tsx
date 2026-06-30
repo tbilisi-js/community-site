@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { speakers } from "@src/core/mock/speakers";
+import { speakers } from "@src/core/data/speakers";
 import { Block } from "@src/components/ui/block";
 
 import "./contributors.scss";

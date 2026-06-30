@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { type Speaker } from "@src/core/mock/speakers";
+import { type Speaker } from "@src/core/data/speakers";
 import { formatDate } from "@src/core/utils/formatDate";
 import { Block } from "@src/components/ui/block";
 
