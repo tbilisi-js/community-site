@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { talks } from "@src/core/data/talks";
+import { talks, type Talk } from "@src/core/data/talks";
 import { speakers } from "@src/core/data/speakers";
 import { Background } from "@src/components/elements/background";
 import { TalkIntro } from "@src/components/sections/talk-intro";
@@ -12,11 +12,13 @@ import { JoinUs } from "@src/components/sections/join-us";
 
 type Params = Promise<{ slug: string }>;
 
+const isTalkPage = (talk: Talk | undefined): talk is Talk => Boolean(talk && (talk.type === "talk" || !talk.type));
+
 const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
     const { slug } = await params;
     const talk = talks.find((talk) => talk.slug === slug);
 
-    if (!talk) return notFound();
+    if (!isTalkPage(talk)) return notFound();
 
     const speaker = speakers.find((speaker) => speaker.slug === talk.speaker);
 
@@ -50,13 +52,13 @@ const TalkPage: React.FC<{ params: Params }> = async ({ params }) => {
     );
 };
 
-export const generateStaticParams = () => talks.map(({ slug }) => ({ slug }));
+export const generateStaticParams = () => talks.filter(isTalkPage).map(({ slug }) => ({ slug }));
 
 export const generateMetadata = async ({ params }: { params: Params }) => {
     const { slug } = await params;
     const talk = talks.find((talk) => talk.slug === slug);
 
-    if (!talk) return notFound();
+    if (!isTalkPage(talk)) return notFound();
 
     return {
         title: talk.name,

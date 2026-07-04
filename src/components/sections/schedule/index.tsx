@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { type Talk } from "@src/core/data/talks";
 import { type Speaker } from "@src/core/data/speakers";
 import { s3Resize } from "@src/core/data/s3";
@@ -5,11 +7,14 @@ import { Block } from "@src/components/ui/block";
 import { NavLink } from "@src/components/ui/nav-link";
 
 import "./schedule.scss";
-import Image from "next/image";
 
 const TALK_TYPES = {
     talk: "#00bcff",
     "free-form": "#c27aff",
+    welcome: "#fbbf24",
+    break: "#86efac",
+    closing: "#94a3b8",
+    afterparty: "#f472b6",
 };
 
 export interface ScheduleProps {
@@ -79,14 +84,16 @@ export const Schedule: React.FC<ScheduleProps> = ({ talks }) => {
                             />
                             <p>
                                 {talk.description}
-                                <NavLink
-                                    href={`/talks/${talk.slug}`}
-                                    weight="bold"
-                                    textTransform="none"
-                                    className="schedule-item-link"
-                                >
-                                    <span>Read more →</span>
-                                </NavLink>
+                                {talk.type === "talk" && (
+                                    <NavLink
+                                        href={`/talks/${talk.slug}`}
+                                        weight="bold"
+                                        textTransform="none"
+                                        className="schedule-item-link"
+                                    >
+                                        <span>Read more →</span>
+                                    </NavLink>
+                                )}
                             </p>
                         </div>
                     </details>
