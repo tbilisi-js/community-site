@@ -35,7 +35,7 @@ export const events: Event[] = [
     {
         slug: "tbilisi-js-meetup-8",
         name: "Tbilisi JS Meetup #8",
-        date: "2026-07-04T12:00:00.000Z",
+        date: "2026-07-04T11:00:00.000Z",
         attendees: undefined,
         talks: [
             "how-not-to-lose-your-mind-in-a-world-where-browsers-ship-every-two-weeks",
