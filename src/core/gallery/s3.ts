@@ -16,6 +16,7 @@ export interface S3Photo {
     preview: string;
     large: string;
     fullJpg: string;
+    filename: string;
     alt: string;
 }
 
@@ -26,6 +27,7 @@ export function buildS3PhotoUrls(struct: S3GalleryStruct, id: string, alt: strin
         preview: `${base}preview.webp`,
         large: `${base}large.webp`,
         fullJpg: `${base}full.jpg`,
+        filename: `${id}.jpg`,
         alt,
     };
 }

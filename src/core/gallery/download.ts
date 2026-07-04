@@ -10,12 +10,3 @@ export async function downloadPhoto(url: string, filename: string) {
     document.body.removeChild(a);
     URL.revokeObjectURL(blobUrl);
 }
-
-export function filenameFromAlt(alt: string): string {
-    return (
-        alt
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .replace(/[^a-z0-9-]/g, "") + ".jpg"
-    );
-}

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { type StaticImageData } from "next/image";
+import cn from "classnames";
 
+import { Icon } from "@src/components/ui/icon";
 import { IconButton } from "@src/components/ui/icon-button";
-import { downloadPhoto, filenameFromAlt } from "@src/core/gallery/download";
+import { downloadPhoto } from "@src/core/gallery/download";
 
 import { DownloadErrorNotification } from "./download-error-notification";
 import "./gallery-modal.scss";
@@ -14,6 +16,7 @@ export interface GalleryModalProps {
         img: string | StaticImageData;
         alt: string;
         downloadUrl?: string;
+        filename?: string;
     }[];
     store: number;
     handleClose: () => void;
@@ -31,7 +34,7 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ images, store, handl
         setDownloading(true);
         setDownloadError(false);
         try {
-            await downloadPhoto(current.downloadUrl, filenameFromAlt(current.alt));
+            await downloadPhoto(current.downloadUrl, current.filename ?? "photo.jpg");
         } catch (error) {
             console.error("Failed to download photo", error);
             setDownloadError(true);
@@ -53,41 +56,17 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ images, store, handl
             <p className="gallery-modal-alt">{current.alt}</p>
             {current.downloadUrl && (
                 <button
-                    className={`gallery-modal-download${downloading ? " gallery-modal-download--loading" : ""}`}
+                    className={cn("gallery-modal-download", downloading && "gallery-modal-download--loading")}
                     onClick={handleDownload}
                     disabled={downloading}
                     title="Download original"
                 >
-                    {downloading ? (
-                        <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="gallery-modal-download-spinner"
-                        >
-                            <circle
-                                cx="12"
-                                cy="12"
-                                r="9"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeDasharray="14 42"
-                            />
-                        </svg>
-                    ) : (
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 3v13m0 0l-4-4m4 4l4-4M4 20h16"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    )}
+                    <Icon
+                        name={downloading ? "spinner" : "download"}
+                        width={20}
+                        height={20}
+                        className={cn(downloading && "gallery-modal-download-spinner")}
+                    />
                 </button>
             )}
             {downloadError && <DownloadErrorNotification onClose={() => setDownloadError(false)} />}
