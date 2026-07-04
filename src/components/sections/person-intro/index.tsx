@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 
 import { Block } from "@src/components/ui/block";
 import { Arrow } from "@src/components/ui/arrow";
@@ -7,7 +7,7 @@ import "./person-intro.scss";
 
 export interface PersonIntroProps {
     name: string;
-    img?: StaticImageData;
+    img?: string;
 }
 
 export const PersonIntro: React.FC<PersonIntroProps> = ({ name, img }) => {

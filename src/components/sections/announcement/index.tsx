@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { type Event } from "@src/core/mock/events";
+import { type Event } from "@src/core/data/events";
 import { Button } from "@src/components/ui/button";
 import { Block } from "@src/components/ui/block";
 import { AnnouncementTimer } from "@src/components/elements/announcement-timer";
@@ -19,7 +19,7 @@ export const Announcement: React.FC<AnnouncementProps> = ({ event }) => (
         <p className="announcement-date">{formatDate(event.date)}</p>
         <h2 className="announcement-heading">{event.name}</h2>
         <Link href={`/events/${event.slug}`} className="announcement-image-link">
-            <Image src={event.image} alt="" loading="lazy" className="announcement-image" />
+            <Image src={event.image} alt="" width={1200} height={630} loading="lazy" className="announcement-image" />
         </Link>
         {event.promo && <p className="announcement-description">{event.promo}</p>}
         <div className="announcement-timer-wrapper">

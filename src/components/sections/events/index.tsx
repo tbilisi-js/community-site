@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
 
-import { type Event } from "@src/core/mock/events";
+import { type Event } from "@src/core/data/events";
 import { Block } from "@src/components/ui/block";
 import { IconButton } from "@src/components/ui/icon-button";
 import { ArrowIcon } from "@src/components/icons";
@@ -85,12 +85,21 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
                                 <Image
                                     src={event.image}
                                     alt={event.name}
+                                    width={600}
+                                    height={400}
                                     className="events-slider-image"
                                     loading="lazy"
                                 />
                             </Link>
                         ) : (
-                            <Image src={event.image} alt="" className="events-slider-image" loading="lazy" />
+                            <Image
+                                src={event.image}
+                                alt=""
+                                width={600}
+                                height={400}
+                                className="events-slider-image"
+                                loading="lazy"
+                            />
                         )}
                         <span className="events-slider-shadow" />
                         <p className="events-slider-heading">

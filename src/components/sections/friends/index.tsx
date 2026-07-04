@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { friends } from "@src/core/mock/friends";
+import { friends } from "@src/core/data/friends";
 import { Block } from "@src/components/ui/block";
 
 import "./friends.scss";

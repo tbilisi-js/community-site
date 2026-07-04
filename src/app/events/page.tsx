@@ -1,6 +1,6 @@
 import { type Metadata } from "next/types";
 
-import { events } from "@src/core/mock/events";
+import { events } from "@src/core/data/events";
 import { Background } from "@src/components/elements/background";
 import { EventsIntro } from "@src/components/sections/events-intro";
 import { EventsList } from "@src/components/sections/events-list";

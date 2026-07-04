@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { type Talk } from "@src/core/mock/talks";
+import { type Talk } from "@src/core/data/talks";
 import { formatDate } from "@src/core/utils/formatDate";
 import { Block } from "@src/components/ui/block";
 
