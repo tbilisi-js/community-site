@@ -8,12 +8,75 @@ export type Talk = {
     start: string;
     end: string;
     speaker?: string;
-    type?: string;
+    type?: "talk" | "welcome" | "break" | "closing" | "afterparty";
     youtube?: string;
     preview?: string;
 };
 
 export const talks: Talk[] = [
+    {
+        slug: "m8-guest-gathering",
+        name: "Guest gathering, welcome coffee",
+        description: "",
+        labels: [],
+        start: "2026-07-04T11:00:00.000Z",
+        end: "2026-07-04T11:30:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "m8-opening",
+        name: "Program start, welcome from Tbilisi JS Team",
+        description: "",
+        labels: [],
+        start: "2026-07-04T11:30:00.000Z",
+        end: "2026-07-04T11:40:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "m8-salmon-welcome",
+        name: "Welcome from Salmon Team",
+        description: "",
+        labels: [],
+        start: "2026-07-04T11:40:00.000Z",
+        end: "2026-07-04T11:50:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "m8-coffee-break-1",
+        name: "Coffee break, activities from Salmon",
+        description: "",
+        labels: [],
+        start: "2026-07-04T13:00:00.000Z",
+        end: "2026-07-04T13:30:00.000Z",
+        type: "break",
+    },
+    {
+        slug: "m8-coffee-break-2",
+        name: "Coffee break, more activities from Salmon",
+        description: "",
+        labels: [],
+        start: "2026-07-04T14:10:00.000Z",
+        end: "2026-07-04T14:30:00.000Z",
+        type: "break",
+    },
+    {
+        slug: "m8-closing",
+        name: "Meetup closing",
+        description: "",
+        labels: [],
+        start: "2026-07-04T15:45:00.000Z",
+        end: "2026-07-04T16:00:00.000Z",
+        type: "closing",
+    },
+    {
+        slug: "m8-afterparty",
+        name: "Afterparty at Buro Bar",
+        description: "",
+        labels: [],
+        start: "2026-07-04T16:00:00.000Z",
+        end: "2026-07-04T19:00:00.000Z",
+        type: "afterparty",
+    },
     {
         slug: "how-not-to-lose-your-mind-in-a-world-where-browsers-ship-every-two-weeks",
         speaker: "vadim-makeev",
@@ -25,8 +88,8 @@ Back in the 2000s, browsers shipped once a year — with cake, fireworks, and a 
         type: "talk",
         preview: s3Talk("m8", "how-not-to-lose-your-mind-in-a-world-where-browsers-ship-every-two-weeks"),
         youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
-        start: "2026-07-04T11:00:00.000Z",
-        end: "2026-07-04T17:00:00.000Z",
+        start: "2026-07-04T14:30:00.000Z",
+        end: "2026-07-04T15:10:00.000Z",
     },
     {
         slug: "why-design-belongs-to-engineers-too",
@@ -40,8 +103,8 @@ We treat the design system as a deliverable that design hands to engineering —
         type: "talk",
         preview: s3Talk("m8", "why-design-belongs-to-engineers-too"),
         youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
-        start: "2026-07-04T11:00:00.000Z",
-        end: "2026-07-04T17:00:00.000Z",
+        start: "2026-07-04T11:50:00.000Z",
+        end: "2026-07-04T12:15:00.000Z",
     },
     {
         slug: "smart-nano-stores-or-how-we-made-web-development-simpler",
@@ -54,8 +117,8 @@ Many popular state management libraries are bloated, require boilerplate, and ov
         type: "talk",
         preview: s3Talk("m8", "smart-nano-stores-or-how-we-made-web-development-simpler"),
         youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
-        start: "2026-07-04T11:00:00.000Z",
-        end: "2026-07-04T17:00:00.000Z",
+        start: "2026-07-04T12:15:00.000Z",
+        end: "2026-07-04T13:00:00.000Z",
     },
     {
         slug: "site-reliability-on-the-way-to-9999-uptime",
@@ -68,8 +131,8 @@ Today, developers aren't just responsible for writing code; they also have to ha
         type: "talk",
         preview: s3Talk("m8", "site-reliability-on-the-way-to-9999-uptime"),
         youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
-        start: "2026-07-04T11:00:00.000Z",
-        end: "2026-07-04T17:00:00.000Z",
+        start: "2026-07-04T13:30:00.000Z",
+        end: "2026-07-04T14:10:00.000Z",
     },
     {
         slug: "anatomy-of-a-messy-mockup-from-a-detached-component-to-clean-react-code",
@@ -82,8 +145,8 @@ Writing code without an IDE, linters, or a compiler is pure madness. Yet, this i
         type: "talk",
         preview: s3Talk("m8", "anatomy-of-a-messy-mockup-from-a-detached-component-to-clean-react-code"),
         youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
-        start: "2026-07-04T11:00:00.000Z",
-        end: "2026-07-04T17:00:00.000Z",
+        start: "2026-07-04T15:10:00.000Z",
+        end: "2026-07-04T15:45:00.000Z",
     },
     {
         slug: "aaaaaaaaaaaaaaaaaaaaaaa-href",
