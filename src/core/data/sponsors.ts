@@ -5,6 +5,11 @@ export type Sponsor = {
 };
 
 export const sponsors: Record<string, Sponsor> = {
+    dataart: {
+        name: "DataArt",
+        url: "https://www.dataart.com/",
+        tagline: "a global software engineering firm building custom solutions for businesses worldwide",
+    },
     salmon: {
         name: "Salmon",
         url: "https://salmon.ph/",
