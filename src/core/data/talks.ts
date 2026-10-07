@@ -15,6 +15,87 @@ export type Talk = {
 
 export const talks: Talk[] = [
     {
+        slug: "y1-guest-gathering",
+        name: "Guest gathering, welcome coffee",
+        description: "",
+        labels: [],
+        start: "2026-10-08T14:30:00.000Z",
+        end: "2026-10-08T15:00:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "y1-opening",
+        name: "Program start, welcome from Tbilisi JS and DataArt Teams",
+        description: "",
+        labels: [],
+        start: "2026-10-08T15:00:00.000Z",
+        end: "2026-10-08T15:10:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "y1-coffee-break",
+        name: "Coffee break, pizza and snacks",
+        description: "",
+        labels: [],
+        start: "2026-10-08T16:30:00.000Z",
+        end: "2026-10-08T16:50:00.000Z",
+        type: "break",
+    },
+    {
+        slug: "y1-closing",
+        name: "Meetup closing",
+        description: "",
+        labels: [],
+        start: "2026-10-08T17:30:00.000Z",
+        end: "2026-10-08T17:45:00.000Z",
+        type: "closing",
+    },
+    {
+        slug: "a-bridge-the-token-never-crosses",
+        speaker: "azat-davliatshin",
+        name: "A Bridge the Token Never Crosses. Signing users into embedded apps without third-party cookies",
+        description: `Azat Davliatshin, Software Architect & Tech Lead at Quantori, author of the open-source library next-auth-bridge, which handles silent SSO for Next.js apps embedded in SharePoint, Teams, Salesforce, and Confluence. Azat has spent more than 10 years in JavaScript — from frontend to distributed systems architecture.
+
+Your Next.js app is embedded in SharePoint, Teams, or a corporate portal. The user is already signed in on the host side, but inside your iframe they're anonymous: Safari and Firefox don't share third-party cookies by default, and Chrome cuts them in incognito mode and under corporate policies. Signing in again ruins the UX. The Storage Access API shows the user a prompt. CHIPS cookies don't inherit the session on their own. And vendor SDKs lock you into someone else's identity provider.
+
+We'll break down the "bridge" pattern: a popup in the top-level context, a one-time code instead of a token, and a partitioned cookie on the other side. Azat will show the invariants without which the bridge turns into a hole, and how the same design maps onto Auth.js and Better Auth with a two-line difference.`,
+        labels: ["auth", "security", "nextjs", "cookies"],
+        type: "talk",
+        preview: s3Talk("y1", "a-bridge-the-token-never-crosses"),
+        start: "2026-10-08T15:10:00.000Z",
+        end: "2026-10-08T15:50:00.000Z",
+    },
+    {
+        slug: "object-prototype-is-not-your-friend",
+        speaker: "gagik-papikyan",
+        name: "Object Prototype is not Your Friend",
+        description: `Gagik Papikyan, Senior Software Engineer at DataArt. He started out as a full-stack developer, then moved into backend, and along the way has worn every hat — from individual contributor to team lead, and even startup co-founder.
+
+Object Prototype Pollution is a JavaScript vulnerability that occurs when an attacker is able to modify properties of the base object prototype. Since almost every object in JavaScript inherits from this shared prototype, injecting or overwriting properties on it can change the behavior of the entire application at once. Protection is built around safe practices: validating and sanitizing input keys, freezing prototypes, and using safer data structures.`,
+        labels: ["security", "javascript", "backend"],
+        type: "talk",
+        preview: s3Talk("y1", "object-prototype-is-not-your-friend"),
+        start: "2026-10-08T15:50:00.000Z",
+        end: "2026-10-08T16:30:00.000Z",
+    },
+    {
+        slug: "webmcp-making-the-web-work-for-humans-and-ai-agents",
+        speaker: "dmitry-shmakov",
+        name: "WebMCP: Making the web work for humans and AI agents",
+        description: `Dmitry Shmakov, Lead Product Engineer at Neverless and one of the organizers of MoscowJS. He works on web performance and modern web technologies. Outside of work, he loves traveling to unusual places, trail running, and photography.
+
+Websites were originally built for people — we read pages, look for buttons, and fill in forms. When an AI agent takes over, it has to reconstruct the meaning of the interface from the DOM, text, and pixels. Because of this, even small changes on a page can break a scenario.
+
+WebMCP offers a different approach: a page can explicitly describe its actions for the agent — how to find a product, pick an available time slot, create a task, or cancel a booking. Humans keep using the familiar interface, while the agent gets tools with clear names, parameter schemas, and structured results.
+
+In this talk we'll look at how WebMCP differs from an MCP server, why it can reduce the number of errors and the cost of agent scenarios, how the design of web applications changes, and what security questions arise when a site exposes its actions to machines. And how you can add this technology to your own site today.`,
+        labels: ["ai", "agents", "mcp", "frontend"],
+        type: "talk",
+        preview: s3Talk("y1", "webmcp-making-the-web-work-for-humans-and-ai-agents"),
+        start: "2026-10-08T16:50:00.000Z",
+        end: "2026-10-08T17:30:00.000Z",
+    },
+    {
         slug: "m8-guest-gathering",
         name: "Guest gathering, welcome coffee",
         description: "",

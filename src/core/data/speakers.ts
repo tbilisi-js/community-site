@@ -12,6 +12,14 @@ export type Speaker = {
 
 export const speakers: Speaker[] = [
     {
+        slug: "gagik-papikyan",
+        name: "Gagik Papikyan",
+        img: s3Speaker("y1", "gagik-papikyan"),
+        company: "DataArt",
+        role: "Senior Software Engineer",
+        location: "Yerevan",
+    },
+    {
         slug: "daria-kamyshina",
         name: "Daria Kamyshina",
         img: s3Speaker("m8", "daria-kamyshina"),
@@ -314,8 +322,8 @@ export const speakers: Speaker[] = [
         name: "Azat Davliatshin",
         img: s3Speaker("m1", "azat-davliatshin"),
         company: "Quantori",
-        role: "Solution / Software Architect",
-        location: "Tbilisi",
+        role: "Software Architect & Tech Lead",
+        location: "Yerevan",
         socialLink: "https://www.linkedin.com/in/azat-davliatshin/",
     },
     {
@@ -339,8 +347,8 @@ export const speakers: Speaker[] = [
         slug: "dmitry-shmakov",
         name: "Dmitry Shmakov",
         img: s3Speaker("m2", "dmitry-shmakov"),
-        company: "",
-        role: "Senior Frontend Engineer",
+        company: "Neverless",
+        role: "Lead Product Engineer",
         location: "Yerevan",
         socialLink: "https://www.linkedin.com/in/shmakovdima/",
     },

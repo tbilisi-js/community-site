@@ -20,6 +20,34 @@ export type Event = {
 
 export const events: Event[] = [
     {
+        slug: "yerevan-js-meetup-1",
+        s3Prefix: "y1",
+        name: "YerevanJS Meetup #1",
+        date: "2026-10-08T14:30:00.000Z",
+        attendees: undefined,
+        talks: [
+            "y1-guest-gathering",
+            "y1-opening",
+            "a-bridge-the-token-never-crosses",
+            "object-prototype-is-not-your-friend",
+            "y1-coffee-break",
+            "webmcp-making-the-web-work-for-humans-and-ai-agents",
+            "y1-closing",
+        ],
+        image: s3Cover("y1"),
+        promo: `Autumn is in full swing, and that means it's meetup season! 🍕
+
+Meet the very first YerevanJS Meetup — three great speakers from Yerevan, backed by the DataArt team and the Tbilisi JS crew, inviting everyone to a cozy evening at the DataArt office (Paronyan str. 40/2, 5th floor, Yerevan). ☕️
+
+All talks are in English, entrance is free with registration.`,
+        description:
+            "Tbilisi JS meets Yerevan! Our first meetup in a new city, hosted at the DataArt office. Azat Davliatshin — a familiar face who opened our very first meetup — shows how to sign users into embedded apps without third-party cookies, Gagik Papikyan explains why Object Prototype is not your friend, and Dmitry Shmakov, who spoke at our second meetup, makes the case for WebMCP — a web that works for both humans and AI agents. Offline, free, and in English. 🍕",
+        sponsor: "dataart",
+        registration: "https://forms.gle/1s92TMeyCFrFFb7P8",
+        telegram: "https://t.me/tbilisi_js/666",
+        youtube: "",
+    },
+    {
         slug: "tbilisi-js-meetup-8",
         s3Prefix: "m8",
         name: "Tbilisi JS Meetup #8",

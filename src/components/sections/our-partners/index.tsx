@@ -9,10 +9,16 @@ import tradingViewImg from "./img/trading-view.svg";
 import socialDiscoderyGroup from "./img/social-discovery-group.svg";
 import exanteImg from "./img/exante.svg";
 import salmonImg from "./img/salmon.svg";
+import dataArtImg from "./img/dataart.svg";
 
 import "./our-partners.scss";
 
 const partners = [
+    {
+        src: dataArtImg.src,
+        alt: "DataArt",
+        url: "https://www.dataart.com/",
+    },
     {
         src: salmonImg.src,
         alt: "Salmon",
