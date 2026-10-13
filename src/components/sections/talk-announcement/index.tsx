@@ -1,6 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-
 import { Block } from "@src/components/ui/block";
+import { Picture } from "@src/components/ui/picture";
 import { AnnouncementTimer } from "@src/components/elements/announcement-timer";
 import { SwapWrapper } from "@src/components/elements/swap-wrapper";
 
@@ -9,13 +8,20 @@ import "./talk-announcement.scss";
 export interface TalkAnnouncementProps {
     description: string;
     date: string;
-    img: StaticImageData | string;
+    img: string;
 }
 
 export const TalkAnnouncement: React.FC<TalkAnnouncementProps> = ({ description, date, img }) => (
     <Block id="talk-announcement" bodyClassName="talk-announcement-body">
         <div className="talk-announcement-visual">
-            <Image width={512} height={512} src={img} alt="" loading="lazy" className="talk-announcement-image" />
+            <Picture
+                width={512}
+                height={512}
+                src={img}
+                alt=""
+                sizes="(max-width: 768px) 100vw, 512px"
+                className="talk-announcement-image"
+            />
             <SwapWrapper
                 before={
                     <div className="talk-announcement-timer-wrapper">

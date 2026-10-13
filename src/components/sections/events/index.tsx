@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 import Link from "next/link";
 import cn from "classnames";
 
@@ -82,23 +82,23 @@ export const Events: React.FC<EventsProps> = ({ events }) => {
                     >
                         {index === activeSlide ? (
                             <Link href={`/events/${event.slug}`} className="events-slider-image-link">
-                                <Image
+                                <Picture
                                     src={event.image}
                                     alt={event.name}
                                     width={600}
                                     height={400}
+                                    sizes="(max-width: 768px) 100vw, 640px"
                                     className="events-slider-image"
-                                    loading="lazy"
                                 />
                             </Link>
                         ) : (
-                            <Image
+                            <Picture
                                 src={event.image}
                                 alt=""
                                 width={600}
                                 height={400}
+                                sizes="(max-width: 768px) 100vw, 640px"
                                 className="events-slider-image"
-                                loading="lazy"
                             />
                         )}
                         <span className="events-slider-shadow" />

@@ -1,7 +1,6 @@
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 
 import { type Speaker } from "@src/core/data/speakers";
-import { s3Resize } from "@src/core/data/s3";
 import { formatDate } from "@src/core/utils/formatDate";
 import { Block } from "@src/components/ui/block";
 
@@ -30,11 +29,12 @@ export const TalkIntro: React.FC<TalkIntroProps> = ({ title, speaker, date }) =>
                 {speaker ? (
                     <>
                         {speaker.img ? (
-                            <Image
-                                src={s3Resize(speaker.img, "thumbnail")}
+                            <Picture
+                                src={speaker.img}
                                 width={40}
                                 height={40}
                                 alt="Avatar"
+                                sizes="40px"
                                 className="talk-intro-speaker-avatar"
                             />
                         ) : (

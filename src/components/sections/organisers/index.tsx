@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 
 import { SocialLink } from "../../elements/social-link";
 import { organisers } from "@src/core/data/organisers";
@@ -17,13 +17,13 @@ export interface OrganiserProps {
 
 const Organiser: React.FC<OrganiserProps> = ({ avatarSrc, name, id, description, socialLink }) => (
     <div className={`organisers-card organisers-${id}`}>
-        <Image
+        <Picture
             src={avatarSrc}
             width={398}
             height={570}
             alt={`${name} Avatar`}
+            sizes="(max-width: 768px) 100vw, 260px"
             className="organisers-card-img"
-            loading="lazy"
         />
         <div className="organisers-info">
             <p className="organisers-card-heading">

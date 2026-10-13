@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 
 import { Block } from "@src/components/ui/block";
 
@@ -27,13 +27,13 @@ export const SpeakersList: React.FC<SpeakersListProps> = ({ speakers = [] }) => 
                             {speaker.location && <p className="speakers-list-location">{speaker.location}</p>}
                         </div>
                         <div className="speakers-list-visual">
-                            <Image
+                            <Picture
                                 width={230}
                                 height={230}
                                 src={speaker.img || "/logo-rect.png"}
                                 alt={speaker.name}
+                                sizes="(max-width: 768px) 100vw, 310px"
                                 className="speakers-list-image"
-                                loading="lazy"
                             />
                         </div>
                     </Link>

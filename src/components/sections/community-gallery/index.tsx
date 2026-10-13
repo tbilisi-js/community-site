@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { type StaticImageData } from "next/image";
+import { type StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { GalleryModal } from "@src/components/elements/gallery-modal";
@@ -9,14 +9,14 @@ import { type S3Photo } from "@src/core/gallery/s3";
 
 import { Block } from "@src/components/ui/block";
 
-import gallery1 from "./img/gallery-1.jpg";
-import gallery2 from "./img/gallery-2.jpg";
-import gallery3 from "./img/gallery-3.jpg";
-import gallery4 from "./img/gallery-4.jpg";
-import gallery5 from "./img/gallery-5.jpg";
-import gallery6 from "./img/gallery-6.jpg";
-import gallery7 from "./img/gallery-7.jpg";
-import gallery8 from "./img/gallery-8.jpg";
+import gallery1 from "./img/gallery-1.webp";
+import gallery2 from "./img/gallery-2.webp";
+import gallery3 from "./img/gallery-3.webp";
+import gallery4 from "./img/gallery-4.webp";
+import gallery5 from "./img/gallery-5.webp";
+import gallery6 from "./img/gallery-6.webp";
+import gallery7 from "./img/gallery-7.webp";
+import gallery8 from "./img/gallery-8.webp";
 
 import "./community-gallery.scss";
 
@@ -96,12 +96,14 @@ export const CommunityGallery: React.FC<CommunityGalleryProps> = ({ images = def
                                   }
                               }}
                           >
-                              <Image
+                              <img
                                   width={960}
                                   height={960}
-                                  src={image.img}
+                                  src={typeof image.img === "string" ? image.img : image.img.src}
                                   alt={image.alt}
                                   className="community-gallery-card-img"
+                                  loading="lazy"
+                                  decoding="async"
                               />
                           </li>
                       ))}
