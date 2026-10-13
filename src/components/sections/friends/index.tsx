@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 import Link from "next/link";
 
 import { friends } from "@src/core/data/friends";
@@ -14,13 +14,13 @@ export const Friends = () => {
                 {friends.map((friend) => (
                     <li className="friends-item" key={friend.slug}>
                         <Link href={friend.href} target="_blank" rel="noopener noreferrer" className="friends-link">
-                            <Image
+                            <Picture
                                 src={friend.img || "/logo-rect.png"}
-                                loading="lazy"
                                 alt={friend.name}
                                 width={180}
                                 height={180}
                                 title={friend.name}
+                                sizes="100px"
                                 className="friends-image"
                             />
                         </Link>

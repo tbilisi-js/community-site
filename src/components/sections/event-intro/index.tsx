@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 import Link from "next/link";
 
 import { type Sponsor } from "@src/core/data/sponsors";
@@ -35,7 +35,15 @@ export const EventIntro: React.FC<EventIntroProps> = ({
             <h1 className="event-intro-title">{title}</h1>
             <div className="event-intro-body">
                 <div className="event-intro-cover">
-                    <Image src={image} alt={title} width={1200} height={630} className="event-intro-cover-image" />
+                    <Picture
+                        src={image}
+                        alt={title}
+                        width={1200}
+                        height={630}
+                        loading="eager"
+                        sizes="(max-width: 768px) 100vw, 420px"
+                        className="event-intro-cover-image"
+                    />
                 </div>
                 <div className="event-intro-content">
                     {description && <p className="event-intro-description">{linkifyText(description, speakers)}</p>}

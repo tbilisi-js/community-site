@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 import Link from "next/link";
 
 import { type Event } from "@src/core/data/events";
@@ -19,7 +19,14 @@ export const Announcement: React.FC<AnnouncementProps> = ({ event }) => (
         <p className="announcement-date">{formatDate(event.date)}</p>
         <h2 className="announcement-heading">{event.name}</h2>
         <Link href={`/events/${event.slug}`} className="announcement-image-link">
-            <Image src={event.image} alt="" width={1200} height={630} loading="lazy" className="announcement-image" />
+            <Picture
+                src={event.image}
+                alt=""
+                width={1200}
+                height={630}
+                sizes="(max-width: 1024px) 100vw, 800px"
+                className="announcement-image"
+            />
         </Link>
         {event.promo && <p className="announcement-description">{event.promo}</p>}
         <div className="announcement-timer-wrapper">

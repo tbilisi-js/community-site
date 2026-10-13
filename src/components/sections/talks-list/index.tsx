@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 
 import { type Talk } from "@src/core/data/talks";
 import { formatDate } from "@src/core/utils/formatDate";
@@ -34,13 +34,13 @@ export const TalksList: React.FC<TalksListProps> = ({ talks }) => {
                             <li className="talks-list-card" key={talk.slug}>
                                 <Link href={`/talks/${talk.slug}`} className="talks-list-link">
                                     <div className="talks-list-visual">
-                                        <Image
+                                        <Picture
                                             src={talk.preview || "/logo-rect.png"}
                                             alt="Talk preview"
                                             width={300}
                                             height={200}
+                                            sizes="(max-width: 768px) 100vw, 540px"
                                             className="talks-list-image"
-                                            loading="lazy"
                                         />
                                     </div>
                                     <p className="talks-list-title" title={talk.name}>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 
 import { type Event } from "@src/core/data/events";
 import { formatDate } from "@src/core/utils/formatDate";
@@ -18,13 +18,13 @@ export const EventsList: React.FC<EventsListProps> = ({ events }) => (
                 <li className="events-list-card" key={event.slug}>
                     <Link href={`/events/${event.slug}`} className="events-list-link">
                         <div className="events-list-visual">
-                            <Image
+                            <Picture
                                 src={event.image}
                                 alt=""
                                 width={600}
                                 height={400}
+                                sizes="(max-width: 768px) 100vw, 400px"
                                 className="events-list-image"
-                                loading="lazy"
                             />
                             <p className="events-list-date">{formatDate(event.date)}</p>
                         </div>

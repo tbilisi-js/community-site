@@ -1,8 +1,7 @@
-import Image from "next/image";
+import { Picture } from "@src/components/ui/picture";
 import Link from "next/link";
 
 import { speakers } from "@src/core/data/speakers";
-import { s3Resize } from "@src/core/data/s3";
 import { Block } from "@src/components/ui/block";
 
 import "./contributors.scss";
@@ -15,9 +14,9 @@ export const Contributors = () => {
                 {speakers.map((speaker) => (
                     <li className="contributors-item" key={speaker.slug}>
                         <Link href={`/people/${speaker.slug}`} className="contributors-link">
-                            <Image
-                                src={speaker.img ? s3Resize(speaker.img, "thumbnail") : "/logo-rect.png"}
-                                loading="lazy"
+                            <Picture
+                                src={speaker.img || "/logo-rect.png"}
+                                sizes="100px"
                                 alt={speaker.name}
                                 width={100}
                                 height={100}
