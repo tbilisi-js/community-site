@@ -20,6 +20,39 @@ export type Event = {
 
 export const events: Event[] = [
     {
+        slug: "tbilisi-js-meetup-9",
+        s3Prefix: "m9",
+        name: "Tbilisi JS Meetup #9",
+        date: "2026-10-24T10:30:00.000Z",
+        attendees: undefined,
+        talks: [
+            "m9-guest-gathering",
+            "m9-opening",
+            "m9-tradingview-welcome",
+            "privacy-first-architecture",
+            "why-product-engineers-cant-build-websites",
+            "m9-coffee-break-1",
+            "code-got-cheap-decisions-didnt-building-a-design-system-with-ai-agents",
+            "m9-coffee-break-2",
+            "how-human-habits-shape-ai-assistant-behavior",
+            "ai-coding-frameworks-what-you-get-for-the-tokens",
+            "m9-closing",
+            "m9-afterparty",
+        ],
+        image: s3Cover("m9"),
+        promo: `Tbilisi JS is back! 🤟
+
+On October 24, we're hosting Meetup #9 at Terminal, together with our friends at TradingView, for the third time already.
+
+Expect a cozy autumn meetup with hot debates, talks, snacks and an afterparty.`,
+        description:
+            "The line-up is one of our strongest yet! Special guest Andrey Sitnik, creator of PostCSS and Nano ID, shows how to build apps that don't track their users, Alexey Krasikov explains why product engineers can't build websites, Alexander Ostrovsky shares how TradingView builds a design system with AI agents, Denis Mitrofanov reveals how human habits shape AI assistants, and Makar Glavanar finds out what AI coding frameworks actually do for their tokens. A cozy autumn meetup with hot debates, snacks and an afterparty. 🍂",
+        sponsor: "tradingview",
+        registration: "https://forms.gle/FgC8wH2guwTXFpaX8",
+        telegram: "https://t.me/tbilisi_js/673",
+        youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
+    },
+    {
         slug: "yerevan-js-meetup-1",
         s3Prefix: "y1",
         name: "YerevanJS Meetup #1",
