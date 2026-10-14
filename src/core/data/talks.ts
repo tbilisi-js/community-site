@@ -15,6 +15,171 @@ export type Talk = {
 
 export const talks: Talk[] = [
     {
+        slug: "m9-guest-gathering",
+        name: "Guest gathering, welcome coffee",
+        description: "",
+        labels: [],
+        start: "2026-10-24T10:30:00.000Z",
+        end: "2026-10-24T11:00:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "m9-opening",
+        name: "Program start, welcome from Tbilisi JS Team",
+        description: "",
+        labels: [],
+        start: "2026-10-24T11:00:00.000Z",
+        end: "2026-10-24T11:10:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "m9-tradingview-welcome",
+        name: "Welcome from TradingView Team",
+        description: "",
+        labels: [],
+        start: "2026-10-24T11:10:00.000Z",
+        end: "2026-10-24T11:20:00.000Z",
+        type: "welcome",
+    },
+    {
+        slug: "m9-coffee-break-1",
+        name: "Coffee break",
+        description: "",
+        labels: [],
+        start: "2026-10-24T12:40:00.000Z",
+        end: "2026-10-24T13:10:00.000Z",
+        type: "break",
+    },
+    {
+        slug: "m9-coffee-break-2",
+        name: "Coffee break",
+        description: "",
+        labels: [],
+        start: "2026-10-24T13:50:00.000Z",
+        end: "2026-10-24T14:10:00.000Z",
+        type: "break",
+    },
+    {
+        slug: "m9-closing",
+        name: "Meetup closing",
+        description: "",
+        labels: [],
+        start: "2026-10-24T15:30:00.000Z",
+        end: "2026-10-24T15:45:00.000Z",
+        type: "closing",
+    },
+    {
+        slug: "m9-afterparty",
+        name: "Afterparty",
+        description: "",
+        labels: [],
+        start: "2026-10-24T15:45:00.000Z",
+        end: "2026-10-24T18:00:00.000Z",
+        type: "afterparty",
+    },
+    {
+        slug: "privacy-first-architecture",
+        speaker: "andrey-sitnik",
+        name: "Privacy-first architecture",
+        description: `Andrey Sitnik, Evil Martians. Creator of PostCSS, Nano ID, oklch.com and many other popular open-source projects.
+
+How developers can make the internet they live in safer — and free of GDPR pop-ups.
+
+We complain about censorship, cancel culture and surveillance. But we, developers, can change the situation. It's time to stop complaining and start building a free internet. In this talk Andrey, the creator of PostCSS and of an open-source privacy-focused social media reader, will show how to reverse this trend and give users back control over their personal data.
+— Beginners will learn how to build websites without GDPR pop-ups.
+— Experienced developers will get practical experience with the new Local First approach, where data is stored and processed on users' machines.
+— With the seasoned ones, we'll talk about what American privacy advocates don't talk about.`,
+        labels: ["privacy", "local-first", "architecture", "frontend"],
+        type: "talk",
+        youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
+        start: "2026-10-24T11:20:00.000Z",
+        end: "2026-10-24T12:00:00.000Z",
+    },
+    {
+        slug: "why-product-engineers-cant-build-websites",
+        speaker: "alexey-krasikov",
+        name: "Why product engineers can't build websites",
+        description: `Alexey Krasikov, Design Engineer at Paper, host of the Web Standards podcast.
+
+Nobody likes building websites: putting together a couple of pages seems too simple a task for a strong engineer. But when a product developer gets moved from the app to the website, the result is so-so... Engineers bring their usual patterns, architecture and shared stack into the website, and a simple site turns into a maintenance nightmare.
+
+Alexey has been building websites for 10 years: from small landing pages to projects with thousands of pages for AI startups, including Attio and Lovable. At these companies he had to argue for and defend his architecture all the way up to CTOs and founders, and then migrate live websites to a new stack.
+
+In this talk he'll explain why the website and the app should live separately:
+- separate frontend projects
+- different stacks and dependencies
+- their own design system
+- their own CI/CD and infrastructure
+
+Spoiler: the answer was always on the surface. It's just a website, and it should be built simpler.`,
+        labels: ["websites", "architecture", "frontend"],
+        type: "talk",
+        youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
+        start: "2026-10-24T12:00:00.000Z",
+        end: "2026-10-24T12:40:00.000Z",
+    },
+    {
+        slug: "code-got-cheap-decisions-didnt-building-a-design-system-with-ai-agents",
+        speaker: "alexander-ostrovsky",
+        name: "Code got cheap, decisions didn't. Building a design system with AI agents",
+        description: `Alexander Ostrovsky is a Staff iOS Engineer at TradingView. He's building a design system for its iOS app, his third; AI agents write most of its documents and code. In ten years of iOS he has built apps from scratch and led a mobile team; before that, he wrote C++ for flight simulators.
+
+TradingView is a large product with a long history, and we're bringing a design system to its mobile apps. I lead the iOS side, from the architecture and the first components to moving the whole app onto them. AI agents write most of the documents and the code; I review and decide.
+
+Code turned out to be the cheap part: a working prototype with alternatives takes hours. Two things stayed expensive, and agents can't do them for you. One is decisions: in three weeks we made more than 200. The other is reaching agreement with everyone the design system affects.
+
+In this talk:
+- where the time actually goes when code is nearly free;
+- how cheap prototypes make it cheap to change your mind;
+- how to keep track of decisions so you don't make them twice.`,
+        labels: ["design-system", "ai", "ios", "mobile"],
+        type: "talk",
+        youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
+        start: "2026-10-24T13:10:00.000Z",
+        end: "2026-10-24T13:50:00.000Z",
+    },
+    {
+        slug: "how-human-habits-shape-ai-assistant-behavior",
+        speaker: "denis-mitrofanov",
+        name: "How Human Habits Shape AI Assistant Behavior",
+        description: `Denis Mitrofanov is a Senior Systems Designer at Lightspeed. For the past two years, he has been designing AI assistants for cross-platform, high-traffic products: behavior, interface, content, and components. Before that, he worked on Yandex Browser, led design at RUSSPASS, and started his own agency.
+
+We build an AI assistant into a product and expect users to ask the questions it can answer. Instead, people seem to ask about anything and behave unpredictably. They hand over large, structured tasks, type a single short, vague question, want control over decisions yet expect a human conversation. As a result, product teams don't know what to rely on when designing the assistant.
+
+In fact, this behavior is driven by habits and expectations formed by communicating with people and other services. ChatGPT taught people they can ask anything. Letters taught them to lay out a task in full; search engines, to get by with a couple of words. Bank bots taught them to pick from ready-made options. And in a live conversation, you can interrupt and jump to another topic. People bring all of this with them before they send their first message.
+
+In the talk:
+— The evolution of communication patterns: between people, and between people and machines.
+— Where assistants break expectations, and how to fix it.
+— Designing an assistant's interface around people's habits.`,
+        labels: ["ai", "ux", "design"],
+        type: "talk",
+        youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
+        start: "2026-10-24T14:10:00.000Z",
+        end: "2026-10-24T14:50:00.000Z",
+    },
+    {
+        slug: "ai-coding-frameworks-what-you-get-for-the-tokens",
+        speaker: "makar-glavanar",
+        name: "AI Coding Frameworks: What You Get for the Tokens",
+        description: `Makar Glavanar, CTO and co-founder of Solvery, co-founder of the AI agency Pulsar Digital. 10 years in software development, from frontend engineer to CTO. Helps product teams bring AI agents into software development.
+
+Spec Kit, BMAD, Superpowers, GSD and dozens of other frameworks promise to make AI coding agents predictable. Each writes its own specs, plans and reports, and each checks the agent's work in its own way.
+
+In this talk Makar will cover:
+- how the frameworks work inside, and why they produce so many artifacts
+- how they check the agent's work, and where those checks fail
+- how they differ in practice on quality, cost and time
+- how to compare frameworks on your own tasks, with a tool you can take home
+
+Spoiler: you can go without a framework, and sometimes it works better.`,
+        labels: ["ai", "agents", "tooling"],
+        type: "talk",
+        youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
+        start: "2026-10-24T14:50:00.000Z",
+        end: "2026-10-24T15:30:00.000Z",
+    },
+    {
         slug: "y1-guest-gathering",
         name: "Guest gathering, welcome coffee",
         description: "",

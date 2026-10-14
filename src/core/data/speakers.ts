@@ -12,6 +12,41 @@ export type Speaker = {
 
 export const speakers: Speaker[] = [
     {
+        slug: "andrey-sitnik",
+        name: "Andrey Sitnik",
+        img: s3Speaker("m9", "andrey-sitnik"),
+        company: "Evil Martians",
+        role: "Creator of PostCSS and Nano ID",
+    },
+    {
+        slug: "alexey-krasikov",
+        name: "Alexey Krasikov",
+        img: s3Speaker("m9", "alexey-krasikov"),
+        company: "Paper",
+        role: "Design Engineer",
+    },
+    {
+        slug: "alexander-ostrovsky",
+        name: "Alexander Ostrovsky",
+        img: s3Speaker("m9", "alexander-ostrovsky"),
+        company: "TradingView",
+        role: "Staff iOS Engineer",
+    },
+    {
+        slug: "denis-mitrofanov",
+        name: "Denis Mitrofanov",
+        img: s3Speaker("m9", "denis-mitrofanov"),
+        company: "Lightspeed",
+        role: "Senior Systems Designer",
+    },
+    {
+        slug: "makar-glavanar",
+        name: "Makar Glavanar",
+        img: s3Speaker("m9", "makar-glavanar"),
+        company: "Solvery",
+        role: "CTO and Co-founder",
+    },
+    {
         slug: "gagik-papikyan",
         name: "Gagik Papikyan",
         img: s3Speaker("y1", "gagik-papikyan"),
