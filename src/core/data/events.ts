@@ -46,6 +46,7 @@ All talks are in English, entrance is free with registration.`,
         registration: "https://forms.gle/1s92TMeyCFrFFb7P8",
         telegram: "https://t.me/tbilisi_js/666",
         youtube: "",
+        gallerySource: s3GallerySource("y1"),
     },
     {
         slug: "tbilisi-js-meetup-8",
@@ -80,6 +81,7 @@ This time we're supported by the awesome folks at Salmon, a fintech company oper
         registration: "https://forms.gle/jAgYr5DhUkaSbW8WA",
         telegram: "https://t.me/tbilisi_js/596",
         youtube: "https://www.youtube.com/embed/g-_by137JKE?si=XsWB_Qzh2iw9ytXL",
+        gallerySource: s3GallerySource("m8"),
     },
     {
         slug: "tbilisi-js-xmas-stream-2025",
