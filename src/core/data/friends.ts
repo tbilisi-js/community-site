@@ -38,4 +38,10 @@ export const friends: Friend[] = [
         img: s3Friend("senior-negroni"),
         href: "https://t.me/seniornegroni",
     },
+    {
+        slug: "unicorn-embassy",
+        name: "Unicorn Embassy",
+        img: "/friends/unicorn-embassy.svg",
+        href: "https://unicornembassy.com/",
+    },
 ];
