@@ -91,14 +91,15 @@ We complain about censorship, cancel culture and surveillance. But we, developer
 — With the seasoned ones, we'll talk about what American privacy advocates don't talk about.`,
         labels: ["privacy", "local-first", "architecture", "frontend"],
         type: "talk",
+        preview: s3Talk("m9", "privacy-first-architecture"),
         youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
         start: "2026-10-24T11:20:00.000Z",
         end: "2026-10-24T12:00:00.000Z",
     },
     {
-        slug: "why-product-engineers-cant-build-websites",
+        slug: "its-a-website-not-a-product",
         speaker: "alexey-krasikov",
-        name: "Why product engineers can't build websites",
+        name: "It’s a website, not a product",
         description: `Alexey Krasikov, Design Engineer at Paper, host of the Web Standards podcast.
 
 Nobody likes building websites: putting together a couple of pages seems too simple a task for a strong engineer. But when a product developer gets moved from the app to the website, the result is so-so... Engineers bring their usual patterns, architecture and shared stack into the website, and a simple site turns into a maintenance nightmare.
@@ -114,12 +115,13 @@ In this talk he'll explain why the website and the app should live separately:
 Spoiler: the answer was always on the surface. It's just a website, and it should be built simpler.`,
         labels: ["websites", "architecture", "frontend"],
         type: "talk",
+        preview: s3Talk("m9", "its-a-website-not-a-product"),
         youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
         start: "2026-10-24T12:00:00.000Z",
         end: "2026-10-24T12:40:00.000Z",
     },
     {
-        slug: "code-got-cheap-decisions-didnt-building-a-design-system-with-ai-agents",
+        slug: "code-got-cheap-decisions-didnt",
         speaker: "alexander-ostrovsky",
         name: "Code got cheap, decisions didn't. Building a design system with AI agents",
         description: `Alexander Ostrovsky is a Staff iOS Engineer at TradingView. He's building a design system for its iOS app, his third; AI agents write most of its documents and code. In ten years of iOS he has built apps from scratch and led a mobile team; before that, he wrote C++ for flight simulators.
@@ -134,6 +136,7 @@ In this talk:
 - how to keep track of decisions so you don't make them twice.`,
         labels: ["design-system", "ai", "ios", "mobile"],
         type: "talk",
+        preview: s3Talk("m9", "code-got-cheap-decisions-didnt"),
         youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
         start: "2026-10-24T13:10:00.000Z",
         end: "2026-10-24T13:50:00.000Z",
@@ -154,6 +157,7 @@ In the talk:
 — Designing an assistant's interface around people's habits.`,
         labels: ["ai", "ux", "design"],
         type: "talk",
+        preview: s3Talk("m9", "how-human-habits-shape-ai-assistant-behavior"),
         youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
         start: "2026-10-24T14:10:00.000Z",
         end: "2026-10-24T14:50:00.000Z",
@@ -175,6 +179,7 @@ In this talk Makar will cover:
 Spoiler: you can go without a framework, and sometimes it works better.`,
         labels: ["ai", "agents", "tooling"],
         type: "talk",
+        preview: s3Talk("m9", "ai-coding-frameworks-what-you-get-for-the-tokens"),
         youtube: "https://www.youtube.com/embed/oQXUtMb-lW0",
         start: "2026-10-24T14:50:00.000Z",
         end: "2026-10-24T15:30:00.000Z",
