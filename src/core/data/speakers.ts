@@ -17,6 +17,7 @@ export const speakers: Speaker[] = [
         img: s3Speaker("m9", "andrey-sitnik"),
         company: "Evil Martians",
         role: "Creator of PostCSS and Nano ID",
+        location: "Barcelona",
     },
     {
         slug: "alexey-krasikov",
@@ -24,6 +25,7 @@ export const speakers: Speaker[] = [
         img: s3Speaker("m9", "alexey-krasikov"),
         company: "Paper",
         role: "Design Engineer",
+        location: "Tbilisi",
     },
     {
         slug: "alexander-ostrovsky",
@@ -31,6 +33,7 @@ export const speakers: Speaker[] = [
         img: s3Speaker("m9", "alexander-ostrovsky"),
         company: "TradingView",
         role: "Staff iOS Engineer",
+        location: "Tbilisi",
     },
     {
         slug: "denis-mitrofanov",
@@ -38,6 +41,7 @@ export const speakers: Speaker[] = [
         img: s3Speaker("m9", "denis-mitrofanov"),
         company: "Lightspeed",
         role: "Senior Systems Designer",
+        location: "Tbilisi",
     },
     {
         slug: "makar-glavanar",
@@ -45,6 +49,7 @@ export const speakers: Speaker[] = [
         img: s3Speaker("m9", "makar-glavanar"),
         company: "Solvery",
         role: "CTO and Co-founder",
+        location: "Yerevan",
     },
     {
         slug: "gagik-papikyan",
